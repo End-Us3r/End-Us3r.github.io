@@ -2,8 +2,9 @@ body {
 	background-color: orange;
 }
 
-h1 {
+h1, h3 {
 	color: black;
+	text-align: center;
 }
 
 p {
