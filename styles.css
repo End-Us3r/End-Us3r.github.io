@@ -1,10 +1,18 @@
 body {
-	background-color: orange;
+	background-color: #16015d;
 	text-align: center;
 }
 
 p {
-	color: black;
+	color: #ffffff;
 	font-size: 20px;
 	text-align: center;
+}
+
+h1, h3 {
+	color: #ffffff;
+}
+
+li {
+	color: #ffffff;
 }
