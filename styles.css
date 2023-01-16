@@ -16,3 +16,14 @@ h1, h3 {
 li {
 	color: #ffffff;
 }
+
+.page_header {
+	margin: 50px;
+}
+
+.lang_section {
+	background-color: #000000;
+	height: 250px;
+	width: 500px;
+	margin: auto;
+}
