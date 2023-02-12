@@ -1,3 +1,8 @@
+
+/** {
+  box-sizing: border-box;
+}*/
+
 body {
   background-color: #f5f5f5;
   margin: 0;
@@ -11,62 +16,124 @@ a {
 
 p {
   color: #0d0d0d;
-  font-size: 18px;
+  font-size: 20px;
   text-align: center;
 }
 
-h1,
+h1 {
+  color: #000000;
+  text-align: center;
+  font-size: 40px;
+}
+
 h2,
 h3 {
   color: #000000;
   text-align: center;
+  font-size: 25px;
 }
 
 ul {
   color: #0d0d0d;
   text-align: center;
   display: inline;
-  max-height: 400px;
+  max-height: 100px;
+  font-size: 25px;
 }
 
 header {
-  background: #c05905;
+  margin: auto;
+  background: #05a7e2;
   color: #f5f5f5;
+  text-align: center;
+  padding: 25px;
 }
 
 footer {
-  background-color: #005a00;
-  color: #f5f5f5;
+  background-color: #028502;
+  color: #0a0000;
+  text-align: center;
+  padding: 10px;
 }
 
-.icons-content {
+.nav-bar {
+  overflow: hidden;
+  background-color: #000000;
+}
+
+.nav-bar a {
+  float: left;
+  display: block;
+  color: #ffffff;
+  border-color: #0059ff;
   text-align: center;
-  width: 800px;
+  padding: 14px 10px;
+  text-decoration: none;
+}
+
+.nav-bar a:hover {
+  background-color: #05a7e2;
+  color: #000000;
+}
+
+.column-one {
+  margin: 30px 10px;
+  float: left;
+  width: 20.00%;
+  padding: 20px 0px 20px 20px;
+}
+
+.column-two {
+  margin: 30px auto;
+  overflow: hidden;
+  float: left;
+  width: 55.00%;
+  padding: 20px 0px;
+}
+
+.column-three {
+  margin: 30px 10px;
+  float: left;
+  width: 20.00%;
+  padding: 20px 0px;
+}
+
+
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*.icons-content {
+  display: block;
+  text-align: center;
+  width: 700px;
   margin: 0 auto;
   padding: 30px 0;
-}
+}*/
 
 .page-content {
-  width: 800px;
+  width: 700px;
   margin: 0 auto;
   padding: 30px 0;
 }
 
-.page-content .btn {
-  color: #f7fff7;
-  background: #0059ff;
-  font-size: 18px;
-  text-decoration: none;
-  margin: 0 5px;
-  padding: 8px;
-  border-radius: 4px;
-  display: inline-block;
+@media screen and (max-width:800px) {
+  .column-one,
+  .column-two,
+  .column-three,
+  .icons-content {
+    width: 100%;
+    padding: 0;
+  } 
 }
 
-.btn:hover {
-  color: #0059ff;
-  background: #e0e0e0;
-  text-decoration: none;
-  border: #000000;
-  box-shadow: 4px 4px;
+@media screen and (max-width: 600px) {
+  .nav-bar a {
+    float: none;
+    width: 100%;
+  }
+  
 }
+
