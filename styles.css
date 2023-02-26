@@ -23,6 +23,7 @@ header {
 
 header p {
   color: #4db000;
+  font-size: 20px;
 }
 
 h1 {
@@ -39,7 +40,22 @@ p {
   max-width: 800px;
   width: 85%;
   margin: 0 25px;
-  padding: 60px 0;
+  padding: 50px 0;
+}
+
+.side-header {
+  height: 550px;
+  width: 35%;
+  float: right;
+  text-align: center;
+  margin: 0 50px;
+  padding: 30px;
+  text-decoration: none;
+}
+
+.side-header h2 {
+  font-size: 30px;
+  text-align: center;
 }
 
 .content-projects {
@@ -48,5 +64,9 @@ p {
   padding: 20px auto;
   margin: 10px auto;
   border: #000;
+}
+
+.projects {
+  text-align: center;
 }
 
