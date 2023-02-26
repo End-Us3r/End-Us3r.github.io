@@ -50,22 +50,3 @@ p {
   border: #000;
 }
 
-
-@media screen and (max-width:800px) {
-  .column-one,
-  .column-two,
-  .column-three,
-  .icons-content {
-    width: 100%;
-    padding: 0;
-  } 
-}
-
-@media screen and (max-width: 600px) {
-  .nav-bar a {
-    float: none;
-    width: 100%;
-  }
-  
-}
-
