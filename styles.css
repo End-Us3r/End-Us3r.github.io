@@ -46,15 +46,21 @@ p {
 }
 
 a {
-  color: #4db000;
   cursor: pointer;
+  color: #4db000;
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding: 14px;
+  background-color: #212121;
+  border-radius: 16px;
   text-decoration: none;
-  width: 40px;
 }
 
 .main-content {
   display: inline-block;
-  max-width: 800px;
+  max-width: 700px;
   width: 85%;
   margin: 0 25px;
   padding: 50px 0;
@@ -80,37 +86,14 @@ a {
 }
 
 .content-projects {
-  display: inline-block;
-  background-color: #212121;
-  color: #4db000;
-  width: 25%;
-  padding: 15px;
-  margin: 20px 5px;
-  border: #000;
-  border-radius: 16px;
+  display: grid;
+  margin: 15px;
+  padding: 2px;
+  text-align: center;
 }
-
-.btn {
-  background-color: #212121;
-  color: #4db000;
-  font-weight: 400;
-  font-size: 16px;
-  text-transform: uppercase;
-  padding: 14px 30px;
-  text-decoration: none;
-  width: 175px;
-}
-
-/*.content-projects a {
-  font-size: 30px;
-  font-weight: 500;
-  text-decoration: none;
-  color: #212121;
-}*/
 
 .projects, .languages, .education, .contact {
   text-align: center;
-
 }
 
 .education p {
