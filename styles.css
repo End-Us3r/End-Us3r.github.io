@@ -47,15 +47,21 @@ p {
 
 a {
   cursor: pointer;
-  color: #4db000;
+  color: #212121;
   font-family: 'Raleway', sans-serif;
-  font-size: 16px;
+  font-size: 22px;
   font-weight: 400;
   text-transform: uppercase;
   padding: 14px;
-  background-color: #212121;
+  background-color: #4db000;
   border-radius: 16px;
   text-decoration: none;
+}
+
+a:hover {
+  background-color: azure;
+  color: #212121;
+  transition: color .1s ease-in, background-color .1s ease-in;
 }
 
 .main-content {
@@ -99,8 +105,9 @@ a {
   border-radius: 25px;
   padding-bottom: 50px;
   padding-top: 0;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #212121;
 }
 
 .projects, .languages, .education, .contact {
@@ -109,7 +116,8 @@ a {
 
 .education p {
   font-size: 22px;
-  font-weight: 500;
+  font-weight: 50px;
+  color: #4db000;
 }
 
 .education h3 {
@@ -119,6 +127,6 @@ a {
 
 .projects h2, .languages h2, .education h2 {
   font-size: 50px;
-  color: #212121;
+  color: #ffffff;
 }
 
