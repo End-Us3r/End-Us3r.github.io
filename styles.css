@@ -24,6 +24,7 @@ header {
 header p {
   color: #4db000;
   font-size: 22px;
+  text-transform: capitalize;
 }
 
 footer {
@@ -53,7 +54,7 @@ a {
   font-weight: 400;
   text-transform: uppercase;
   padding: 14px;
-  background-color: #4db000;
+  background-color: #939594;
   border-radius: 16px;
   text-decoration: none;
 }
@@ -65,13 +66,22 @@ a:hover {
 }
 
 .main-content {
+  text-align: center;
+  padding: 25px;
+}
+
+.main-content footer {
+  margin: 0 auto;
+}
+
+.main-header-content {
   display: inline-block;
   max-width: 700px;
   width: 85%;
   margin: 25px;
 }
 
-.side-header {
+.side-header-content {
   height: 500px;
   width: 35%;
   float: right;
@@ -92,6 +102,12 @@ a:hover {
   text-align: center;
 }
 
+.main-content .projects {
+  float: left;
+  width: 40%;
+}
+
+
 .content-projects {
   display: grid;
   margin: 15px;
@@ -99,7 +115,7 @@ a:hover {
   text-align: center;
 }
 
-.projects .main-content, .languages .main-content, .education .main-content {
+.main-content .projects, .main-content .languages, .main-content .education {
   border: 5px solid #212121;
   margin: 30px 25px;
   border-radius: 25px;
@@ -110,8 +126,24 @@ a:hover {
   background-color: #212121;
 }
 
-.projects, .languages, .education, .contact {
+.main-content .footer {
+  display: inline;
+  max-width: 700px;
+  margin: 25px;
+}
+
+.projects, .languages, .education, .footer {
   text-align: center;
+}
+
+.languages {
+  display: inline-block;
+  width: 50%;
+}
+
+.education {
+  display: inline-block;
+  width: 50%;
 }
 
 .education p {
