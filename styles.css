@@ -162,3 +162,12 @@ a:hover {
   color: #DB7032;
 }
 
+@media only screen and (max-width: 800px) {
+  .main-content, .main-content .projects, .main-content .languages, .main-content .education, .main-header-content, header, footer, body, html {
+    width: 100%;
+  }
+
+  .side-header-content {
+    display: none;
+  }
+}
