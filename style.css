@@ -46,6 +46,8 @@ div#goal {
 
 div#goal p {
     padding: 20px;
+    padding-top: 10px;
+    margin-top: 0px;
     border-bottom: 2px dashed;
 }
 
@@ -119,17 +121,19 @@ nav ul li:last-child {
 nav ul li a {
     color: #ffffff;
     display: block;
+    text-align: center;
     font-size: 25px;
     font-weight: 400;
-    margin: 10px;
-    padding: 5px;
+    width: auto;
+    margin: 5px;
+    padding: 10px;
     text-decoration: none;
 }  
 
 nav ul li a:hover {
     color: black;
     text-decoration: none;
-    background-color: gray;
+    background-color: limegreen;
     border-radius: 5px;
 
 }
@@ -169,9 +173,8 @@ h2 {
 }
 
 h3 {
-    font-size: 40px;
     margin-top: 0px;
-    margin-bottom: 20px;
+    margin: 20px;
     padding: 5px;
     text-align: center;
     border-bottom: 2px solid white;
@@ -380,6 +383,11 @@ footer {
     text-decoration: none;
     color:#ffffff;
     margin: 0 20px;
+}
+
+.logo-list a:hover {
+    color: limegreen;
+    transition: color .5s ease-in;
 }
 
 footer p {
