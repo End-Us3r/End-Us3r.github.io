@@ -405,7 +405,7 @@ footer p {
     }
 }
 
-@media only screen and (min-width: 769px) and (max-width: 1280px) {
+@media only screen and (min-width: 768px) and (max-width: 1280px) {
 
     html, body {
         width: 100%;
@@ -474,22 +474,18 @@ footer p {
     }
 }
 
-@media only screen and (min-width: 391px) and (max-width: 768px) {
+@media only screen and (min-width: 390px) and (max-width: 768px) {
 
     html, body {
         width: 100%;
     }
 
-    #nav-bar-main {
-        display: hidden;
-    }
-
-    #nav-bar-mobile {
-        display: flex;
+    nav ul {
+        display: none;
     }
 
     h2 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 
     div.about, div.contact, div.hobbies, div.projects, div.skills, div.education {
@@ -528,8 +524,9 @@ footer p {
 
     header > div > h1 {
         width: auto;
-        font-size: 75px;
+        font-size: 60px;
         margin: 25px;
+        padding: 25px;
     }
 
     .left-panel, .right-panel {
@@ -542,11 +539,29 @@ footer p {
         width: 100%;
         margin: 0 auto;
     }
+    
+    .skills ul {
+        display: flex;
+        flex-direction: column;
+        list-style-type: none;
+        justify-items: start;
+        padding: 10px;
+        text-align: center;
+    }
 
-    ul.logo-list > li {
-        padding: 5px;
+    .logo-list {
+        display: block;
+    }
+
+    .logo-list a {
+        margin: 0 auto;
     }
     
+    ul.logo-list {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
 }
 /*CSS for mobile devices*/
 @media only screen and (min-width: 0px) and (max-width: 390px) {
@@ -555,12 +570,8 @@ footer p {
         width: 100%;
     }
 
-    #nav-bar-main {
-        display: hidden;
-    }
-
-    #nav-bar-mobile {
-        display: flex;
+    nav ul {
+        display: none;
     }
 
     h2 {
@@ -594,6 +605,8 @@ footer p {
     header, main, footer {
         flex-wrap: wrap;
         width: auto;
+        margin: 25px;
+        padding: 25px;
     }
 
     div {
@@ -623,3 +636,4 @@ footer p {
     }
     
 }
+
