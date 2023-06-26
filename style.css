@@ -405,23 +405,6 @@ footer p {
     }
 }
 
-/*@media screen and (min-width: 1025px) and (max-width: 1280px) {
-    div#goal {
-        display: block;
-        margin: 0 5px;
-        border: none;
-    }
-
-    div#goal > h2 {
-        font-size: 35px;
-        padding: 5px;
-    }
-
-    div#goal > p {
-        font-size: 15px;
-    }
-}*/
-
 
 @media screen and (min-width: 769px) and (max-width: 1280px) {
 
@@ -493,6 +476,81 @@ footer p {
 }
 
 @media screen and (min-width: 360px) and (max-width: 768px) {
+
+    html, body {
+        width: 100%;
+    }
+
+    #nav-bar-main {
+        display: hidden;
+    }
+
+    #nav-bar-mobile {
+        display: flex;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    div.about, div.contact, div.hobbies, div.projects, div.skills, div.education {
+        padding: 15px;
+        margin: 25px auto;
+    }
+
+    div.projects {
+        margin-top: 0px !important;
+    }
+
+    div#goal {
+        display: block;
+        margin: 0 5px;
+        border: none;
+    }
+
+    div#goal > h2 {
+        font-size: 35px;
+        padding: 5px;
+    }
+
+    div#goal > p {
+        font-size: 15px;
+    }
+
+    header, main, footer {
+        flex-wrap: wrap;
+        width: auto;
+    }
+
+    div {
+        width: 100%;
+        height: fit-content;
+    }
+
+    header > div > h1 {
+        width: auto;
+        font-size: 75px;
+        margin: 25px;
+    }
+
+    .left-panel, .right-panel {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    footer ul.logo-list {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    ul.logo-list > li {
+        padding: 5px;
+    }
+    
+}
+/*CSS for mobile devices*/
+@media screen and (min-width: 0px) and (max-width: 359px) {
 
     html, body {
         width: 100%;
