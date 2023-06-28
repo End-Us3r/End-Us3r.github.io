@@ -1,15 +1,15 @@
 /* Global Styles */
 * {
     box-sizing: border-box;
-    line-height: 1.5;
-    letter-spacing: 1.5px;
+    line-height: 1.2;
+    letter-spacing: 1.4px;
     font-family: 'Georgia', 'Roboto', sans-serif;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 400;
 }
 
 body {
-    background-color: saddlebrown; 
+    background-color: #333; 
     color: #ffffff;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
@@ -19,7 +19,7 @@ body {
 
 /* Header */
 header {
-    background-color: #212121;
+    background-color: #333;
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
@@ -40,8 +40,6 @@ div#goal {
     display: flex;
     flex-direction: column;
     justify-items: center;
-    border: 5px solid saddlebrown;
-    border-radius: 15px;
 }
 
 div#goal p {
@@ -53,7 +51,7 @@ div#goal p {
 
 
 header h1 {
-    color: limegreen;
+    color: mediumseagreen;
     font-family: 'Georgia', monospace;
     font-size: 4.9rem;
     width: auto;
@@ -68,7 +66,7 @@ header h2 {
     font-size: 65px;
     font-weight: 600;
     font-family: initial;
-    color: limegreen;
+    color: mediumseagreen;
     margin: 10px;
     padding: 15px;
     text-align: center;
@@ -79,8 +77,10 @@ header h2 {
 
 
 header div {
-    width: 100%;
+    width: auto;
     overflow: auto;
+    padding: 10px;
+    margin: 10px;
 }
 
 /* Navigation */
@@ -123,7 +123,7 @@ nav ul li a {
     display: block;
     text-align: center;
     font-size: 25px;
-    font-weight: 400;
+    font-weight: bold;
     width: auto;
     margin: 5px;
     padding: 10px;
@@ -160,11 +160,11 @@ main {
 }
 
 h2 {
-    color: orangered;
-    font-size: 60px;
+    color: sienna;
+    font-size: 40px;
     font-family: 'Georgia', sans-serif;
     margin-top: 0px;
-    margin-bottom: 20px;
+    margin-bottom: 1px;
     padding: 5px;
     text-align: center;
     border-bottom: 4px solid white;
@@ -233,7 +233,7 @@ h3 {
 .skills ul {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     list-style-type: none;
     justify-items: center;
     gap: 10px;
@@ -259,9 +259,9 @@ h3 {
     grid-template-rows: repeat(5, 1fr);
     list-style-type: none;
     justify-items: center;
-    gap: 30px;
-    padding: 5px;
-    margin: 5px;
+    gap: 20px;
+    padding: 20px 25px;
+    margin: 30px;
 }
 
 .projects li, a {
@@ -276,8 +276,8 @@ h3 {
     cursor: pointer;
     color: #212121;
     font-family: 'Raleway', sans-serif;
-    font-size: 22px;
-    font-weight: 400;
+    font-size: 25px;
+    font-weight: 700;
     text-transform: uppercase;
     padding: 14px;
     background-color: #939594;
@@ -364,8 +364,9 @@ footer {
     color: #ffffff;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
-    margin: 0 auto;
-    padding: 20px;
+    padding: 10px;
+    overflow: auto;
+    width: auto;
 }
 
 .logo-list {
@@ -392,8 +393,9 @@ footer {
 
 footer p {
     text-align: center;
-    padding: 25px;
+    padding: 15px;
     margin: 0 auto;
+    font-size: 15px;
 }
 
 /* Media Queries */
