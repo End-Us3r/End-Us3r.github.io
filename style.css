@@ -161,7 +161,7 @@ main {
 
 h2 {
     color: sienna;
-    font-size: 40px;
+    font-size: 65px;
     font-family: 'Georgia', sans-serif;
     margin-top: 0px;
     margin-bottom: 1px;
@@ -173,6 +173,7 @@ h2 {
 }
 
 h3 {
+    font-size: 40px;
     margin-top: 0px;
     margin: 20px;
     padding: 5px;
@@ -260,7 +261,8 @@ h3 {
     list-style-type: none;
     justify-items: center;
     gap: 20px;
-    margin: 30px;
+    margin: 15px 25px;
+    padding: 5px;
 }
 
 .projects li, a {
@@ -509,8 +511,8 @@ footer p {
         padding: 5px;
     }
 
-    div#goal > p {
-        font-size: 15px;
+    div#goal > p, .about > p, .hobbies > p, .projects > p, .skills > p, .education > p {
+        font-size: 1rem;
     }
 
     header, main, footer {
@@ -525,7 +527,7 @@ footer p {
 
     header > div > h1 {
         width: auto;
-        font-size: 60px;
+        font-size: 3rem;
         margin: 25px;
         padding: 25px;
     }
