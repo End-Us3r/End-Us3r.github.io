@@ -260,7 +260,6 @@ h3 {
     list-style-type: none;
     justify-items: center;
     gap: 20px;
-    padding: 20px 25px;
     margin: 30px;
 }
 
@@ -487,7 +486,7 @@ footer p {
     }
 
     h2 {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
     }
 
     div.about, div.contact, div.hobbies, div.projects, div.skills, div.education {
