@@ -1,2 +1,2 @@
 # End-Us3r.github.io
-My website hosting my portfolio using GitHub pages, 
+My website, using GitHub Pages, hosting my portfolio containing projects that I've built. 
