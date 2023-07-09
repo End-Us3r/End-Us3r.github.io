@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+
+nav {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+}
+
+header {
+    background: url(images/sunset-ocean.jpg);
+    background-size: cover;
+    background-position: center;
+    background-color: #333;
+    filter: brightness(80%);
+    height: 100vh;
+    color: #fff;
+    padding: 3rem;
+    text-align: center;
+}
+
+main {
+    margin: 2.5rem;
+    padding: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 1rem;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.title-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 25px;
+    margin: 25px;
+
+}
+
+h1 {
+    font-size: 7rem;
+    color: #fff;
+    margin: 2rem;
+    margin-top: 5rem;
+    padding: 1rem;
+    width: fit-content;
+    text-align: left;
+    height: auto;
+}
+
+.project-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    padding: 1rem;
+    width: 100%;
+    height: auto;
+}
+
+.project-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    padding: 1rem;
+    width: 100%;
+    height: auto;
+}
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
