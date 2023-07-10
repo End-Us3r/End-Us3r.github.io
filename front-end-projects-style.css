@@ -13,7 +13,7 @@ html {
 body {
     margin: 0;
     padding: 0;
-    background-color: #fff;
+    background-color: #D7BE82;
 }
 
 nav {
@@ -35,6 +35,7 @@ header {
     color: #fff;
     padding: 3rem;
     text-align: center;
+    border-radius: 25px;
 }
 
 main {
@@ -59,15 +60,24 @@ nav a {
     cursor: pointer;
 }
 
-.title-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    padding: 25px;
-    margin: 25px;
+img {
+    background-color: white;
+    width: 100%;
+    height: auto;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
 
+div > p {
+    margin: 1rem;
+    padding: 1rem;
+    font-size: 1rem;
+    text-align: center;
+    line-height: 1.5;
+    width: 100%;
+    height: auto;
 }
 
 h1 {
@@ -86,7 +96,7 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 1rem;
+    margin: 0;
     padding: 1rem;
     width: 100%;
     height: auto;
@@ -95,6 +105,17 @@ h1 {
 .project-row {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 1rem;
+    width: 100%;
+    height: auto;
+}
+
+.card-col {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 1rem;
