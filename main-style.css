@@ -39,6 +39,7 @@ div#goal {
     display: flex;
     flex-direction: column;
     justify-items: center;
+    width: 61%;
 }
 
 div#goal p {
@@ -424,7 +425,7 @@ footer p {
 @media only screen and (min-width: 1025px) {
     div#goal {
         display: flex;
-        width: 70%;
+        width: 61%;
         height: fit-content;
     }
 }
@@ -440,6 +441,7 @@ footer p {
         flex-wrap: wrap;
         margin: 0 5px;
         border: none;
+        width: 100%;
     }
 
     div#goal > p {
@@ -524,6 +526,7 @@ footer p {
         display: block;
         margin: 0;
         border: none;
+        width: 100%;
     }
 
     div#goal > p, .about > p, .hobbies > p, .projects > p, .skills > p, .education > p {
