@@ -61,9 +61,8 @@ nav a {
 }
 
 img {
-    background-color: #e8db7d;
     width: 100%;
-    height: aut0;
+    height: auto;
     border-radius: 10px;
     box-shadow: 0 0 15px 5px rgba(0, 0, 0, 1);
 }
@@ -167,7 +166,7 @@ footer p {
     text-align: end;
 }
 
-@media only screen and (min-width: 380px) and (max-width: 836px) {
+@media only screen and (min-width: 374px) and (max-width: 1024px) {
 
     html, body {
         font-size: 16px;

@@ -40,6 +40,11 @@ header {
     height: 590px;
 }
 
+header div {
+    margin: 0 auto;
+    padding: 0;
+}
+
 nav ul {
     list-style: none;
     text-align: center;
@@ -58,9 +63,8 @@ nav a {
 }
 
 img {
-    background-color: #e8db7d;
     width: 100%;
-    height: aut0;
+    height: auto;
     border-radius: 10px;
     box-shadow: 0 0 15px 5px rgba(0, 0, 0, 1);
 }
@@ -160,16 +164,11 @@ footer p {
     text-align: end;
 }
 
-@media only screen and (min-width: 380px) and (max-width: 836px) {
+@media only screen and (min-width: 374px) and (max-width: 1024px) {
 
     html, body {
         font-size: 16px;
         width: 100%;
-    }
-
-    main {
-        margin: 1.5rem;
-        padding: 1rem;
     }
 
     header {
@@ -180,7 +179,8 @@ footer p {
         filter: brightness(80%);
         height: 100vh;
         color: #fff;
-        padding: 1rem;
+        padding: 0;
+        margin: 0 auto;
         text-align: center;
         border-radius: 50px;
     }
@@ -188,9 +188,9 @@ footer p {
     h1 {
         font-size: 5rem;
         color: #fff;
-        margin: 2rem;
-        margin-top: 5rem;
-        padding: 1rem;
+        margin: 0 auto;
+        margin-top: 10rem;
+        padding: 1rem 0;
         width: fit-content;
         text-align: left;
         height: auto;
@@ -198,13 +198,12 @@ footer p {
     }
 
     img {
-        background-color: #e8db7d;
-        width: 300px;
+        width: 100%;
         height: auto;
-        margin: 1rem;
-        padding: 0.1rem;
+        margin: 0 auto;
+        padding: 0;
         border-radius: 10px;
-        box-shadow: 0 0 15px 5px rgba(0, 0, 0, 1);
+        box-shadow: 0 0 15px 4px rgba(0, 0, 0, 1);
     }
 
     .card-container {
@@ -219,7 +218,7 @@ footer p {
         height: auto;
         border-radius: 20px;
         opacity: 0.7;
-        box-shadow: 0 0 15px rgba(0, 0, 0, 1);
+        box-shadow: 0 0 15px 4px rgba(0, 0, 0, 1);
     }
     
     .card {
@@ -231,6 +230,12 @@ footer p {
         padding: 1rem;
         width: 100%;
         height: auto;
+    }
+
+    .card a {
+        width: auto;
+        margin: 1rem auto;
+        padding: 0;
     }
 
     .project-col {
