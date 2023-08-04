@@ -1,0 +1,246 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: darkcyan;
+}
+
+nav {
+    background-color: #231123;
+    color: #fff;
+    padding: 1rem;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+}
+
+header {
+    display: flex;
+    background: url(images/python1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-color: #333;
+    filter: brightness(80%);
+    color: #fff;
+    padding: 3rem;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 50px;
+    height: 590px;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 1rem;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+img {
+    background-color: #e8db7d;
+    width: 100%;
+    height: aut0;
+    border-radius: 10px;
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 1);
+}
+
+div > p {
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    text-align: left;
+    line-height: 1.5;
+    width: 100%;
+    height: auto;
+}
+
+h1 {
+    font-size: 7rem;
+    color: #fff;
+    margin: 2rem;
+    margin-top: 4rem;
+    padding: 1rem;
+    width: fit-content;
+    text-align: left;
+    height: auto;
+    text-shadow: -19px -10px 15px black;
+    color: linen
+}
+
+.project-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 1rem;
+    width: 100%;
+    height: auto;
+}
+
+.project-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 1rem;
+    width: 100%;
+    height: auto;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 1rem;
+    height: auto;
+    background-color: cadetblue;
+    border-radius: 15px;
+    width: 100%;
+}
+
+.card a {
+    width: 80%;
+}
+
+.card-container {
+    display: flex;
+    background-color: #EFF7FF;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 1rem;
+    padding: 1rem;
+    width: 800px;
+    height: auto;
+    border-radius: 20px;
+    opacity: 0.7;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 1);
+}
+
+
+footer {
+    background-color: #231123;
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    color: linen;
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    text-align: end;
+}
+
+@media only screen and (min-width: 380px) and (max-width: 836px) {
+
+    html, body {
+        font-size: 16px;
+        width: 100%;
+    }
+
+    main {
+        margin: 1.5rem;
+        padding: 1rem;
+    }
+
+    header {
+        background: url(images/sunset-ocean.jpg);
+        background-size: cover;
+        background-position: center;
+        background-color: #333;
+        filter: brightness(80%);
+        height: 100vh;
+        color: #fff;
+        padding: 1rem;
+        text-align: center;
+        border-radius: 50px;
+    }
+
+    h1 {
+        font-size: 5rem;
+        color: #fff;
+        margin: 2rem;
+        margin-top: 5rem;
+        padding: 1rem;
+        width: fit-content;
+        text-align: left;
+        height: auto;
+        text-shadow: -19px -10px 15px black;
+    }
+
+    img {
+        background-color: #e8db7d;
+        width: 300px;
+        height: auto;
+        margin: 1rem;
+        padding: 0.1rem;
+        border-radius: 10px;
+        box-shadow: 0 0 15px 5px rgba(0, 0, 0, 1);
+    }
+
+    .card-container {
+        display: flex;
+        background-color: #EFF7FF;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        margin: 1rem;
+        padding: 1rem;
+        width: 100%;
+        height: auto;
+        border-radius: 20px;
+        opacity: 0.7;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 1);
+    }
+    
+    .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 1rem;
+        padding: 1rem;
+        width: 100%;
+        height: auto;
+    }
+
+    .project-col {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 1rem;
+        width: 100%;
+        height: auto;
+    }
+}
