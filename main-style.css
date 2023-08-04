@@ -1,11 +1,12 @@
 /* Global Styles */
 * {
     box-sizing: border-box;
-    line-height: 1.2;
-    letter-spacing: 1.4px;
+    line-height: 1.3;
+    letter-spacing: 1.3px;
     font-family: 'Georgia', 'Roboto', sans-serif;
     font-size: 20px;
     font-weight: 400;
+    cursor: default;
 }
 
 body {
@@ -24,19 +25,18 @@ header {
     margin: 0;
     padding: 0;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
     height: auto;
 }
 
 div#goal {
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
-    margin-top: 90px;
-    margin-bottom: 50px;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin: 25px;
+    margin-top: 0px;
     padding: 25px;
-    padding-top: 10px;
+    padding-top: 0px;
     display: flex;
     flex-direction: column;
     justify-items: center;
@@ -53,12 +53,14 @@ div#goal p {
 header h1 {
     color: mediumseagreen;
     font-family: 'Georgia', monospace;
-    font-size: 4.9rem;
+    font-size: 5rem;
+    text-align: center;
     width: auto;
     margin: 50px;
-    padding-top: 35px;
-    line-height: 1.2;
-    letter-spacing: -1.5px;
+    margin-bottom: 0px;
+    padding: 35px;
+    padding-bottom: 0px;
+    line-height: 1.5;
     height: auto;
 }
 
@@ -139,13 +141,13 @@ nav ul li a:hover {
 }
 
 nav ul li a:active {
-    color: #cb5202;
-    text-decoration: underline;
+    color: #DB504A;
+    text-decoration: none;
 }
 
 nav ul li a:focus {
     color: #cb5202;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 /* Main */
@@ -160,12 +162,13 @@ main {
 }
 
 h2 {
-    color: sienna;
-    font-size: 65px;
+    color: #DB504A;
+    font-size: 60px;
     font-family: 'Georgia', sans-serif;
     margin-top: 0px;
     margin-bottom: 1px;
-    padding: 5px;
+    padding: 20px;
+    padding-top: 0px;
     text-align: center;
     border-bottom: 4px solid white;
     text-transform: uppercase;
@@ -179,7 +182,7 @@ h3 {
     padding: 5px;
     text-align: center;
     border-bottom: 2px solid white;
-    text-transform: uppercase;
+    text-transform: capitalize;
 }
 
 
@@ -204,8 +207,7 @@ h3 {
     font-size: 16px;
     width: 50%;
     margin: 0 25px;
-    margin-top: 200px;
-    padding: 0 25px;
+    padding: 25px;
     text-align: center;
 }
 
@@ -219,7 +221,7 @@ h3 {
     width: 100%;
     margin: 50px auto;
     padding: 25px;
-    text-align: center;
+    text-align: left;
     border-radius: 25px;
 }
 
@@ -248,8 +250,8 @@ h3 {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     height: auto;
-    margin: 100px auto;
-    padding: 25px;
+    margin: 50px auto;
+    padding: 20px;
     text-align: center;
     border-radius: 25px;
 }
@@ -287,9 +289,11 @@ h3 {
 }
 
 .projects a:hover {
-    background-color: limegreen;
+    background-color: seagreen;
     color: #212121;
-    transition: color .5s ease-in, background-color .5s ease-in;
+    transition: color .2s ease-in, background-color .3s ease-in;
+    translate: 5px 5px;
+    box-shadow: -6px -6px #212121;
 }
 
 .education {
@@ -355,7 +359,7 @@ h3 {
     height: 100%;
 }
 
-.contact li  h3 {
+.contact li h3 {
     color: blue;
 }
 
@@ -365,7 +369,9 @@ footer {
     color: #ffffff;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
+    margin: 0 auto;
     padding: 10px;
+    padding-bottom: 0px;
     overflow: auto;
     width: auto;
 }
@@ -375,26 +381,43 @@ footer {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: repeat(1, 1fr);
     list-style-type: none;
-    justify-items: center;
-    margin: 5px auto;
-    justify-content: start;
+    margin: 0 auto;
+    padding: 0;
     width: fit-content;
+    gap: 10px;
 } 
 
 .logo-list a{
+    font-size: 25px;
     text-decoration: none;
     color:#ffffff;
-    margin: 0 20px;
+    margin: 0 auto;
+    padding: 5px;
+    width: auto;
+    cursor: pointer;
 }
 
 .logo-list a:hover {
-    color: limegreen;
-    transition: color .5s ease-in;
+    color: black;
+    transition: color .2s ease-in;
+    background-color: limegreen;
+    border-radius: 5px;
 }
 
+.logo-list a:active {
+    color: #DB504A;
+    text-decoration: none;
+}
+
+.logo-list a:focus {
+    color: #cb5202;
+    text-decoration: none;
+}
+
+
 footer p {
-    text-align: center;
-    padding: 15px;
+    text-align: end;
+    padding: 0;
     margin: 0 auto;
     font-size: 15px;
 }
@@ -403,7 +426,7 @@ footer p {
 @media only screen and (min-width: 1025px) {
     div#goal {
         display: flex;
-        width: 100%;
+        width: 61%;
         height: fit-content;
     }
 }
