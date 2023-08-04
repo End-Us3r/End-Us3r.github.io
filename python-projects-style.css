@@ -1,25 +1,28 @@
 * {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
 }
 
 html {
     font-size: 18px;
     font-family: 'Roboto', sans-serif;
-    color: #333;
 }
 
 body {
     margin: 0;
     padding: 0;
-    background-color: darkcyan;
+    background-color: #49A078;
+}
+
+main {
+    margin: 1.5rem;
+    padding: 1rem;
 }
 
 nav {
-    background-color: #231123;
+    background-color: #4D685A;
     color: #fff;
-    padding: 1rem;
+    margin: 0 auto;
+    padding: 0;
     position: fixed;
     z-index: 1;
     width: 100%;
@@ -37,7 +40,7 @@ header {
     margin: 0 auto;
     text-align: center;
     border-radius: 50px;
-    height: 590px;
+    height: fit-content;
 }
 
 nav ul {
@@ -76,8 +79,8 @@ div > p {
 }
 
 h1 {
-    font-size: 7rem;
-    color: #fff;
+    font-size: 6rem;
+    color: #4D685A;
     margin: 2rem;
     margin-top: 4rem;
     padding: 1rem;
@@ -85,7 +88,11 @@ h1 {
     text-align: left;
     height: auto;
     text-shadow: -19px -10px 15px black;
-    color: linen
+    
+    text-orientation: upright;
+    text-transform: uppercase;
+    letter-spacing: -10px;
+    writing-mode: vertical-lr;
 }
 
 .project-col {
@@ -118,7 +125,7 @@ h1 {
     margin: 0 auto;
     padding: 1rem;
     height: auto;
-    background-color: cadetblue;
+    background-color: #546D64;
     border-radius: 15px;
     width: 100%;
 }
@@ -129,7 +136,7 @@ h1 {
 
 .card-container {
     display: flex;
-    background-color: #EFF7FF;
+    background-color: linen;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
@@ -144,7 +151,7 @@ h1 {
 
 
 footer {
-    background-color: #231123;
+    background-color: #4D685A;
     padding: 1rem;
     text-align: center;
     position: relative;
@@ -167,13 +174,19 @@ footer p {
         width: 100%;
     }
 
+    body {
+        margin: 0 auto;
+        padding: 0;
+        background-color: #49A078;
+    }
+
     main {
         margin: 1.5rem;
         padding: 1rem;
     }
 
     header {
-        background: url(images/sunset-ocean.jpg);
+        background: url(images/python1.jpg);
         background-size: cover;
         background-position: center;
         background-color: #333;
@@ -187,7 +200,7 @@ footer p {
 
     h1 {
         font-size: 5rem;
-        color: #fff;
+        color: #4D685Aff;
         margin: 2rem;
         margin-top: 5rem;
         padding: 1rem;
@@ -209,7 +222,7 @@ footer p {
 
     .card-container {
         display: flex;
-        background-color: #EFF7FF;
+        background-color: linen;
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
