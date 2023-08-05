@@ -179,11 +179,6 @@ footer p {
         background-color: #49A078;
     }
 
-    main {
-        margin: 1.5rem;
-        padding: 1rem;
-    }
-
     header {
         background: url(images/python1.jpg);
         background-size: cover;
@@ -200,7 +195,7 @@ footer p {
     h1 {
         font-size: 5rem;
         color: #4D685Aff;
-        margin: 2rem;
+        margin: 0 auto;
         margin-top: 5rem;
         padding: 1rem;
         width: fit-content;
@@ -210,13 +205,12 @@ footer p {
     }
 
     img {
-        background-color: #e8db7d;
-        width: 300px;
+        width: 100%;
         height: auto;
-        margin: 1rem;
-        padding: 0.1rem;
+        margin: 0 auto;
+        padding: 0;
         border-radius: 10px;
-        box-shadow: 0 0 15px 5px rgba(0, 0, 0, 1);
+        box-shadow: 0 0 15px 4px rgba(0, 0, 0, 1);
     }
 
     .card-container {
@@ -231,7 +225,7 @@ footer p {
         height: auto;
         border-radius: 20px;
         opacity: 0.7;
-        box-shadow: 0 0 15px rgba(0, 0, 0, 1);
+        box-shadow: 0 0 15px 4px rgba(0, 0, 0, 1);
     }
     
     .card {
@@ -243,6 +237,12 @@ footer p {
         padding: 1rem;
         width: 100%;
         height: auto;
+    }
+
+    .card a {
+        width: auto;
+        margin: 1rem auto;
+        padding: 0;
     }
 
     .project-col {

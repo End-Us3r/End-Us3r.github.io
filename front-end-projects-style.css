@@ -208,7 +208,7 @@ footer p {
 
     .card-container {
         display: flex;
-        background-color: #EFF7FF;
+        background-color: linen;
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
