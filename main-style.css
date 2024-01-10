@@ -2,7 +2,7 @@
 * {
     box-sizing: border-box;
     line-height: 1.3;
-    letter-spacing: 1.3px;
+    letter-spacing: 1.5px;
     font-family: 'Georgia', 'Roboto', sans-serif;
     font-size: 18px;
     font-weight: 400;
@@ -57,11 +57,9 @@ header h1 {
     font-size: 5rem;
     text-align: center;
     width: auto;
-    margin: 50px;
-    margin-bottom: 0px;
     padding: 35px;
-    padding-bottom: 0px;
-    line-height: 1.5;
+    margin-bottom: 0;
+    line-height: 1.3;
     height: auto;
 }
 
@@ -142,13 +140,13 @@ nav ul li a:hover {
 }
 
 nav ul li a:active {
-    color: #DB504A;
+    color: rgb(27, 110, 255);
     text-decoration: none;
 }
 
 nav ul li a:focus {
-    color: #cb5202;
-    text-decoration: none;
+    color: rgb(27, 110, 255);
+    text-decoration: underline;
 }
 
 /* Main */
@@ -293,8 +291,8 @@ h3 {
     background-color: seagreen;
     color: #212121;
     transition: color .2s ease-in, background-color .3s ease-in;
-    translate: 5px 5px;
-    box-shadow: -6px -6px #212121;
+    translate: 0px 5px;
+    box-shadow: 0px -6px #212121;
 }
 
 .education {
@@ -325,6 +323,7 @@ h3 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(3, 1fr);
+    list-style-type: none;
     justify-items: center;
     gap: 10px;
     padding: 5px;
@@ -364,26 +363,21 @@ h3 {
 
 /* Footer */
 footer {
+    display: flex;
+    flex-direction: column;
     background-color: #1a1a1a;
     color: #ffffff;
     font-family: 'Roboto', sans-serif;
     font-size: 1.2rem;
     margin: 0 auto;
     padding: 10px;
-    padding-bottom: 0px;
     overflow: auto;
-    width: auto;
 }
 
 .logo-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: repeat(1, 1fr);
     list-style-type: none;
     margin: 0 auto;
     padding: 0;
-    width: fit-content;
-    gap: 10px;
 } 
 
 .logo-list a{
@@ -404,13 +398,13 @@ footer {
 }
 
 .logo-list a:active {
-    color: #DB504A;
+    color: rgb(27, 110, 255);
     text-decoration: none;
 }
 
 .logo-list a:focus {
-    color: #cb5202;
-    text-decoration: none;
+    color: rgb(27, 110, 255);
+    text-decoration: underline;
 }
 
 
@@ -418,14 +412,13 @@ footer p {
     text-align: end;
     padding: 0;
     margin: 0 auto;
-    font-size: 15px;
 }
 
 /* Media Queries */
 @media only screen and (min-width: 1025px) {
     div#goal {
         display: flex;
-        width: 61%;
+        width: 70%;
         height: fit-content;
     }
 }
