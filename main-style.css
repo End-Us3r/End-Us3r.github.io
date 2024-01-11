@@ -95,14 +95,6 @@ nav {
     position: fixed;
 }   
 
-#nav-bar-main {
-    display: flex;
-}
-
-#nav-bar-mobile {
-    display: none;
-}
-
 nav ul {
     list-style-type: none;
     margin: 0;
@@ -129,14 +121,28 @@ nav ul li a {
     margin: 5px;
     padding: 10px;
     text-decoration: none;
-}  
+    cursor: pointer;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    background-color: #ffffff;
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+}
 
 nav ul li a:hover {
     color: black;
     text-decoration: none;
     background-color: limegreen;
     border-radius: 5px;
-
+    cursor: pointer;
 }
 
 nav ul li a:active {
@@ -494,8 +500,34 @@ footer p {
         width: 100%;
     }
 
-    nav ul {
+    .nav-list {
         display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        z-index: 1;
+        position: absolute;
+        left: 0;
+    }
+
+    .nav-list.show {
+        display: flex;
+
+    }
+
+    nav li {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        padding: 15px;
+    }
+
+    .menu-toggle {
+        display: flow;
+        flex-direction: column;
+        cursor: pointer;
+        padding: 10px;
+        text-align: -webkit-right;
     }
 
     h2 {
