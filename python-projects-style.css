@@ -169,12 +169,11 @@ footer p {
     body {
         margin: 0 auto;
         padding: 0;
-        background-color: #49A078;
+        background-color: black;
     }
 
     header {
         filter: brightness(80%);
-        height: 100vh;
         color: #fff;
         padding: 1rem;
         text-align: center;
@@ -183,14 +182,17 @@ footer p {
 
     h1 {
         font-size: 5rem;
-        color: #4D685Aff;
+        color: limegreen;
         margin: 0 auto;
-        margin-top: 5rem;
+        margin-top: 3rem;
         padding: 1rem;
         width: fit-content;
         text-align: left;
         height: auto;
-        text-shadow: -19px -10px 15px black;
+        text-shadow: -2px -1px 10px limegreen;
+        border-block: 3px solid limegreen;
+
+    
     }
 
     img {

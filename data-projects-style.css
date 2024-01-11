@@ -13,7 +13,7 @@ html {
 body {
     margin: 0;
     padding: 0;
-    background-color: darkslategray;
+    background-color: brown;
 }
 
 nav {
@@ -86,7 +86,7 @@ h1 {
     text-align: left;
     height: auto;
     text-shadow: -5px -3px 10px black;
-    color: darkgray;
+    color: #fff;
     border-bottom: 4px solid black;
 }
 
@@ -120,7 +120,7 @@ h1 {
     margin: 0 auto;
     padding: 1rem;
     height: auto;
-    background-color: lightslategray;
+    background-color: indianred;
     border-radius: 15px;
     width: 80%;
 }
@@ -172,7 +172,6 @@ footer p {
 
     header {
         filter: brightness(80%);
-        height: 100vh;
         color: #fff;
         padding: 0;
         margin: 0 auto;
@@ -184,12 +183,11 @@ footer p {
         font-size: 5rem;
         color: #fff;
         margin: 0 auto;
-        margin-top: 10rem;
-        padding: 1rem 0;
+        margin-top: 6rem;
         width: fit-content;
         text-align: left;
         height: auto;
-        text-shadow: -19px -10px 15px black;
+        text-shadow: -3px -1px 5px black;
     }
 
     img {
