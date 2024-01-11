@@ -2,6 +2,7 @@
 <html lang="en-US">
 <!--Head-->
     <head>
+        
         <title>James Atkins | Homepage</title>
         <link rel="stylesheet" href="main-style.css">
         <!-- REMEMBER TO UPLOAD FILES TO DIR -->
@@ -20,14 +21,14 @@
     <body>
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
+                <li><a href="#hero-banner">Home</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
         <header>
             <div>
-                <h1>Hello,<br>I'm James.<br>Software Engineer</h1>
+                <h1 id="hero-banner">Hello,<br>I'm James.<br>Software Engineer</h1>
             </div>
             <div id="goal">
                 <p>
@@ -60,7 +61,7 @@
             </section>
             <!-- Right Panel -->
             <section class="right-panel">
-                <div class="projects">
+                <div class="projects" id="projects">
                     <h2>Projects</h2>
                     <ul>
                         <li><a href="projects-folder/front-end-projects.html" target="_self" alt="Front-end Projects" title="Front-end Projects">Front-end Projects</a></li>
@@ -105,5 +106,6 @@
             </ul>
             <p>©2024 James Atkins</p>
         </footer>
+        <script src="navigation.js" defer></script>
     </body>
 </html>
