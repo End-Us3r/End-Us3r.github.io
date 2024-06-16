@@ -1,11 +1,12 @@
 * {
-    box-sizing: border-box;    
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0;
 }
 
 html {
-    font-size: 18px;
+    font-size: 18px !important;
     font-family: 'Roboto', sans-serif;
-    color: #333;
 }
 
 body {
@@ -14,48 +15,77 @@ body {
     background-color: deepskyblue;;
 }
 
-
 header {
     display: flex;
     filter: brightness(80%);
     color: #fff;
-    padding: 0.5rem;
+    padding: 1rem;
     margin: 0 auto;
     margin-top: 50px;
     height: auto;
     position: relative;
 }
 
-header div {
-    padding: 0;
-    margin: 0;
-}
-
 nav {
     background-color: black;
     color: #fff;
+    margin: 0 auto;
+    padding: 1rem;
     position: fixed;
     z-index: 1;
     width: 100%;
     top: 0;
 }
 
-nav ul {
-    list-style: none;
-    text-align: center;
-    padding: 0;
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-nav li {
-    display: inline-block;
-    margin: 0 1rem;
+.nav-link {
+    margin-right: 50%;
 }
 
-nav a {
-    color: #fff;
+.nav-link, .dropbtn {
+    background-color: skyblue;
+    color: skyblue;
     text-decoration: none;
     font-size: 1.2rem;
     cursor: pointer;
+    border: none;
+    background: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: skyblue;
+    min-width: 200px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    background-color: skyblue;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: black;
+    color: skyblue;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
 img {
@@ -68,9 +98,9 @@ img {
 }
 
 div > p {
+    font-size: 1.2rem;
     margin: 0;
     padding: 0;
-    font-size: 1.2rem;
     text-align: left;
     line-height: 1.5;
     width: 100%;
@@ -169,13 +199,18 @@ footer p {
         width: 100%;
     }
 
+    body {
+        margin: 0 auto;
+        padding: 0;
+        background-color: deepskyblue;
+    }
+
     header {
         filter: brightness(80%);
         color: #fff;
-        margin: 0 auto;
+        padding: 1rem;
         text-align: center;
         border-radius: 50px;
-        width: fit-content;
     }
 
     h1 {
