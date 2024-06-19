@@ -55,18 +55,20 @@ nav {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: brown;
+    background-color: indianred;
     min-width: 200px;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     z-index: 1;
+    border-radius: 10px;
 }
 
 .dropdown-content a {
-    background-color: brown;
+    background-color: indianred;
     color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+    border-radius: 8px;
 }
 
 .dropdown-content a:hover {
@@ -88,6 +90,7 @@ header {
     margin-top: 50px;
     height: auto;
     position: relative;
+    justify-content: center;
 }
 
 header div {

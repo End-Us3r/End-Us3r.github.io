@@ -38,8 +38,8 @@ nav {
 }
 
 .nav-link, .dropbtn {
-    background-color: limegreen;
-    color: limegreen;
+    background-color: yellow;
+    color: white;
     text-decoration: none;
     font-size: 1.2rem;
     cursor: pointer;
@@ -55,23 +55,25 @@ nav {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: limegreen;
+    background-color: yellow;
     min-width: 200px;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     z-index: 1;
+    border-radius: 10px;
 }
 
 .dropdown-content a {
-    background-color: limegreen;
+    background-color: yellow;
     color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+    border-radius: 8px;
 }
 
 .dropdown-content a:hover {
     background-color: black;
-    color: limegreen;
+    color: yellow;
 }
 
 .dropdown:hover .dropdown-content {
@@ -88,6 +90,7 @@ header {
     margin-top: 50px;
     height: auto;
     position: relative;
+    justify-content: center;
 }
 
 header div {
