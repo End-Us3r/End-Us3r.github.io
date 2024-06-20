@@ -71,6 +71,9 @@ nav {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     z-index: 1;
     border-radius: 10px;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .dropdown-content a {
@@ -150,7 +153,7 @@ h1 {
     flex-direction: column;
     text-align: center;
     align-items: center;
-    margin: 0 auto;
+    margin: 1rem auto;
     padding: 0 1rem;
     height: 90%;
     background-color: darkslategray;
@@ -170,7 +173,7 @@ h1 {
     align-items: flex-start;
     margin: 1rem;
     padding: 1rem;
-    width: 70%;
+    width: 100%;
     height: auto;
     border-radius: 20px;
     opacity: 0.7;
@@ -238,6 +241,21 @@ footer p {
         padding: 0;
         border-radius: 10px;
         box-shadow: 0 0 15px 4px rgba(0, 0, 0, 1);
+    }
+
+    .dropdown-content {
+        left: 0;
+        transform: translateX(-100);
+        width: 100%;
+        opacity: 0.9;
+    }
+
+    .dropdown-content a {
+        text-align: center;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
     }
 
     .card-container {

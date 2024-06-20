@@ -39,74 +39,28 @@ header {
 }
 
 #hero-banner .line1 {
-    animation: fadeInText1 2s ease forwards;
+    animation: fadeInText 2s ease forwards;
     
 }
 
 #hero-banner .line2 {
-    animation: fadeInText2 2s ease forwards;
+    animation: fadeInText 2s ease forwards;
     animation-delay: 1s;
 }
 
 #hero-banner .line3 {
-    animation: fadeInText3 2s ease forwards;
+    animation: fadeInText 2s ease forwards;
     animation-delay: 2s;
 }
 
-/* #hero-banner .line1,
-#hero-banner .line2,
-#hero-banner .line3 {
-    font-size: inherit;
-} */
-
-
-@keyframes fadeInText1 {
+@keyframes fadeInText {
     from {
         opacity: 0;
     }
     to {
-        opacity: 1;
+        opacity: 0.9;
     }
 }
-
-@keyframes fadeInText2 {
-    from {
-        opacity: 0;
-    } 
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes fadeInText3 {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-div#goal {
-    font-family: 'Roboto', sans-serif;
-    margin: 25px;
-    margin-top: 0px;
-    padding: 25px;
-    padding-top: 0px;
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    width: 61%;
-}
-
-div#goal p {
-    font-size: 1.2rem;
-    padding: 20px;
-    margin-top: 0px;
-    border-bottom: 2px dashed;
-    border-top: 2px dashed;
-}
-
 
 header {
     background-color: #333;
@@ -140,17 +94,6 @@ header div {
     margin: 10px;
 }
 
-/* Navigation */
-
-nav {
-    background-color: #1a1a1a;
-    color: #ffffff;
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    width: 100%;
-    position: fixed;
-}   
-
 li {
     list-style-type: none;
     margin: 0;
@@ -161,7 +104,6 @@ nav {
     display: none;
 }
 
-/* Main */
 main {
     background-color: darkslategray;
     color: #ffffff;
@@ -195,8 +137,6 @@ h3 {
     text-transform: capitalize;
 }
 
-
-/* New Section */
 .left-panel {
     
     color: #ffffff;
@@ -210,7 +150,6 @@ h3 {
     
 }
 
-/* New Section */
 .right-panel {
     color: #ffffff;
     font-family: 'Roboto', sans-serif;
@@ -220,7 +159,6 @@ h3 {
     padding: 25px;
     text-align: center;
 }
-
 
 .about {
     background-color: #333333;
@@ -304,8 +242,6 @@ h3 {
     color: #212121;
     transition: color .2s ease-in, background-color .3s ease-out;
     transform: scale(1.1);
-    /* translate: 0px 5px; */
-    /* box-shadow: 0px -6px #212121; */
 }
 
 .education {
@@ -385,7 +321,6 @@ h3 {
     color: blue;
 }
 
-/* Footer */
 footer {
     display: flex;
     flex-direction: column;
@@ -410,41 +345,6 @@ footer {
     justify-content: space-evenly;
 }
 
-.footer-right {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 0;
-    padding: 10px;
-
-}
-
-.footer-right h3 {
-    font-size: 1.5rem;
-    width: 100%;
-    margin-top: 10px;
-    margin-bottom: 5px;
-}
-
-.footer-right-sections {
-    display: flex;
-    flex-direction: column;
-}
-
-.footer-right-sections ul {
-    list-style-type: none;
-    margin: 0 20px;
-    padding: 0;
-}
-
-.footer-right-sections a {
-    color: #ffffff;
-    font-size: 1rem;
-    text-decoration: none;
-    margin: 2px;
-    padding: 2px;
-}
-
 .social-media-bar {
     margin: 20px;
 }
@@ -458,8 +358,6 @@ footer {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    /* display: flex;
-    justify-content: center; */
 } 
 
 .logo-list li {
@@ -485,19 +383,6 @@ footer {
     html, body {
         width: 100%;
     }
-
-    div#goal {
-        text-align: center;
-        flex-wrap: wrap;
-        margin: 0 5px;
-        border: none;
-        width: 100%;
-    }
-
-    div#goal > p {
-        font-size: 1rem;
-    }
-
 
     header, main, footer {
         flex-wrap: wrap;
@@ -556,14 +441,6 @@ footer {
         text-align: center;
         margin: 0;
         padding: 15px;
-    }
-
-    .menu-toggle {
-        display: flow;
-        flex-direction: column;
-        cursor: pointer;
-        padding: 10px;
-        text-align: -webkit-right;
     }
 
     .projects a {
