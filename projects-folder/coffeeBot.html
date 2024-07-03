@@ -15,19 +15,12 @@
             height: 100%;
             margin: 0;
             padding: 0;
-            font-size: larger;
-        }
-
-        body {
-            display: flex;
-            flex-direction: column;
+            font-size: 18px;
         }
 
         main {
-            flex: 1;
             background-color: lightgray;
             overflow-y: auto;
-            padding-bottom: 2em;
         }
 
         header {
@@ -35,6 +28,8 @@
             color: white;
             text-align: center;
             padding: 1em;
+            display: flex;
+            justify-content: center;
         }
 
         section {
@@ -52,9 +47,17 @@
             background-color: chocolate;
             color: white;
             text-align: center;
-            position: fixed;
-            bottom: 0;
+            position: static;
             width: 100%;
+            padding: 2px;
+            margin: 0 auto;
+        }
+
+        video {
+            width: 800px;
+            max-width: 100%;
+            margin: 1em;
+            height: auto;
         }
 
     </style>
@@ -71,9 +74,8 @@
         </section>
 
         <section>
-            <h2>Images</h2>
-            <img src="image1.jpg" alt="Image 1">
-            <img src="image2.jpg" alt="Image 2">
+            <h2>Demo</h2>
+            <video src="video.mp4" controls></video>
         </section>
 
         <section>
