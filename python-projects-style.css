@@ -27,8 +27,20 @@ header {
     height: 100vh;
 }
 
+.hero-banner > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 1rem;
+    width: 100%;
+    height: auto;
+
+}
+
 nav {
-    background-color: transparent;
+    background-color: #000;
     color: #fff;
     margin: 0 auto;
     padding: 1rem;
@@ -117,7 +129,6 @@ h1 {
     font-size: 6rem;
     color: hsl(118, 100%, 50%);
     margin: 2rem;
-    margin-top: 4rem;
     padding: 2rem 5rem;
     width: fit-content;
     text-align: center;

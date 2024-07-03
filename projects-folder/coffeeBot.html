@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CoffeeBot</title>
+    <style>
+        /* Add your custom CSS styles here */
+        * {
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            letter-spacing: 0.5px;
+        }
+
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-size: larger;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1;
+            background-color: lightgray;
+            overflow-y: auto;
+            padding-bottom: 2em;
+        }
+
+        header {
+            background-color: chocolate;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+
+        section {
+            margin: 1em;
+            padding: 1em;
+        }
+
+        section > p {
+            text-align: center;
+            max-width: 75%;
+            margin: 0 auto;
+            padding: auto;
+        }
+        footer {
+            background-color: chocolate;
+            color: white;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to my CoffeeBot Program</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Description</h2>
+            <p>This Python script implements a simple coffee ordering chatbot. It interacts with the user to determine their desired drink size, coffee type, and the type of milk for a latte. It then collects the user's name and confirms their order. The chatbot includes error handling to prompt the user to enter valid inputs when necessary.</p>
+        </section>
+
+        <section>
+            <h2>Images</h2>
+            <img src="image1.jpg" alt="Image 1">
+            <img src="image2.jpg" alt="Image 2">
+        </section>
+
+        <section>
+            <h2>Code</h2>
+            <p>You can find the code for this program on <a href="https://github.com/End-Us3r/Coffee-bot/blob/main/coffee-bot.py">GitHub</a>.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 James Atkins</p>
+    </footer>
+</body>
+</html>
