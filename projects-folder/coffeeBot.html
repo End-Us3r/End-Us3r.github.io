@@ -27,9 +27,11 @@
             background-color: chocolate;
             color: white;
             text-align: center;
-            padding: 1em;
             display: flex;
+            flex-direction: column;
             justify-content: center;
+            padding: auto;
+            margin: 0 auto;
         }
 
         section {
@@ -54,36 +56,36 @@
         }
 
         video {
-            width: 800px;
-            max-width: 100%;
-            margin: 1em;
+            display: block;
+            width: 100%;
+            max-width: 800px;
             height: auto;
+            margin: 0 auto;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            outline: none;
         }
 
     </style>
 </head>
 <body>
     <header>
-        <h1>Welcome to my CoffeeBot Program</h1>
+        <h1>Say hello to CoffeeBot!</h1>
     </header>
-
     <main>
         <section>
             <h2>Description</h2>
             <p>This Python script implements a simple coffee ordering chatbot. It interacts with the user to determine their desired drink size, coffee type, and the type of milk for a latte. It then collects the user's name and confirms their order. The chatbot includes error handling to prompt the user to enter valid inputs when necessary.</p>
         </section>
-
         <section>
             <h2>Demo</h2>
             <video src="video.mp4" controls></video>
         </section>
-
         <section>
             <h2>Code</h2>
             <p>You can find the code for this program on <a href="https://github.com/End-Us3r/Coffee-bot/blob/main/coffee-bot.py">GitHub</a>.</p>
         </section>
     </main>
-
     <footer>
         <p>© 2024 James Atkins</p>
     </footer>

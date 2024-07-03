@@ -18,17 +18,19 @@
         }
 
         main {
-            background-color: lightgray;
+            background-color: lightgrey;
             overflow-y: auto;
         }
 
         header {
-            background-color: darkgoldenrod;
-            color: white;
+            background-color: darkred;
+            color: linen;
             text-align: center;
-            padding: 1em;
             display: flex;
+            flex-direction: column;
             justify-content: center;
+            padding: auto;
+            margin: 0 auto;
         }
 
         section {
@@ -44,15 +46,19 @@
         }
 
         video {
-            max-width: 100%;
+            display: block;
+            width: 100%;
+            max-width: 800px;
             height: auto;
-            margin: 1em;
-            width: 800px;
+            margin: 0 auto;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            outline: none;
         }
 
         footer {
-            background-color: darkgoldenrod;
-            color: white;
+            background-color: darkred;
+            color: linen;
             text-align: center;
             position: static;
             width: 100%;
@@ -64,28 +70,25 @@
 </head>
 <body>
     <header>
-        <h1>Welcome to my first coded game, The Nightmare!</h1>
+        <h1>Let's play a game, The Nightmare!</h1>
+        <p>Warning: Graphic</p>
     </header>
-
     <main>
         <section>
             <h2>Description</h2>
             <p>This program is a text-based adventure game implemented in C++. It allows users to navigate through different locations and make choices that influence the game's outcome. The game starts with a welcome message and prompts for user interaction. It features locations ('field', 'home', 'forest', 'mountain', 'cave') and events ('bearAttack'). The program includes a boolean variable to track item acquisition status and utilizes the 'Sleep()' function from 'windows.h' for immersive pauses. User input is managed through keyboard commands with error handling to ensure valid commands, providing an engaging and interactive experience.</p>
         </section>
-
         <section>
             <h2>Demo</h2>
             <video controls>
-                <source src="nightmare-game-demo.mp4" type="video/mp4">
+                <source src="#" type="video/mp4">
                 Your browser does not support the video tag.
         </section>
-
         <section>
             <h2>Code</h2>
             <p>You can find the code for this program on <a href="https://github.com/End-Us3r/nightmare-game/blob/main/adventure-game.cpp">GitHub</a>.</p>
         </section>
     </main>
-
     <footer>
         <p>© 2024 James Atkins</p>
     </footer>
