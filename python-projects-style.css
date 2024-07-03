@@ -34,6 +34,7 @@ header {
     align-items: center;
     margin: 0 auto;
     padding: 1rem;
+    padding-top: 0;
     width: 100%;
     height: auto;
 
@@ -129,6 +130,7 @@ h1 {
     font-size: 6rem;
     color: hsl(118, 100%, 50%);
     margin: 2rem;
+    margin-top: 0;
     padding: 2rem 5rem;
     width: fit-content;
     text-align: center;
@@ -233,8 +235,6 @@ footer p {
     h1 {
         font-size: 2rem;
         color: limegreen;
-        margin: 0 auto;
-        margin-top: 3rem;
         padding: 1rem;
         width: fit-content;
         text-align: left;
