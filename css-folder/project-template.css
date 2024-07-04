@@ -16,6 +16,7 @@ html, body {
 main {
     background-color: lightgray;
     overflow-y: auto;
+    height: 100%;
 }
 
 header {
@@ -25,7 +26,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: auto;
+    padding: 0;
     margin: 0 auto;
 }
 
@@ -82,5 +83,10 @@ video {
         display: flex;
         flex-direction: column;
         flex: 1;
+    }
+
+    section {
+        margin: 2em;
+        padding: 2em;
     }
 }
