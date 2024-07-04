@@ -65,15 +65,26 @@ video {
 /* Media Query */
 @media only screen and (min-width: 320px) and (max-width: 480px) {
     h1 {
-        font-size: 1.5em;
+        font-size: 3rem;
         margin: 1em auto;
         padding: 0;
     }
     h2 {
-        font-size: 1.2em;
+        font-size: 2rem;
     }
     p {
-        font-size: 1em;
+        font-size: 1.5rem;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 autp;
+        padding: 2em;
+        width: 100%;
+        height: auto;
     }
 
     html, body {
