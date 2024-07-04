@@ -81,8 +81,8 @@ video {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin: 0 autp;
-        padding: 2em;
+        margin: 0 auto;
+        padding: 2rem 0;
         width: 100%;
         height: auto;
     }
@@ -94,6 +94,7 @@ video {
 
     main {
         height: auto;
+        font-size: 1.5rem;
     }
 
     section {
