@@ -155,6 +155,8 @@ button:hover {
 }
 
 a {
+    display: flex;
+    justify-content: center;
     color: white;
     text-decoration: none;
     background-color: transparent;
