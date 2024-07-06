@@ -114,6 +114,7 @@ section {
 section p, ul {
     font-size: 1rem;
     list-style-type: none;
+    line-height: 1.5rem;
 }
 
 li h3, li p, li em {
@@ -172,7 +173,7 @@ header, main {
 
 section li {
     align-content: center;
-    margin: 5px;
+    margin: 10px;
     padding: 5px;
     border-radius: 15px;
     background-color: #1a1a1a;
@@ -265,3 +266,64 @@ footer * {
     margin: 0;
 }
 /* End of Reused CSS */
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+
+    header div {
+        width: 100%;
+    }
+
+    main {
+        font-size: 1rem;
+    }
+
+    section {
+        font-size: 1rem;
+    }
+
+    section p {
+        font-size: 1.2rem;
+        line-height: 2rem;
+    }
+
+    h2 {
+        margin: 0 auto;
+        padding: 1rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    button {
+        font-size: 1rem;
+    }
+
+    a {
+        font-size: 1rem;
+    }
+
+    header > div > h1 {
+        font-size: 4rem;
+    }
+
+    footer ul.logo-list {
+        font-size: 1rem;
+    }
+
+    button {
+        width: 50%;
+    }
+
+    button a {
+        font-size: 1.2rem;
+    }
+
+    .social-media-bar h3 {
+        font-size: 2rem;
+    }
+
+    .logo-list img {
+        width: 150px;
+    }   
+}
