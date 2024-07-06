@@ -12,7 +12,7 @@ html {
 body {
     margin: 0;
     padding: 0;
-    background: linear-gradient(155deg, #1a237e 20%, #ff8f00 90%, #ff8f00 100%, #1a237e 100%)
+    background: linear-gradient(155deg, #ff8f00 20%, #1a237e 90%, #1a237e 100%, #ff8f00 100%);
 }
 
 header {
@@ -125,7 +125,7 @@ div > p {
 
 h1 {
     font-size: 2rem;
-    color: #ff8f00;
+    color: blue;
     padding: 0 1rem;
     text-align: center;
     height: auto;
