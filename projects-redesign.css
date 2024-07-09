@@ -92,3 +92,7 @@ button {
 .card:hover {
     box-shadow: 0.5rem 0.5rem 0 -0.25rem #ceeef8, 0.5rem 0.5rem 0 0 black;
 }
+
+.card > p {
+    text-align: left;
+}
