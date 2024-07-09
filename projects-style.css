@@ -246,3 +246,30 @@ footer p {
     }
 
 }
+
+@media only screen and (min-width: 1025px) {
+    .project-col {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 1rem auto;
+        padding: 1rem;
+        height: auto;
+        background-color: transparent;
+        border-radius: 15px;
+        width: 85%;
+    }
+
+    main {
+        font-size: 1rem;
+        margin: 0 auto;
+        padding: 0;
+    }
+}
