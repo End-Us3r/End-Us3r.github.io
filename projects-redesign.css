@@ -41,7 +41,7 @@ header {
 }
 
 header h1 {
-    font-size: 2rem;
+    font-size: 3rem;
     margin: 0;
     padding: 1rem;
     
@@ -62,10 +62,13 @@ main {
 }
 
 section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background-color: transparent;
     margin: 1rem;
-    padding: 1rem;
-    width: 90%;
+    padding: 0;
+    
 }
 
 button {
@@ -76,12 +79,14 @@ button {
 .card {
     border: solid 0.25rem black;
     background-color: #FFEDD8;
+    color: black;
     box-shadow: 1rem 1rem 0 -0.25rem #ceeef8, 1rem 1rem 0 0 black;
     transition: box-shadow 0.3s ease;
     font-family: "VT323", monospace;
     font-weight: 400;
     font-style: normal;
-
+    font-size: 1.2rem;
+    text-transform: uppercase;
 }
 
 .card:hover {
