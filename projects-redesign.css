@@ -81,18 +81,58 @@ button {
     background-color: #FFEDD8;
     color: black;
     box-shadow: 1rem 1rem 0 -0.25rem #ceeef8, 1rem 1rem 0 0 black;
-    transition: box-shadow 0.3s ease;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
     font-family: "VT323", monospace;
     font-weight: 400;
     font-style: normal;
     font-size: 1.2rem;
     text-transform: uppercase;
+    letter-spacing: 0.5px;
+    width: 90%;
+    cursor: pointer;
 }
+
 
 .card:hover {
     box-shadow: 0.5rem 0.5rem 0 -0.25rem #ceeef8, 0.5rem 0.5rem 0 0 black;
+    transform: translateX(10px) translateY(10px);
 }
 
 .card > p {
     text-align: left;
+}
+
+@media only screen and (min-width: 426px) and (max-width: 768px) {
+
+    main {
+        display: block;
+    }
+
+    section {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card {
+        padding: 0.2rem;
+    }
+
+}
+
+@media only screen and (min-width: 769px) {
+
+    main {
+        display: block;
+    }
+
+    section {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px
+    }
+
+    .card {
+        padding: 0.2rem;
+    }
+
 }
