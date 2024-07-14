@@ -76,6 +76,11 @@ button {
     padding: 1rem;
 }
 
+button:active {
+    background-color: black;
+    color: white;
+}
+
 .card {
     border: solid 0.25rem black;
     background-color: #FFEDD8;
