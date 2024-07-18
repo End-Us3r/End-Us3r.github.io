@@ -9,7 +9,8 @@ function setupButtonListeners() {
         button_three: 'projects-folder/gpaCalculator.html',
         button_four: 'projects-folder/boredlessTourist.html',
         button_five: 'projects-folder/rps.html',
-        button_six: 'projects-folder/nightmareGame.html'
+        button_six: 'projects-folder/nightmareGame.html',
+        button_seven: 'https://end-us3r.github.io/Message-Generator/',
     };
 
     for (const buttonId in buttons) {
