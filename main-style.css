@@ -84,7 +84,20 @@ h3 {
     margin: 0 auto;
     padding: 5px;
     background-color: transparent;
-    text-decoration: underline;
+    text-align: center;
+    margin: 1rem auto;
+    border-bottom: 2px solid white;
+    width: 80%;
+}
+
+.about-me-para {
+    margin: 0.5rem;
+}
+
+
+footer h3 {
+    border-bottom: none;
+    width: 100%;
 }
 
 main {
@@ -124,6 +137,7 @@ section p, ul {
 
 li h3, li p, li em {
     background-color: transparent;
+
 }
 
 p {
@@ -150,7 +164,7 @@ button {
     border-radius: 5px;
     border: none;
     cursor: pointer;
-    width: 100%;
+    width: 95%;
     height: 2.1rem;
     margin: 5px auto;
     text-align: center;
@@ -159,7 +173,7 @@ button {
 }
 
 button:hover {
-    background-color: darkseagreen;
+    background-color: green;
     transform: scale(1.05);
 }
 
@@ -185,16 +199,13 @@ header, main {
 
 section li {
     align-content: center;
-    margin: 10px;
+    margin: 1rem;
     padding: 5px;
     border-radius: 15px;
     background-color: #1a1a1a;
     border-bottom: 2px solid mediumseagreen;
     border-top: 2px solid mediumseagreen;
-}
-
-li > p {
-    max-width: 80%;
+    gap: 1rem;
 }
 
 .projects a {
@@ -217,13 +228,22 @@ header > div > h1 {
 }
 
 footer ul.logo-list {
+    display: flex;
+    flex-direction: row;
     width: 100%;
     margin: 0 auto;
+    justify-content: center;
+    gap: 1rem;
 }
 
 ul.logo-list > li {
     padding: 5px;
 }
+
+li a {
+    width: 50px;
+}
+
 footer {
     display: flex;
     flex-direction: column;
@@ -242,17 +262,18 @@ footer * {
     flex-direction: row;
     width: 100%;
     justify-content: space-evenly;
-    background-color: black;
+    background-color: transparent;
 }
 
 .social-media-bar {
-    margin: 20px;
+    margin: 0;
     text-align: center;
+    width: 100%;
 }
 
 .social-media-bar h3 {
     font-size: 1.5rem;
-    margin-bottom: 10px;
+    margin: 0;
 }
 
 .social-media-bar div {
@@ -270,9 +291,10 @@ footer * {
 }
 
 .logo-list img {
-    width: 100px;
+    width: 50px;
     height: auto;
     margin: 0 auto;
+    border-radius: 5px;
 }
 
 .copyright {
@@ -316,6 +338,15 @@ footer * {
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin: 1rem;
+        gap: 1rem;
+    }
+
+    ul.logo-list > li{
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        width: auto;
     }
 
     li {
@@ -363,7 +394,7 @@ footer * {
     }
 
     .logo-list img {
-        width: 150px;
+        width: 50px;
     }   
 }
 
@@ -385,6 +416,7 @@ footer * {
     section p {
         font-size: 1.2rem;
         line-height: 2rem;
+        margin: 1rem 2rem;
     }
 
     section:first-child p {
@@ -400,6 +432,15 @@ footer * {
         display: flex;
         flex-direction: column;
         align-items: center;
+        gap: 1rem;
+        margin: 1rem;
+    }
+
+    ul.logo-list > li{
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        width: auto;
     }
 
     li {
@@ -428,18 +469,18 @@ footer * {
     }
 
     .social-media-bar h3 {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     .logo-list img {
-        width: 150px;
+        width: 50px;
     }   
 }
 
 @media only screen and (min-width: 1441px) {
 
     header > div > h1 {
-        font-size: 5rem;
+        font-size: 7rem;
     }
 
     main {
@@ -454,6 +495,7 @@ footer * {
     section p {
         font-size: 1.2rem;
         line-height: 2rem;
+        margin: 1rem 2rem;
     }
 
     section:first-child p {
@@ -469,6 +511,14 @@ footer * {
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin: 1rem;
+    }
+
+    ul.logo-list > li{
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        width: auto;
     }
 
     li {
@@ -497,10 +547,10 @@ footer * {
     }
 
     .social-media-bar h3 {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     .logo-list img {
-        width: 150px;
+        width: 50px;
     }   
 }
