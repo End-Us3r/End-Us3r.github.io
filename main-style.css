@@ -39,6 +39,7 @@ nav{
     height: 12vh;
     background-color: var(--secondary-color);
     box-shadow: var(--drop-shadow-one);
+
 }
 
 
@@ -74,6 +75,46 @@ ul > :nth-child(3) {
     border-radius: var(--border-radius-one);
     box-shadow: var(--drop-shadow-one);
     cursor: pointer;
+    position: relative;
+    z-index: 10;
+}
+
+.profile-tab::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border-radius: var(--border-radius-one);
+    z-index: 5;
+}
+
+.profile-tab #tab-text {
+    position: relative;
+    z-index: 10;
+}
+
+.profile-tab-hidden {
+    display: flex;
+    flex-direction: column;
+    width: 427px;
+    height: 0; /* Initially hidden */
+    overflow: hidden; /* Hide overflow */
+    position: absolute;
+    top: 50%; /* Position dropdown below the profile tab */
+    left: 0;
+    background-color: white;
+    border-radius: var(--border-radius-one);
+    box-shadow: var(--drop-shadow-one);
+    transition: height 0.5s ease; /* Smooth transition for height */
+    z-index: 1;
+}
+
+.profile-tab:hover .profile-tab-hidden {
+    height: 500px;
 }
 
 .nav-buttons {
