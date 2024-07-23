@@ -104,17 +104,84 @@ ul > :nth-child(3) {
     height: 0; /* Initially hidden */
     overflow: hidden; /* Hide overflow */
     position: absolute;
+    opacity: 0; /* Initially hidden */
     top: 50%; /* Position dropdown below the profile tab */
     left: 0;
     background-color: white;
     border-radius: var(--border-radius-one);
     box-shadow: var(--drop-shadow-one);
-    transition: height 0.5s ease; /* Smooth transition for height */
+    transition: height 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Smooth transition for height */
     z-index: 1;
+    align-items: center;
 }
 
 .profile-tab:hover .profile-tab-hidden {
-    height: 500px;
+    height: 400px;
+    opacity: 1;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 93%;
+    width: max-content;
+    margin: 0;
+    padding: 0;
+}
+
+.upper-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: max-content;
+    height: 15vh;
+    color: var(--secondary-color);
+    font-size: var(--font-size-one);
+    gap: 1rem;
+}
+
+.upper-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+
+}
+
+.text-section {
+    line-height: 2rem;
+}
+
+.upper-card h2 {
+    font-size: var(--font-size-two);
+}
+
+.lower-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    line-height: 2rem;
+    font-size: var(--font-size-one);
+    align-items: flex-start;
+    margin-top: 1rem;
+
+}
+
+.social-backdrop  {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: -20%;
+}
+
+.social-backdrop img {
+    width: 50px;
+    height: 50px;
+    margin: 1rem;
 }
 
 .nav-buttons {
@@ -131,7 +198,13 @@ ul > :nth-child(3) {
     border-radius: var(--border-radius-one);
     box-shadow: var(--drop-shadow-one);
     cursor: pointer;
-} 
+    transition: height 0.5s ease-in-out;
+}
+
+.nav-buttons:hover {
+    height: 9vh;
+    transition: height 0.5s ease-in-out;
+}
 
 main {
     height: 100vh;
