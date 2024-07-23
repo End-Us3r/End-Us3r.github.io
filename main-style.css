@@ -73,6 +73,7 @@ ul > :nth-child(3) {
     align-items: center;
     border-radius: var(--border-radius-one);
     box-shadow: var(--drop-shadow-one);
+    cursor: pointer;
 }
 
 .nav-buttons {
@@ -88,6 +89,7 @@ ul > :nth-child(3) {
     align-items: center;
     border-radius: var(--border-radius-one);
     box-shadow: var(--drop-shadow-one);
+    cursor: pointer;
 } 
 
 main {
@@ -112,6 +114,7 @@ h1 {display: flex;
     margin: 1rem 0;
     justify-content: center;
     align-content: center;
+    line-height: 5rem;
 }
 
 a {
