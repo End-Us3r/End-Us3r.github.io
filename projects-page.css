@@ -5,9 +5,9 @@
 }
 
 :root {
-    --primary-color: #424242;
-    --secondary-color: #A2A2A2;
-    --background-light-grey: #D9D9D9;
+    --primary-color: dodgerblue;
+    --secondary-color: gold;
+    --background-light-grey: #ececec;
     --white-color: #fff;
     --font-light-color: #fff;
     --font-dark-color: #000;
@@ -15,11 +15,9 @@
     --font-size-two: 24px;
     --font-size-three: 32px;
     --drop-shadow-one: 0 4px 4px rgba(0, 0, 0, 0.75);
-    --drop-shadow-two: 12px 12px 5px 0px rgba(0, 0, 0, 0.75);
+    --drop-shadow-two: 8px 8px 0px 0px rgba(0, 0, 0, 0.75);
     --border-radius-one: 0px 0px 25px 25px;
     --border-radius-two: 50px;
-
-
 }
 
 body {
@@ -27,7 +25,7 @@ body {
     flex-direction: column;
     font-family: 'Roboto', sans-serif;
     background-color: var(--primary-color);
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     background-color: var(--primary-color);
 
@@ -75,6 +73,7 @@ ul > :nth-child(3) {
     border-radius: var(--border-radius-one);
     box-shadow: var(--drop-shadow-one);
     transition: height 0.5s ease-in-out;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.75);
 }
 
 .nav-buttons:hover {
@@ -85,7 +84,6 @@ ul > :nth-child(3) {
 main {
     display: flex;
     flex-direction: column;
-    height: 100vh;
 }
 
 section {
@@ -125,6 +123,7 @@ a {
     justify-items: center;
     align-items: center;
     margin: 5rem auto;
+    height: auto;
     
 }
 
@@ -137,12 +136,25 @@ a {
     height: 115%;
     border-radius: var(--border-radius-two);
     box-shadow: var(--drop-shadow-two);
+    z-index: 2;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.card-container:hover {
+    box-shadow: 0 0 20px 3px black;
+    transform: translateX(10px) translateY(10px);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    border: 3px solid var(--secondary-color);
 }
 
 .inner-card {
     margin: 1.5rem;
     padding: 0;
     height: 100%;
+}
+
+.inner-card:hover {
+    translate: scale(-8px) translateY(-8px);
 }
 
 img {
