@@ -117,13 +117,12 @@ a {
   text-align: center;
   width: 1000px;
   border-radius: var(--border-radius-two);
-  box-shadow: inset 0px 0px 20px 16px rgba(0, 0, 0, 0.75);
+  box-shadow: 18px 18px 36px #222325, -18px -18px 36px #323337;
   margin: 10rem auto;
   padding: 1rem;
   height: min-content;
   z-index: -5;
-  position: relative;
-  left: -10%;
+  
 }
 
 p {

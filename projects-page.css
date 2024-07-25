@@ -152,11 +152,11 @@ a {
     box-shadow: 0 0 20px 3px var(--third-color);
     transform: translateX(10px) translateY(10px);
     transition: box-shadow 0.3s ease, transform 0.3s ease;
-    border: 1px black solid;
-    animation: pulse 3.5s infinite;
+    border: 1px green solid;
+    animation: pulse 0.5s infinite;
 }
 
-.card-container  p {
+.card-container p {
     width: 95%;
 }
 
