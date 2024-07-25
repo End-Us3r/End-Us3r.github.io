@@ -41,9 +41,8 @@ nav {
   flex-direction: row;
   width: 100%;
   height: 12vh;
-  background-color: var(--primary-color);
-  box-shadow: var(--drop-shadow-one);
-  box-shadow: 0 8px 20px 0 var(--fifth-color);
+  background-color: transparent;
+  position: fixed;
 }
 
 ul {
@@ -53,7 +52,7 @@ ul {
   list-style: none;
   width: 100%;
   margin: 0 2rem;
-  background-color: #2a2b2e;
+ 
 }
 
 ul > :nth-child(2) {
@@ -90,6 +89,7 @@ main {
   display: flex;
   flex-direction: column;
   height: auto;
+  
 }
 
 section {
@@ -144,6 +144,7 @@ h2 {
   width: 800px;
   border-radius: var(--border-radius-two);
   box-shadow: inset 0px 0px 20px 16px rgba(0, 0, 0, 0.75);
+  margin: 10rem auto;
 }
 
 .education {
@@ -158,13 +159,23 @@ h2 {
   width: 800px;
   border-radius: var(--border-radius-two);
   box-shadow: inset 0px 0px 20px 16px rgba(0, 0, 0, 0.75);
+  margin-top: 0rem;
 }
 
-.intro,
+.intro {
+  padding: 1rem;
+  height: min-content;
+  z-index: -5;
+  margin: 1rem auto;
+  margin-top: 10rem;
+
+}
+
 .education {
   padding: 1rem;
-  margin: 5rem auto;
   height: min-content;
+  z-index: -5;
+  margin: 1rem auto;
 }
 
 .intro > h2,
