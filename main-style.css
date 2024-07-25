@@ -5,19 +5,26 @@
 }
 
 :root {
-    --primary-color: dodgerblue;
-    --secondary-color: gold;
+    --primary-color: #2A2B2E;
+    --secondary-color: #5A5A66;
+    --third-color: #A4C2A8;
+    --fourth-color: #00ff09;
+    --fifth-color: green;
+    --seventh-color: #b2f3b4;
+    --sixth-color: #15c215;
     --background-light-grey: #b4b4b4;
-    --white-color: #fff;
     --font-light-color: #fff;
     --font-dark-color: #000;
     --font-size-one: 16px;
     --font-size-two: 24px;
     --font-size-three: 32px;
-    --drop-shadow-one: 0 4px 4px rgba(0, 0, 0, 0.75);
+    --drop-shadow-one: 0 4px 4px rgba(73, 46, 46, 0.75);
+    --drop-shadow-two: 8px 8px 5px var(--third-color);
+    --drop-shadow-three: 0 6px 6px var(--third-color);
     --border-radius-one: 0px 0px 25px 25px;
     --border-radius-two: 50px;
-}
+    --box-shadow-one: 0px 5px 11px 4px #a4c2a8;
+  }
 
 body {
     display: flex;
@@ -27,7 +34,13 @@ body {
     width: 100%;
     height: 100vh;
     background-color: var(--primary-color);
+    
+}
 
+main {
+    height: 100vh;
+    background-color: var(--primary-color);
+    z-index: -1;
 }
 
 nav{
@@ -35,7 +48,6 @@ nav{
     flex-direction: row;
     width: 100%;
     height: 12vh;
-    background-color: var(--secondary-color);
     box-shadow: var(--drop-shadow-one);
 }
 
@@ -46,7 +58,8 @@ ul {
     justify-content: space-between;
     list-style: none;
     width: 100%;
-    background-color: gold;
+    background-color: #2a2b2e;
+    box-shadow: 0 8px 20px 0 var(--sixth-color);
 }
     
 
@@ -71,7 +84,7 @@ ul > :nth-child(3) {
     justify-content: center;
     align-items: center;
     border-radius: var(--border-radius-one);
-    box-shadow: var(--drop-shadow-one);
+    /* box-shadow: var(--drop-shadow-one); */
     cursor: pointer;
     position: relative;
     z-index: 10;
@@ -85,10 +98,11 @@ ul > :nth-child(3) {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: var(--primary-color);
+    background-color: green;
     color: var(--background-light-grey);
     border-radius: var(--border-radius-one);
     z-index: 5;
+    box-shadow: var(--box-shadow-one);
     
 }
 
@@ -96,6 +110,8 @@ ul > :nth-child(3) {
     position: relative;
     z-index: 10;
     text-shadow: 0 4px 4px rgba(0, 0, 0, 0.75);
+    color: #b2f3b4;
+    text-shadow: 0 0px 10px rgba(255, 254, 254, 0.75);
 }
 
 .profile-tab-hidden {
@@ -110,7 +126,7 @@ ul > :nth-child(3) {
     left: 0;
     background-color: white;
     border-radius: var(--border-radius-one);
-    box-shadow: var(--drop-shadow-one);
+    box-shadow: var(--drop-shadow-three);
     transition: height 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Smooth transition for height */
     z-index: 1;
     align-items: center;
@@ -196,19 +212,19 @@ ul > :nth-child(3) {
 .nav-buttons {
     display: flex;
     flex-direction: row;
-    color: var(--secondary-color);
+    color: var(--third-color);
     flex-shrink: 0;
-    background-color: var(--primary-color);
+    background-color: var(--fifth-color);
     margin: 0 1rem;
     height: 7vh;
     width: 150px;
     justify-content: center;
     align-items: center;
     border-radius: var(--border-radius-one);
-    box-shadow: var(--drop-shadow-one);
+    box-shadow: var(--box-shadow-one);
     cursor: pointer;
     transition: height 0.5s ease-in-out;
-    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.75);
+    text-shadow: 0 0px 10px rgba(255, 254, 254, 0.75);
 }
 
 .nav-buttons:hover {
@@ -216,11 +232,6 @@ ul > :nth-child(3) {
     transition: height 0.5s ease-in-out;
 }
 
-main {
-    height: 100vh;
-    background-color: dodgerblue;
-    z-index: -1;
-}
 
 section {
     display: flex;
@@ -234,7 +245,7 @@ section {
 
 h1 {display: flex;
     
-    color: gold;
+    color: var(--secondary-color);
     font-size: calc(3 * var(--font-size-three));
     font-family: 'Inter';
     text-align: center;
@@ -247,7 +258,7 @@ h1 {display: flex;
 
 a {
     text-decoration: none;
-    color: var(--secondary-color);
+    color: #b2f3b4;
     font-size: var(--font-size-three);
     width: 95%;
     text-align: center;
