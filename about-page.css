@@ -29,7 +29,7 @@
 body {
   display: flex;
   flex-direction: column;
-  font-family: "Roboto", sans-serif;
+  font-family: "Source Code Pro", monospace;
   background-color: var(--primary-color);
   width: 100%;
   height: 100vh;
@@ -39,6 +39,7 @@ body {
 nav {
   display: flex;
   flex-direction: row;
+  
   width: 100%;
   height: 12vh;
   background-color: transparent;
@@ -105,7 +106,7 @@ section {
 a {
   text-decoration: none;
   color: var(--sixth-color);
-  font-size: var(--font-size-three);
+  font-size: var(--font-size-two);
   width: 95%;
   text-align: center;
 }
@@ -113,7 +114,7 @@ a {
 .intro {
   display: flex;
   background-color: #2a2b2e;
-  font-family: "monospace";
+  font-family: "Source Code Pro", monospace;
   text-align: center;
   width: 1000px;
   border-radius: var(--border-radius-two);
@@ -126,8 +127,8 @@ a {
 }
 
 p {
-  font-size: var(--font-size-two);
-  font-family: "monospace";
+  font-size: 20px;
+  font-family: "Source Code Pro", monospace;
   color: var(--background-light-grey);
   margin: 1rem;
   padding: 0;
