@@ -139,8 +139,9 @@ a {
     display: flex;
     flex-direction: column;
     background-color: var(--background-light-grey);
-    width: 85%;
-    height: 115%;
+    font-size: 1.2rem;
+    width: 90%;
+    height: 125%;
     border-radius: var(--border-radius-two);
     box-shadow: 8px 8px 10px var(--fifth-color);
     z-index: 2;
@@ -151,7 +152,7 @@ a {
     box-shadow: 0 0 20px 3px var(--third-color);
     transform: translateX(10px) translateY(10px);
     border: 1px green solid;
-    animation: pulse 1.5s infinite;
+    /* animation: pulse 1.5s infinite; */
     cursor: pointer;
     background-color: var(--primary-color);
     color: var(--sixth-color);
