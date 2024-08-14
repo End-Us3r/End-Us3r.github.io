@@ -1,16 +1,16 @@
 function redirectToPage(url) {
-    window.location.href = url;
+    window.open(url, '_blank');
 }
 
 function setupButtonListeners() {
     const buttons = {
         button_one: 'https://end-us3r.github.io/Inked-Art-Homepage-Project/',
-        button_two: 'projects-folder/coffeeBot.html',
-        button_three: 'projects-folder/gpaCalculator.html',
-        button_four: 'projects-folder/boredlessTourist.html',
-        button_five: 'projects-folder/rps.html',
-        button_six: 'projects-folder/nightmareGame.html',
-        button_seven: 'https://end-us3r.github.io/Message-Generator/',
+        button_two: 'https://end-us3r.github.io/Message-Generator/',
+        button_three: 'projects-folder/coffeeBot.html',
+        button_four: 'projects-folder/gpaCalculator.html',
+        button_five: 'projects-folder/boredlessTourist.html',
+        button_six: 'projects-folder/rps.html',
+        button_seven: 'projects-folder/nightmareGame.html',
     };
 
     for (const buttonId in buttons) {
