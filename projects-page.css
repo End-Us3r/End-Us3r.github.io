@@ -125,7 +125,7 @@ a {
 .grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 300px);
+    grid-template-rows: repeat(4, 300px);
     grid-row-gap: 10rem;
     justify-content: space-around;
     justify-items: center;
@@ -150,17 +150,20 @@ a {
 .card-container:hover {
     box-shadow: 0 0 20px 3px var(--third-color);
     transform: translateX(10px) translateY(10px);
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
     border: 1px green solid;
-    animation: pulse 0.5s infinite;
+    animation: pulse 1.5s infinite;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: var(--sixth-color);
+    transition: box-shadow 0.3s ease, transform 0.3s ease, background-color 0.5s ease, color 0.5s ease;
 }
 
-.card-container p {
+/* .card-container p {
     width: 95%;
-}
+} */
 
 .inner-card {
-    margin: 1.5rem;
+    margin: 1.5rem 2rem;
     padding: 0;
     height: 100%;
 }
@@ -170,8 +173,10 @@ a {
 }
 
 img {
-    width: 200px;
-    height: 125px;
+    width: calc(1.2 * 200px);
+    height: calc(1.2 * 125px);
+    border-radius: 25px;
+
 }
 
 .upper-card {
@@ -185,7 +190,7 @@ img {
     flex-direction: column;
     gap: 1.5rem;
     margin: 0 1rem;
-    width: 50%;
+    width: 100%;
 }
 
 h2 {
@@ -198,7 +203,6 @@ h2 {
 .lower-card {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
     align-items: center;
     margin: 1rem 0;
     height: max-content;

@@ -257,7 +257,7 @@ h1 {
   border-radius: var(--border-radius-two);
   animation: moveInFromLeft 1.2s ease-out forwards;
   transition: color 5s ease-in-out;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 .intro-container-one {
