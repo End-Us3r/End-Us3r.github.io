@@ -446,19 +446,23 @@ footer {
   }
 
   h1 {
-    font-size: calc(2 * var(--font-size-three));
+    font-size: calc(1.2 * var(--font-size-three));
     padding: 0 1rem;
   }
 
   .intro-container-one {
     position: relative;
     left: 0;
+    margin: 1rem;
+    font-size: 18px;
   }
 
   .intro-container-two {
     position: relative;
     left: 0;
     top: 0;
+    margin: 1rem;
+    font-size: 18px;
   }
 
   .intro-container-two > p {
