@@ -10,8 +10,8 @@
   --third-color: #a4c2a8;
   --fourth-color: #00ff09;
   --fifth-color: green;
-  --seventh-color: #b2f3b4;
   --sixth-color: #15c215;
+  --seventh-color: #b2f3b4;
   --background-light-grey: #b4b4b4;
   --font-light-color: #fff;
   --font-dark-color: #000;
@@ -30,11 +30,10 @@
 body {
   display: flex;
   flex-direction: column;
-  font-family: "Source Code Pro", monospace;;
+  font-family: "Source Code Pro", monospace;
   background-color: var(--primary-color);
   width: 100%;
   height: 100vh;
-  background-color: var(--primary-color);
   overflow-x: hidden;
 }
 
@@ -80,7 +79,6 @@ ul > :nth-child(3) {
   justify-content: center;
   align-items: center;
   border-radius: var(--border-radius-one);
-  /* box-shadow: var(--drop-shadow-one); */
   cursor: pointer;
   position: relative;
   z-index: 10;
@@ -106,9 +104,8 @@ ul > :nth-child(3) {
 .profile-tab #tab-text {
   position: relative;
   z-index: 10;
-  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.5), 0 0px 10px rgba(255, 254, 254, 0.5);
   color: #b2f3b4;
-  text-shadow: 0 0px 10px rgba(255, 254, 254, 0.5);
   animation: fadeInFromTop 1s ease-out forwards;
 }
 
@@ -116,16 +113,16 @@ ul > :nth-child(3) {
   display: flex;
   flex-direction: column;
   width: 427px;
-  height: 0; /* Initially hidden */
-  overflow: hidden; /* Hide overflow */
+  height: 0;
+  overflow: hidden;
   position: absolute;
-  opacity: 0; /* Initially hidden */
-  top: 50%; /* Position dropdown below the profile tab */
+  opacity: 0;
+  top: 50%;
   left: 0;
   background-color: white;
   border-radius: var(--border-radius-one);
   box-shadow: var(--drop-shadow-three);
-  transition: height 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Smooth transition for height */
+  transition: height 0.5s ease-in-out, opacity 0.5s ease-in-out;
   z-index: 1;
   align-items: center;
   animation: pulse 3.5s infinite;
@@ -142,8 +139,8 @@ ul > :nth-child(3) {
   justify-content: center;
   align-items: center;
   height: 100%;
-  margin: 0;
-  padding: 0;
+  /* margin: 0;
+  padding: 0; */
 }
 
 .upper-card {
@@ -173,7 +170,7 @@ ul > :nth-child(3) {
 
 .dark-text {
   color: var(--font-dark-color);
-  filter: blur(0.3px);
+  /* filter: blur(0.3px); */
 }
 
 .upper-card h2 {
@@ -289,7 +286,7 @@ h1 {
 
 a {
   text-decoration: none;
-  color: #b2f3b4;
+  color: var(--seventh-color);
   font-size: var(--font-size-two);
   width: 95%;
   text-align: center;
