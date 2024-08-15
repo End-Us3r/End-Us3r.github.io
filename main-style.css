@@ -344,7 +344,7 @@ footer {
 
 @media only screen and (max-width: 600px) {
   .profile-tab {
-    width: 100%;
+    width: 30vw;
     height: 7vh;
     margin: 0;
   }
@@ -354,16 +354,14 @@ footer {
   }
 
   .profile-tab-hidden {
-    width: 100%;
+    width: 95vw;
     height: 0;
     top: 50%;
     left: 0;
-    border-radius: 0;
+    border-radius: 25px;
   }
 
-  .nav-list li:nth-child(2), .nav-list li:nth-child(3) {
-    display: none;
-  }
+
 
   .card-container {
     width: 100%;
@@ -409,10 +407,34 @@ footer {
     margin: 0.5rem;
   }
 
+  nav {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 12vh;
+  }
+
+  .nav-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style: none;
+    width: 100vw;
+  }
+
   .nav-buttons {
-    width: 100%;
+    width: 31vw;
     height: 7vh;
     margin: 0;
+    font-size: 22px;
+  }
+
+  ul > :nth-child(2) {
+    margin-left: 0;
+  }
+
+  ul > :nth-child(3) {
+    margin-right: 0;
   }
 
   .nav-buttons:hover {
