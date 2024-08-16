@@ -160,7 +160,7 @@ p {
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 320px) and (max-width: 480px) {
   .intro {
     width: 100vw;
     margin: 5rem 1rem;
@@ -202,4 +202,93 @@ p {
   .nav-buttons:hover {
     height: 7vh;
   }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .intro {
+    width: 100vw;
+    margin: 5rem 1rem;
+    font-size: 16px;
+    align-self: center;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 12vh;
+  }
+
+  .nav-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style: none;
+    width: 100vw;
+    margin: 0;
+  }
+
+  .nav-buttons {
+    width: 31vw;
+    height: 7vh;
+    margin: 0;
+    font-size: 22px;
+  }
+
+  ul > :nth-child(2) {
+    margin-left: 0;
+  }
+
+  ul > :nth-child(3) {
+    margin-right: 0;
+  }
+
+  .nav-buttons:hover {
+    height: 7vh;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .intro {
+    width: 100vw;
+    margin: 5rem 1rem;
+    font-size: 16px;
+    align-self: center;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 12vh;
+  }
+
+  .nav-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style: none;
+    width: 100vw;
+    margin: 0;
+  }
+
+  .nav-buttons {
+    width: 31vw;
+    height: 7vh;
+    margin: 0;
+    font-size: 22px;
+  }
+
+  ul > :nth-child(2) {
+    margin-left: 0;
+  }
+
+  ul > :nth-child(3) {
+    margin-right: 0;
+  }
+
+  .nav-buttons:hover {
+    height: 7vh;
+  }
+  
 }

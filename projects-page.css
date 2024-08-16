@@ -218,7 +218,7 @@ h2 {
     }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 320px) and (max-width: 480px) {
   
     nav {
       display: flex;
@@ -305,3 +305,175 @@ h2 {
     }
 
   }
+
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+    nav {
+        display: flex;
+        flex-direction: row;
+        width: 100vw;
+        height: 12vh;
+      }
+    
+      .nav-list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        list-style: none;
+        width: 100vw;
+        margin: 0;
+      }
+    
+      .nav-buttons {
+        width: 31vw;
+        height: 7vh;
+        margin: 0;
+        font-size: 22px;
+      }
+    
+      ul > :nth-child(2) {
+        margin-left: 0;
+      }
+    
+      ul > :nth-child(3) {
+        margin-right: 0;
+      }
+    
+      .nav-buttons:hover {
+        height: 7vh;
+      }
+  
+      .grid {
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+          grid-template-rows: repeat(1, 1fr);
+          grid-row-gap: 5rem;
+          justify-content: space-around;
+          justify-items: center;
+          align-items: center;
+          margin: 5rem auto;
+          height: auto;
+          
+      }
+  
+      .card-container {
+          display: flex;
+          flex-direction: column;
+          background-color: var(--background-light-grey);
+          font-size: 1.2rem;
+          border-radius: var(--border-radius-two);
+          box-shadow: 8px 8px 10px var(--fifth-color);
+          z-index: 2;
+          transition: box-shadow 0.3s ease, transform 0.3s ease;
+          height: auto;
+      }
+  
+      .upper-card {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+      }
+  
+      .inner-card {
+          margin: 1.5rem;
+          padding: 0;
+          height: 100%;
+      }
+  
+      img {
+          width: auto;
+          height: calc(1.2 * 125px);
+          border-radius: 25px;
+      }
+  
+      h2 {
+          border-bottom: 2px solid black;
+          margin: 0;
+          padding: 1rem;
+      }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    nav {
+        display: flex;
+        flex-direction: row;
+        width: 100vw;
+        height: 12vh;
+      }
+    
+      .nav-list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        list-style: none;
+        width: 100vw;
+        margin: 0;
+      }
+    
+      .nav-buttons {
+        width: 31vw;
+        height: 7vh;
+        margin: 0;
+        font-size: 22px;
+      }
+    
+      ul > :nth-child(2) {
+        margin-left: 0;
+      }
+    
+      ul > :nth-child(3) {
+        margin-right: 0;
+      }
+    
+      .nav-buttons:hover {
+        height: 7vh;
+      }
+  
+      .grid {
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+          grid-template-rows: repeat(1, 1fr);
+          grid-row-gap: 5rem;
+          justify-content: space-around;
+          justify-items: center;
+          align-items: center;
+          margin: 5rem auto;
+          height: auto;
+          
+      }
+  
+      .card-container {
+          display: flex;
+          flex-direction: column;
+          background-color: var(--background-light-grey);
+          font-size: 1.2rem;
+          border-radius: var(--border-radius-two);
+          box-shadow: 8px 8px 10px var(--fifth-color);
+          z-index: 2;
+          transition: box-shadow 0.3s ease, transform 0.3s ease;
+          height: auto;
+      }
+  
+      .upper-card {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+      }
+  
+      .inner-card {
+          margin: 1.5rem;
+          padding: 0;
+          height: 100%;
+      }
+  
+      img {
+          width: auto;
+          height: calc(1.2 * 125px);
+          border-radius: 25px;
+      }
+  
+      h2 {
+          border-bottom: 2px solid black;
+          margin: 0;
+          padding: 1rem;
+      }
+}
