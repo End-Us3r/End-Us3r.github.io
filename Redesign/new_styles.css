@@ -1,0 +1,153 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    filter: brightness(75%)
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    background-color: floralwhite;
+    position: sticky;
+    height: 75px;
+    width: 100%;
+    border-bottom: rgb(0, 0, 0) solid 5px;
+
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    padding: 1rem 2rem;
+    list-style: none;
+}
+
+.first-pic {
+    height: 50px;
+    width: 50px;
+    border: black solid 3px;
+    background-color: transparent;
+    border-radius: 25px;
+    transform: scale(1.25);
+}
+
+ul > li {
+    display: flex;
+    background-color: #5f21c2;
+    width: 250px;
+    height: 50px;
+    border-radius: 25px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+li:nth-child(2) {
+    margin-left: auto;
+    margin-right: 1rem;
+    
+}
+
+li > a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.landing-page {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+.left-panel {
+    background-color: #5f21c2;
+    height: 100vh;
+    width: 50%;
+    border-right: black solid 5px;
+}
+
+.right-panel {
+    height: 100vh;
+    width: 50%;
+}
+
+.upper-right-panel {
+    background-color: white;
+    height: 50vh;
+    width: 100%;
+}
+
+.lower-right-panel {
+    background-color: black;
+    height: 50vh;
+    width: 100%;
+    color: white;
+    margin: 0 auto;
+    padding: 5rem 0;
+    justify-items: center;
+}
+
+.lower-right-panel > p {
+    font-size: 22px;
+}
+
+.second-page {
+    display: flex; 
+    flex-direction: column;
+    background-color: white;
+    height: 100vh;
+    border-top: black solid 5px;
+    border-bottom: black solid 5px;
+    width: 100vw;
+}
+
+.sec_pic {
+    height: 300px;
+    width: 300px;
+    margin-top: 5rem;
+    margin-left: 5rem
+
+}
+
+.first_para {
+    margin-left: auto;
+    background-color: #5f21c2;
+    height: 25rem;
+    text-align: center;
+    width: 50%;
+    position: absolute;
+    left: 625px;
+    bottom: 25rem;
+    color: white;
+    justify-items: center;
+    align-content: space-evenly;
+    font-size: 22px;
+    border: black solid 5px;
+    border-radius: 25px;
+}
+
+.third-page {
+    background-color: black;
+}
+
+.third-pic {
+    height: 100%;
+    width: 100%;
+}
