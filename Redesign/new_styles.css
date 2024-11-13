@@ -5,6 +5,17 @@
 }
 
 :root {
+  --gray-50: #ffffff;
+  --gray-100: #efefef;
+  --gray-200: #dcdcdc;
+  --gray-300: #bdbdbd;
+  --gray-400: #989898;
+  --gray-500: #7c7c7c;
+  --gray-600: #656565;
+  --gray-700: #525252;
+  --gray-800: #464646;
+  --gray-900: #3d3d3d;
+  --gray-950: #292929;
   --purple-50: #f0f2fd;
   --purple-100: #e4e7fb;
   --purple-200: #cfd4f6;
@@ -56,12 +67,23 @@ ul {
 }
 
 .first-element {
-  height: 45px;
-  width: 45px;
+  height: 40px;
+  width: 40px;
   border: black solid 2px;
   background-color: slateblue;
   border-radius: 25px;
   transform: scale(1.2);
+}
+
+.first-element-two {
+  height: 40px;
+  width: 40px;
+  border: black solid 2px;
+  background-color: slateblue;
+  border-radius: 25px;
+  position: fixed;
+  left: -5%;
+  top: -5%;
 }
 
 .first-element > a {
@@ -74,37 +96,26 @@ ul {
   align-items: center;
   width: 100%;
   height: 100%;
-}
-
-.first-element {
-  display: flex;
-  flex-direction: row;
-  font-size: var(--font-size-three);
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  position: relative;
-  animation: fadeInFromTop 0.5s ease-out forwards;
+  position: absolute;
+  z-index: 10;
 }
 
 .first-element-hidden {
   display: flex;
   flex-direction: column;
-  width: 427px;
+  width: 400px;
   height: 0;
   overflow: hidden;
   position: absolute;
   opacity: 0;
-  top: 0%;
-  left: 0;
-  background-color: var(--purple-200);
-  border-radius: var(--border-radius-one);
-  box-shadow: var(--drop-shadow-three);
-  transition: height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  top: 25%;
+  left: 35%;
+  background-color: var(--gray-50);
+  transition: height 0.5s ease-in-out, opacity .25s ease-in-out;
   z-index: 1;
   align-items: center;
   animation: pulse 3.5s infinite;
-  border-radius: 22px;
+  border-radius: 25px;
 }
 
 .first-element:hover .first-element-hidden {
@@ -117,7 +128,8 @@ ul {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
+  height: 90%;
+  color: var(--gray-500);
 }
 
 .upper-card {
@@ -129,13 +141,13 @@ ul {
   height: 15vh;
   color: var(--background-light-grey);
   font-size: var(--font-size-one);
-  gap: 0.5rem;
+  gap: 1rem;
   margin-top: 1rem;
 }
 
 .upper-card img {
-  width: 100px;
-  height: 100px;
+  width: 90px;
+  height: auto;
   border-radius: 50%;
 }
 
@@ -146,8 +158,9 @@ ul {
 }
 
 .dark-text {
-  color: var(--font-dark-color);
-  /* filter: blur(0.3px); */
+  color: #000000;
+  letter-spacing: 0.5px;
+  font-weight: 600;
 }
 
 .upper-card h2 {
