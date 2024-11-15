@@ -24,7 +24,7 @@
             <div class="first-element-hidden">
               <div class="first-element-two"></div>
               <div class="card-container-one">
-                <div class="upper-card">
+                <div class="upper-card-one">
                   <img src="../Redesign/profile_pic.png" />
                   <div class="text-section">
                     <h2><span class="dark-text">Name: </span> James Atkins</h2>
@@ -39,7 +39,7 @@
                     </p>
                   </div>
                 </div>
-                <div class="lower-card">
+                <div class="lower-card-one">
                   <p>
                     <span class="dark-text">Education: </span>Junior, Bachelors
                     in Software Engineering @W.G.U.
@@ -93,8 +93,45 @@
         <!-- Landing page here-->
         <div class="left-panel">
           <div class="left-panel-container">
-            <h1>James Atkins</h1>
-            <p>Software Engineer</p>
+            <h1 data-text=">: Hey, I'm James"><span class="cursor">_</span></h1>
+            <script>
+              document.addEventListener("DOMContentLoaded", function () {
+                const headingElement = document.querySelector("h1");
+                const text = headingElement.getAttribute("data-text");
+                const typingSpeed = 100;
+                let i = 0;
+
+                function typeWriter() {
+                  if (i < text.length) {
+                    headingElement.textContent = text.substring(0, i + 1);
+                    headingElement.insertAdjacentHTML('beforeend', '<span class="cursor">_</span>');
+                    i++;
+                    setTimeout(typeWriter, typingSpeed);
+                  }
+                }
+
+                typeWriter();
+              });
+            </script>
+            <!-- <script>
+              document.addEventListener("DOMContentLoaded", function () {
+                const h1Element = document.querySelector("h1");
+                const text = h1Element.getAttribute("data-text");
+                const typingSpeed = 100;
+                let i = 0;
+
+                function typeWriter() {
+                  if (i < text.length) {
+                    h1Element.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, typingSpeed);
+                  }
+                }
+
+                typeWriter();
+              });
+            </script>-->
+            <p>// Software Engineer</p>
           </div>
         </div>
         <div class="right-panel">
@@ -105,11 +142,11 @@
             <p>
               Welcome to my portfolio! I'm a student at Western Governors
               University studying
-              <span style="color: white">software engineering</span>
+              <span class="secret-text">Software Engineering</span>
               and passionate about
-              <span style="color: white">web development</span>,
-              <span style="color: white">game development</span>, and
-              <span style="color: white">artificial intelligence</span>. I'm
+              <span class="secret-text">Web Development</span>,
+              <span class="secret-text">Game Development</span>, and
+              <span class="secret-text">Artificial Intelligence</span>. I'm
               still learning and growing, so I'm excited to share my journey
               with you!
             </p>
@@ -128,7 +165,9 @@
           learning IT/tech is both gratifying and tough! I've worked in physical
           labor, construction, and commercial fishing for most of my life but
           I've always desired a more mentally stimulating career!<br />
+          <button id="info-button">Extra, Extra</button>
         </p>
+        <!--
         <p>
           I'm passionate about learning and creating interactive media, such as
           games, websites, and artificial intelligence. I'm still a couple years
@@ -136,12 +175,13 @@
           this time so if you're here and see some potential or have some advice
           for me then I'm open to communication!
         </p>
+        -->
       </section>
       <section class="third-page" id="third-page">
         <!-- Content page here-->
         <div class="content-container">
-          <h3 id="inspire-h3">Get inspired!</h3>
-          <button id="inspire-button">Inspire me!</button>
+          <h3 id="inspire-h3">Be inspired!</h3>
+          <button id="inspire-button">Click me</button>
         </div>
         <div class="hidden" id="expanded-element">
           <q id="random-quote"></q>
@@ -150,8 +190,50 @@
       </section>
       <section class="fourth-page" id="fourth-page">
         <!-- Projects page here-->
-        <div class="card-container"></div>
-        <div class="card-container"></div>
+        <div class="card-container">
+          <div id="button_one" title="Inked Art Landing Page">
+            <div class="inner-card">
+              <div class="upper-card">
+                <img src="../images/InkedArtPoster.png" />
+                <div class="text-section">
+                  <h2>Inked Art Landing Page</h2>
+                  <p><strong>Focus: </strong>Web Development</p>
+                  <p><strong>Tools: </strong>HTML5/CSS3</p>
+                </div>
+              </div>
+              <div class="lower-card">
+                <p>
+                  This landing page project showcases a sleek and modern design
+                  for Inked Art Studios, a premier tattoo shop.
+                  <br />
+                  <br />
+                  The design focuses on a clean layout with engaging visuals and
+                  user-friendly navigation.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-container">
+          <div id="button_two">
+            <div class="inner-card">
+              <div class="upper-card">
+                <img src="../images/Inspire.png" />
+                <div class="text-section">
+                  <h2>Message Generator</h2>
+                  <p><strong>Focus: </strong>Web Development</p>
+                  <p><strong>Tools: </strong>HTML5/CSS3/JS</p>
+                </div>
+              </div>
+              <div class="lower-card">
+                <p>
+                  A webpage that utilizes JavaScript to generates random
+                  inspirational quotes from influential figures.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
   </body>
@@ -176,4 +258,5 @@
     <p>&copy; 2024 James Atkins. All rights reserved</p>
   </footer>
   <script src="messages.js"></script>
+  <script src="buttons.js"></script>
 </html>
