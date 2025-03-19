@@ -93,69 +93,104 @@
         <!-- Landing page here-->
         <div class="left-panel">
           <div class="left-panel-container">
-            <h1 data-text=">: Hey, I'm James"><span class="cursor">_</span></h1>
+            <h1 data-text=">: Greetings, User, I'm James!"><span class="cursor">_</span></h1>
             <script>
               document.addEventListener("DOMContentLoaded", function () {
                 const headingElement = document.querySelector("h1");
                 const text = headingElement.getAttribute("data-text");
-                const typingSpeed = 100;
+                const typingSpeed = 25;
                 let i = 0;
+                
+                const paragraphElement = document.querySelector(".lower-right-panel p:first-child");
+                const text2 = paragraphElement.getAttribute("data-text-2");
+                const typingSpeed2 = 5;
+                let j = 0;
+
+                const paragraphElementTwo = document.querySelector(".lower-right-panel p:last-child");
+                const text3 = paragraphElementTwo.getAttribute("data-text-3");
+                const typingSpeed3 = 5;
+                let k = 0;
+
+                headingElement.innerHTML = '<span class="cursor">_</span>';
 
                 function typeWriter() {
                   if (i < text.length) {
-                    headingElement.textContent = text.substring(0, i + 1);
+                    headingElement.innerHTML = text.substring(0, i + 1);
                     headingElement.insertAdjacentHTML('beforeend', '<span class="cursor">_</span>');
                     i++;
+                    const cursor = headingElement.querySelector('.cursor')
+                    cursor.classList.add('visible'); // Make the cursor visible
                     setTimeout(typeWriter, typingSpeed);
                   }
                 }
 
                 typeWriter();
+
+                function typeWriter2() {
+                  let contentToType = "";
+                  // We will type out text normally, but preserve the spans and their style
+                  let tempText = text2;  // No need to modify or replace the span tags
+
+                  if (j < tempText.length) {
+                    contentToType = tempText.substring(0, j + 1); // Get the current part to type
+                    
+                    // Replace the typed portion in the original text while maintaining span tags
+                    paragraphElement.innerHTML = contentToType;
+                    
+                    // Add the cursor to the end of the typed portion
+                    paragraphElement.insertAdjacentHTML('beforeend', '<span class="cursor">_</span>');
+                    const cursor = paragraphElement.querySelector('.cursor');
+                    cursor.classList.add('visible');
+              
+                    j++; // Move to the next character
+                    setTimeout(typeWriter2, typingSpeed2); // Call the function recursively to type the next character
+                  }
+                }
+
+                setTimeout(typeWriter2, 2000);
+
+                function typeWriter3() {
+                  let contentToType = "";
+                  // We will type out text normally, but preserve the spans and their style
+                  let tempTextTwo = text3;  // No need to modify or replace the span tags
+
+                  if (k < tempTextTwo.length) {
+                    contentToType = tempTextTwo.substring(0, k + 1); // Get the current part to type
+                    
+                    // Replace the typed portion in the original text while maintaining span tags
+                    paragraphElementTwo.innerHTML = contentToType;
+                    
+                    // Add the cursor to the end of the typed portion
+                    paragraphElementTwo.innerHTML += '<span class="cursor">_</span>';
+                    const cursor = paragraphElementTwo.querySelector('.cursor');
+                    cursor.classList.add('visible');
+              
+                    k++; // Move to the next character
+                    setTimeout(typeWriter3, typingSpeed3); // Call the function recursively to type the next character
+                  }
+                }
+              
+                setTimeout(typeWriter3, 8500);
               });
+
             </script>
-            <!-- <script>
-              document.addEventListener("DOMContentLoaded", function () {
-                const h1Element = document.querySelector("h1");
-                const text = h1Element.getAttribute("data-text");
-                const typingSpeed = 100;
-                let i = 0;
-
-                function typeWriter() {
-                  if (i < text.length) {
-                    h1Element.innerHTML += text.charAt(i);
-                    i++;
-                    setTimeout(typeWriter, typingSpeed);
-                  }
-                }
-
-                typeWriter();
-              });
-            </script>-->
-            <p>// Software Engineer</p>
           </div>
         </div>
         <div class="right-panel">
-          <div class="upper-right-panel">
-            <!--FIX ME: ASSIGN CORRECT IMAGES TO PLACEHOLDERS IN NUMBERICAL ORDER-->
-          </div>
           <div class="lower-right-panel">
-            <p>
-              Welcome to my portfolio! I'm a student at Western Governors
-              University studying
-              <span class="secret-text">Software Engineering</span>
-              and passionate about
-              <span class="secret-text">Web Development</span>,
-              <span class="secret-text">Game Development</span>, and
-              <span class="secret-text">Artificial Intelligence</span>. I'm
-              still learning and growing, so I'm excited to share my journey
-              with you!
+            <p data-text-2="Welcome to my portfolio! I'm a student at Western Governors
+              University studying <span class='secret-text'> Software Engineering</span> 
+              and passionate about <span class='secret-text'>Web Development</span>, <span class='secret-text'>Game Development</span>, and <span class='secret-text'>Artificial Intelligence</span>.">
+              <span class="cursor">_</span></p>
+              <br>
+              <br>
+            <p data-text-3="I'm still learning how to do these cool things so there will be ongoing changes and additions to this site. I'm a career transitioner doing my best to pursue my passions, and learning IT/tech is both gratifying and tough! I've worked in physical labor, construction, and commercial fishing for most of my life but I've always desired a more mentally stimulating career!"><span class="cursor">_</span>
             </p>
           </div>
         </div>
       </section>
       <section class="second-page" id="second-page">
-        <!-- About me page here-->
-        <img class="sec-pic" src="../Redesign/profile_pic.png" />
+        <!-- ABOUT ME -->
         <p>
           Greetings from my virtual portfolio! I'm still learning how to do
           these cool things so there will be ongoing changes and additions to
@@ -167,18 +202,9 @@
           I've always desired a more mentally stimulating career!<br />
           <button id="info-button">Extra, Extra</button>
         </p>
-        <!--
-        <p>
-          I'm passionate about learning and creating interactive media, such as
-          games, websites, and artificial intelligence. I'm still a couple years
-          away from finishing my bachelor's degree in software engineering at
-          this time so if you're here and see some potential or have some advice
-          for me then I'm open to communication!
-        </p>
-        -->
       </section>
       <section class="third-page" id="third-page">
-        <!-- Content page here-->
+        <!-- CONTENT PAGE -->
         <div class="content-container">
           <h3 id="inspire-h3">Be inspired!</h3>
           <button id="inspire-button">Click me</button>
@@ -238,7 +264,7 @@
     </main>
   </body>
   <!-- Footer-->
-  <footer>
+  <footer id="third-page">
     <div class="footer-left">
       <ul class="footer-ul">
         <li>
