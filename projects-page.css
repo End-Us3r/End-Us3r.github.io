@@ -50,7 +50,6 @@ body::after {
     transparent 1px,
     transparent 3px
   );
-  
   pointer-events: none;
   z-index: 999;
 }
@@ -67,6 +66,28 @@ nav {
   text-shadow: green 0px 0px 4px;
   box-shadow: 1px 1px 10px 5px;
   
+}
+
+.card-container {
+  position: relative;
+}
+
+.card-container img {
+  z-index: 10;
+}
+
+.card-container img:hover {
+  cursor: pointer;
+  background-color: #00ff09;
+}
+
+.card-container h2 {
+  position: relative;
+  z-index: 0;
+}
+
+.card-container h2:hover {
+  pointer-events: none;
 }
 
 ul {
@@ -175,10 +196,11 @@ a {
   align-items: center;
   margin: 10rem 0 0 0;
   height: auto;
+  text-align: center;
 }
 
 h2 {
-  font-size: var(--font-size-two);
+  font-size: 1.25rem;
   font-family: doto, sans-serif;
   color: #00ff09;
   width: 100%;
@@ -345,12 +367,7 @@ footer p {
   .card-container {
     display: flex;
     flex-direction: column;
-    background-color: var(--background-light-grey);
-    font-size: 1.2rem;
-    border-radius: var(--border-radius-two);
-    box-shadow: 8px 8px 10px var(--fifth-color);
-    z-index: 2;
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    font-size: 1rem;
     height: auto;
   }
 
@@ -412,13 +429,6 @@ footer p {
   .card-container {
     display: flex;
     flex-direction: column;
-    background-color: var(--background-light-grey);
-    font-size: 1.2rem;
-    border-radius: var(--border-radius-two);
-    box-shadow: 8px 8px 10px var(--fifth-color);
-    z-index: 2;
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
-    height: auto;
   }
 
   h2 {
