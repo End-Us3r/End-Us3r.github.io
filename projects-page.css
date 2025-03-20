@@ -33,6 +33,26 @@ body {
   background-color: grey;
   width: 100%;
   height: 100vh;
+  
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.15),
+    rgba(0, 0, 0, 0.15) 2px,
+    transparent 1px,
+    transparent 3px
+  );
+  
+  pointer-events: none;
+  z-index: 999;
 }
 
 nav {
@@ -46,6 +66,7 @@ nav {
   z-index: 10;
   text-shadow: green 0px 0px 4px;
   box-shadow: 1px 1px 10px 5px;
+  
 }
 
 ul {
@@ -148,12 +169,11 @@ a {
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(4, 300px);
-  grid-row-gap: 10rem;
+  grid-template-rows: repeat(3, 300px);
   justify-content: space-around;
   justify-items: center;
   align-items: center;
-  margin: 10rem auto;
+  margin: 10rem 0 0 0;
   height: auto;
 }
 
@@ -163,6 +183,80 @@ h2 {
   color: #00ff09;
   width: 100%;
   text-align: center;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  height: 20rem;
+  width: 100%;
+  justify-content: center;
+  padding-left: 2rem;
+  box-shadow: 0px -4px 7px 5px black;
+  z-index: 10;
+  overflow: visible;
+  position: relative;
+  row-gap: 2rem;
+}
+
+footer p {
+  color: white;
+  text-align: center;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  height: 65%;
+  color: black;
+  margin-left: 1rem;
+  border-left: white solid 1px;
+}
+
+.footer-ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  align-items: start;
+  gap: 5px;
+}
+
+.footer-ul > li {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin-left: 1rem;
+  background-color: transparent;
+  align-items: start;
+  height: auto;
+}
+
+.footer-ul > li > a {
+  color: white;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  width: auto;
+}
+
+.footer-ul  li:nth-child(odd) a:hover {
+  text-decoration: underline;
+  color: lawngreen;
+}
+
+.footer-ul  li:nth-child(even) a:hover {
+  text-decoration: underline;
+  color: lawngreen;
+  filter: invert(100%);
+}
+
+.footer-ul > li:hover {
+  translate: 0;
 }
 
 @keyframes pulse {
@@ -175,6 +269,29 @@ h2 {
   100% {
     box-shadow: 0 5px 10px 4px rgba(0, 255, 9, 0.5);
   }
+}
+
+.glitch {
+  animation: horizontalGlitch 5s steps(1) infinite;
+}
+
+@keyframes horizontalGlitch {
+  0%, 93%, 100% {
+    background-position: 0 0; opacity: 1;
+  }
+  93.5% {
+    background-position: 115% 0; opacity: 0;
+  }
+  94% {
+    background-position: -15% 0; opacity: 0;
+    
+  }
+  94.5% {
+    background-position: 5% 0; opacity: 0;
+  }
+  95% { opacity: 1;
+  }
+
 }
 
 @media only screen and (min-width: 320px) and (max-width: 480px) {
@@ -235,24 +352,6 @@ h2 {
     z-index: 2;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
     height: auto;
-  }
-
-  .upper-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .inner-card {
-    margin: 1.5rem;
-    padding: 0;
-    height: 100%;
-  }
-
-  img {
-    width: auto;
-    height: calc(1.2 * 125px);
-    border-radius: 25px;
   }
 
   h2 {
@@ -322,24 +421,6 @@ h2 {
     height: auto;
   }
 
-  .upper-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .inner-card {
-    margin: 1.5rem;
-    padding: 0;
-    height: 100%;
-  }
-
-  img {
-    width: auto;
-    height: calc(1.2 * 125px);
-    border-radius: 25px;
-  }
-
   h2 {
     border-bottom: 2px solid black;
     margin: 0;
@@ -393,36 +474,6 @@ h2 {
     align-items: center;
     margin: 5rem auto;
     height: auto;
-  }
-
-  .card-container {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--background-light-grey);
-    font-size: 1.2rem;
-    border-radius: var(--border-radius-two);
-    box-shadow: 8px 8px 10px var(--fifth-color);
-    z-index: 2;
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
-    height: auto;
-  }
-
-  .upper-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .inner-card {
-    margin: 1.5rem;
-    padding: 0;
-    height: 100%;
-  }
-
-  img {
-    width: auto;
-    height: calc(1.2 * 125px);
-    border-radius: 25px;
   }
 
   h2 {

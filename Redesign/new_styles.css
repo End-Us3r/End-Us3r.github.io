@@ -2,6 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  
 }
 
 :root {
@@ -28,7 +29,7 @@
   --purple-800: #483d8b;
   --purple-900: #413a75;
   --purple-950: #272244;
-  --purple-one: #8303FF;
+  --purple-one: #8303ff;
 
   --salmon-50: #fdf4f3;
   --salmon-100: #fce7e8;
@@ -49,6 +50,42 @@ html {
   scroll-behavior: smooth;
   cursor: default;
   background-color: floralwhite;
+  animation: flicker 15s infinite;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    ellipse at center,
+    transparent 50%,
+    rgba(0,0,0,0.3) 100%
+  );
+  pointer-events: none;
+  z-index: 3;
+}
+
+.landing-page::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.15),
+    rgba(0, 0, 0, 0.15) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  pointer-events: none;
+  z-index: 999;
+  animation: flicker 15s infinite;
 }
 
 main {
@@ -305,7 +342,6 @@ h1 {
   padding: 0;
   margin-right: auto;
   letter-spacing: -5px;
-  filter: brightness(0.8);
   width: max-content;
 }
 
@@ -316,6 +352,10 @@ h1 {
 
 .cursor.visible {
   visibility: visible;
+}
+
+.cursor-two {
+  animation: cursorBlink 1s infinite ease-in-out;
 }
 
 .left-panel-container > p {
@@ -621,7 +661,7 @@ footer {
   display: flex;
   flex-direction: column;
   background-color: black;
-  height: 25rem;
+  height: 20rem;
   width: 100%;
   justify-content: center;
   padding-left: 2rem;
@@ -629,6 +669,7 @@ footer {
   z-index: 10;
   overflow: visible;
   position: relative;
+  row-gap: 2rem;
 }
 
 .footer-left {
@@ -670,13 +711,12 @@ footer {
   width: auto;
 }
 
-.footer-ul > li > a:nth-child(odd):hover {
+.footer-ul  li:nth-child(odd) a:hover {
   text-decoration: underline;
   color: lawngreen;
-  text-shadow: lawngreen;
 }
 
-.footer-ul > li > a:nth-child(even):hover {
+.footer-ul  li:nth-child(even) a:hover {
   text-decoration: underline;
   color: lawngreen;
   filter: invert(100%);
@@ -686,6 +726,11 @@ footer {
   translate: 0;
 }
 
+footer p {
+  color: white;
+  text-align: center;
+}
+
 @keyframes cursorBlink {
   0% {
     opacity: 0;
@@ -693,6 +738,23 @@ footer {
   100% {
     opacity: 1;
   }
+}
+
+@keyframes flicker {
+  0% {opacity: 1;}
+  3% {opacity: 0.8;}
+  6% {opacity: 1;}
+  7% {opacity: 0.9;}
+  8% {opacity: 1;}
+  9% {opacity: 1;}
+  10% {opacity: 0.9;}
+  20% {opacity: 1;}
+  50% {opacity: 1;}
+  70% {opacity: 0.7;}
+  72% {opacity: 0.95;}
+  77% {opacity: 0.9;}
+  100% {opacity: 1;}
+
 }
 
 @keyframes pulsePurple {

@@ -58,64 +58,85 @@
             </a>
           </li>
           <li class="nav-buttons">
-            <a href="about-page.html" tabindex="2">../About </a>
+            <a href="#" tabindex="2">../About </a>
           </li>
           <li class="nav-buttons">
-            <a href="projects-page.html" tabindex="3">../Contact </a>
+            <a href="#" tabindex="3">../Contact </a>
           </li>
         </ul>
       </nav>
     </header>
     <main>
+
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          const gridItems = document.querySelectorAll('.card-container');
+
+          gridItems.forEach(item => {
+            if (Math.random() > 0.5) {
+              item.classList.add('glitch');
+            }
+          });
+        });
+      </script>
+
       <section class="grid">
         <div
           id="button_one"
           class="card-container"
           title="Inked Art Landing Page"
         >
-          <div class="text-section">
-            <h2>Inked_Art_Landing_Page.exe</h2>
-          </div>
+          <h2>Inked_Art_Landing_Page.exe</h2>
         </div>
 
         <div id="button_two" class="card-container">
-          <div class="text-section">
-            <h2>Message_Generator.exe</h2>
-          </div>
+          <h2>Message_Generator.exe</h2>
         </div>
 
         <div id="button_three" class="card-container">
-          <div class="text-section">
-            <h2>CoffeeBot.exe</h2>
-          </div>
+          <h2>CoffeeBot.exe</h2>
         </div>
 
         <div id="button_four" class="card-container">
-          <div class="text-section">
-            <h2>GPA_Calculator.exe</h2>
-          </div>
+          <h2>GPA_Calculator.exe</h2>
         </div>
 
         <div id="button_five" class="card-container">
-          <div class="text-section">
-            <h2>The_Boredless_Tourist.exe</h2>
-          </div>
+          <h2>The_Boredless_Tourist.exe</h2>
         </div>
 
         <div id="button_six" class="card-container">
-          <div class="text-section">
-            <h2>Rock_Paper_Scissors.exe</h2>
-          </div>
+          <h2>Rock_Paper_Scissors.exe</h2>
         </div>
 
         <div id="button_seven" class="card-container">
-          <div class="text-section">
-            <h2>Nightmare.exe</h2>
-          </div>
+          <h2>Nightmare.exe</h2>
         </div>
       </section>
     </main>
-    <footer></footer>
+    <footer>
+      <div class="footer-left">
+        <ul class="footer-ul">
+          <li>
+            <a href="https://www.linkedin.com/in/techiejames/" target="_blank">
+              LinkedIn
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/End-Us3r" target="_blank"> 
+              GitHub
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/End-Us3r" target="_blank"> Codecademy </a>
+          </li>
+          <li>
+            <a href="https://github.com/End-Us3r" target="_blank"> GitHub </a>
+          </li>
+        </ul>
+      </div>
+      <p>&copy;2024 James Atkins.</p>
+    </footer>
     <script src="./buttons.js"></script>
   </body>
 </html>
