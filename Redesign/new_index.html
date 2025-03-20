@@ -82,9 +82,9 @@
             </div>
             <a href="#homepage">JA</a>
           </div>
-          <li><a href="#second-page">Journey</a></li>
-          <li><a href="#fourth-page">Projects</a></li>
-          <li><a href="#third-page">Contact</a></li>
+          <li><a href="#second-page">../Journey</a></li>
+          <li><a href="../projects-page.html">../Projects</a></li>
+          <li><a href="#third-page">../Contact</a></li>
         </ul>
       </nav>
     </header>
@@ -98,7 +98,7 @@
               document.addEventListener("DOMContentLoaded", function () {
                 const headingElement = document.querySelector("h1");
                 const text = headingElement.getAttribute("data-text");
-                const typingSpeed = 25;
+                const typingSpeed = 35;
                 let i = 0;
                 
                 const paragraphElement = document.querySelector(".lower-right-panel p:first-child");
@@ -170,7 +170,7 @@
                   }
                 }
               
-                setTimeout(typeWriter3, 8500);
+                setTimeout(typeWriter3, 6000);
               });
 
             </script>
@@ -179,7 +179,7 @@
         <div class="right-panel">
           <div class="lower-right-panel">
             <p data-text-2="Welcome to my portfolio! I'm a student at Western Governors
-              University studying <span class='secret-text'> Software Engineering</span> 
+              University studying <span class='secret-text' id='button_one'> Software Engineering</span> 
               and passionate about <span class='secret-text'>Web Development</span>, <span class='secret-text'>Game Development</span>, and <span class='secret-text'>Artificial Intelligence</span>.">
               <span class="cursor">_</span></p>
               <br>
@@ -200,11 +200,10 @@
           learning IT/tech is both gratifying and tough! I've worked in physical
           labor, construction, and commercial fishing for most of my life but
           I've always desired a more mentally stimulating career!<br />
-          <button id="info-button">Extra, Extra</button>
         </p>
+        <a href="#homepage" id="info-button">Would you like to know more?<a/>
       </section>
-      <section class="third-page" id="third-page">
-        <!-- CONTENT PAGE -->
+      <!-- <section class="third-page" id="third-page">
         <div class="content-container">
           <h3 id="inspire-h3">Be inspired!</h3>
           <button id="inspire-button">Click me</button>
@@ -213,58 +212,11 @@
           <q id="random-quote"></q>
           <p id="random-author"></p>
         </div>
-      </section>
-      <section class="fourth-page" id="fourth-page">
-        <!-- Projects page here-->
-        <div class="card-container">
-          <div id="button_one" title="Inked Art Landing Page">
-            <div class="inner-card">
-              <div class="upper-card">
-                <img src="../images/InkedArtPoster.png" />
-                <div class="text-section">
-                  <h2>Inked Art Landing Page</h2>
-                  <p><strong>Focus: </strong>Web Development</p>
-                  <p><strong>Tools: </strong>HTML5/CSS3</p>
-                </div>
-              </div>
-              <div class="lower-card">
-                <p>
-                  This landing page project showcases a sleek and modern design
-                  for Inked Art Studios, a premier tattoo shop.
-                  <br />
-                  <br />
-                  The design focuses on a clean layout with engaging visuals and
-                  user-friendly navigation.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card-container">
-          <div id="button_two">
-            <div class="inner-card">
-              <div class="upper-card">
-                <img src="../images/Inspire.png" />
-                <div class="text-section">
-                  <h2>Message Generator</h2>
-                  <p><strong>Focus: </strong>Web Development</p>
-                  <p><strong>Tools: </strong>HTML5/CSS3/JS</p>
-                </div>
-              </div>
-              <div class="lower-card">
-                <p>
-                  A webpage that utilizes JavaScript to generates random
-                  inspirational quotes from influential figures.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      </section> -->
     </main>
   </body>
   <!-- Footer-->
-  <footer id="third-page">
+  <footer>
     <div class="footer-left">
       <ul class="footer-ul">
         <li>
@@ -272,10 +224,6 @@
             LinkedIn
           </a>
         </li>
-      </ul>
-    </div>
-    <div class="footer-right">
-      <ul class="footer-ul">
         <li>
           <a href="https://github.com/End-Us3r" target="_blank"> GitHub </a>
         </li>
