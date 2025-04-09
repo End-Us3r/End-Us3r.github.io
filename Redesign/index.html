@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="../../End-Us3r.github.io/Redesign/styles.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <header>
+      <!-- Navbar here-->
+      <nav>
+        <ul>
+          <div class="first-element">
+            <!--FIX ME: PROFILE TAB / CSS-->
+            <div class="first-element-hidden">
+              <div class="first-element-two"></div>
+              <div class="card-container-one">
+                <div class="upper-card-one">
+                  <img src="../Redesign/profile_pic.png" />
+                  <div class="text-section">
+                    <h2><span class="dark-text">Name: </span> James Atkins</h2>
+                    <p>
+                      <span class="dark-text">Location: </span> San Mateo,
+                      California
+                    </p>
+                    <p>
+                      <span class="dark-text">Skills: </span>HTML/CSS/JS •
+                      Python<br />
+                      • Git/GitHub • Figma
+                    </p>
+                  </div>
+                </div>
+                <div class="lower-card-one">
+                  <p>
+                    <span class="dark-text">Education: </span>Junior, Bachelors
+                    in Software Engineering @W.G.U.
+                  </p>
+                  <p>
+                    <span class="dark-text">Interests: </span> Web Development,
+                    Game Development, Artificial Intelligence
+                  </p>
+                </div>
+                <div class="social-backdrop">
+                  <a
+                    href="https://www.codecademy.com/profiles/James-Atkins"
+                    target="_blank"
+                  >
+                    <img
+                      src="../images/codecademy_icon.svg"
+                      alt="Codecademy Profile"
+                      loading="lazy"
+                    />
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/techiejames/"
+                    target="_blank"
+                  >
+                    <img
+                      src="../images/linkedin_icon.svg"
+                      alt="LinkedIn Profile"
+                      loading="lazy"
+                    />
+                  </a>
+                  <a href="https://github.com/End-Us3r" target="_blank">
+                    <img
+                      src="../images/github_icon.svg"
+                      alt="GitHub Profile"
+                      loading="lazy"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <a href="#homepage">JA</a>
+          </div>
+          <li><a href="#second-page">../Journey</a></li>
+          <li><a href="../projects-page.html">../Projects</a></li>
+          <li><a href="#third-page">../Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="landing-page" id="homepage">
+        <!-- Landing page here-->
+        <div class="left-panel">
+          <div class="left-panel-container">
+            <h1 data-text=">: Greetings, User, I'm James!"><span class="cursor">_</span></h1>
+          </div>
+        </div>
+        <div class="right-panel">
+          <div class="lower-right-panel">
+            <p data-text-2="Welcome to my portfolio! I'm a student at Western Governors
+            University studying <span class='secret-text' id='button_one'> Software Engineering</span> 
+            and passionate about <span class='secret-text'>Web Development</span>, <span class='secret-text'>Game Development</span>, and <span class='secret-text'>Artificial Intelligence</span>.">
+            <span class="cursor">_</span></p>
+            <br>
+            <br>
+            <p data-text-3="I'm still learning how to do these cool things so there will be ongoing changes and additions to this site. I'm a career transitioner doing my best to pursue my passions, and learning IT/tech is both gratifying and tough! I've worked in physical labor, construction, and commercial fishing for most of my life but I've always desired a more mentally stimulating career!"><span class="cursor">_</span>
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="second-page" id="second-page">
+        <!-- ABOUT ME -->
+        <p>
+          Greetings from my virtual portfolio! I'm still learning how to do
+          these cool things so there will be ongoing changes and additions to
+          this site.<span class="cursor-two">_</span><br />
+          <br />
+          I'm a career transitioner doing my best to pursue my passions, and
+          learning IT/tech is both gratifying and tough! I've worked in physical
+          labor, construction, and commercial fishing for most of my life but
+          I've always desired a more mentally stimulating career!<span class="cursor-two">_</span><br />
+        </p>
+        <a href="#homepage" id="info-button">Would you like to know more?<span class="cursor-two">_</span><a/>
+        </section>
+      </main>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const headingElement = document.querySelector("h1");
+          const text = headingElement.getAttribute("data-text");
+          const typingSpeed = 25;
+          let i = 0;
+          
+          const paragraphElement = document.querySelector(".lower-right-panel p:first-child");
+          const text2 = paragraphElement.getAttribute("data-text-2");
+          const typingSpeed2 = 2;
+          let j = 0;
+
+          const paragraphElementTwo = document.querySelector(".lower-right-panel p:last-child");
+          const text3 = paragraphElementTwo.getAttribute("data-text-3");
+          const typingSpeed3 = 2;
+          let k = 0;
+
+          headingElement.innerHTML = '<span class="cursor">_</span>';
+
+          function typeWriter() {
+            if (i < text.length) {
+              headingElement.innerHTML = text.substring(0, i + 1);
+              headingElement.insertAdjacentHTML('beforeend', '<span class="cursor">_</span>');
+              i++;
+              const cursor = headingElement.querySelector('.cursor')
+              cursor.classList.add('visible'); // Make the cursor visible
+              setTimeout(typeWriter, typingSpeed);
+            }
+          }
+
+          typeWriter();
+
+          function typeWriter2() {
+            let contentToType = "";
+            // We will type out text normally, but preserve the spans and their style
+            let tempText = text2;  // No need to modify or replace the span tags
+
+            if (j < tempText.length) {
+              contentToType = tempText.substring(0, j + 1); // Get the current part to type
+              
+              // Replace the typed portion in the original text while maintaining span tags
+              paragraphElement.innerHTML = contentToType;
+              
+              // Add the cursor to the end of the typed portion
+              paragraphElement.insertAdjacentHTML('beforeend', '<span class="cursor">_</span>');
+              const cursor = paragraphElement.querySelector('.cursor');
+              cursor.classList.add('visible');
+        
+              j++; // Move to the next character
+              setTimeout(typeWriter2, typingSpeed2); // Call the function recursively to type the next character
+            }
+          }
+
+          setTimeout(typeWriter2, 2000);
+
+          function typeWriter3() {
+            let contentToType = "";
+            // We will type out text normally, but preserve the spans and their style
+            let tempTextTwo = text3;  // No need to modify or replace the span tags
+
+            if (k < tempTextTwo.length) {
+              contentToType = tempTextTwo.substring(0, k + 1); // Get the current part to type
+              
+              // Replace the typed portion in the original text while maintaining span tags
+              paragraphElementTwo.innerHTML = contentToType;
+              
+              // Add the cursor to the end of the typed portion
+              paragraphElementTwo.innerHTML += '<span class="cursor">_</span>';
+              const cursor = paragraphElementTwo.querySelector('.cursor');
+              cursor.classList.add('visible');
+        
+              k++; // Move to the next character
+              setTimeout(typeWriter3, typingSpeed3); // Call the function recursively to type the next character
+            }
+          }
+        
+          setTimeout(typeWriter3, 6000);
+        });
+
+      </script>
+  </body>
+  <!-- Footer-->
+  <footer>
+    <div class="footer-left">
+      <ul class="footer-ul">
+        <li>
+          <a href="https://www.linkedin.com/in/techiejames/" target="_blank">
+            LinkedIn
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/End-Us3r" target="_blank"> 
+            GitHub
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/End-Us3r" target="_blank"> Codecademy </a>
+        </li>
+        <li>
+          <a href="https://github.com/End-Us3r" target="_blank"> GitHub </a>
+        </li>
+      </ul>
+    </div>
+    <p>&copy;2025 James Atkins</p>
+  </footer>
+  <script src="messages.js"></script>
+  <script src="buttons.js"></script>
+</html>
