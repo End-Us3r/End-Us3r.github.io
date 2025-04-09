@@ -9,7 +9,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Open index.html",
-            "file": "d:\\Users\\James\\Portfolio\\Portfolio_Project\\End-Us3r.github.io\\src\\index.html"
+            "file": "d:\\Users\\James\\Portfolio\\Portfolio_Project\\End-Us3r.github.io\\index.html"
         }
     ]
 }
