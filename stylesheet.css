@@ -211,6 +211,7 @@ ul {
   width: 100%;
   margin: 0 2rem;
   align-items: center;
+  gap: 1rem;
 }
 
 .first-element {
@@ -266,7 +267,7 @@ ul {
   opacity: 0;
   top: 25%;
   left: 35%;
-  background-color: var(--gray-50);
+  background-color: rgba(131, 3, 255, 1);
   transition: height 0.5s ease-in-out, opacity 0.25s ease-in-out;
   z-index: 1;
   align-items: center;
@@ -274,7 +275,6 @@ ul {
   border-radius: 25px;
   text-transform: uppercase;
   width: max-content;
-  border: #000000 solid 1px;
 }
 
 .first-element:hover .first-element-hidden {
@@ -289,7 +289,7 @@ ul {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: var(--gray-500);
+  color: white;
   font-size: 18px;
   text-shadow: 0px 0px 20px black;
   gap: 0.5rem;
@@ -394,18 +394,26 @@ li > a {
   color: black;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 28px;
+  font-size: 22px;
   letter-spacing: 1px;
   width: 100%;
   height: 100%;
   align-content: center;
   text-align: center;
+  background-color: transparent;
 }
 
 li:hover {
-  box-shadow: 0px 0px 0px;
   background-color: lawngreen;
-  filter: brightness(1);
+  color: black; /* optional: better contrast */
+  border: none;
+  filter: brightness(1.1);
+  box-shadow:
+    0 0 5px lawngreen,
+    0 0 10px lawngreen,
+    0 0 20px lawngreen,
+    0 0 40px lawngreen;
+  transition: all 0.3s ease-in-out;
 }
 
 .landing-page {
@@ -817,6 +825,7 @@ footer {
   background-color: transparent;
   align-items: start;
   height: auto;
+  box-shadow: none;
 }
 
 .footer-ul > li > a {
@@ -831,6 +840,7 @@ footer {
 .footer-ul  li:nth-child(odd) a:hover {
   text-decoration: underline;
   color: lawngreen;
+  text-shadow: 0 0 5px lawngreen, 0 0 10px lawngreen;
 }
 
 .footer-ul  li:nth-child(even) a:hover {
@@ -855,7 +865,7 @@ footer p {
 
   ul > li {
     height: 3rem;
-    width: 13rem;
+    width: 10rem;
   }
 
   .first-element {
