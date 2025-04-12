@@ -44,6 +44,82 @@
   --salmon-950: #440d18;
 }
 
+@keyframes cursorBlink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes flicker {
+  0% {opacity: 1;}
+  3% {opacity: 0.8;}
+  6% {opacity: 1;}
+  7% {opacity: 0.9;}
+  8% {opacity: 1;}
+  9% {opacity: 1;}
+  10% {opacity: 0.9;}
+  20% {opacity: 1;}
+  50% {opacity: 1;}
+  70% {opacity: 0.7;}
+  72% {opacity: 0.95;}
+  77% {opacity: 0.9;}
+  100% {opacity: 1;}
+
+}
+
+@keyframes glitch {
+  0% {
+    text-shadow: 2px 0 red, -2px 0 blue;
+  }
+  20% {
+    text-shadow: -2px -1px red, 2px 1px blue;
+  }
+  40% {
+    text-shadow: -1px 1px red, 1px -1px blue;
+  }
+  60% {
+    text-shadow: 1px -1px red, -1px 1px blue;
+  }
+  80% {
+    text-shadow: -2px 0 red, 2px 0 blue;
+  }
+  100% {
+    text-shadow: 2px 0 red, -2px 0 blue;
+  }
+}
+
+@keyframes pulsePurple {
+  0% {
+    box-shadow: 0 5px 10px 4px var(--purple-one);
+  }
+  50% {
+    box-shadow: 0px 5px 11px 4px var(--gray-200);
+  }
+  100% {
+    box-shadow: 0 5px 10px 4px var(--purple-one);
+  }
+}
+
+@keyframes pulseSpecialOne {
+  0% {
+    box-shadow: 0 5px 10px 4px var(--salmon-500);
+  }
+  50% {
+    box-shadow: 0px 5px 11px 4px var(--gray-200);
+  }
+  100% {
+    box-shadow: 0 5px 10px 4px var(--salmon-500);
+  }
+}
+
+@keyframes gridMove {
+  0% { background-position: 0 0; }
+  100% { background-position: 1000px 1000px; }
+}
+
 html {
   font-size: 16px;
   font-family: "doto", sans-serif;
@@ -67,6 +143,21 @@ body::before {
   );
   pointer-events: none;
   z-index: 3;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+  background-size: 20px 20px;
+  z-index: 0;
+  pointer-events: none;
+  animation: gridMove 60s linear infinite;
 }
 
 .landing-page::after {
@@ -315,6 +406,7 @@ li:hover {
   flex-direction: row;
   height: 100vh;
   background-color: #1d1d1d;
+  text-shadow: 0 0 5px lawngreen, 0 0 10px lawngreen;
 }
 
 .left-panel-container {
@@ -344,6 +436,24 @@ h1 {
   margin-right: auto;
   letter-spacing: -5px;
   width: max-content;
+  text-shadow: 0 0 5px lawngreen, 0 0 10px lawngreen;
+}
+
+.glitch {
+  position: relative;
+  color: #00ffea;
+  font-weight: bold;
+  text-shadow: 0 0 5px #00ffea, 0 0 10px #00ffea;
+  animation: glitch 1s infinite;
+}
+
+.glitch:hover {
+  text-decoration: underline;
+  cursor: pointer;
+  color: lawngreen;
+  filter: invert(100%);
+  font-weight: 900;
+  animation: none;
 }
 
 .cursor {
@@ -420,12 +530,13 @@ h1 {
   height: 75vh;
   padding: 0 5rem;
   font-size: 22px;
-  background-color: rgb(179, 179, 179);
+  background-color: rgb(222 222 222);
   font-family: "doto", sans-serif;
-  font-weight: 700;
+  font-weight: 900;
+  color: black;
   text-align: center;
   box-shadow: 0px -5px 10px 0px lawngreen;
-  position: relative;
+  position: relative;;
 }
 
 .sec-pic {
@@ -442,7 +553,6 @@ h1 {
 
 .second-page > p {
   font-size: 1.5rem;
-  color: black;
   text-align: left;
   margin: 5rem 0 5rem 0;
 }
@@ -450,7 +560,6 @@ h1 {
 .second-page > a {
   padding: 0.5rem;
   font-size: 1.5rem;
-  color: white;
   outline: none;
   cursor: pointer;
   letter-spacing: 1px;
@@ -459,8 +568,10 @@ h1 {
   text-align: center;
   position: relative;
   text-decoration: none;
-  background-color: rgb(179, 179, 179);
-  font-weight: 700;
+  background-color: rgb(222 222 222);
+  font-weight: 900;
+  text-shadow: 0 0 5px white, 0 0 10px white;
+  color: black;
 }
 
 .second-page > a:hover {
@@ -468,7 +579,8 @@ h1 {
   cursor: pointer;
   color: rgba(131, 3, 255, 1);
   background-color: transparent;
-  font-weight: 900;
+  font-weight: 700;
+  text-shadow: 0 0 5px rgba(131, 3, 255, 1), 0 0 10px rgba(131, 3, 255, 1);
 }
 
 .third-page {
@@ -727,56 +839,6 @@ footer {
 footer p {
   color: white;
   text-align: center;
-}
-
-@keyframes cursorBlink {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes flicker {
-  0% {opacity: 1;}
-  3% {opacity: 0.8;}
-  6% {opacity: 1;}
-  7% {opacity: 0.9;}
-  8% {opacity: 1;}
-  9% {opacity: 1;}
-  10% {opacity: 0.9;}
-  20% {opacity: 1;}
-  50% {opacity: 1;}
-  70% {opacity: 0.7;}
-  72% {opacity: 0.95;}
-  77% {opacity: 0.9;}
-  100% {opacity: 1;}
-
-}
-
-@keyframes pulsePurple {
-  0% {
-    box-shadow: 0 5px 10px 4px var(--purple-one);
-  }
-  50% {
-    box-shadow: 0px 5px 11px 4px var(--gray-200);
-  }
-  100% {
-    box-shadow: 0 5px 10px 4px var(--purple-one);
-  }
-}
-
-@keyframes pulseSpecialOne {
-  0% {
-    box-shadow: 0 5px 10px 4px var(--salmon-500);
-  }
-  50% {
-    box-shadow: 0px 5px 11px 4px var(--gray-200);
-  }
-  100% {
-    box-shadow: 0 5px 10px 4px var(--salmon-500);
-  }
 }
 
 @media only screen and (max-width: 1600px) {
