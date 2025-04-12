@@ -208,18 +208,14 @@ h2 {
 }
 
 footer {
-  display: flex;
-  flex-direction: column;
+  display: block;
   background-color: black;
-  height: 20rem;
   width: 100%;
-  justify-content: center;
   padding-left: 2rem;
   box-shadow: 0px -4px 7px 5px black;
   z-index: 10;
   overflow: visible;
   position: relative;
-  row-gap: 2rem;
 }
 
 footer p {
@@ -230,7 +226,6 @@ footer p {
 .footer-left {
   display: flex;
   flex-direction: column;
-  height: 65%;
   color: black;
   margin-left: 1rem;
   border-left: white solid 1px;
