@@ -1,9 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
+body {
+    display: contents;
+    height: 100vh;
+}
+
+main {
+    height: 100vh;
+}
+
 /* Main Container */
 .neo-cyber-form {
   position: relative;
-  padding: 4rem 1rem;
+  padding: 0;
   font-family: 'VT323', monospace;
   display: flex;
   justify-content: center;
@@ -134,6 +143,11 @@
   box-shadow: 0 0 25px #ff00cc;
 }
 
+.cursor {
+    animation: cursorBlink 1s infinite ease-in-out;
+    color: #00ff00;
+  }
+
 /* 🔁 Gradient animation keyframes */
 @keyframes gradientAnimation {
   0% {
@@ -146,3 +160,12 @@
     background-position: 0% 50%;
   }
 }
+
+@keyframes cursorBlink {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
