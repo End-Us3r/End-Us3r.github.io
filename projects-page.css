@@ -194,7 +194,7 @@ a {
   justify-content: space-around;
   justify-items: center;
   align-items: center;
-  margin: 10rem 0 0 0;
+  margin: 10rem 0 10rem 0;
   height: auto;
   text-align: center;
 }
@@ -208,18 +208,14 @@ h2 {
 }
 
 footer {
-  display: flex;
-  flex-direction: column;
+  display: block;
   background-color: black;
-  height: 20rem;
   width: 100%;
-  justify-content: center;
   padding-left: 2rem;
   box-shadow: 0px -4px 7px 5px black;
   z-index: 10;
   overflow: visible;
   position: relative;
-  row-gap: 2rem;
 }
 
 footer p {
@@ -230,7 +226,6 @@ footer p {
 .footer-left {
   display: flex;
   flex-direction: column;
-  height: 65%;
   color: black;
   margin-left: 1rem;
   border-left: white solid 1px;
@@ -279,6 +274,56 @@ footer p {
 
 .footer-ul > li:hover {
   translate: 0;
+}
+
+@media only screen and (max-width: 1600px) {
+  nav {
+    height: 5rem;
+  }
+
+  ul > li {
+    height: 3rem;
+    width: 13rem;
+  }
+
+  .first-element {
+    height: 3rem;
+    width: 3rem;
+  }
+
+  .first-element-two {
+    height: 3rem;
+    width: 3rem;
+  }
+
+  .first-element-hidden {
+    width: auto;
+  }
+
+  .upper-card-one img {
+    position: relative;
+    width: 8vw;
+    height: auto;
+    right: -7%;
+  }
+
+  .lower-card-one {
+    margin-left: 2rem;
+  }
+
+  .lower-right-panel {
+    top: 40%
+  }
+
+  .lower-right-panel p:last-child {
+    left: 150%;
+    position: relative;
+    bottom: 16rem;
+  }
+
+  .grid {
+    margin: 4rem 0;
+  }
 }
 
 @keyframes pulse {
