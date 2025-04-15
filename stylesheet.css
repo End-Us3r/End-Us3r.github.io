@@ -378,7 +378,6 @@ ul > li {
   font-size: 1.5rem;
   font-weight: 600;
   padding: 0 1px;
-  filter: brightness(3);
 }
 
 li:nth-child(2) {
@@ -388,6 +387,17 @@ li:nth-child(2) {
 
 li:nth-child(3) {
   margin-right: 1rem;
+}
+
+nav > ul > li > a {
+  display: flex;
+  color: lawngreen;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  text-shadow: lawngreen 0px 0px 5px, lawngreen 0px 0px 10px, lawngreen 0px 0px 20px, lawngreen 0px 0px 40px;
 }
 
 li > a {
@@ -403,7 +413,16 @@ li > a {
   background-color: transparent;
 }
 
-li:hover {
+li > a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+  color: black;
+  background-color: transparent;
+  font-weight: 900;
+  text-shadow: lawngreen 0px 0px 5px, lawngreen 0px 0px 10px, lawngreen 0px 0px 20px, lawngreen 0px 0px 40px;
+}
+
+nav li:hover {
   background-color: lawngreen;
   color: black; /* optional: better contrast */
   border: none;
@@ -413,7 +432,6 @@ li:hover {
     0 0 10px lawngreen,
     0 0 20px lawngreen,
     0 0 40px lawngreen;
-  transition: all 0.3s ease-in-out;
 }
 
 .landing-page {
@@ -749,10 +767,6 @@ h3 {
   gap: 2rem;
 }
 
-.inner-card:hover {
-  translate: scale(-8px) translateY(-8px);
-}
-
 .upper-card {
   display: flex;
   flex-direction: row;
@@ -803,7 +817,7 @@ footer div {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 1rem;
+  border-left: white solid 2px;
 }
 
 footer div:first-child {
@@ -825,15 +839,42 @@ footer ul li {
   margin: 0;
   text-align: center;
   justify-content: end;
+  background-color: transparent;
+}
+
+footer ul li:nth-child(odd) a:hover {
+  text-decoration: underline;
+  color: lawngreen;
+  background-color: transparent;
+  box-shadow: none;
+  text-shadow: 0 0 5px lawngreen, 0 0 10px lawngreen, 0 0 20px lawngreen, 0 0 40px lawngreen;
+  font-weight: 900;
+  filter: brightness(1.2);
+  transform: none;
+}
+
+footer ul li:nth-child(even) a:hover {
+  text-decoration: underline;
+  color: rgba(131, 3, 255, 1);
+  background-color: transparent;
+  box-shadow: none;
+  text-shadow: 0 0 5px rgba(131, 3, 255, 1), 0 0 10px rgba(131, 3, 255, 1),  0 0 20px rgba(131, 3, 255, 1), 0 0 40px rgba(131, 3, 255, 1);
+  font-weight: 900;
+  filter: brightness(1.2);
+  transform: none;
 }
 
 footer ul li a {
   color: white;
   text-decoration: none;
-  font-size: 1.2rem;
+  text-shadow: none;
+  font-size: 1.3rem;
   text-align: left;
   padding: 0.5rem;
   border-radius: 5px;
+  background-color: transparent;
+  font-weight: 300;
+  margin-left: 2rem;
 } 
 
 @media only screen and (max-width: 1600px) {
