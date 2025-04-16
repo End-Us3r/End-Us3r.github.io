@@ -226,18 +226,18 @@ ul {
 }
 
 .first-element:hover {
-  box-shadow: 0 0 10px 2px rgba(131, 3, 255, 1), 0 0 10px 2px rgba(131, 3, 255, 1);
+  box-shadow: 0 0 10px 2px var(--gray-50), 0 0 10px 2px var(--gray-50);
 }
 
 .first-element-two {
   height: 70px;
   width: 70px;
   border: black solid 1px;
-  background-color: rgba(131, 3, 255, 1);
+  background-color: lawngreen;
   border-radius: 50px;
   position: fixed;
-  left: -3%;
-  top: -3%;
+  left: -2%;
+  top: -2%;
 }
 
 .first-element > a {
@@ -267,7 +267,7 @@ ul {
   opacity: 0;
   top: 25%;
   left: 35%;
-  background-color: rgba(131, 3, 255, 1);
+  background-color: var(--gray-300);
   transition: height 0.5s ease-in-out, opacity 0.25s ease-in-out;
   z-index: 1;
   align-items: center;
@@ -278,9 +278,9 @@ ul {
 }
 
 .first-element:hover .first-element-hidden {
-  height: 475px;
+  height: max-content;
   opacity: 1;
-  background-color: 0 0 10px 2px rgba(131, 3, 255, 1);
+  padding: 1rem;
   
 }
 
@@ -810,6 +810,7 @@ footer {
   padding: 1rem;
   position: relative;
   z-index: 10;
+  box-shadow: 0px -5px 10px 0px lawngreen;
 }
 
 footer div {
@@ -875,7 +876,16 @@ footer ul li a {
   background-color: transparent;
   font-weight: 300;
   margin-left: 2rem;
-} 
+}
+
+footer p {
+  font-weight: 300;
+  font-family: 'Doto', sans-serif;
+  font-size: 1rem;
+  color: white;
+  text-align: center;
+  align-self: center;
+}
 
 @media only screen and (max-width: 1600px) {
   nav {
