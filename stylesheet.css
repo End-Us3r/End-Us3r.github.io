@@ -432,6 +432,7 @@ nav li:hover {
     0 0 10px lawngreen,
     0 0 20px lawngreen,
     0 0 40px lawngreen;
+  animation: flicker 0.5s infinite;
 }
 
 .landing-page {
@@ -483,10 +484,12 @@ h1 {
 .glitch:hover {
   text-decoration: underline;
   cursor: pointer;
-  color: lawngreen;
-  filter: invert(100%);
+  color: purple;
   font-weight: 900;
   animation: none;
+  filter: brightness(2);
+  text-shadow: 0 0 5px purple, 0 0 10px purple, 0 0 20px purple, 0 0 40px purple;
+  animation: flicker 1s infinite;
 }
 
 .cursor {
@@ -861,7 +864,7 @@ footer ul li:nth-child(even) a:hover {
   box-shadow: none;
   text-shadow: 0 0 5px rgba(131, 3, 255, 1), 0 0 10px rgba(131, 3, 255, 1),  0 0 20px rgba(131, 3, 255, 1), 0 0 40px rgba(131, 3, 255, 1);
   font-weight: 900;
-  filter: brightness(1.2);
+  filter: brightness(2);
   transform: none;
 }
 
