@@ -88,6 +88,167 @@ body::before {
   animation: flicker 15s infinite;
 }
 
+/* Contact Form CSS *//* Main Container */
+/* Hides the modal by default */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.8); /* optional dim background */
+}
+
+/* Optional fade-in class for animation */
+.modal.show {
+  display: block;
+}
+
+
+.neo-cyber-form {
+  position: relative;
+  padding: 0;
+  font-family: 'VT323', monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+  color: #00ff00;
+  background-color: #000;
+  z-index: 0;
+}
+
+/* 🔁 Dynamic background animation layer */
+.neo-cyber-form::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #00ff00, #ff00cc, #00ff00);
+  background-size: 400% 400%;
+  animation: gradientAnimation 16s ease infinite;
+  opacity: 0.07;
+  z-index: 0;
+}
+
+/* 💾 Grid Overlay */
+.form-overlay {
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+      to bottom,
+      rgba(255, 0, 255, 0.06),
+      rgba(255, 0, 255, 0.06) 1px,
+      transparent 1px,
+      transparent 12px
+    ),
+    repeating-linear-gradient(
+      to right,
+      rgba(255, 0, 255, 0.06),
+      rgba(255, 0, 255, 0.06) 1px,
+      transparent 1px,
+      transparent 12px
+    );
+  z-index: 1;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* 📦 Form Container */
+.form-container {
+  position: relative;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.9);
+  border: 2px solid #ff00cc;
+  box-shadow:
+    0 0 25px #00ff00,
+    0 0 15px #ff00cc inset,
+    0 0 5px #00ff00 inset;
+  padding: 2.5rem;
+  max-width: 600px;
+  width: 100%;
+  backdrop-filter: blur(3px);
+}
+
+/* ✨ Title */
+.glow-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #00ff00;
+  text-shadow:
+    0 0 3px #00ff00,
+    0 0 7px #00ff00,
+    0 0 15px #ff00cc;
+  font-weight: 100;
+}
+
+/* Labels */
+.form-container label {
+  display: block;
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  color: #00ff00;
+}
+
+/* Inputs & Textarea */
+.form-container input,
+.form-container textarea {
+  width: 100%;
+  background-color: #000;
+  color: #00ff00;
+  border: 1px solid #00ff00;
+  padding: 0.6rem;
+  font-size: 1rem;
+  margin-top: 0.4rem;
+  font-family: inherit;
+  box-shadow:
+    inset 0 0 5px #00ff00,
+    0 0 3px #00ff00;
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.form-container input:focus,
+.form-container textarea:focus {
+  outline: none;
+  box-shadow:
+    0 0 10px #ff00cc,
+    inset 0 0 10px #00ff00;
+}
+
+/* Button */
+.form-container button {
+  margin-top: 2rem;
+  background-color: transparent;
+  color: #ff00cc;
+  border: 2px solid #ff00cc;
+  padding: 0.6rem 2rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px #ff00cc;
+}
+
+.form-container button:hover {
+  background-color: #ff00cc;
+  color: #000;
+  box-shadow: 0 0 25px #ff00cc;
+}
+
+.cursor {
+    animation: cursorBlink 1s infinite ease-in-out;
+    color: #00ff00;
+  }
+
+/*End of Contact Form CSS*/
+
 main {
   display: flex;
   flex-direction: column;
@@ -776,6 +937,18 @@ footer p {
   }
   100% {
     box-shadow: 0 5px 10px 4px var(--salmon-500);
+  }
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
 

@@ -85,7 +85,27 @@
           </div>
           <li><a href="../End-Us3r.github.io/about-me.html">../Journey</a></li>
           <li><a href="projects-page.html">../Projects</a></li>
-          <li><a href="contact-form.html">../Contact</a></li>
+          <li><a id="contactLink">../Contact</a></li>
+          <div id="contactForm" class="modal">
+            <section class="neo-cyber-form" id="third-page">
+              <div class="form-overlay"></div>
+              <div class="form-container">
+                <h2 class="glow-title">[::] Initiate Contact<span class="cursor">_</span></h2>
+                <form action="https://formspree.io/f/YOUR_ID" method="POST">
+                  <label for="name">> Name:</label>
+                  <input type="text" name="name" id="name" required />
+        
+                  <label for="email">> Email:</label>
+                  <input type="email" name="email" id="email" required />
+        
+                  <label for="message">> Message:</label>
+                  <textarea name="message" id="message" rows="5" required></textarea>
+        
+                  <button type="submit">> Transmit</button>
+                </form>
+              </div>
+            </section>
+          </div>
         </ul>
       </nav>
     </header>
@@ -224,4 +244,5 @@
   </footer>
   <script src="js/messages.js"></script>
   <script src="js/buttons.js"></script>
+  <script src="js/contactForm.js"></script>
 </html>
