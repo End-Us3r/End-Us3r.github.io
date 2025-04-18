@@ -226,6 +226,7 @@ nav {
 }
 
 .card-container div {
+  display: inline;
   width: min-content;
   justify-self: center;
 }
@@ -276,7 +277,7 @@ ul > li {
   align-items: center;
   border: black solid 2px;
   box-shadow: 2px 2px 3px 0px;
-  text-shadow: 0 0 5px lawngreen, 0 0 10px lawngreen;
+  text-shadow: 0 0 5px rgb(0, 240, 255), 0 0 10px rgb(0, 240, 255);
   font-family: "doto", sans-serif;
   font-size: 1.5rem;
   font-weight: 600;
@@ -381,75 +382,6 @@ a {
 .glitch {
   animation: horizontalGlitch 5s steps(1) infinite;
 }
-/*
-footer {
-  display: block;
-  background-color: black;
-  width: 100%;
-  padding-left: 2rem;
-  box-shadow: 0px -4px 7px 5px black;
-  z-index: 10;
-  overflow: visible;
-  position: relative;
-}
-
-footer p {
-  color: white;
-  text-align: center;
-}
-
-.footer-left {
-  display: flex;
-  flex-direction: column;
-  color: black;
-  margin-left: 1rem;
-  border-left: white solid 1px;
-}
-
-.footer-ul {
-  display: flex;
-  flex-direction: column;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  background-color: transparent;
-  align-items: start;
-  gap: 5px;
-}
-
-.footer-ul > li {
-  display: flex;
-  flex-direction: column;
-  list-style: none;
-  margin-left: 1rem;
-  background-color: transparent;
-  align-items: start;
-  height: auto;
-}
-
-.footer-ul > li > a {
-  color: white;
-  text-decoration: none;
-  text-transform: capitalize;
-  font-size: 1.5rem;
-  letter-spacing: 1px;
-  width: auto;
-}
-
-.footer-ul li:nth-child(odd) a:hover {
-  text-decoration: underline;
-  color: lawngreen;
-}
-
-.footer-ul li:nth-child(even) a:hover {
-  text-decoration: underline;
-  color: lawngreen;
-  filter: invert(100%);
-}
-
-.footer-ul > li:hover {
-  translate: 0;
-}*/
 
 footer {
   display: flex;
@@ -460,7 +392,7 @@ footer {
   padding: 1rem;
   position: relative;
   z-index: 10;
-  box-shadow: 0px -5px 10px 0px lawngreen;
+  
 }
 
 footer div {
