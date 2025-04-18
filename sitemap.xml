@@ -1,9 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
+		<loc>file:///D:/Users/James/Portfolio/Portfolio_Project/End-Us3r.github.io/index.html</loc>
+	</url>
+	<url>
+		<loc>https://end-us3r.github.io/about-me.html</loc>
+	</url>
+	<url>
+		<loc>https://end-us3r.github.io/projects-page.html</loc>
+	</url>
+	<url>
+		<loc>https://end-us3r.github.io/Message-Generator/</loc>
+	</url>
+	<url>
+		<loc>https://www.codecademy.com/profiles/James-Atkins</loc>
+	</url>
+	<url>
+		<loc>https://www.linkedin.com/in/techiejames/</loc>
+	</url>
+	<url>
 		<loc>https://end-us3r.github.io</loc>
 	</url>
 	<url>
 		<loc>https://end-us3r.github.io/Inked-Art-Homepage-Project/</loc>
 	</url>
+	<url>
+		<loc>https://github.com/End-Us3r</loc>
+	</url>
+
 </urlset>
