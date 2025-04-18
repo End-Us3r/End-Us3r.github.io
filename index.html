@@ -91,7 +91,13 @@
               <div class="form-overlay"></div>
               <div class="form-container">
                 <h2 class="glow-title">[::] Initiate Contact<span class="cursor">_</span></h2>
-                <form action="https://formspree.io/f/YOUR_ID" method="POST">
+                <form action="javascript:void(0)" method="POST" onsubmit="alert('Form submission disabled for demo purposes.');">
+                  <input type="text" name="_gotcha" style="display:none">
+
+                  <input type="hidden" name="_subject" value="New submission!" />
+
+                  <input type="hidden" name="_redirect" value="https://end-us3r.github.io/End-Us3r.github.io/" />
+
                   <label for="name">> Name:</label>
                   <input type="text" name="name" id="name" required />
         
@@ -99,7 +105,9 @@
                   <input type="email" name="email" id="email" required />
         
                   <label for="message">> Message:</label>
-                  <textarea name="message" id="message" rows="5" required></textarea>
+                  <textarea name="message" id="message" rows="5" required minlength="10"></textarea>
+
+                  <p>[For demo purposes only, no user data collected]</p>
         
                   <button type="submit">> Transmit</button>
                 </form>

@@ -1,8 +1,8 @@
-// Wait for the DOM to load
 document.addEventListener('DOMContentLoaded', () => {
-    const contactLink = document.querySelector('#contactLink'); // adjust this selector to match your link
+    const contactLink = document.querySelector('#contactLink');
     const modal = document.querySelector('.modal');
-    const closeModal = document.querySelector('.close-modal'); // button or element to close
+    const closeModal = document.querySelector('.close-modal');
+    const formContainer = document.querySelector('.form-container');
 
     contactLink?.addEventListener('click', (e) => {
         e.preventDefault();
@@ -13,10 +13,17 @@ document.addEventListener('DOMContentLoaded', () => {
         modal?.classList.remove('show');
     });
 
-    // Optional: Close modal when clicking outside form
-    window.addEventListener('click', (e) => {
-        if (e.target === modal) {
+    // Close when clicking outside the form
+    modal?.addEventListener('click', (e) => {
+        if (!formContainer.contains(e.target)) {
             modal.classList.remove('show');
+        }
+    });
+
+    // Close on Esc key
+    window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            modal?.classList.remove('show');
         }
     });
 });
