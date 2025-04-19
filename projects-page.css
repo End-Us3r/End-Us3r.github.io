@@ -553,7 +553,6 @@ footer p {
     display: flex;
     flex-direction: row;
     width: 100vw;
-    height: 12vh;
   }
 
   .nav-list {
@@ -563,10 +562,10 @@ footer p {
     list-style: none;
     width: 100vw;
     margin: 0;
+    height: 5rem;
   }
 
   .nav-buttons {
-    width: 31vw;
     height: 7vh;
     margin: 0;
     font-size: 22px;
@@ -592,7 +591,7 @@ footer p {
     justify-content: space-around;
     justify-items: center;
     align-items: center;
-    margin: 5rem auto;
+    margin: 7rem auto;
     height: auto;
   }
 
@@ -601,66 +600,14 @@ footer p {
     flex-direction: column;
     font-size: 1rem;
     height: auto;
-  }
-
-  h2 {
-    border-bottom: 2px solid black;
-    margin: 0;
-    padding: 1rem;
-  }
-}
-
-@media only screen and (min-width: 481px) and (max-width: 767px) {
-  nav {
-    display: flex;
-    flex-direction: row;
-    width: 100vw;
-    height: 12vh;
-  }
-
-  .nav-list {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    list-style: none;
-    width: 100vw;
-    margin: 0;
-  }
-
-  .nav-buttons {
-    width: 31vw;
-    height: 7vh;
-    margin: 0;
-    font-size: 22px;
-  }
-
-  ul > :nth-child(2) {
-    margin-left: 0;
-  }
-
-  ul > :nth-child(3) {
-    margin-right: 0;
-  }
-
-  .nav-buttons:hover {
-    height: 7vh;
-  }
-
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(1, 1fr);
-    grid-row-gap: 5rem;
-    justify-content: space-around;
-    justify-items: center;
+    width: 50vw;
+    justify-self: center;
     align-items: center;
-    margin: 5rem auto;
-    height: auto;
+
   }
 
-  .card-container {
-    display: flex;
-    flex-direction: column;
+  .card-container h2 {
+    width: 90vw;
   }
 
   h2 {
@@ -668,59 +615,5 @@ footer p {
     margin: 0;
     padding: 1rem;
   }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
-  nav {
-    display: flex;
-    flex-direction: row;
-    width: 100vw;
-    height: 12vh;
-  }
-
-  .nav-list {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    list-style: none;
-    width: 100vw;
-    margin: 0;
-  }
-
-  .nav-buttons {
-    width: 31vw;
-    height: 7vh;
-    margin: 0;
-    font-size: 22px;
-  }
-
-  ul > :nth-child(2) {
-    margin-left: 0;
-  }
-
-  ul > :nth-child(3) {
-    margin-right: 0;
-  }
-
-  .nav-buttons:hover {
-    height: 7vh;
-  }
-
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(1, 1fr);
-    grid-row-gap: 5rem;
-    justify-content: space-around;
-    justify-items: center;
-    align-items: center;
-    margin: 5rem auto;
-    height: auto;
-  }
-
-  h2 {
-    border-bottom: 2px solid black;
-    margin: 0;
-    padding: 1rem;
-  }
+  
 }

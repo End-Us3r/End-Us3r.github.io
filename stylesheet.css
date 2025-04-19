@@ -2,7 +2,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  
 }
 
 :root {
@@ -54,20 +53,45 @@
 }
 
 @keyframes flicker {
-  0% {opacity: 1;}
-  3% {opacity: 0.8;}
-  6% {opacity: 1;}
-  7% {opacity: 0.9;}
-  8% {opacity: 1;}
-  9% {opacity: 1;}
-  10% {opacity: 0.9;}
-  20% {opacity: 1;}
-  50% {opacity: 1;}
-  70% {opacity: 0.7;}
-  72% {opacity: 0.95;}
-  77% {opacity: 0.9;}
-  100% {opacity: 1;}
-
+  0% {
+    opacity: 1;
+  }
+  3% {
+    opacity: 0.8;
+  }
+  6% {
+    opacity: 1;
+  }
+  7% {
+    opacity: 0.9;
+  }
+  8% {
+    opacity: 1;
+  }
+  9% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 0.9;
+  }
+  20% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0.7;
+  }
+  72% {
+    opacity: 0.95;
+  }
+  77% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes glitch {
@@ -116,8 +140,12 @@
 }
 
 @keyframes gridMove {
-  0% { background-position: 0 0; }
-  100% { background-position: 1000px 1000px; }
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 1000px 1000px;
+  }
 }
 
 /*html {
@@ -139,7 +167,7 @@ body::before {
   background: linear-gradient(
     ellipse at center,
     transparent 50%,
-    rgba(0,0,0,0.3) 100%
+    rgba(0, 0, 0, 0.3) 100%
   );
   pointer-events: none;
   z-index: 3;
@@ -152,8 +180,11 @@ body::after {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px),
-                    linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.06) 1px,
+      transparent 1px
+    ),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
   background-size: 20px 20px;
   z-index: 0;
   pointer-events: none;
@@ -179,7 +210,7 @@ body::after {
   animation: flicker 15s infinite;
 }
 
-/* Contact Form CSS *//* Main Container */
+/* Contact Form CSS */ /* Main Container */
 /* Hides the modal by default */
 .modal {
   display: none;
@@ -190,7 +221,7 @@ body::after {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0,0,0,0.8); /* optional dim background */
+  background-color: rgba(0, 0, 0, 0.8); /* optional dim background */
 }
 
 /* Optional fade-in class for animation */
@@ -198,11 +229,10 @@ body::after {
   display: block;
 }
 
-
 .neo-cyber-form {
   position: relative;
   padding: 0;
-  font-family: 'VT323', monospace;
+  font-family: "VT323", monospace;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -215,7 +245,7 @@ body::after {
 
 /* 🔁 Dynamic background animation layer */
 .neo-cyber-form::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   background: linear-gradient(135deg, #00ff00, #ff00cc, #00ff00);
@@ -254,10 +284,7 @@ body::after {
   z-index: 2;
   background-color: rgba(0, 0, 0, 0.9);
   border: 2px solid #ff00cc;
-  box-shadow:
-    0 0 25px #00ff00,
-    0 0 15px #ff00cc inset,
-    0 0 5px #00ff00 inset;
+  box-shadow: 0 0 25px #00ff00, 0 0 15px #ff00cc inset, 0 0 5px #00ff00 inset;
   padding: 2.5rem;
   max-width: 600px;
   width: 100%;
@@ -270,10 +297,7 @@ body::after {
   text-align: center;
   margin-bottom: 2rem;
   color: #00ff00;
-  text-shadow:
-    0 0 3px #00ff00,
-    0 0 7px #00ff00,
-    0 0 15px #ff00cc;
+  text-shadow: 0 0 3px #00ff00, 0 0 7px #00ff00, 0 0 15px #ff00cc;
   font-weight: 100;
 }
 
@@ -296,18 +320,14 @@ body::after {
   font-size: 1rem;
   margin-top: 0.4rem;
   font-family: inherit;
-  box-shadow:
-    inset 0 0 5px #00ff00,
-    0 0 3px #00ff00;
+  box-shadow: inset 0 0 5px #00ff00, 0 0 3px #00ff00;
   transition: box-shadow 0.2s ease-in-out;
 }
 
 .form-container input:focus,
 .form-container textarea:focus {
   outline: none;
-  box-shadow:
-    0 0 10px #ff00cc,
-    inset 0 0 10px #00ff00;
+  box-shadow: 0 0 10px #ff00cc, inset 0 0 10px #00ff00;
 }
 
 /* Button */
@@ -334,9 +354,9 @@ body::after {
 }
 
 .cursor {
-    animation: cursorBlink 1s infinite ease-in-out;
-    color: #00ff00;
-  }
+  animation: cursorBlink 1s infinite ease-in-out;
+  color: #00ff00;
+}
 
 /*End of Contact Form CSS*/
 
@@ -418,7 +438,6 @@ ul {
   font-weight: 600;
 }
 
-
 .first-element-hidden {
   display: flex;
   flex-direction: column;
@@ -442,7 +461,6 @@ ul {
   height: max-content;
   opacity: 1;
   padding: 1rem;
-  
 }
 
 .card-container-one {
@@ -558,7 +576,8 @@ nav > ul > li > a {
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-  text-shadow: lawngreen 0px 0px 5px, lawngreen 0px 0px 10px, lawngreen 0px 0px 20px, lawngreen 0px 0px 40px;
+  text-shadow: lawngreen 0px 0px 5px, lawngreen 0px 0px 10px,
+    lawngreen 0px 0px 20px, lawngreen 0px 0px 40px;
 }
 
 li > a {
@@ -580,7 +599,8 @@ li > a:hover {
   color: black;
   background-color: transparent;
   font-weight: 900;
-  text-shadow: lawngreen 0px 0px 5px, lawngreen 0px 0px 10px, lawngreen 0px 0px 20px, lawngreen 0px 0px 40px;
+  text-shadow: lawngreen 0px 0px 5px, lawngreen 0px 0px 10px,
+    lawngreen 0px 0px 20px, lawngreen 0px 0px 40px;
 }
 
 nav li:hover {
@@ -588,10 +608,7 @@ nav li:hover {
   color: black; /* optional: better contrast */
   border: none;
   filter: brightness(1.1);
-  box-shadow:
-    0 0 5px lawngreen,
-    0 0 10px lawngreen,
-    0 0 20px lawngreen,
+  box-shadow: 0 0 5px lawngreen, 0 0 10px lawngreen, 0 0 20px lawngreen,
     0 0 40px lawngreen;
   animation: flicker 0.5s infinite;
 }
@@ -631,7 +648,8 @@ h1 {
   margin-right: auto;
   letter-spacing: -5px;
   width: max-content;
-  text-shadow: 0 0 3px lawngreen, 0 0 7px lawngreen, 0 0 12px #00ff00, 0 0 20px #00ff00;
+  text-shadow: 0 0 3px lawngreen, 0 0 7px lawngreen, 0 0 12px #00ff00,
+    0 0 20px #00ff00;
 }
 
 .glitch {
@@ -733,7 +751,7 @@ h1 {
   color: black;
   text-align: center;
   box-shadow: 0px -5px 10px 0px lawngreen;
-  position: relative;;
+  position: relative;
 }
 
 .sec-pic {
@@ -1012,7 +1030,8 @@ footer ul li:nth-child(odd) a:hover {
   color: lawngreen;
   background-color: transparent;
   box-shadow: none;
-  text-shadow: 0 0 5px lawngreen, 0 0 10px lawngreen, 0 0 20px lawngreen, 0 0 40px lawngreen;
+  text-shadow: 0 0 5px lawngreen, 0 0 10px lawngreen, 0 0 20px lawngreen,
+    0 0 40px lawngreen;
   font-weight: 900;
   filter: brightness(1.2);
   transform: none;
@@ -1023,7 +1042,8 @@ footer ul li:nth-child(even) a:hover {
   color: rgba(131, 3, 255, 1);
   background-color: transparent;
   box-shadow: none;
-  text-shadow: 0 0 5px rgba(131, 3, 255, 1), 0 0 10px rgba(131, 3, 255, 1),  0 0 20px rgba(131, 3, 255, 1), 0 0 40px rgba(131, 3, 255, 1);
+  text-shadow: 0 0 5px rgba(131, 3, 255, 1), 0 0 10px rgba(131, 3, 255, 1),
+    0 0 20px rgba(131, 3, 255, 1), 0 0 40px rgba(131, 3, 255, 1);
   font-weight: 900;
   filter: brightness(2);
   transform: none;
@@ -1044,7 +1064,7 @@ footer ul li a {
 
 footer p {
   font-weight: 300;
-  font-family: 'Doto', sans-serif;
+  font-family: "Doto", sans-serif;
   font-size: 1rem;
   color: white;
   text-align: center;
@@ -1099,7 +1119,7 @@ footer p {
   }
 
   .lower-right-panel {
-    top: 40%
+    top: 40%;
   }
 
   .lower-right-panel p:last-child {
@@ -1108,4 +1128,119 @@ footer p {
   }
 }
 
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  nav {
+    height: 5rem;
+    width: 100%;
+  }
 
+  h1 {
+    font-size: 2rem;
+    letter-spacing: -4.5px;
+  }
+
+  .landing-page {
+    display: flex;
+    height: 1250px;
+    background-color: #1d1d1d;
+    text-shadow: 0 0 5px lawngreen, 0 0 10px lawngreen;
+  }
+
+  .left-panel-container {
+    padding-left: 1rem;
+    top: 25%;
+  }
+
+  ul {
+    flex-direction: row;
+    gap: 0.5rem;
+    margin: 0;
+    width: auto;
+  }
+
+  ul > li {
+    height: 3rem;
+    width: 11rem;
+  }
+
+  .first-element {
+    height: 3rem;
+    width: 3rem;
+    margin: 0 1rem;
+  }
+
+  .first-element-two {
+    height: 3rem;
+    width: 3rem;
+  }
+
+  .first-element-hidden {
+    width: 100vw;
+    top: 0%;
+    left: 0%;
+  }
+
+  .first-element:hover .first-element-hidden {
+    height: max-content;
+    padding: 3rem 1rem;
+    opacity: 1;
+    width: 79vw;
+  }
+
+  .card-container-one {
+    align-items: center;
+    gap: 0;
+    font-size: 17px;
+  }
+
+  .upper-card-one {
+    width: auto;
+  }
+
+  .upper-card-one img {
+    position: relative;
+    width: 8vw;
+    height: auto;
+    right: -7%;
+    display: none;
+  }
+
+  .right-panel {
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .lower-card-one {
+    display: flex;
+    flex-direction: column;
+    color: var(--background-light-grey);
+    line-height: 1.5rem;
+    font-size: var(--font-size-one);
+    align-items: center;
+    position: relative;
+    bottom: -5%;
+    left: -6%;
+    gap: 2rem;
+    margin-left: 0rem;
+    margin-top: 1rem;
+  }
+
+  .lower-right-panel {
+    top: 20%;
+    margin: 0;
+    padding: 0 1rem;
+    width: 100%;
+  }
+
+  .lower-right-panel p:last-child {
+    position: static;
+  }
+
+  .text-section {
+    line-height: 1.5rem;
+    position: relative;
+    top: 0%;
+    gap: 1rem;
+  }
+}
