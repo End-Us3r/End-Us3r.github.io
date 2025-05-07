@@ -416,7 +416,7 @@ ul {
 .first-element {
   height: 70px;
   width: 70px;
-  border: black solid 1px;
+  border: black solid 0px;
   background-color: lawngreen;
   border-radius: 50px;
   transform: scale(1.2);
@@ -568,7 +568,7 @@ ul > li {
   border-radius: 10px;
   justify-content: space-around;
   align-items: center;
-  border: black solid 2px;
+  border: black solid 1px;
   box-shadow: 2px 2px 3px 0px;
   text-shadow: 0 0 5px lawngreen, 0 0 10px lawngreen;
   font-family: "doto", sans-serif;
@@ -1196,14 +1196,16 @@ footer p {
     color: #000;
   }
 
+  .first-element {
+    transform: none;
+  }
+
   .first-element:hover {
     box-shadow: 0 0 10px 2px lawngreen, 0 0 10px 2px lawngreen;
   }
   
   .first-element > a {
     display: block;
-    border: black solid 1px;
-    border-radius: 50px;
   }
 
   .first-element > a:hover {

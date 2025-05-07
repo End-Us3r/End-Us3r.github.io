@@ -331,8 +331,7 @@ li > a:hover {
   color: black;
   font-weight: 900;
   cursor: pointer;
-  box-shadow: 0 0 5px rgb(0, 240, 255), 0 0 10px rgb(0, 240, 255), 0 0 20px rgb(0, 240, 255),
-    0 0 40px rgb(0, 240, 255);
+  box-shadow: 0 0 5px rgb(0, 240, 255), 0 0 10px rgb(0, 240, 255), 0 0 20px rgb(0, 240, 255);
   border-radius: inherit;
 }
 
@@ -611,20 +610,14 @@ footer p {
 
   .mobile-dropdown li a {
     font-size: 18px;
-    color: #00ff00;
   }
 
   .mobile-dropdown li a:hover {
     color: #000;
   }
-
-  .first-element:hover {
-    box-shadow: 0 0 10px 2px purple, 0 0 10px 2px purple;
-  }
   
   .first-element > a {
     display: block;
-    border: black solid 1px;
     border-radius: 50px;
     align-content: center;
   }
