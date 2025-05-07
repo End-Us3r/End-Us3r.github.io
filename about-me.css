@@ -194,6 +194,11 @@ body::before {
   }
 
 @media only screen and (max-width: 1600px) {
+
+  body, html {
+    overflow: visible;
+  }
+
   html {
     height: auto;
   }
@@ -220,14 +225,13 @@ body::before {
     background-color: black;
     flex-direction: column;
     padding: 0 1rem;
-    position: relative;
+    position: sticky;
     z-index: 10;
     box-shadow: 0px 5px 10px 0px purple;
     width: 100%;
     height: auto;
     filter: brightness(2);
-    /*transition: box-shadow 0.5s ease-in-out;
-    animation: pulsePurple 5s infinite;*/
+    top: 0;
   }
 
   h1, section {
@@ -250,6 +254,10 @@ body::before {
     text-shadow: 0 0 5px white, 0 0 10px white, 0 0 20px white,
       0 0 40px white;
     animation: flicker 3s infinite;
+  }
+
+  .mobile-nav {
+    display: none;
   }
 
   nav {
@@ -437,6 +445,72 @@ body::before {
 }
 
 @media only screen and (min-width: 320px) and (max-width: 480px) {
+
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+  }
+  
+  .mobile-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    align-items: center;
+  }
+
+  .mobile-dropdown {
+    display: none;
+    height: 200px;
+    width: 175px;
+    flex-direction: column;
+    background-color: black;
+    padding: 10px;
+    position: absolute;
+    top: 120%;
+    opacity: 1;
+    justify-content: space-around;
+    border-radius: 0 0 10px 10px;
+    
+  }
+
+  .mobile-dropdown li {
+    margin: 5px 0;
+    box-shadow: none;
+    width: 150px;
+  }
+
+  .mobile-dropdown li a {
+    font-size: 18px;
+    color: #00ff00;
+  }
+
+  .mobile-dropdown li a:hover {
+    color: #000;
+  }
+
+  .first-element:hover {
+    box-shadow: 0 0 10px 2px purple, 0 0 10px 2px purple;
+  }
+  
+  .first-element > a {
+    display: block;
+    border: black solid 1px;
+    border-radius: 50px;
+  }
+
+  .first-element > a:hover {
+    text-decoration: none;
+    font-weight: 600;
+  }
+
 
   main {
     padding: 5rem 1rem 1rem 1rem;
