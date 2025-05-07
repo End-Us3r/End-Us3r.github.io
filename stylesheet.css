@@ -1168,17 +1168,32 @@ footer p {
 
   .mobile-dropdown {
     display: none;
-    height: 250px;
+    height: 200px;
+    width: 175px;
     flex-direction: column;
     background-color: black;
     padding: 10px;
     position: absolute;
-    top: 100%;
+    top: 120%;
     opacity: 1;
+    justify-content: space-around;
+    border-radius: 0 0 10px 10px;
+    
   }
 
   .mobile-dropdown li {
     margin: 5px 0;
+    box-shadow: none;
+    width: 150px;
+  }
+
+  .mobile-dropdown li a {
+    font-size: 18px;
+    color: #00ff00;
+  }
+
+  .mobile-dropdown li a:hover {
+    color: #000;
   }
 
   .first-element:hover {
@@ -1193,6 +1208,7 @@ footer p {
 
   .first-element > a:hover {
     text-decoration: none;
+    font-weight: 600;
   }
 
   
