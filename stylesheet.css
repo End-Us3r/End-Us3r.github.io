@@ -385,6 +385,10 @@ section {
   height: 100vh;
 }
 
+.mobile-nav, .mobile-dropdown {
+  display: none;
+}
+
 nav {
   display: flex;
   flex-direction: row;
@@ -412,7 +416,7 @@ ul {
 .first-element {
   height: 70px;
   width: 70px;
-  border: black solid 1px;
+  border: black solid 0px;
   background-color: lawngreen;
   border-radius: 50px;
   transform: scale(1.2);
@@ -564,7 +568,7 @@ ul > li {
   border-radius: 10px;
   justify-content: space-around;
   align-items: center;
-  border: black solid 2px;
+  border: black solid 1px;
   box-shadow: 2px 2px 3px 0px;
   text-shadow: 0 0 5px lawngreen, 0 0 10px lawngreen;
   font-family: "doto", sans-serif;
@@ -1143,6 +1147,74 @@ footer p {
 }
 
 @media only screen and (min-width: 320px) and (max-width: 480px) {
+
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .mobile-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+  }
+
+  .mobile-dropdown {
+    display: none;
+    height: 200px;
+    width: 175px;
+    flex-direction: column;
+    background-color: black;
+    padding: 10px;
+    position: absolute;
+    top: 120%;
+    opacity: 1;
+    justify-content: space-around;
+    border-radius: 0 0 10px 10px;
+    
+  }
+
+  .mobile-dropdown li {
+    margin: 5px 0;
+    box-shadow: none;
+    width: 150px;
+  }
+
+  .mobile-dropdown li a {
+    font-size: 18px;
+    color: #00ff00;
+  }
+
+  .mobile-dropdown li a:hover {
+    color: #000;
+  }
+
+  .first-element {
+    transform: none;
+  }
+
+  .first-element:hover {
+    box-shadow: 0 0 10px 2px lawngreen, 0 0 10px 2px lawngreen;
+  }
+  
+  .first-element > a {
+    display: block;
+  }
+
+  .first-element > a:hover {
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  
+
   nav {
     height: 5rem;
     width: 100%;
@@ -1162,7 +1234,7 @@ footer p {
 
   .left-panel-container {
     padding-left: 1rem;
-    top: 25%;
+    top:30%;
   }
 
   ul {

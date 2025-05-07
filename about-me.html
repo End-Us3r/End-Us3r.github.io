@@ -45,7 +45,7 @@
   </head>
   <body>
     <header>
-      <nav>
+      <nav class="desktop-nav">
         <ul class="nav-list">
           <li>
             <a href="index.html" tabindex="1"> Root </a>
@@ -55,6 +55,19 @@
           </li>
           <li>
             <a id="" tabindex="3">../Contact </a>
+          </li>
+        </ul>
+      </nav>
+      <nav class="mobile-nav">
+        <ul>
+          <li class="first-element">
+            <a href="#homepage" id="toggleDropdown">JA</a>
+            <ul class="mobile-dropdown">
+              <li><a href="index.html">Root</a></li>
+              <li><a href="about-me.html">About</a></li>
+              <li><a href="projects-page.html">Projects</a></li>
+              <li><a id="contactLink">Contact</a></li>
+            </ul>
           </li>
         </ul>
       </nav>
@@ -120,4 +133,11 @@
       <p>&copy;2025 James Atkins</p>
     </footer>
   </body>
+  <script>
+    document.getElementById("toggleDropdown").addEventListener("click", function (e) {
+      e.preventDefault();
+      const dropdown = this.nextElementSibling;
+      dropdown.style.display = dropdown.style.display === "flex" ? "none" : "flex";
+    });
+  </script>
 </html>
