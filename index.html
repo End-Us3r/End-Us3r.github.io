@@ -26,7 +26,7 @@
   </head>
   <body>
     <header>
-      <nav>
+      <nav class="desktop-nav">
         <ul>
           <div class="first-element">
             <div class="first-element-hidden">
@@ -121,6 +121,18 @@
               </div>
             </section>
           </div>
+        </ul>
+      </nav>
+      <nav class="mobile-nav">
+        <ul>
+          <li class="first-element">
+            <a href="#homepage" id="toggleDropdown">JA</a>
+            <ul class="mobile-dropdown">
+              <li><a href="about-me.html">../Journey</a></li>
+              <li><a href="projects-page.html">../Projects</a></li>
+              <li><a id="contactLink">../Contact</a></li>
+            </ul>
+          </li>
         </ul>
       </nav>
     </header>
@@ -249,4 +261,11 @@
   <script src="js/messages.js"></script>
   <script src="js/buttons.js"></script>
   <script src="js/contactForm.js"></script>
+  <script>
+    document.getElementById("toggleDropdown").addEventListener("click", function (e) {
+      e.preventDefault();
+      const dropdown = this.nextElementSibling;
+      dropdown.style.display = dropdown.style.display === "flex" ? "none" : "flex";
+    });
+  </script>
 </html>
