@@ -625,9 +625,14 @@
   }
 
   .site-header .site-mark-card {
-    width: 100vw;
+    width: 100%;
     top: 0%;
     left: 0%;
+  }
+
+  .site-header .first-element-two {
+    left: 0;
+    top: 0;
   }
 
   .site-header .site-mark:hover .site-mark-card,

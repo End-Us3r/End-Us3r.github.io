@@ -699,7 +699,10 @@ footer p {
   }
 
   .card-container h2 {
-    width: 90vw;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-wrap: anywhere;
   }
 
   h2 {

@@ -1225,6 +1225,14 @@ footer p {
     letter-spacing: -4.5px;
   }
 
+  .landing-page h1 {
+    width: auto;
+    max-width: 100%;
+    font-size: clamp(1.35rem, 7vw, 2rem);
+    letter-spacing: -0.04em;
+    overflow-wrap: anywhere;
+  }
+
   .landing-page {
     display: flex;
     height: 1250px;
@@ -1233,7 +1241,11 @@ footer p {
   }
 
   .left-panel-container {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
     padding-left: 1rem;
+    padding-right: 1rem;
     top:30%;
   }
 
