@@ -237,35 +237,37 @@
         });
 
       </script>
+    <footer class="site-footer">
+      <div>
+        <ul>
+          <li>
+            <a href="https://www.linkedin.com/in/techiejames/" target="_blank">
+              LinkedIn
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/End-Us3r" target="_blank">
+              GitHub
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/End-Us3r" target="_blank">
+              Codecademy
+            </a>
+          </li>
+        </ul>
+      </div>
+      <p>&copy;2025 James Atkins</p>
+    </footer>
+    <script src="js/messages.js"></script>
+    <script src="js/buttons.js"></script>
+    <script src="js/contactForm.js"></script>
+    <script>
+      document.getElementById("toggleDropdown").addEventListener("click", function (e) {
+        e.preventDefault();
+        const dropdown = this.nextElementSibling;
+        dropdown.style.display = dropdown.style.display === "flex" ? "none" : "flex";
+      });
+    </script>
   </body>
-  <footer>
-    <div>
-      <ul>
-        <li>
-          <a href="https://www.linkedin.com/in/techiejames/" target="_blank">
-            LinkedIn
-          </a>
-        </li>
-        <li>
-          <a href="https://github.com/End-Us3r" target="_blank"> 
-            GitHub
-          </a>
-        </li>
-        <li>
-          <a href="https://github.com/End-Us3r" target="_blank"> Codecademy </a>
-        </li>
-      </ul>
-    </div>
-    <p>&copy;2025 James Atkins</p>
-  </footer>
-  <script src="js/messages.js"></script>
-  <script src="js/buttons.js"></script>
-  <script src="js/contactForm.js"></script>
-  <script>
-    document.getElementById("toggleDropdown").addEventListener("click", function (e) {
-      e.preventDefault();
-      const dropdown = this.nextElementSibling;
-      dropdown.style.display = dropdown.style.display === "flex" ? "none" : "flex";
-    });
-  </script>
 </html>
