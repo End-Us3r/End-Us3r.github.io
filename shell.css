@@ -10,6 +10,10 @@
   --shell-footer-even: rgba(131, 3, 255, 1);
 }
 
+.theme-contact {
+  background-color: #1d1d1d;
+}
+
 .theme-about {
   --shell-accent: purple;
   --shell-bar-shadow: 0px 5px 10px 0px purple;
