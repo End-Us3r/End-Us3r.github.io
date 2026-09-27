@@ -29,6 +29,7 @@
       color="#5bbad5"
     />
     <link rel="stylesheet" href="about-me.css" type="text/css" />
+    <link rel="stylesheet" href="shell.css" type="text/css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -43,33 +44,80 @@
 
     <title>About Me | James Atkins</title>
   </head>
-  <body>
-    <header>
-      <nav class="desktop-nav">
-        <ul class="nav-list">
-          <li>
-            <a href="index.html" tabindex="1"> Root </a>
-          </li>
-          <li>
-            <a href="projects-page.html" tabindex="2">../Projects </a>
-          </li>
-          <li>
-            <a id="" tabindex="3">../Contact </a>
-          </li>
-        </ul>
-      </nav>
-      <nav class="mobile-nav">
-        <ul>
-          <li class="first-element">
-            <a href="#homepage" id="toggleDropdown">JA</a>
-            <ul class="mobile-dropdown">
-              <li><a href="index.html">Root</a></li>
-              <li><a href="about-me.html">About</a></li>
-              <li><a href="projects-page.html">Projects</a></li>
-              <li><a id="contactLink">Contact</a></li>
-            </ul>
-          </li>
-        </ul>
+  <body class="theme-about">
+        <header class="site-header">
+      <nav class="site-nav" aria-label="Primary">
+        <div class="site-mark">
+          <div class="site-mark-card">
+            <div class="first-element-two"></div>
+            <div class="card-container-one">
+              <div class="upper-card-one">
+                <img src="assets/images/profile_pic.png" />
+                <div class="text-section">
+                  <h2><span class="dark-text">Name: </span> James Atkins</h2>
+                  <p>
+                    <span class="dark-text">Location: </span> San Mateo,
+                    California
+                  </p>
+                  <p>
+                    <span class="dark-text">Skills: </span>HTML/CSS/JS •
+                    Python<br />
+                    • Git/GitHub • Figma
+                  </p>
+                </div>
+              </div>
+              <div class="lower-card-one">
+                <p>
+                  <span class="dark-text">Education: </span>Junior, Bachelors
+                  in Software Engineering @W.G.U.
+                </p>
+                <p>
+                  <span class="dark-text">Interests: </span> Web Development,
+                  Game Development, Artificial Intelligence
+                </p>
+              </div>
+              <div class="social-backdrop">
+                <a
+                  href="https://www.codecademy.com/profiles/James-Atkins"
+                  target="_blank"
+                >
+                  <img
+                    src="assets/images/codecademy_icon.svg"
+                    alt="Codecademy Profile"
+                    loading="lazy"
+                  />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/techiejames/"
+                  target="_blank"
+                >
+                  <img
+                    src="assets/images/linkedin_icon.svg"
+                    alt="LinkedIn Profile"
+                    loading="lazy"
+                  />
+                </a>
+                <a href="https://github.com/End-Us3r" target="_blank">
+                  <img
+                    src="assets/images/github_icon.svg"
+                    alt="GitHub Profile"
+                    loading="lazy"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+          <a href="index.html" aria-label="Home">JA</a>
+        </div>
+        <div class="site-menu">
+          <input class="site-menu-checkbox" type="checkbox" id="site-menu-toggle" />
+          <label class="site-menu-toggle" for="site-menu-toggle">Menu</label>
+          <ul class="site-menu-list">
+            <li><a href="about-me.html">../About</a></li>
+            <li><a href="projects-page.html">../Projects</a></li>
+            <li><a href="contact.html">../Contact</a></li>
+          </ul>
+        </div>
       </nav>
     </header>
     <main>
@@ -135,11 +183,4 @@
       <p>&copy;2025 James Atkins</p>
     </footer>
   </body>
-  <script>
-    document.getElementById("toggleDropdown").addEventListener("click", function (e) {
-      e.preventDefault();
-      const dropdown = this.nextElementSibling;
-      dropdown.style.display = dropdown.style.display === "flex" ? "none" : "flex";
-    });
-  </script>
 </html>
