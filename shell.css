@@ -499,7 +499,7 @@ button:focus-visible,
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   padding: 8rem 1.5rem 4rem;
   text-align: center;
   background-color: #1d1d1d;
@@ -511,7 +511,7 @@ button:focus-visible,
   letter-spacing: 0;
 }
 
-.contact-main p {
+.contact-main > p {
   font-family: "doto", sans-serif;
   font-size: 1.5rem;
   font-weight: 700;
@@ -520,6 +520,26 @@ button:focus-visible,
   margin-top: 1.5rem;
   line-height: 1.5;
   max-width: 36rem;
+}
+
+.contact-main .neo-cyber-form {
+  width: 100%;
+  max-width: 40rem;
+  min-height: 0;
+  height: auto;
+  margin-top: 1.5rem;
+  text-align: left;
+  overflow: visible;
+}
+
+.contact-main .form-container {
+  max-width: 100%;
+}
+
+.contact-main .glow-title,
+.contact-main .form-container p,
+.contact-main .form-container label {
+  overflow-wrap: anywhere;
 }
 
 @media only screen and (max-width: 1600px) {
@@ -708,5 +728,9 @@ button:focus-visible,
 
   .contact-main h1 {
     font-size: 2rem;
+  }
+
+  .contact-main .form-container {
+    padding: 1.25rem;
   }
 }
