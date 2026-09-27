@@ -816,10 +816,14 @@ h1 {
   text-shadow: 0 0 5px rgba(131, 3, 255, 1), 0 0 10px rgba(131, 3, 255, 1);
 }
 
+[hidden] {
+  display: none !important;
+}
+
 .third-page {
   display: flex;
   flex-direction: column;
-  background: black url(layered-peaks-haikei.svg) no-repeat center center/cover;
+  background: black url(assets/images/layered-peaks-haikei.svg) no-repeat center center/cover;
   color: white;
   align-items: center;
   margin: 0 auto;
@@ -851,6 +855,10 @@ h3 {
   text-transform: capitalize;
 }
 
+#inspire-h3 {
+  margin-bottom: 1.5rem;
+}
+
 #inspire-h3.invisible {
   display: none;
 }
@@ -867,9 +875,14 @@ h3 {
   letter-spacing: 1px;
   text-transform: capitalize;
   z-index: 1;
-  position: absolute;
+  position: relative;
   border-radius: 25px;
   border: #000000 solid 2px;
+}
+
+#inspire-button:focus-visible {
+  outline: 2px solid lawngreen;
+  outline-offset: 3px;
 }
 
 #inspire-button:hover {
@@ -1225,6 +1238,14 @@ footer p {
     letter-spacing: -4.5px;
   }
 
+  .landing-page h1 {
+    width: auto;
+    max-width: 100%;
+    font-size: clamp(1.35rem, 7vw, 2rem);
+    letter-spacing: -0.04em;
+    overflow-wrap: anywhere;
+  }
+
   .landing-page {
     display: flex;
     height: 1250px;
@@ -1233,7 +1254,11 @@ footer p {
   }
 
   .left-panel-container {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
     padding-left: 1rem;
+    padding-right: 1rem;
     top:30%;
   }
 
@@ -1328,5 +1353,43 @@ footer p {
     position: relative;
     top: 0%;
     gap: 1rem;
+  }
+
+  .third-page {
+    height: auto;
+    min-height: 70vh;
+    box-sizing: border-box;
+    padding: 1rem;
+    overflow: hidden;
+  }
+
+  .content-container {
+    height: auto;
+    box-sizing: border-box;
+    padding: 2rem 1rem 4rem;
+  }
+
+  #inspire-h3 {
+    font-size: clamp(1.75rem, 9vw, 2.5rem);
+    padding: 1.5rem 0.5rem;
+    overflow-wrap: anywhere;
+  }
+
+  #inspire-button {
+    position: relative;
+    left: auto;
+    top: auto;
+    max-width: 100%;
+  }
+
+  #expanded-element,
+  #expanded-element.visible {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    min-height: 0;
+    box-sizing: border-box;
+    transform: none;
+    padding: 1.25rem;
   }
 }

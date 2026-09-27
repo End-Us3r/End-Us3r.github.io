@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="About Me - James Atkins" />
 
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link
       rel="icon"
       href="assets/images/favicon-16x16.png"
@@ -19,12 +18,8 @@
       href="site.webmanifest"
       type="application/manifest+json"
     />
-    <link
-      rel="mask-icon"
-      href="assets/images/safari-pinned-tab.svg"
-      color="#5bbad5"
-    />
     <link rel="stylesheet" href="projects-page.css" type="text/css" />
+    <link rel="stylesheet" href="shell.css" type="text/css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -33,134 +28,164 @@
     />
     <title>Projects | James Atkins</title>
   </head>
-  <body>
-    <header>
-      <nav class="desktop-nav">
-        <ul class="nav-list">
-          <li class="nav-buttons">
-            <a href="index.html" tabindex="1"> Root </a>
-          </li>
-          <li class="nav-buttons">
-            <a href="about-me.html" tabindex="2">../Journey </a>
-          </li>
-          <li class="nav-buttons">
-            <a href="#" tabindex="3">../Contact </a>
-          </li>
-        </ul>
-      </nav>
-      <nav class="mobile-nav">
-        <ul>
-          <li class="first-element">
-            <a href="#homepage" id="toggleDropdown">JA</a>
-            <ul class="mobile-dropdown">
-              <li><a href="index.html">Root</a></li>
-              <li><a href="about-me.html">About</a></li>
-              <li><a href="projects-page.html">Projects</a></li>
-              <li><a id="contactLink">Contact</a></li>
-            </ul>
-          </li>
-        </ul>
+  <body class="theme-projects">
+    <a class="skip-link" href="#main">Skip to content</a>
+        <header class="site-header">
+      <nav class="site-nav" aria-label="Primary">
+        <div class="site-mark">
+          <a href="index.html" aria-label="Home">JA</a>
+          <div class="site-mark-card">
+            <div class="first-element-two"></div>
+            <div class="card-container-one">
+              <div class="upper-card-one">
+                <img src="assets/images/profile_pic.png" alt="Portrait of James Atkins" />
+                <div class="text-section">
+                  <h2><span class="dark-text">Name: </span> James Atkins</h2>
+                  <p>
+                    <span class="dark-text">Location: </span> San Mateo,
+                    California
+                  </p>
+                  <p>
+                    <span class="dark-text">Skills: </span>HTML/CSS/JS •
+                    Python<br />
+                    • Git/GitHub • Figma
+                  </p>
+                </div>
+              </div>
+              <div class="lower-card-one">
+                <p>
+                  <span class="dark-text">Education: </span>Junior, Bachelors
+                  in Software Engineering @W.G.U.
+                </p>
+                <p>
+                  <span class="dark-text">Interests: </span> Web Development,
+                  Game Development, Artificial Intelligence
+                </p>
+              </div>
+              <div class="social-backdrop">
+                <a
+                  href="https://www.codecademy.com/profiles/James-Atkins"
+                  target="_blank"
+                >
+                  <img
+                    src="assets/images/codecademy_icon.svg"
+                    alt="Codecademy logo"
+                    loading="lazy"
+                  />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/techiejames/"
+                  target="_blank"
+                >
+                  <img
+                    src="assets/images/linkedin_icon.svg"
+                    alt="LinkedIn logo"
+                    loading="lazy"
+                  />
+                </a>
+                <a href="https://github.com/End-Us3r" target="_blank">
+                  <img
+                    src="assets/images/github_icon.svg"
+                    alt="GitHub logo"
+                    loading="lazy"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="site-menu">
+          <input class="site-menu-checkbox" type="checkbox" id="site-menu-toggle" />
+          <label class="site-menu-toggle" for="site-menu-toggle">Menu</label>
+          <ul class="site-menu-list">
+            <li><a href="about-me.html">../About</a></li>
+            <li><a href="projects-page.html">../Projects</a></li>
+            <li><a href="contact.html">../Contact</a></li>
+          </ul>
+        </div>
       </nav>
     </header>
-    <main>
+    <main id="main" tabindex="-1">
+      <h1>Projects</h1>
       <section class="grid">
-        <div class="card-container" title="Inked Art Landing Page">
-          <div id="button_one">
-            <img
-              href="https://end-us3r.github.io/Inked-Art-Homepage-Project/"
-              src="assets/images/diskette.png"
-              alt="Icon created by rizal2109 @ Flaticon"
-            />
-          </div>
+        <a class="card-container" id="button_one" href="https://end-us3r.github.io/Inked-Art-Homepage-Project/">
+          <img
+            src="assets/images/diskette.png"
+            alt="Blue floppy disk icon"
+          />
           <h2>/Inked_Art_Landing_Page.exe</h2>
-        </div>
+        </a>
 
-        <div class="card-container">
-          <div id="button_two">
-            <img
-              href="#"
-              src="assets/images/diskette.png"
-              alt="Icon created by rizal2109 @ Flaticon"
-            />
-          </div>
+        <a class="card-container" id="button_two" href="https://end-us3r.github.io/Message-Generator/">
+          <img
+            src="assets/images/diskette.png"
+            alt="Blue floppy disk icon"
+          />
           <h2>/Message_Generator.exe</h2>
-        </div>
+        </a>
 
-        <div class="card-container">
-          <div id="button_three">
-            <img
-              href="#"
-              src="assets/images/diskette.png"
-              alt="Icon created by rizal2109 @ Flaticon"
-            />
-          </div>
+        <a class="card-container" id="button_three" href="projects-folder/coffeeBot.html">
+          <img
+            src="assets/images/diskette.png"
+            alt="Blue floppy disk icon"
+          />
           <h2>/CoffeeBot.exe</h2>
-        </div>
+        </a>
 
-        <div class="card-container">
-          <div id="button_four">
-            <img
-              href="#"
-              src="assets/images/diskette.png"
-              alt="Icon created by rizal2109 @ Flaticon"
-            />
-          </div>
+        <a class="card-container" id="button_four" href="projects-folder/gpaCalculator.html">
+          <img
+            src="assets/images/diskette.png"
+            alt="Blue floppy disk icon"
+          />
           <h2>/GPA_Calculator.exe</h2>
-        </div>
+        </a>
 
-        <div class="card-container">
-          <div id="button_five">
-            <img
-              href="#"
-              src="assets/images/diskette.png"
-              alt="Icon created by rizal2109 @ Flaticon"
-            />
-          </div>
+        <a class="card-container" id="button_five" href="projects-folder/boredlessTourist.html">
+          <img
+            src="assets/images/diskette.png"
+            alt="Blue floppy disk icon"
+          />
           <h2>/The_Boredless_Tourist.exe</h2>
-        </div>
+        </a>
 
-        <div class="card-container">
-          <div id="button_six">
-            <img
-              href="#"
-              src="assets/images/diskette.png"
-              alt="Icon created by rizal2109 @ Flaticon"
-            />
-          </div>
+        <a class="card-container" id="button_six" href="projects-folder/rps.html">
+          <img
+            src="assets/images/diskette.png"
+            alt="Blue floppy disk icon"
+          />
           <h2>/Rock_Paper_Scissors.exe</h2>
-        </div>
+        </a>
 
-        <div class="card-container">
-          <div id="button_seven">
-            <img
-              href="#"
-              src="assets/images/diskette.png"
-              alt="Icon created by rizal2109 @ Flaticon"
-            />
-          </div>
+        <a class="card-container" id="button_seven" href="projects-folder/nightmareGame.html">
+          <img
+            src="assets/images/diskette.png"
+            alt="Blue floppy disk icon"
+          />
           <h2>/Nightmare.exe</h2>
-        </div>
+        </a>
       </section>
     </main>
-    <footer>
-      <div class="footer-left">
-        <ul class="footer-ul">
+    <footer class="site-footer">
+      <div>
+        <ul>
           <li>
             <a href="https://www.linkedin.com/in/techiejames/" target="_blank">
               LinkedIn
             </a>
           </li>
           <li>
-            <a href="https://github.com/End-Us3r" target="_blank"> GitHub </a>
+            <a href="https://github.com/End-Us3r" target="_blank">
+              GitHub
+            </a>
           </li>
           <li>
-            <a href="https://github.com/End-Us3r" target="_blank">
+            <a href="https://www.codecademy.com/profiles/James-Atkins" target="_blank">
               Codecademy
             </a>
           </li>
         </ul>
       </div>
-      <p>&copy;2025 James Atkins.</p>
+      <p>&copy;2025 James Atkins</p>
     </footer>
     <script src="js/buttons.js"></script>
     <script>
@@ -172,13 +197,6 @@
             item.classList.add("glitch");
           }
         });
-      });
-    </script>
-    <script>
-      document.getElementById("toggleDropdown").addEventListener("click", function (e) {
-        e.preventDefault();
-        const dropdown = this.nextElementSibling;
-        dropdown.style.display = dropdown.style.display === "flex" ? "none" : "flex";
       });
     </script>
   </body>

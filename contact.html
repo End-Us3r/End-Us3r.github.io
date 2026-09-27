@@ -2,27 +2,11 @@
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="keywords"
-      content="James Atkins, Portfolio, Software Engineer, Web Developer"
-    />
+    <meta name="description" content="Contact - James Atkins" />
     <meta name="author" content="James Atkins" />
     <meta name="robots" content="index, follow" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="About Me - James Atkins" />
-
-    <link
-      rel="icon"
-      href="assets/images/favicon-16x16.png"
-      type="image/png"
-      sizes="16x16"
-    />
-    <link
-      rel="manifest"
-      href="site.webmanifest"
-      type="application/manifest+json"
-    />
-    <link rel="stylesheet" href="about-me.css" type="text/css" />
+    <link rel="stylesheet" href="stylesheet.css" type="text/css" />
     <link rel="stylesheet" href="shell.css" type="text/css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -30,17 +14,13 @@
       href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&display=swap"
       rel="stylesheet"
     />
-    <meta charset="UTF-8" />
-    <meta
-      name="keywords"
-      content="James Atkins, Portfolio, Software Engineer, Web Developer"
-    />
-
-    <title>About Me | James Atkins</title>
+    <link rel="icon" href="assets/images/favicon-16x16.png" type="image/png" sizes="16x16" />
+    <link rel="manifest" href="site.webmanifest" type="application/manifest+json" />
+    <title>Contact | James Atkins</title>
   </head>
-  <body class="theme-about">
+  <body class="theme-contact">
     <a class="skip-link" href="#main">Skip to content</a>
-        <header class="site-header">
+    <header class="site-header">
       <nav class="site-nav" aria-label="Primary">
         <div class="site-mark">
           <a href="index.html" aria-label="Home">JA</a>
@@ -115,44 +95,33 @@
         </div>
       </nav>
     </header>
-    <main id="main" tabindex="-1">
-      <h1>About Me</h1>
-      <section>
-        <h2>Introduction</h2>
-        <p>
-          Hello World, I’m James Atkins. Originally from a small town in Eastern
-          North Carolina, I now live in the Bay Area, CA. I come from a
-          background in manual labor — mainly construction and commercial
-          fishing — but over time, I found myself drawn toward a different kind
-          of building: creating things with code.
-        </p>
-      </section>
-      <section>
-        <h2>Background</h2>
-        <p>
-          I began my education at FTCC in 2019, where a C++ class first sparked
-          my interest in programming. I took that curiosity further by enrolling
-          in Web Development and Computer Programming courses, which opened up a
-          new world for me. Those experiences laid the foundation for what I’m
-          passionate about today — designing and building websites that look
-          good and work well. After taking some time off and moving west, I’m
-          now studying Software Engineering at WGU, working toward launching a
-          career in tech. Lately, I’ve been diving into Data Science topics like
-          MySQL and data visualization, and I’m looking forward to deepening my
-          skills in Python.
-        </p>
-      </section>
-      <section>
-        <h2>Interests</h2>
-        <p>
-          Outside of coding, I’m all about staying active and exploring new
-          places. I love hiking, camping, photography, gaming, traveling,
-          hitting the gym, and I’ve recently picked up golf (jury’s still out on
-          my swing). I’ve traveled all over the U.S., and I think getting out
-          and experiencing new environments is one of the best ways to stay
-          inspired. Whether you’re here to connect, collaborate, or just learn
-          more — welcome!
-        </p>
+    <main id="main" class="contact-main" tabindex="-1">
+      <h1>Contact</h1>
+      <section class="neo-cyber-form" id="third-page">
+        <div class="form-overlay"></div>
+        <div class="form-container">
+          <h2 class="glow-title">[::] Initiate Contact<span class="cursor visible">_</span></h2>
+          <form action="javascript:void(0)" method="POST" onsubmit="alert('Form submission disabled for demo purposes.');" aria-describedby="contact-demo-note">
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+            <input type="hidden" name="_subject" value="New submission!" />
+
+            <input type="hidden" name="_redirect" value="https://end-us3r.github.io/End-Us3r.github.io/" />
+
+            <label for="name">> Name:</label>
+            <input type="text" name="name" id="name" autocomplete="name" required />
+
+            <label for="email">> Email:</label>
+            <input type="email" name="email" id="email" autocomplete="email" required />
+
+            <label for="message">> Message:</label>
+            <textarea name="message" id="message" rows="5" required minlength="10"></textarea>
+
+            <p id="contact-demo-note">[For demo purposes only, no user data collected]</p>
+
+            <button type="submit">> Transmit</button>
+          </form>
+        </div>
       </section>
     </main>
     <footer class="site-footer">
