@@ -30,6 +30,35 @@
   --shell-footer-even: #ff6c11;
 }
 
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: 0;
+  transform: translateY(-150%);
+  z-index: 30;
+  background: #000;
+  color: var(--shell-accent, lawngreen);
+  font-family: "doto", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0.6rem 1rem;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  transform: translateY(0.75rem);
+  outline: 2px solid var(--shell-accent, lawngreen);
+  outline-offset: 3px;
+}
+
+a:focus-visible,
+button:focus-visible,
+.site-menu-toggle:focus-visible {
+  outline: 2px solid var(--shell-accent, lawngreen);
+  outline-offset: 3px;
+}
+
 .site-header {
   display: block;
   position: static;
