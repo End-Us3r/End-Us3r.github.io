@@ -242,6 +242,18 @@ nav {
   position: relative;
 }
 
+a.card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  max-width: 100%;
+  color: inherit;
+  font-size: inherit;
+  text-decoration: none;
+}
+
 .card-container div {
   display: inline;
   width: min-content;
@@ -674,15 +686,16 @@ footer p {
     height: auto;
   }
 
-  .card-container {
+  .card-container,
+  a.card-container {
     display: flex;
     flex-direction: column;
     font-size: 1rem;
     height: auto;
-    width: 50vw;
+    width: min(50vw, 100%);
+    max-width: 100%;
     justify-self: center;
     align-items: center;
-
   }
 
   .card-container h2 {
