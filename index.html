@@ -2,6 +2,13 @@
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+    <style>
+      .js .js-fallback { display: none !important; }
+      html:not(.js) .tw-seed { display: none !important; }
+    </style>
     <meta name="description" content="James Atkins Portfolio" />
     <meta name="keywords" content="James Atkins, Portfolio, Software Engineer, Web Developer" />
     <meta name="author" content="James Atkins" />
@@ -105,22 +112,20 @@
       <section class="landing-page" id="homepage">
         <div class="left-panel">
           <div class="left-panel-container">
-            <h1 data-text="Greetings User, I'm James!">Greetings User, I'm James!<span class="cursor visible">_</span></h1>
+            <h1 data-text="Greetings User, I'm James!"><span class="cursor tw-seed">_</span><span class="js-fallback">Greetings User, I'm James!<span class="cursor visible">_</span></span></h1>
           </div>
         </div>
         <div class="right-panel">
           <div class="lower-right-panel">
             <p data-text-2="Welcome to my portfolio! I'm a Junior at Western Governors
-            University studying <span class='glitch'> Software Engineering</span> 
+            University studying <span class='glitch' id='button_one'> Software Engineering</span> 
             and passionate about <span class='glitch'>Web Development</span>, <span class='glitch'>Game Development</span>, and <span class='glitch'>Artificial Intelligence</span>.">
-              Welcome to my portfolio! I'm a Junior at Western Governors
+            <span class="cursor tw-seed">_</span><span class="js-fallback">Welcome to my portfolio! I'm a Junior at Western Governors
               University studying <span class="glitch"> Software Engineering</span>
-              and passionate about <span class="glitch">Web Development</span>, <span class="glitch">Game Development</span>, and <span class="glitch">Artificial Intelligence</span>.<span class="cursor visible">_</span>
-            </p>
+              and passionate about <span class="glitch">Web Development</span>, <span class="glitch">Game Development</span>, and <span class="glitch">Artificial Intelligence</span>.<span class="cursor visible">_</span></span></p>
             <br>
             <br>
-            <p data-text-3="Originally from a small town in Eastern North Carolina, I now call the Bay Area home. My path into tech has been anything but traditional. I come from a background in hands-on work, with experience in construction and the fishing industry. But over time, I discovered a real passion for problem-solving, learning, and building things in the digital world.">
-              Originally from a small town in Eastern North Carolina, I now call the Bay Area home. My path into tech has been anything but traditional. I come from a background in hands-on work, with experience in construction and the fishing industry. But over time, I discovered a real passion for problem-solving, learning, and building things in the digital world.<span class="cursor visible">_</span>
+            <p data-text-3="Originally from a small town in Eastern North Carolina, I now call the Bay Area home. My path into tech has been anything but traditional. I come from a background in hands-on work, with experience in construction and the fishing industry. But over time, I discovered a real passion for problem-solving, learning, and building things in the digital world."><span class="cursor tw-seed">_</span><span class="js-fallback">Originally from a small town in Eastern North Carolina, I now call the Bay Area home. My path into tech has been anything but traditional. I come from a background in hands-on work, with experience in construction and the fishing industry. But over time, I discovered a real passion for problem-solving, learning, and building things in the digital world.<span class="cursor visible">_</span></span>
             </p>
           </div>
         </div>
@@ -138,20 +143,18 @@
       </main>
       <script>
         document.addEventListener("DOMContentLoaded", function () {
-          const headingElement = document.querySelector(".landing-page h1");
-          const paragraphElement = document.querySelector(".lower-right-panel p:first-child");
-          const paragraphElementTwo = document.querySelector(".lower-right-panel p:last-child");
-          if (!headingElement || !paragraphElement || !paragraphElementTwo) return;
-
+          const headingElement = document.querySelector("h1");
           const text = headingElement.getAttribute("data-text");
-          const text2 = paragraphElement.getAttribute("data-text-2");
-          const text3 = paragraphElementTwo.getAttribute("data-text-3");
-          if (!text || !text2 || !text3) return;
-
           const typingSpeed = 25;
           let i = 0;
+          
+          const paragraphElement = document.querySelector(".lower-right-panel p:first-child");
+          const text2 = paragraphElement.getAttribute("data-text-2");
           const typingSpeed2 = 2;
           let j = 0;
+
+          const paragraphElementTwo = document.querySelector(".lower-right-panel p:last-child");
+          const text3 = paragraphElementTwo.getAttribute("data-text-3");
           const typingSpeed3 = 2;
           let k = 0;
 
@@ -163,7 +166,7 @@
               headingElement.insertAdjacentHTML('beforeend', '<span class="cursor">_</span>');
               i++;
               const cursor = headingElement.querySelector('.cursor')
-              if (cursor) cursor.classList.add('visible');
+              cursor.classList.add('visible'); // Make the cursor visible
               setTimeout(typeWriter, typingSpeed);
             }
           }
@@ -184,7 +187,7 @@
               // Add the cursor to the end of the typed portion
               paragraphElement.insertAdjacentHTML('beforeend', '<span class="cursor">_</span>');
               const cursor = paragraphElement.querySelector('.cursor');
-              if (cursor) cursor.classList.add('visible');
+              cursor.classList.add('visible');
         
               j++; // Move to the next character
               setTimeout(typeWriter2, typingSpeed2); // Call the function recursively to type the next character
@@ -207,7 +210,7 @@
               // Add the cursor to the end of the typed portion
               paragraphElementTwo.innerHTML += '<span class="cursor">_</span>';
               const cursor = paragraphElementTwo.querySelector('.cursor');
-              if (cursor) cursor.classList.add('visible');
+              cursor.classList.add('visible');
         
               k++; // Move to the next character
               setTimeout(typeWriter3, typingSpeed3); // Call the function recursively to type the next character
