@@ -44,7 +44,9 @@ James's personal work goes on `james/local-work` (or another `james/*` branch) a
 James locked this look on 2026-09-28. On 2026-09-27 he restarted the site from scratch with a futuristic space, robotics, and tech theme. This applies to everyone, including Design Studio and Grok Build.
 
 ### Reference build
-The visual reference for the build is the Aurora Deep Field mockup approved by James on 2026-09-28. The mockup is plain HTML and CSS: the Home page, the Projects page, a shared base stylesheet, and `ui.js`. If the design team posts an updated version later, that version replaces it.
+The approved design reference is the design team's final Aurora handoff, approved by James on 2026-09-28. The handoff includes a README with build notes, a mockup, renders, all 7 NASA photos in computer and phone sizes, and credits. It is kept outside this repo. If the design team posts an updated version later, that version replaces it.
+- Phones download only the phone-size photos, for example with a `picture` element.
+- Long project cards grow taller without breaking the layout.
 
 ### What carries over
 - Only James's words, and his seven projects. The words are the greeting sentence, the About text, and the project names, descriptions, and links.
@@ -54,7 +56,7 @@ The visual reference for the build is the Aurora Deep Field mockup approved by J
 The background is near-black `#07060a`. Text is warm white `#f6f4ef`, muted text is `#d5d0c8`, and hairline lines are `rgba(246, 244, 239, 0.28)`. The color comes from the photographs.
 Titles use Cormorant Garamond. Paragraphs use Outfit. Small labels use IBM Plex Mono.
 On Home, the aurora photo fills the first screen, and the greeting is set large in the lower part of the picture, clear of the station structure. The welcome text sits in a dark glass panel. A full-width Crab Nebula band follows. Introduction, Background, and Interests are three columns with a hairline over each. On a phone, those three columns stack.
-On Projects, the cards are tall and equal height. The photo covers each card. The name, description, and code button sit on a dark panel at the bottom left.
+On Projects, the cards are tall and equal height. The photo covers each card. The name, description, and code button sit on a dark panel at the bottom left. A long card grows taller without breaking the layout.
 
 ### Greeting
 The greeting words stay the same. How the sentence appears is open: typing, a scramble, or a fade. Whatever effect is used, the full sentence must be readable with JavaScript off and when the device is set to reduce motion. The box holding the greeting is sized for the full sentence, so the page does not jump.
@@ -81,8 +83,16 @@ Do not use ESA/Webb images. Mission Control and Red Planet Lab are saved for fut
 ### How the site is built
 Plain GitHub Pages, with no build step and no frameworks. Motion and depth come from CSS and small scripts, with no heavy 3D or video backgrounds. Loading the fonts above with a Google Fonts link is fine. Use relative paths for links and assets so previews via raw.githack work. Every page has a phone version, with no sideways scroll at 390 and 375 pixels wide. Text stays readable over the photos at every point.
 
+### Contact form
+The look of the contact form may change to the Aurora pop-up. Its behavior stays the same as the current `contact-form.html`.
+- The same three fields are required: name, email, and message.
+- The form sends a real POST to the same address the current form uses. Today that address is the Formspree placeholder `https://formspree.io/f/YOUR_ID`.
+- It must never be swapped for a demo or a `javascript:void(0)` action.
+- Changing that address to a real one is James's decision and is not part of the redesign.
+- The pop-up closes with Esc and with a tap outside. It works with a keyboard and with screen readers.
+- With JavaScript off, the Contact link still reaches a working contact form.
+
 ### What stays working
-- The contact form (`contact-form.html` and its behavior) stays as it is.
 - `js/buttons.js` and its button effects stay as they are.
 - Project cards open in the same tab.
 - `houseTour.html` is left untouched.
@@ -95,7 +105,7 @@ Only edit James's files above. If a fix needs a Stacky-owned or shared file, sto
 **Before layout/IA work (Phase 2) starts**
 - Shared header/menu/footer on Home, About, and Projects
 - The greeting is readable with JavaScript off and when reduce motion is on. The words stay the same, and the box is sized for the full sentence so the page does not jump
-- One contact control only (no duplicate contact IDs); James's original contact form on `contact.html` stays and may be improved
+- One contact control only (no duplicate contact IDs). The contact form may use the Aurora pop-up look, and it keeps the current `contact-form.html` behavior: three required fields and a real POST to `https://formspree.io/f/YOUR_ID`, never a `javascript:void(0)` demo
 - No `#inspire-button` console error
 - `button_one` ID clash fixed
 
