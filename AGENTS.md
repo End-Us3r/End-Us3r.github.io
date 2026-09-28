@@ -44,6 +44,8 @@ This applies to everyone, including Design Studio and Grok Build.
 - Visual work improves his existing theme and never replaces it. His colors (including each page's green, purple, and cyan), his fonts, and his overall style stay. Work is polish only: spacing, headings, readability, consistent buttons and cards, and small hover effects. No new theme (for example no terminal style).
 - His original interactive features stay and only get improved, never removed: typing effect, inspire button, button effects in `js/buttons.js`, the contact form, and project card clicks.
 - The Home typewriter effect stays unchanged. With JavaScript on, the text starts empty and types out with his original words, speed, and cursor. The full text never flashes first, and there is no skip, speed-up, or reduced-motion bypass.
+- Project colors stay exactly as they are on the live site (`main`): the project card and icon colors on the Projects page, including the cyan `rgb(0, 240, 255)`, the orange `#ff6c11`, and the orange-pink-cyan card gradient in `projects-page.css`. James cancelled the earlier "Option B" look and its dark project icon tiles, so do not introduce dark icon tiles or recolor the cards.
+- Design direction for Phase 2 (James, 2026-09-27): everything James already has, made futuristic. His colors, project colors, fonts, content, the typewriter, and every interactive effect stay; the futuristic finish goes on top of them. Nothing gets replaced or removed.
 
 ## If you are an AI coding tool working for James
 Only edit James's files above. If a fix needs a Stacky-owned or shared file, stop and tell James so he can claim it in the Software Team room first. Show every change before it is kept.
