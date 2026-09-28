@@ -84,13 +84,12 @@ Do not use ESA/Webb images. Mission Control and Red Planet Lab are saved for fut
 Plain GitHub Pages, with no build step and no frameworks. Motion and depth come from CSS and small scripts, with no heavy 3D or video backgrounds. Loading the fonts above with a Google Fonts link is fine. Use relative paths for links and assets so previews via raw.githack work. Every page has a phone version, with no sideways scroll at 390 and 375 pixels wide. Text stays readable over the photos at every point.
 
 ### Contact form
-The look of the contact form may change to the Aurora pop-up. Its behavior stays the same as the current `contact-form.html`.
-- The same three fields are required: name, email, and message.
-- The form sends a real POST to the same address the current form uses. Today that address is the Formspree placeholder `https://formspree.io/f/YOUR_ID`.
-- It must never be swapped for a demo or a `javascript:void(0)` action.
-- Changing that address to a real one is James's decision and is not part of the redesign.
+- The Contact page (`contact.html`) stays exactly as it is for now. Its form uses the demo pop-up that tells visitors nothing was sent. Do not point it at the Formspree placeholder, because that would send visitors to an error page.
+- If the Aurora contact pop-up is built, it can take the Aurora look. It keeps the same three required fields (name, email, message) and the same honest "nothing was sent" behavior as the Contact page. It does not send to the placeholder address.
+- Real sending waits until James sets up a real Formspree address. Then both forms switch to sending real messages in one small change, and QA tests it. Setting up that address is James's decision and is not part of the redesign.
 - The pop-up closes with Esc and with a tap outside. It works with a keyboard and with screen readers.
-- With JavaScript off, the Contact link still reaches a working contact form.
+- With JavaScript off, the Contact link still reaches the Contact page.
+- There is one contact control per page (no duplicate contact IDs).
 
 ### What stays working
 - `js/buttons.js` and its button effects stay as they are.
@@ -105,7 +104,7 @@ Only edit James's files above. If a fix needs a Stacky-owned or shared file, sto
 **Before layout/IA work (Phase 2) starts**
 - Shared header/menu/footer on Home, About, and Projects
 - The greeting is readable with JavaScript off and when reduce motion is on. The words stay the same, and the box is sized for the full sentence so the page does not jump
-- One contact control only (no duplicate contact IDs). The contact form may use the Aurora pop-up look, and it keeps the current `contact-form.html` behavior: three required fields and a real POST to `https://formspree.io/f/YOUR_ID`, never a `javascript:void(0)` demo
+- One contact control only (no duplicate contact IDs). The Aurora pop-up look is allowed. Both the Contact page and the pop-up keep the honest "nothing was sent" demo until James sets up a real Formspree address.
 - No `#inspire-button` console error
 - `button_one` ID clash fixed
 
