@@ -43,6 +43,9 @@ James's personal work goes on `james/local-work` (or another `james/*` branch) a
 ## Aurora Deep Field
 James locked this look on 2026-09-28. On 2026-09-27 he restarted the site from scratch with a futuristic space, robotics, and tech theme. This applies to everyone, including Design Studio and Grok Build.
 
+### Reference build
+The visual reference for the build is the Aurora Deep Field mockup approved by James on 2026-09-28. The mockup is plain HTML and CSS: the Home page, the Projects page, a shared base stylesheet, and `ui.js`. If the design team posts an updated version later, that version replaces it.
+
 ### What carries over
 - Only James's words, and his seven projects. The words are the greeting sentence, the About text, and the project names, descriptions, and links.
 - The old colors, fonts, theme, and effects are no longer locked.
@@ -60,14 +63,18 @@ The greeting words stay the same. How the sentence appears is open: typing, a sc
 On a computer, the aurora photo drifts very slowly. On a phone, photos stay still. With reduce motion on, nothing moves.
 
 ### Photos
-Use only the NASA public-domain images listed here. Save each one as WebP, with a desktop size and a phone size, and keep each file under 300 KB. Keep each credit line on the site.
-- Aurora — `aurora-d.webp`, `aurora-p.webp`. Credit: NASA / Johnson Space Center
-- Crab Nebula — `crab-d.webp`, `crab-p.webp`. Credit: NASA/ESA/JPL/Arizona State Univ. Keep this full line. ESA is named because Hubble is a NASA/ESA telescope. This is not an ESA/Webb image.
-- Earth from orbit at sunrise — `earth-d.webp`, `earth-p.webp`. Credit: NASA / Johnson Space Center
-- California at night — `night-d.webp`, `night-p.webp`. Credit: NASA / Johnson Space Center
-- Mars globe — `mars-d.webp`, `mars-p.webp`. Credit: NASA/JPL/USGS
-- Perseverance panorama — `terrain-d.webp`, `terrain-p.webp`. Credit: NASA/JPL-Caltech/MSSS/ASU
-- Earthrise — `earthrise-d.webp`, `earthrise-p.webp`. Credit: NASA / Johnson Space Center
+Use only the NASA public-domain images listed here. Save each one as WebP, with a desktop size and a phone size, and keep each file under 300 KB.
+
+Every page that shows a NASA photo has a credit line in its footer. That line names each photo used on that page, with the full credit exactly as written below. A page passes when the footer includes the matching line for every NASA photo on that page:
+- `Aurora: NASA / Johnson Space Center` — `aurora-d.webp`, `aurora-p.webp`
+- `Crab Nebula: NASA/ESA/JPL/Arizona State Univ.` — `crab-d.webp`, `crab-p.webp`. Keep this full credit. ESA is named because Hubble is a NASA/ESA telescope. This is not an ESA/Webb image.
+- `Earth from orbit at sunrise: NASA / Johnson Space Center` — `earth-d.webp`, `earth-p.webp`
+- `California at night: NASA / Johnson Space Center` — `night-d.webp`, `night-p.webp`
+- `Mars globe: NASA/JPL/USGS` — `mars-d.webp`, `mars-p.webp`
+- `Perseverance panorama: NASA/JPL-Caltech/MSSS/ASU` — `terrain-d.webp`, `terrain-p.webp`
+- `Earthrise: NASA / Johnson Space Center` — `earthrise-d.webp`, `earthrise-p.webp`
+
+A general `Photographs: NASA` line alone is not enough. A caption on a full-width photo band, like the Crab Nebula caption in the mockup, is fine in addition to the footer line. It does not replace the footer line.
 
 Do not use ESA/Webb images. Mission Control and Red Planet Lab are saved for future ideas only. They are not part of this build.
 
