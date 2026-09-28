@@ -3,31 +3,128 @@
 <head>
     <title>Rock-Paper-Scissors</title>
     <link rel="stylesheet" type="text/css" href="../project-template.css">
+    <link rel="stylesheet" href="../shell.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&display=swap" rel="stylesheet">
     <link rel="icon" href="../assets/images/favicon-16x16.png" type="image/png" sizes="16x16">
     <meta content="IE=edge, " http-equiv="X-UA-Compatible">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body>
-    <header>
-        <h1>Let's play Rock-Paper-Scissors!</h1>
+<body class="theme-projects">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <nav class="site-nav" aria-label="Primary">
+        <div class="site-mark">
+          <a href="../index.html" aria-label="Home">JA</a>
+          <div class="site-mark-card">
+            <div class="first-element-two"></div>
+            <div class="card-container-one">
+              <div class="upper-card-one">
+                <img src="../assets/images/profile_pic.png" alt="Portrait of James Atkins" />
+                <div class="text-section">
+                  <h2><span class="dark-text">Name: </span> James Atkins</h2>
+                  <p>
+                    <span class="dark-text">Location: </span> San Mateo,
+                    California
+                  </p>
+                  <p>
+                    <span class="dark-text">Skills: </span>HTML/CSS/JS •
+                    Python<br />
+                    • Git/GitHub • Figma
+                  </p>
+                </div>
+              </div>
+              <div class="lower-card-one">
+                <p>
+                  <span class="dark-text">Education: </span>Junior, Bachelors
+                  in Software Engineering @W.G.U.
+                </p>
+                <p>
+                  <span class="dark-text">Interests: </span> Web Development,
+                  Game Development, Artificial Intelligence
+                </p>
+              </div>
+              <div class="social-backdrop">
+                <a
+                  href="https://www.codecademy.com/profiles/James-Atkins"
+                  target="_blank"
+                >
+                  <img
+                    src="../assets/images/codecademy_icon.svg"
+                    alt="Codecademy logo"
+                    loading="lazy"
+                  />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/techiejames/"
+                  target="_blank"
+                >
+                  <img
+                    src="../assets/images/linkedin_icon.svg"
+                    alt="LinkedIn logo"
+                    loading="lazy"
+                  />
+                </a>
+                <a href="https://github.com/End-Us3r" target="_blank">
+                  <img
+                    src="../assets/images/github_icon.svg"
+                    alt="GitHub logo"
+                    loading="lazy"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="site-menu">
+          <input class="site-menu-checkbox" type="checkbox" id="site-menu-toggle" />
+          <label class="site-menu-toggle" for="site-menu-toggle">Menu</label>
+          <ul class="site-menu-list">
+            <li><a href="../about-me.html">../About</a></li>
+            <li><a href="../projects-page.html">../Projects</a></li>
+            <li><a href="../contact.html">../Contact</a></li>
+          </ul>
+        </div>
+      </nav>
     </header>
-    <main>
+    <main id="main" tabindex="-1">
+        <h1>Let's play Rock-Paper-Scissors!</h1>
         <section>
             <h2>Description</h2>
             <p>This code is a C++ program that implements the game Rock-Paper-Scissors using a random number generator to simulate the computer's choice. The program prompts the user to input their choice and then displays the result of the game. The program keeps track of the number of wins, losses, and ties and displays the final score at the end of the game. The game is played until the user decides to stop playing.</p>
         </section>
         <section>
             <h2>Demo</h2>
-            <video src="" type="video/mp4" controls></video>
+            <video type="video/mp4" controls></video>
         </section>
         <section>
             <h2>Code</h2>
             <p>You can find the code for this program on <a href="https://github.com/End-Us3r/Rock-Paper-Scissors/blob/main/main.cpp">GitHub</a>.</p>
         </section>
     </main>
-    <footer>
-        <p>© 2024 James Atkins</p>
+    <footer class="site-footer">
+      <div>
+        <ul>
+          <li>
+            <a href="https://www.linkedin.com/in/techiejames/" target="_blank">
+              LinkedIn
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/End-Us3r" target="_blank">
+              GitHub
+            </a>
+          </li>
+          <li>
+            <a href="https://www.codecademy.com/profiles/James-Atkins" target="_blank">
+              Codecademy
+            </a>
+          </li>
+        </ul>
+      </div>
+      <p>&copy;2025 James Atkins</p>
     </footer>
 </body>
 </html>
