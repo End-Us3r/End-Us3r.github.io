@@ -61,6 +61,17 @@ main section {
   border-left: 2px solid rgb(0, 240, 255);
 }
 
+/* Collapse an empty Demo block so it leaves no gap. CSS only, so this
+   holds with JavaScript off. A real src shows the section and player. */
+main section:has(video:not([src])),
+main section:has(video[src=""]),
+main section:has(video[src="#"]) {
+  display: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
 main h2 {
   margin: 0 0 0.75rem;
   color: #ff6c11;
