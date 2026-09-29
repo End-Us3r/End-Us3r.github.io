@@ -19,6 +19,8 @@ On upgrade the menu must match main at 1280, 390, and 375 pixels wide on every p
 - Phone pages do not scroll sideways.
 - The phone menu opens with JavaScript off.
 
+Upgrade has no Skip to content link and no custom focus outline. It uses the browser's default focus outline, as main does. The JA hover card with social links stays on Home only, as on main.
+
 Project cards open in the same tab (James lock 2026-09-27).
 
 The six old project pages (`coffeeBot.html`, `gpaCalculator.html`, `boredlessTourist.html`, `rps.html`, `nightmareGame.html`, `houseTour.html`) look like main. `houseTour.html` stays exactly as on main.
@@ -60,7 +62,7 @@ The Aurora rules apply only to `test/aurora-home` and later `test/aurora-*` bran
 James locked this look on 2026-09-28. On 2026-09-27 he restarted the site from scratch with a futuristic space, robotics, and tech theme. These rules apply only to `test/aurora-home` and later `test/aurora-*` branches. Aurora does not go into upgrade or main until James picks it.
 
 ### Reference build
-The approved design reference is the design team's final Aurora handoff, approved by James on 2026-09-28. The handoff includes a README with build notes, a mockup, renders, all 7 NASA photos in computer and phone sizes, and credits. It is kept outside this repo. If the design team posts an updated version later, that version replaces it.
+The approved design reference is the design team's final Aurora handoff, approved by James on 2026-09-28. The handoff includes a README with build notes, a mockup, renders, all 7 NASA photos in computer and phone sizes, and credits. The approved Aurora v2 plan (James, 2026-09-28, with the Europe at night swap) adds 7 Earth photos, each in a computer and a phone size (14 files). Where the first handoff and the v2 plan differ, the v2 plan wins. The photo list below is the only source for which photos may be used. It is kept outside this repo. If the design team posts an updated version later, that version replaces it.
 - Phones download only the phone-size photos, for example with a `picture` element.
 - Long project cards grow taller without breaking the layout.
 
