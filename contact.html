@@ -19,82 +19,51 @@
     <title>Contact | James Atkins</title>
   </head>
   <body class="theme-contact">
-    <a class="skip-link" href="#main">Skip to content</a>
-    <header class="site-header">
-      <nav class="site-nav" aria-label="Primary">
-        <div class="site-mark">
-          <a href="index.html" aria-label="Home">JA</a>
-          <div class="site-mark-card">
-            <div class="first-element-two"></div>
-            <div class="card-container-one">
-              <div class="upper-card-one">
-                <img src="assets/images/profile_pic.png" alt="Portrait of James Atkins" />
-                <div class="text-section">
-                  <h2><span class="dark-text">Name: </span> James Atkins</h2>
-                  <p>
-                    <span class="dark-text">Location: </span> San Mateo,
-                    California
-                  </p>
-                  <p>
-                    <span class="dark-text">Skills: </span>HTML/CSS/JS •
-                    Python<br />
-                    • Git/GitHub • Figma
-                  </p>
-                </div>
-              </div>
-              <div class="lower-card-one">
-                <p>
-                  <span class="dark-text">Education: </span>Junior, Bachelors
-                  in Software Engineering @W.G.U.
-                </p>
-                <p>
-                  <span class="dark-text">Interests: </span> Web Development,
-                  Game Development, Artificial Intelligence
-                </p>
-              </div>
-              <div class="social-backdrop">
-                <a
-                  href="https://www.codecademy.com/profiles/James-Atkins"
-                  target="_blank"
-                >
-                  <img
-                    src="assets/images/codecademy_icon.svg"
-                    alt="Codecademy logo"
-                    loading="lazy"
-                  />
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/techiejames/"
-                  target="_blank"
-                >
-                  <img
-                    src="assets/images/linkedin_icon.svg"
-                    alt="LinkedIn logo"
-                    loading="lazy"
-                  />
-                </a>
-                <a href="https://github.com/End-Us3r" target="_blank">
-                  <img
-                    src="assets/images/github_icon.svg"
-                    alt="GitHub logo"
-                    loading="lazy"
-                  />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="site-menu">
-          <input class="site-menu-checkbox" type="checkbox" id="site-menu-toggle" />
-          <label class="site-menu-toggle" for="site-menu-toggle">Menu</label>
-          <ul class="site-menu-list">
-            <li><a href="about-me.html">../About</a></li>
-            <li><a href="projects-page.html">../Projects</a></li>
-            <li><a href="contact.html">../Contact</a></li>
-          </ul>
-        </div>
+    <header>
+      <nav class="desktop-nav">
+        <ul class="nav-list">
+          <li>
+            <a href="index.html" tabindex="1"> Root </a>
+          </li>
+          <li>
+            <a href="projects-page.html" tabindex="2">../Projects </a>
+          </li>
+          <li>
+            <a href="contact.html" tabindex="3">../Contact </a>
+          </li>
+        </ul>
+      </nav>
+      <nav class="mobile-nav">
+        <ul>
+          <li class="first-element">
+            <input class="nav-fallback" type="checkbox" id="nav-fallback" tabindex="-1" aria-hidden="true">
+            <label for="nav-fallback" id="toggleDropdown" tabindex="0">JA</label>
+            <ul class="mobile-dropdown">
+              <li><a href="index.html">Root</a></li>
+              <li><a href="about-me.html">About</a></li>
+              <li><a href="projects-page.html">Projects</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </li>
+        </ul>
       </nav>
     </header>
+    <script>
+      document.getElementById("toggleDropdown").addEventListener("click", function (e) {
+        e.preventDefault();
+        const dropdown = this.nextElementSibling;
+        const open = dropdown.style.display === "flex";
+        dropdown.style.display = open ? "none" : "flex";
+        const box = document.getElementById("nav-fallback");
+        if (box) box.checked = !open;
+      });
+      document.getElementById("toggleDropdown").addEventListener("keydown", function (e) {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          this.click();
+        }
+      });
+    </script>
     <main id="main" class="contact-main" tabindex="-1">
       <h1>Contact</h1>
       <section class="neo-cyber-form" id="third-page">

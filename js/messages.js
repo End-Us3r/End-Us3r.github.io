@@ -1,10 +1,7 @@
 const inspireButton = document.getElementById("inspire-button");
 
 if (inspireButton) {
-    const inspirePanel = document.getElementById("third-page");
-    if (inspirePanel) inspirePanel.hidden = false;
-
-inspireButton.addEventListener('click', function() {
+    inspireButton.addEventListener('click', function() {
     // Toggle 'clicked' class on inspire-button
     this.classList.add('clicked');
     setTimeout(() => {
