@@ -1,15 +1,18 @@
 /* Demo pages use James's existing projects theme: black, cyan, orange, Doto.
-   Colors and the grain overlay come from the site stylesheets. */
+   Colors and the grain overlay come from the site stylesheets.
+   Every rule is scoped to body.demo-colors so houseTour.html, which links
+   this file but does not use that class, stays unstyled. */
 
-* {
+body.demo-colors,
+body.demo-colors * {
   box-sizing: border-box;
 }
 
-html {
+html:has(body.demo-colors) {
   background-color: black;
 }
 
-body {
+body.demo-colors {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -21,7 +24,7 @@ body {
   line-height: 1.6;
 }
 
-body::before {
+body.demo-colors::before {
   content: "";
   z-index: 100000;
   position: fixed;
@@ -34,7 +37,7 @@ body::before {
   opacity: 0.06;
 }
 
-main {
+body.demo-colors main {
   flex: 1 0 auto;
   width: 100%;
   max-width: 46rem;
@@ -42,8 +45,8 @@ main {
   padding: 1.5rem 1.25rem 3rem;
 }
 
-header h1,
-main h1 {
+body.demo-colors header h1,
+body.demo-colors main h1 {
   margin: 0 0 2rem;
   color: rgb(0, 240, 255);
   font-family: "doto", sans-serif;
@@ -56,7 +59,7 @@ main h1 {
   overflow-wrap: anywhere;
 }
 
-main section {
+body.demo-colors main section {
   margin: 0 0 2rem;
   padding-left: 1rem;
   border-left: 2px solid rgb(0, 240, 255);
@@ -64,16 +67,16 @@ main section {
 
 /* Collapse an empty Demo block so it leaves no gap. CSS only, so this
    holds with JavaScript off. A real src shows the section and player. */
-main section:has(video:not([src])),
-main section:has(video[src=""]),
-main section:has(video[src="#"]) {
+body.demo-colors main section:has(video:not([src])),
+body.demo-colors main section:has(video[src=""]),
+body.demo-colors main section:has(video[src="#"]) {
   display: none;
   margin: 0;
   padding: 0;
   border: 0;
 }
 
-main h2 {
+body.demo-colors main h2 {
   margin: 0 0 0.75rem;
   color: #ff6c11;
   font-family: "doto", sans-serif;
@@ -84,7 +87,7 @@ main h2 {
   overflow-wrap: anywhere;
 }
 
-main p {
+body.demo-colors main p {
   margin: 0;
   color: white;
   font-family: "doto", sans-serif;
@@ -93,7 +96,7 @@ main p {
   overflow-wrap: anywhere;
 }
 
-main > p {
+body.demo-colors main > p {
   margin: -1rem 0 2rem;
   color: #ff6c11;
   font-size: 1.15rem;
@@ -102,59 +105,59 @@ main > p {
   text-shadow: 0 0 5px #ff6c11, 0 0 10px #ff6c11, 0 0 20px #ff6c11;
 }
 
-main a {
+body.demo-colors main a {
   color: rgb(0, 240, 255);
   font-weight: 700;
   text-decoration: underline;
   text-underline-offset: 0.15em;
 }
 
-main a:hover {
+body.demo-colors main a:hover {
   color: #ff6c11;
   text-shadow: 0 0 5px #ff6c11, 0 0 10px #ff6c11, 0 0 20px #ff6c11,
     0 0 40px #ff6c11;
 }
 
-img,
-video {
+body.demo-colors img,
+body.demo-colors video {
   max-width: 100%;
   height: auto;
 }
 
-main video {
+body.demo-colors main video {
   display: block;
   width: min(700px, 100%);
   margin-top: 0.75rem;
 }
 
 /* Stay hidden until a real file is set on src. */
-video:not([src]),
-video[src=""],
-video[src="#"] {
+body.demo-colors video:not([src]),
+body.demo-colors video[src=""],
+body.demo-colors video[src="#"] {
   display: none;
 }
 
 @media (max-width: 1600px) {
-  main {
+  body.demo-colors main {
     padding-top: 1.5rem;
   }
 }
 
 @media (max-width: 480px) {
-  main {
+  body.demo-colors main {
     padding: 1rem 1rem 2.5rem;
   }
 
-  header h1,
-  main h1 {
+  body.demo-colors header h1,
+  body.demo-colors main h1 {
     font-size: 1.6rem;
   }
 
-  main h2 {
+  body.demo-colors main h2 {
     font-size: 1.25rem;
   }
 
-  main p {
+  body.demo-colors main p {
     font-size: 1rem;
   }
 }
