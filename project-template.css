@@ -45,6 +45,19 @@ body.demo-colors main {
   padding: 1.5rem 1.25rem 3rem;
 }
 
+body.demo-colors header,
+body.demo-colors footer {
+  width: 100%;
+  max-width: 46rem;
+  margin: 0 auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+body.demo-colors header {
+  padding-top: 1.25rem;
+}
+
 body.demo-colors header h1,
 body.demo-colors main h1 {
   margin: 0 0 2rem;
@@ -96,6 +109,7 @@ body.demo-colors main p {
   overflow-wrap: anywhere;
 }
 
+body.demo-colors header > p,
 body.demo-colors main > p {
   margin: -1rem 0 2rem;
   color: #ff6c11;
@@ -144,6 +158,12 @@ body.demo-colors video[src="#"] {
 }
 
 @media (max-width: 480px) {
+  body.demo-colors header,
+  body.demo-colors footer {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
   body.demo-colors main {
     padding: 1rem 1rem 2.5rem;
   }
