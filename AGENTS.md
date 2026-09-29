@@ -9,6 +9,24 @@ Work lands on `upgrade/v1-structure` and reaches `main` only through a reviewed 
 Rough test builds go on a separate test branch made from `upgrade/v1-structure`.
 James's personal work goes on `james/local-work` (or another `james/*` branch) and is folded into the upgrade branch by Stacky.
 
+## Two tracks
+Work follows two tracks. Do not mix them.
+
+`upgrade/v1-structure` keeps main's visible look: menu, colors, fonts, the typing greeting, and effects. Only structure changes that visitors cannot see are allowed there.
+
+On upgrade the menu must match main at 1280, 390, and 375 pixels wide on every page: same links and order, same look, same phone menu open and close. James approved three exceptions on 2026-09-28:
+- Contact on the Home phone menu, About, and Projects opens `contact.html`. The Home computer menu's Contact keeps main's pop-up.
+- Phone pages do not scroll sideways.
+- The phone menu opens with JavaScript off.
+
+Upgrade has no Skip to content link and no custom focus outline. It uses the browser's default focus outline, as main does. The JA hover card with social links stays on Home only, as on main.
+
+Project cards open in the same tab (James lock 2026-09-27).
+
+The six old project pages (`coffeeBot.html`, `gpaCalculator.html`, `boredlessTourist.html`, `rps.html`, `nightmareGame.html`, `houseTour.html`) look like main. `houseTour.html` stays exactly as on main.
+
+The Aurora rules apply only to `test/aurora-home` and later `test/aurora-*` branches. Aurora does not go into upgrade or main until James gives a separate yes to move it.
+
 ## Who edits what
 
 ### James owns (content)
@@ -19,8 +37,8 @@ James's personal work goes on `james/local-work` (or another `james/*` branch) a
 - "Known gap" labels on the Inked Art demo (card on `projects-page.html`; the live demo is https://end-us3r.github.io/Inked-Art-Homepage-Project/) and the Nightmare demo (`projects-folder/nightmareGame.html`)
 
 ### Stacky owns (structure)
-- Shared header, menu, and footer on `index.html`, `about-me.html`, `projects-page.html`
-- `shell.css` (shared header, menu, and footer styles)
+- Each page's menu on `index.html`, `about-me.html`, and `projects-page.html` matches main at 1280/390/375 (its own links and look), except the three approved fixes. A shared footer is fine if it looks the same as main's.
+- `shell.css` (each page's own menu styles, matching main at 1280/390/375 except the three approved fixes; a shared footer is fine if it looks the same as main's)
 - CSS consolidation
 - `js/contactForm.js`, `js/buttons.js`, `js/messages.js`
 - `contact-form.html`
@@ -41,44 +59,76 @@ James's personal work goes on `james/local-work` (or another `james/*` branch) a
 - Keep all seven demos. Leave `houseTour.html` untouched. For the other demos, leave the game logic alone unless a path or CSS link is broken.
 
 ## Aurora Deep Field
-James locked this look on 2026-09-28. On 2026-09-27 he restarted the site from scratch with a futuristic space, robotics, and tech theme. This applies to everyone, including Design Studio and Grok Build.
+James locked this look on 2026-09-28. On 2026-09-27 he restarted the site from scratch with a futuristic space, robotics, and tech theme. These rules apply only to `test/aurora-home` and later `test/aurora-*` branches. Aurora does not go into upgrade or main until James gives a separate yes to move it.
 
 ### Reference build
-The approved design reference is the design team's final Aurora handoff, approved by James on 2026-09-28. The handoff includes a README with build notes, a mockup, renders, all 7 NASA photos in computer and phone sizes, and credits. It is kept outside this repo. If the design team posts an updated version later, that version replaces it.
+The approved design reference is the design team's final Aurora handoff, approved by James on 2026-09-28. The handoff includes a README with build notes, a mockup, renders, all 7 NASA photos in computer and phone sizes, and credits. It is kept outside this repo. If the design team posts an updated version later, that version replaces it. The approved Aurora v2 plan (James, 2026-09-28) and the design team's later v3 photo swaps (James, 2026-09-29) set which photos are used. The photo list in this file (14 photos, 30 files) is the only source for which photos may be used.
 - Phones download only the phone-size photos, for example with a `picture` element.
 - Long project cards grow taller without breaking the layout.
 
 ### What carries over
-- Only James's words, and his seven projects. The words are the greeting sentence, the About text, and the project names, descriptions, and links.
+- Only James's words, and his seven projects. The words are the greeting sentence, the About text, and the project names, descriptions, and links. New text is only UI labels and photo captions.
 - The old colors, fonts, theme, and effects are no longer locked.
 
 ### The look
-The background is near-black `#07060a`. Text is warm white `#f6f4ef`, muted text is `#d5d0c8`, and hairline lines are `rgba(246, 244, 239, 0.28)`. The color comes from the photographs.
+The background is near-black `#07060a`. Text is warm white `#f6f4ef`, muted text is `#d5d0c8`, and hairline lines are `rgba(246, 244, 239, 0.28)`. The color comes from the photographs. Keep these colors and fonts unchanged.
 Titles use Cormorant Garamond. Paragraphs use Outfit. Small labels use IBM Plex Mono.
-On Home, the aurora photo fills the first screen, and the greeting is set large in the lower part of the picture, clear of the station structure. The welcome text sits in a dark glass panel. A full-width Crab Nebula band follows. Introduction, Background, and Interests are three columns with a hairline over each. On a phone, those three columns stack.
-On Projects, the cards are tall and equal height. The photo covers each card. The name, description, and code button sit on a dark panel at the bottom left. A long card grows taller without breaking the layout.
+On Home, the aurora photo fills the first screen, and the greeting is set large in the lower part of the picture, clear of the station structure. The welcome text sits in a dark glass panel. Introduction, Background, and Interests are three columns with a hairline over each. On a phone, those three columns stack. With JavaScript on, those chapters are tabs. A contained View from orbit photo sits after the chapters. A full-width Crab Nebula band follows that.
+On Projects, the page is a card grid: 2 columns on a computer, 1 on a phone. Smaller photos sit inside the cards, not full-screen photos in a row. The name, description, and code button sit with each card. A long card grows taller without breaking the layout.
+
+### Image rhythm
+Never two full-width photos back to back. Between any two photos there is a text section, a panel, or at least 96px of empty space (64px on phone). At most two full-width photos per page. A contained photo sits inside the page margins, at most 1200px wide. Projects is a card grid (2 columns on a computer, 1 on a phone) with smaller photos inside the cards, not full-screen photos in a row.
 
 ### Greeting
 The greeting words stay the same. How the sentence appears is open: typing, a scramble, or a fade. Whatever effect is used, the full sentence must be readable with JavaScript off and when the device is set to reduce motion. The box holding the greeting is sized for the full sentence, so the page does not jump.
 
 ### Motion
-On a computer, the aurora photo drifts very slowly. On a phone, photos stay still. With reduce motion on, nothing moves.
+On a computer, the aurora photo drifts very slowly. On a phone, photos stay still. There is no phone or device tilt.
+With reduce motion on, the page holds completely still: no drift, no parallax, and no fade-ins. Switches are instant.
 
 ### Photos
-Use only the NASA public-domain images listed here. Save each one as WebP, with a desktop size and a phone size, and keep each file under 300 KB.
+Use only the NASA public-domain images listed here. WebP only. Load a desktop size and a phone size with a `picture` element. The files are in `images/aurora/`.
 
-Every page that shows a NASA photo has a credit line in its footer. That line names each photo used on that page, with the full credit exactly as written below. A page passes when the footer includes the matching line for every NASA photo on that page:
-- `Aurora: NASA / Johnson Space Center` — `aurora-d.webp`, `aurora-p.webp`
-- `Crab Nebula: NASA/ESA/JPL/Arizona State Univ.` — `crab-d.webp`, `crab-p.webp`. Keep this full credit. ESA is named because Hubble is a NASA/ESA telescope. This is not an ESA/Webb image.
-- `Earth from orbit at sunrise: NASA / Johnson Space Center` — `earth-d.webp`, `earth-p.webp`
-- `California at night: NASA / Johnson Space Center` — `night-d.webp`, `night-p.webp`
-- `Mars globe: NASA/JPL/USGS` — `mars-d.webp`, `mars-p.webp`
-- `Perseverance panorama: NASA/JPL-Caltech/MSSS/ASU` — `terrain-d.webp`, `terrain-p.webp`
-- `Earthrise: NASA / Johnson Space Center` — `earthrise-d.webp`, `earthrise-p.webp`
+Phone files must be no more than 1,280 px wide and no more than 450 KB. Desktop files must be no more than 2,560 px wide and no more than 500 KB.
+
+The first photo on each page loads right away (the aurora on Home, the Himalayas band on Projects) and must not be `loading="lazy"`. Every other photo uses `loading="lazy"`, including the hidden picker views.
+
+Every page that shows a NASA photo has a credit line in its footer. That line names each photo used on that page, including all picker views on Home, with the full credit exactly as written below. A page passes when the footer includes the matching line for every NASA photo on that page:
+- `Aurora: NASA / Johnson Space Center` — Home hero (loads right away): `aurora-manitoba-hero-d.webp`, `aurora-manitoba-hero-p.webp`. Projects card 03: `aurora-manitoba-d.webp`, `aurora-manitoba-p.webp`. Alt: "The aurora borealis over Canada, seen from the International Space Station".
+- `Whole Earth: NASA / Johnson Space Center` — `bluemarble-d.webp`, `bluemarble-p.webp`. Alt: "The whole Earth, photographed by the Apollo 17 crew". Caption: "Whole Earth from Apollo 17, 7 Dec. 1972. NASA / Johnson Space Center." Home, View from orbit (default).
+- `Hurricane Florence: NASA / Johnson Space Center` — `florence-d.webp`, `florence-p.webp`. Alt: "Hurricane Florence seen from the International Space Station". Caption: "Hurricane Florence over the Atlantic, from the ISS, 12 Sept. 2018. NASA / Johnson Space Center." Home, View from orbit.
+- `Europe at night: NASA/Chris Williams` — `vienna-night-d.webp`, `vienna-night-p.webp`. Alt: "Vienna and Bratislava at night along the Danube, seen from the International Space Station". Caption: "Vienna and Bratislava at night, from the ISS, 18 Jan. 2026. NASA/Chris Williams." Home, View from orbit.
+- `Aurora over city lights: NASA/Chris Williams` — `aurora-europe-d.webp`, `aurora-europe-p.webp`. Alt: "Green and red aurora over the city lights of Europe". Caption: "Aurora above the city lights of Italy and Germany, from the ISS, 19 Jan. 2026. NASA/Chris Williams." Home, View from orbit.
+- `Sahara coast: NASA / Johnson Space Center` — `sahara-coast-d.webp`, `sahara-coast-p.webp`. Alt: "The desert coast of Mauritania". Caption: "The Sahara meets the Atlantic in Mauritania, from the ISS, 16 May 2024. NASA / Johnson Space Center." Home, View from orbit.
+- `Crab Nebula: NASA/ESA/JPL/Arizona State Univ.` — `crab-d.webp`, `crab-p.webp`. Alt: "The Crab Nebula". Caption: "Crab Nebula. NASA, ESA, JPL, Arizona State Univ." Keep this full credit. ESA is named because Hubble is a NASA/ESA telescope. This is not an ESA/Webb image. Home, deep field band. Projects card 04.
+- `Himalayas: NASA / Johnson Space Center` — `himalaya-d.webp`, `himalaya-p.webp`. Alt: "The Himalayas and Mount Everest". Projects, top band (loads right away).
+- `Earth from orbit at sunrise: NASA / Johnson Space Center` — `sunrise-d.webp`, `sunrise-p.webp`. Alt: "Sunrise above the clouds, seen from orbit". Projects card 01.
+- `Los Angeles at night: NASA / Johnson Space Center` — `la-night-d.webp`, `la-night-p.webp`. Alt: "Los Angeles at night, seen from orbit". Projects card 02.
+- `Earthrise: NASA / Johnson Space Center` — `earthrise-d.webp`, `earthrise-p.webp`. Alt: "Earthrise over the Moon". Projects card 05.
+- `Perseverance panorama: NASA/JPL-Caltech/MSSS/ASU` — `terrain-d.webp`, `terrain-p.webp`. Alt: "Perseverance panorama on Mars". Projects card 06.
+- `Mars globe: NASA/JPL/USGS` — `mars-d.webp`, `mars-p.webp`. Alt: "Mars globe". Projects card 07.
+- `Sun glint, Indian Ocean: NASA / Johnson Space Center` — `glint-d.webp`, `glint-p.webp`. Alt: "The sun's glint on a partly cloudy Indian Ocean". Caption: "Sun glint, Indian Ocean. NASA / Johnson Space Center." Projects, closing band.
+
+Home footer credit line, exactly:
+`Aurora: NASA / Johnson Space Center. Crab Nebula: NASA/ESA/JPL/Arizona State Univ. Whole Earth: NASA / Johnson Space Center. Hurricane Florence: NASA / Johnson Space Center. Europe at night: NASA/Chris Williams. Aurora over city lights: NASA/Chris Williams. Sahara coast: NASA / Johnson Space Center.`
+
+Projects footer credit line, exactly:
+`Earth from orbit at sunrise: NASA / Johnson Space Center. Los Angeles at night: NASA / Johnson Space Center. Aurora: NASA / Johnson Space Center. Crab Nebula: NASA/ESA/JPL/Arizona State Univ. Earthrise: NASA / Johnson Space Center. Perseverance panorama: NASA/JPL-Caltech/MSSS/ASU. Mars globe: NASA/JPL/USGS. Himalayas: NASA / Johnson Space Center. Sun glint, Indian Ocean: NASA / Johnson Space Center.`
 
 A general `Photographs: NASA` line alone is not enough. A caption on a full-width photo band, like the Crab Nebula caption in the mockup, is fine in addition to the footer line. It does not replace the footer line.
 
 Do not use ESA/Webb images. Mission Control and Red Planet Lab are saved for future ideas only. They are not part of this build.
+
+### Interactions
+v2 may add these, in plain JavaScript and CSS, with no libraries. They live in one small file, `js/aurora-v2.js`:
+- Desktop pointer depth on the hero
+- About chapters as tabs
+- The View from orbit picker (CSS radio buttons, so it works with JavaScript off)
+- Project filter and More buttons
+- Gentle scroll fade-ins
+
+With JavaScript off, everything still works and all content is visible. With reduce motion on, the page holds completely still: no drift, no parallax, and no fade-ins. Switches are instant.
+Put new controls inside `header`, `main`, or `footer`, so the contact pop-up can lock them. One contact control per page. Do not load `js/contactForm.js` on Aurora pages.
 
 ### How the site is built
 Plain GitHub Pages, with no build step and no frameworks. Motion and depth come from CSS and small scripts, with no heavy 3D or video backgrounds. Loading the fonts above with a Google Fonts link is fine. Use relative paths for links and assets so previews via raw.githack work. Every page has a phone version, with no sideways scroll at 390 and 375 pixels wide. Text stays readable over the photos at every point.
@@ -92,7 +142,7 @@ Plain GitHub Pages, with no build step and no frameworks. Motion and depth come 
 - There is one contact control per page (no duplicate contact IDs).
 
 ### What stays working
-- `js/buttons.js` and its button effects stay as they are.
+- `js/buttons.js` and its button effects stay as they are. Do not reuse `#button_one` through `#button_seven`.
 - Project cards open in the same tab.
 - `houseTour.html` is left untouched.
 
@@ -101,10 +151,11 @@ Only edit James's files above. If a fix needs a Stacky-owned or shared file, sto
 
 ## Checkpoints (gates)
 
+### Upgrade track
 **Before layout/IA work (Phase 2) starts**
-- Shared header/menu/footer on Home, About, and Projects
-- The greeting is readable with JavaScript off and when reduce motion is on. The words stay the same, and the box is sized for the full sentence so the page does not jump
-- One contact control only (no duplicate contact IDs). The Aurora pop-up look is allowed. Both the Contact page and the pop-up keep the honest "nothing was sent" demo until James sets up a real Formspree address.
+- Each page's menu matches main at 1280/390/375 (its own links and look), except the three approved fixes. A shared footer is fine if it looks the same as main's.
+- The greeting is the same as main
+- One contact control only (no duplicate contact IDs). The Contact page and the pop-up keep the honest "nothing was sent" demo, and neither posts to the Formspree placeholder, until James sets up a real Formspree address.
 - No `#inspire-button` console error
 - `button_one` ID clash fixed
 
@@ -119,7 +170,18 @@ Only edit James's files above. If a fix needs a Stacky-owned or shared file, sto
 
 **Before merge to `main` (live)**
 - QA v1 acceptance passes
+- Menu matches main at 1280/390/375 except the three approved fixes
 - James gives a separate, explicit yes. Merge is never automatic after Phase 3.
+
+### Aurora track
+These checks are for `test/aurora-home` and later `test/aurora-*` branches.
+- The greeting is readable with JavaScript off and when reduce motion is on. The words stay the same, and the box is sized for the full sentence so the page does not jump.
+- JavaScript off: both pages are fully readable. All three chapters are visible. All seven cards show their full descriptions. The filter bar is hidden. The Earth picker still switches. Contact goes to `contact.html`.
+- Reduce motion on: no drift, no parallax, no fade-ins, and every switch is instant.
+- Phone at 390 and 375 pixels wide: no sideways scroll, and no two full-width photos touch. Tap targets are at least 44 pixels tall.
+- Keyboard only: Tab reaches every control in order, with a visible ring. Arrow keys work in the tabs and the picker. Enter and Space work on More and the filters. Esc closes the pop-up and focus returns to Contact.
+- Must not break: `js/buttons.js` stays unchanged, and `#button_one` through `#button_seven` are not reused. Project links open in the same tab (no `target`, and no click handler on the whole card). The footer on each page names every photo on that page with the exact credit lines in the photo list. The contact pop-up `#contact-dialog` opens from `[data-contact]`, traps focus, closes with Esc and a tap outside, and shows the "Nothing was sent" message in `#contact-status`.
+- Phone files are no more than 1,280 px wide and no more than 450 KB. Desktop files are no more than 2,560 px wide and no more than 500 KB. Phones download only the phone-size (`-p`) files. The first photo on each page is not `loading="lazy"`. Every other photo is.
 
 ## Working habits
 - Pull before each block of work. Push small commits often.
