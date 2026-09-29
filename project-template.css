@@ -34,14 +34,25 @@ body::before {
   opacity: 0.06;
 }
 
+/* The fixed menu bar this padding used to clear is gone. The title now
+   lives in header, so the same top space sits above the title and main
+   starts directly under it. */
+body > header {
+  width: 100%;
+  max-width: 46rem;
+  margin: 0 auto;
+  padding: 12rem 1.25rem 0;
+}
+
 main {
   flex: 1 0 auto;
   width: 100%;
   max-width: 46rem;
   margin: 0 auto;
-  padding: 12rem 1.25rem 3rem;
+  padding: 0 1.25rem 3rem;
 }
 
+header h1,
 main h1 {
   margin: 0 0 2rem;
   color: rgb(0, 240, 255);
@@ -92,6 +103,7 @@ main p {
   overflow-wrap: anywhere;
 }
 
+header > p,
 main > p {
   margin: -1rem 0 2rem;
   color: #ff6c11;
@@ -134,16 +146,21 @@ video[src="#"] {
 }
 
 @media (max-width: 1600px) {
-  main {
+  body > header {
     padding-top: 7.5rem;
   }
 }
 
 @media (max-width: 480px) {
-  main {
-    padding: 6.5rem 1rem 2.5rem;
+  body > header {
+    padding: 6.5rem 1rem 0;
   }
 
+  main {
+    padding: 0 1rem 2.5rem;
+  }
+
+  header h1,
   main h1 {
     font-size: 1.6rem;
   }
@@ -152,6 +169,7 @@ video[src="#"] {
     font-size: 1.25rem;
   }
 
+  header p,
   main p {
     font-size: 1rem;
   }
