@@ -389,6 +389,23 @@ section {
   display: none;
 }
 
+/* Visually hidden checkbox. Its label is the JA circle, so the phone
+   menu still opens when JavaScript is off. */
+.nav-fallback {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+  opacity: 0;
+  pointer-events: none;
+  appearance: none;
+}
+
 nav {
   display: flex;
   flex-direction: row;
@@ -439,7 +456,8 @@ ul {
   top: -2%;
 }
 
-.first-element > a {
+.first-element > a,
+.first-element > label {
   display: flex;
   color: black;
   text-decoration: none;
@@ -454,6 +472,7 @@ ul {
   font-family: "doto", sans-serif;
   font-size: 28px;
   font-weight: 600;
+  cursor: pointer;
 }
 
 .first-element-hidden {
@@ -586,7 +605,8 @@ li:nth-child(3) {
   margin-right: 1rem;
 }
 
-nav > ul > li > a {
+nav > ul > li > a,
+nav > ul > li > label {
   display: flex;
   color: lawngreen;
   width: 100%;
@@ -598,7 +618,8 @@ nav > ul > li > a {
     lawngreen 0px 0px 20px, lawngreen 0px 0px 40px;
 }
 
-li > a {
+li > a,
+li > label {
   color: black;
   text-decoration: none;
   text-transform: uppercase;
@@ -611,7 +632,8 @@ li > a {
   background-color: transparent;
 }
 
-li > a:hover {
+li > a:hover,
+li > label:hover {
   text-decoration: underline;
   cursor: pointer;
   color: black;
@@ -878,11 +900,6 @@ h3 {
   position: relative;
   border-radius: 25px;
   border: #000000 solid 2px;
-}
-
-#inspire-button:focus-visible {
-  outline: 2px solid lawngreen;
-  outline-offset: 3px;
 }
 
 #inspire-button:hover {
@@ -1209,6 +1226,10 @@ footer p {
     color: #000;
   }
 
+  .nav-fallback:checked ~ .mobile-dropdown {
+    display: flex;
+  }
+
   .first-element {
     transform: none;
   }
@@ -1217,11 +1238,13 @@ footer p {
     box-shadow: 0 0 10px 2px lawngreen, 0 0 10px 2px lawngreen;
   }
   
-  .first-element > a {
+  .first-element > a,
+  .first-element > label {
     display: block;
   }
 
-  .first-element > a:hover {
+  .first-element > a:hover,
+  .first-element > label:hover {
     text-decoration: none;
     font-weight: 600;
   }

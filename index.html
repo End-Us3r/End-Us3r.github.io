@@ -20,7 +20,6 @@
       href="stylesheet.css"
       type="text/css"
     />
-    <link rel="stylesheet" href="shell.css" type="text/css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -32,81 +31,117 @@
     <link rel="mask-icon" href="assets/images/safari-pinned-tab.svg" color="#5bbad5" />
     <title>James Atkins | Portfolio</title>
   </head>
-  <body class="theme-home">
-    <a class="skip-link" href="#main">Skip to content</a>
-        <header class="site-header">
-      <nav class="site-nav" aria-label="Primary">
-        <div class="site-mark">
-          <a href="index.html" aria-label="Home">JA</a>
-          <div class="site-mark-card">
-            <div class="first-element-two"></div>
-            <div class="card-container-one">
-              <div class="upper-card-one">
-                <img src="assets/images/profile_pic.png" alt="Portrait of James Atkins" />
-                <div class="text-section">
-                  <h2><span class="dark-text">Name: </span> James Atkins</h2>
+  <body>
+    <header>
+      <nav class="desktop-nav">
+        <ul>
+          <div class="first-element">
+            <div class="first-element-hidden">
+              <div class="first-element-two"></div>
+              <div class="card-container-one">
+                <div class="upper-card-one">
+                  <img src="assets/images/profile_pic.png" alt="Portrait of James Atkins" />
+                  <div class="text-section">
+                    <h2><span class="dark-text">Name: </span> James Atkins</h2>
+                    <p>
+                      <span class="dark-text">Location: </span> San Mateo,
+                      California
+                    </p>
+                    <p>
+                      <span class="dark-text">Skills: </span>HTML/CSS/JS •
+                      Python<br />
+                      • Git/GitHub • Figma
+                    </p>
+                  </div>
+                </div>
+                <div class="lower-card-one">
                   <p>
-                    <span class="dark-text">Location: </span> San Mateo,
-                    California
+                    <span class="dark-text">Education: </span>Junior, Bachelors
+                    in Software Engineering @W.G.U.
                   </p>
                   <p>
-                    <span class="dark-text">Skills: </span>HTML/CSS/JS •
-                    Python<br />
-                    • Git/GitHub • Figma
+                    <span class="dark-text">Interests: </span> Web Development,
+                    Game Development, Artificial Intelligence
                   </p>
                 </div>
-              </div>
-              <div class="lower-card-one">
-                <p>
-                  <span class="dark-text">Education: </span>Junior, Bachelors
-                  in Software Engineering @W.G.U.
-                </p>
-                <p>
-                  <span class="dark-text">Interests: </span> Web Development,
-                  Game Development, Artificial Intelligence
-                </p>
-              </div>
-              <div class="social-backdrop">
-                <a
-                  href="https://www.codecademy.com/profiles/James-Atkins"
-                  target="_blank"
-                >
-                  <img
-                    src="assets/images/codecademy_icon.svg"
-                    alt="Codecademy logo"
-                    loading="lazy"
-                  />
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/techiejames/"
-                  target="_blank"
-                >
-                  <img
-                    src="assets/images/linkedin_icon.svg"
-                    alt="LinkedIn logo"
-                    loading="lazy"
-                  />
-                </a>
-                <a href="https://github.com/End-Us3r" target="_blank">
-                  <img
-                    src="assets/images/github_icon.svg"
-                    alt="GitHub logo"
-                    loading="lazy"
-                  />
-                </a>
+                <div class="social-backdrop">
+                  <a
+                    href="https://www.codecademy.com/profiles/James-Atkins"
+                    target="_blank"
+                  >
+                    <img
+                      src="assets/images/codecademy_icon.svg"
+                      alt="Codecademy Profile"
+                      loading="lazy"
+                    />
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/techiejames/"
+                    target="_blank"
+                  >
+                    <img
+                      src="assets/images/linkedin_icon.svg"
+                      alt="LinkedIn Profile"
+                      loading="lazy"
+                    />
+                  </a>
+                  <a href="https://github.com/End-Us3r" target="_blank">
+                    <img
+                      src="assets/images/github_icon.svg"
+                      alt="GitHub Profile"
+                      loading="lazy"
+                    />
+                  </a>
+                </div>
               </div>
             </div>
+            <a href="#homepage">JA</a>
           </div>
-        </div>
-        <div class="site-menu">
-          <input class="site-menu-checkbox" type="checkbox" id="site-menu-toggle" />
-          <label class="site-menu-toggle" for="site-menu-toggle">Menu</label>
-          <ul class="site-menu-list">
-            <li><a href="about-me.html">../About</a></li>
-            <li><a href="projects-page.html">../Projects</a></li>
-            <li><a href="contact.html">../Contact</a></li>
-          </ul>
-        </div>
+          <li><a href="about-me.html">../About</a></li>
+          <li><a href="projects-page.html">../Projects</a></li>
+          <li><a id="contactLink">../Contact</a></li>
+          <div id="contactForm" class="modal">
+            <section class="neo-cyber-form" id="contact-pop">
+              <div class="form-overlay"></div>
+              <div class="form-container">
+                <h2 class="glow-title">[::] Initiate Contact<span class="cursor">_</span></h2>
+                <form action="javascript:void(0)" method="POST" onsubmit="alert('Form submission disabled for demo purposes.');">
+                  <input type="text" name="_gotcha" style="display:none">
+
+                  <input type="hidden" name="_subject" value="New submission!" />
+
+                  <input type="hidden" name="_redirect" value="https://end-us3r.github.io/End-Us3r.github.io/" />
+
+                  <label for="name">> Name:</label>
+                  <input type="text" name="name" id="name" required />
+
+                  <label for="email">> Email:</label>
+                  <input type="email" name="email" id="email" required />
+
+                  <label for="message">> Message:</label>
+                  <textarea name="message" id="message" rows="5" required minlength="10"></textarea>
+
+                  <p>[For demo purposes only, no user data collected]</p>
+
+                  <button type="submit">> Transmit</button>
+                </form>
+              </div>
+            </section>
+          </div>
+        </ul>
+      </nav>
+      <nav class="mobile-nav">
+        <ul>
+          <li class="first-element">
+            <input class="nav-fallback" type="checkbox" id="nav-fallback" tabindex="-1" aria-hidden="true">
+            <label for="nav-fallback" id="toggleDropdown" tabindex="0">JA</label>
+            <ul class="mobile-dropdown">
+              <li><a href="about-me.html">About</a></li>
+              <li><a href="projects-page.html">Projects</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </li>
+        </ul>
       </nav>
     </header>
     <main id="main" tabindex="-1">
@@ -247,5 +282,21 @@
     <script src="js/messages.js"></script>
     <script src="js/buttons.js"></script>
     <script src="js/contactForm.js"></script>
+    <script>
+      document.getElementById("toggleDropdown").addEventListener("click", function (e) {
+        e.preventDefault();
+        const dropdown = this.nextElementSibling;
+        const open = dropdown.style.display === "flex";
+        dropdown.style.display = open ? "none" : "flex";
+        const box = document.getElementById("nav-fallback");
+        if (box) box.checked = !open;
+      });
+      document.getElementById("toggleDropdown").addEventListener("keydown", function (e) {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          this.click();
+        }
+      });
+    </script>
   </body>
 </html>

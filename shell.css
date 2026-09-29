@@ -14,6 +14,22 @@
   background-color: #1d1d1d;
 }
 
+/* About-style row: Root, Projects, Contact, centered. Home's nth-child
+   margins would otherwise shove the second and third items to the right. */
+.theme-contact .desktop-nav .nav-list {
+  justify-content: center;
+  margin: 0 auto;
+  width: auto;
+  max-width: 100%;
+  gap: 1rem;
+}
+
+.theme-contact .desktop-nav li:nth-child(2),
+.theme-contact .desktop-nav li:nth-child(3) {
+  margin-left: 0;
+  margin-right: 0;
+}
+
 .theme-about {
   --shell-accent: purple;
   --shell-bar-shadow: 0px 5px 10px 0px purple;
@@ -43,20 +59,6 @@
   font-weight: 600;
   text-decoration: none;
   padding: 0.6rem 1rem;
-}
-
-.skip-link:focus,
-.skip-link:focus-visible {
-  transform: translateY(0.75rem);
-  outline: 2px solid var(--shell-accent, lawngreen);
-  outline-offset: 3px;
-}
-
-a:focus-visible,
-button:focus-visible,
-.site-menu-toggle:focus-visible {
-  outline: 2px solid var(--shell-accent, lawngreen);
-  outline-offset: 3px;
 }
 
 .site-header {
