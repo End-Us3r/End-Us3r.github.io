@@ -216,7 +216,7 @@ h1 {
   --shift-y: 0px;
   transform: translate3d(var(--shift-x), var(--shift-y), 0);
 }
-.tile[hidden],
+[hidden] { display: none !important; }
 .chapter[hidden],
 .filter[hidden],
 .more[hidden],
@@ -426,6 +426,17 @@ h1 {
   .page-projects .tile picture { aspect-ratio: 4 / 3; }
   .page-projects .tile a.code { min-height: 44px; padding: 12px 14px; }
   .top nav a { display: inline-flex; align-items: center; min-height: 44px; }
+  .mark { min-height: 44px; }
+  .see-projects a,
+  .foot a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+  .page-projects .tile h2 a {
+    display: inline-block;
+    min-height: 44px;
+  }
   .closeband { height: 50svh; margin-top: 64px; }
 }
 @media (prefers-reduced-motion: reduce) {
