@@ -14,10 +14,11 @@ Work follows two tracks. Do not mix them.
 
 `upgrade/v1-structure` keeps main's visible look: menu, colors, fonts, the typing greeting, and effects. Only structure changes that visitors cannot see are allowed there.
 
-On upgrade the menu must match main at 1280, 390, and 375 pixels wide on every page: same links and order, same look, same phone menu open and close. James approved three exceptions on 2026-09-28:
+On upgrade the menu must match main at 1280, 390, and 375 pixels wide on every page: same links and order, same look, same phone menu open and close. James approved four exceptions (2026-09-28 and 2026-09-29):
 - Contact on the Home phone menu, About, and Projects opens `contact.html`. The Home computer menu's Contact keeps main's pop-up.
 - Phone pages do not scroll sideways.
 - The phone menu opens with JavaScript off.
+- On the mobile (responsive) layout only, meaning 480px wide or less where the phone menu takes over, the top nav bar slides away when you scroll down and comes back when you scroll up (approved 2026-09-29). It always shows at the top of the page, while the phone menu is open, and when anything in it gets keyboard focus. With JavaScript off it stays put, and with reduce motion on it appears without sliding. Wider layouts keep the nav bar fixed exactly as it is now. The footer does not hide.
 
 James approved a separate exception on 2026-09-29. Five demo pages load `project-template.css` and keep James's original colors. They do not match main's browser-default look. The pages are `coffeeBot.html` (CoffeeBot), `gpaCalculator.html` (GPA Calculator), `boredlessTourist.html` (Boredless Tourist), `rps.html` (Rock Paper Scissors), and `nightmareGame.html` (Nightmare). `houseTour.html` is not part of this exception and stays exactly as on main.
 
@@ -39,8 +40,8 @@ The Aurora rules apply only to `test/aurora-home` and later `test/aurora-*` bran
 - "Known gap" labels on the Inked Art demo (card on `projects-page.html`; the live demo is https://end-us3r.github.io/Inked-Art-Homepage-Project/) and the Nightmare demo (`projects-folder/nightmareGame.html`)
 
 ### Stacky owns (structure)
-- Each page's menu on `index.html`, `about-me.html`, and `projects-page.html` matches main at 1280/390/375 (its own links and look), except the three approved fixes. A shared footer is fine if it looks the same as main's.
-- `shell.css` (each page's own menu styles, matching main at 1280/390/375 except the three approved fixes; a shared footer is fine if it looks the same as main's)
+- Each page's menu on `index.html`, `about-me.html`, and `projects-page.html` matches main at 1280/390/375 (its own links and look), except the four approved fixes. A shared footer is fine if it looks the same as main's.
+- `shell.css` (each page's own menu styles, matching main at 1280/390/375 except the four approved fixes; a shared footer is fine if it looks the same as main's)
 - CSS consolidation
 - `js/contactForm.js`, `js/buttons.js`, `js/messages.js`
 - `contact-form.html`
@@ -155,7 +156,7 @@ Only edit James's files above. If a fix needs a Stacky-owned or shared file, sto
 
 ### Upgrade track
 **Before layout/IA work (Phase 2) starts**
-- Each page's menu matches main at 1280/390/375 (its own links and look), except the three approved fixes. A shared footer is fine if it looks the same as main's.
+- Each page's menu matches main at 1280/390/375 (its own links and look), except the four approved fixes. A shared footer is fine if it looks the same as main's.
 - The greeting is the same as main
 - One contact control only (no duplicate contact IDs). The Contact page and the pop-up keep the honest "nothing was sent" demo, and neither posts to the Formspree placeholder, until James sets up a real Formspree address.
 - No `#inspire-button` console error
@@ -173,7 +174,7 @@ Only edit James's files above. If a fix needs a Stacky-owned or shared file, sto
 
 **Before merge to `main` (live)**
 - QA v1 acceptance passes
-- Menu matches main at 1280/390/375 except the three approved fixes
+- Menu matches main at 1280/390/375 except the four approved fixes
 - Five demo pages (`coffeeBot.html`, `gpaCalculator.html`, `boredlessTourist.html`, `rps.html`, `nightmareGame.html`) load `project-template.css` and keep James's original colors. `houseTour.html` stays unchanged from main.
 - James gives a separate, explicit yes. Merge is never automatic after Phase 3.
 

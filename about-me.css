@@ -664,3 +664,20 @@ body::before {
     font-weight: 500;
   }
 }
+
+/* Phone widths only. The sticky header is the bar. Wider screens never match. */
+@media (max-width: 480px) {
+  header {
+    transition: transform 0.2s ease;
+  }
+
+  header.nav-hidden {
+    transform: translateY(-100%);
+  }
+}
+
+@media (max-width: 480px) and (prefers-reduced-motion: reduce) {
+  header {
+    transition: none;
+  }
+}
