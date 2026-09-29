@@ -35,24 +35,91 @@
   <div class="hero-copy">
     <p class="kicker">James Atkins</p>
     <h1>Greetings User, I'm James!</h1>
+    <button class="tilt-toggle code" type="button" aria-pressed="false" hidden>Tilt</button>
   </div>
 </section>
-<section class="glass" id="about">
+<section class="glass reveal" id="about">
   <p class="kicker">01 / About</p>
   <p>Welcome to my portfolio! I'm a Junior at Western Governors University studying Software Engineering and passionate about Web Development, Game Development, and Artificial Intelligence.</p>
   <p>Originally from a small town in Eastern North Carolina, I now call the Bay Area home. My path into tech has been anything but traditional. I come from a background in hands-on work, with experience in construction and the fishing industry. But over time, I discovered a real passion for problem-solving, learning, and building things in the digital world.</p>
 </section>
+<section class="chapters reveal">
+  <article class="chapter" id="ch-intro"><p class="kicker">01</p><h2>Introduction</h2><p>Hello World, I’m James Atkins. Originally from a small town in Eastern North Carolina, I now live in the Bay Area, CA. I come from a background in manual labor — mainly construction and commercial fishing — but over time, I found myself drawn toward a different kind of building: creating things with code.</p></article>
+  <article class="chapter" id="ch-background"><p class="kicker">02</p><h2>Background</h2><p>I began my education at FTCC in 2019, where a C++ class first sparked my interest in programming. I took that curiosity further by enrolling in Web Development and Computer Programming courses, which opened up a new world for me. Those experiences laid the foundation for what I’m passionate about today — designing and building websites that look good and work well. After taking some time off and moving west, I’m now studying Software Engineering at WGU, working toward launching a career in tech. Lately, I’ve been diving into Data Science topics like MySQL and data visualization, and I’m looking forward to deepening my skills in Python.</p></article>
+  <article class="chapter" id="ch-interests"><p class="kicker">03</p><h2>Interests</h2><p>Outside of coding, I’m all about staying active and exploring new places. I love hiking, camping, photography, gaming, traveling, hitting the gym, and I’ve recently picked up golf (jury’s still out on my swing). I’ve traveled all over the U.S., and I think getting out and experiencing new environments is one of the best ways to stay inspired. Whether you’re here to connect, collaborate, or just learn more — welcome!</p></article>
+</section>
+
+<section class="orbit reveal" id="orbit" aria-labelledby="orbit-title">
+  <div class="orbit-wrap">
+    <p class="kicker">Earth</p>
+    <h2 id="orbit-title">View from orbit</h2>
+    <div class="orbit-layout">
+      <div class="orbit-stage">
+        <figure class="orbit-view v-disk">
+          <picture>
+            <source media="(max-width: 800px)" srcset="images/aurora/bluemarble-p.webp" type="image/webp" />
+            <img src="images/aurora/bluemarble-d.webp" alt="The whole Earth, photographed by the Apollo 17 crew" />
+          </picture>
+          <figcaption><p class="kicker">Whole Earth</p><p>Apollo 17, 7 December 1972. NASA / Johnson Space Center.</p></figcaption>
+        </figure>
+        <figure class="orbit-view v-florence">
+          <picture>
+            <source media="(max-width: 800px)" srcset="images/aurora/florence-p.webp" type="image/webp" />
+            <img src="images/aurora/florence-d.webp" alt="Hurricane Florence seen from the International Space Station" loading="lazy" />
+          </picture>
+          <figcaption><p class="kicker">Hurricane Florence</p><p>12 September 2018. NASA / Johnson Space Center.</p></figcaption>
+        </figure>
+        <!-- med-night slot: radio, label, and figure. Swap this trio plus its footer credit line. -->
+        <figure class="orbit-view v-med">
+          <picture>
+            <source media="(max-width: 800px)" srcset="images/aurora/med-night-p.webp" type="image/webp" />
+            <img src="images/aurora/med-night-d.webp" alt="City lights of the Mediterranean coasts at night" loading="lazy" />
+          </picture>
+          <figcaption><p class="kicker">Mediterranean at night</p><p>31 August 2022. NASA / Johnson Space Center.</p></figcaption>
+        </figure>
+        <figure class="orbit-view v-aurora">
+          <picture>
+            <source media="(max-width: 800px)" srcset="images/aurora/aurora-lights-p.webp" type="image/webp" />
+            <img src="images/aurora/aurora-lights-d.webp" alt="Aurora over the city lights of Europe" loading="lazy" />
+          </picture>
+          <figcaption><p class="kicker">Aurora over Europe</p><p>22 February 2026. NASA/Chris Williams.</p></figcaption>
+        </figure>
+        <figure class="orbit-view v-sahara">
+          <picture>
+            <source media="(max-width: 800px)" srcset="images/aurora/sahara-coast-p.webp" type="image/webp" />
+            <img src="images/aurora/sahara-coast-d.webp" alt="The desert coast of Mauritania" loading="lazy" />
+          </picture>
+          <figcaption><p class="kicker">Sahara coast</p><p>16 May 2024. NASA / Johnson Space Center.</p></figcaption>
+        </figure>
+      </div>
+      <fieldset class="orbit-places">
+        <legend>Choose a view</legend>
+        <input class="visually-hidden" type="radio" name="orbit" id="v-disk" checked />
+        <label for="v-disk">Whole Earth</label>
+        <input class="visually-hidden" type="radio" name="orbit" id="v-florence" />
+        <label for="v-florence">Hurricane Florence</label>
+        <!-- med-night slot -->
+        <input class="visually-hidden" type="radio" name="orbit" id="v-med" />
+        <label for="v-med">Mediterranean at night</label>
+        <input class="visually-hidden" type="radio" name="orbit" id="v-aurora" />
+        <label for="v-aurora">Aurora over Europe</label>
+        <input class="visually-hidden" type="radio" name="orbit" id="v-sahara" />
+        <label for="v-sahara">Sahara coast</label>
+      </fieldset>
+    </div>
+  </div>
+</section>
+<section class="see-projects">
+  <p class="kicker">Projects</p>
+  <p><a href="projects.html">See all seven projects</a></p>
+</section>
+
 <section class="band">
   <picture>
     <source media="(max-width: 800px)" srcset="images/aurora/crab-p.webp" type="image/webp" />
     <img src="images/aurora/crab-d.webp" alt="The Crab Nebula" />
   </picture>
-  <div class="cap"><p class="kicker">02 / Deep field</p><p>Crab Nebula. NASA, ESA, JPL, Arizona State Univ.</p></div>
-</section>
-<section class="chapters">
-  <article class="chapter"><p class="kicker">01</p><h2>Introduction</h2><p>Hello World, I’m James Atkins. Originally from a small town in Eastern North Carolina, I now live in the Bay Area, CA. I come from a background in manual labor — mainly construction and commercial fishing — but over time, I found myself drawn toward a different kind of building: creating things with code.</p></article>
-  <article class="chapter"><p class="kicker">02</p><h2>Background</h2><p>I began my education at FTCC in 2019, where a C++ class first sparked my interest in programming. I took that curiosity further by enrolling in Web Development and Computer Programming courses, which opened up a new world for me. Those experiences laid the foundation for what I’m passionate about today — designing and building websites that look good and work well. After taking some time off and moving west, I’m now studying Software Engineering at WGU, working toward launching a career in tech. Lately, I’ve been diving into Data Science topics like MySQL and data visualization, and I’m looking forward to deepening my skills in Python.</p></article>
-  <article class="chapter"><p class="kicker">03</p><h2>Interests</h2><p>Outside of coding, I’m all about staying active and exploring new places. I love hiking, camping, photography, gaming, traveling, hitting the gym, and I’ve recently picked up golf (jury’s still out on my swing). I’ve traveled all over the U.S., and I think getting out and experiencing new environments is one of the best ways to stay inspired. Whether you’re here to connect, collaborate, or just learn more — welcome!</p></article>
+  <div class="cap reveal"><p class="kicker">02 / Deep field</p><p>Crab Nebula. NASA, ESA, JPL, Arizona State Univ.</p></div>
 </section>
 </main>
 <footer class="foot">
@@ -60,7 +127,7 @@
   <p><a href="https://www.linkedin.com/in/techiejames/" target="_blank" rel="noopener">LinkedIn</a>
   · <a href="https://github.com/End-Us3r" target="_blank" rel="noopener">GitHub</a>
   · <a href="https://www.codecademy.com/profiles/James-Atkins" target="_blank" rel="noopener">Codecademy</a></p>
-  <p class="credits">Aurora: NASA / Johnson Space Center. Crab Nebula: NASA/ESA/JPL/Arizona State Univ.</p>
+  <p class="credits">Aurora: NASA / Johnson Space Center. Crab Nebula: NASA/ESA/JPL/Arizona State Univ. Whole Earth: NASA / Johnson Space Center. Hurricane Florence: NASA / Johnson Space Center. <!-- med-night credit -->Mediterranean at night: NASA / Johnson Space Center. Aurora over city lights: NASA/Chris Williams. Sahara coast: NASA / Johnson Space Center.</p>
 </footer>
 <div class="modal" id="contact-dialog" role="dialog" aria-modal="true" aria-labelledby="contact-dialog-title" hidden tabindex="-1">
   <div class="form-card">
@@ -82,5 +149,6 @@
   </div>
 </div>
 <script src="js/aurora-ui.js"></script>
+<script src="js/aurora-v2.js" defer></script>
 </body>
 </html>

@@ -25,63 +25,107 @@
   </nav>
 </header>
 <main class="cards" id="main" tabindex="-1">
-<h1 class="visually-hidden">Projects</h1>
-<article class="tile">
+<section class="topband">
+  <picture>
+    <source media="(max-width: 800px)" srcset="images/aurora/himalaya-p.webp" type="image/webp" />
+    <img src="images/aurora/himalaya-d.webp" alt="The Himalayas and Mount Everest" />
+  </picture>
+  <div class="topband-copy">
+    <h1>Projects</h1>
+  </div>
+</section>
+<div class="filter" role="group" aria-label="Filter projects by language" hidden>
+  <button type="button" data-filter="all" aria-pressed="true">All</button>
+  <button type="button" data-filter="web" aria-pressed="false">Web</button>
+  <button type="button" data-filter="python" aria-pressed="false">Python</button>
+  <button type="button" data-filter="java" aria-pressed="false">Java</button>
+  <button type="button" data-filter="cpp" aria-pressed="false">C++</button>
+  <p class="filter-count" role="status">Showing 7 of 7</p>
+</div>
+<article class="tile reveal" data-tags="web">
   <picture>
     <source media="(max-width: 800px)" srcset="images/aurora/earth-p.webp" type="image/webp" />
     <img src="images/aurora/earth-d.webp" alt="Earth from orbit at sunrise" />
   </picture>
   <div class="cap"><p class="kicker">01 / WEB</p><h2><a href="https://end-us3r.github.io/Inked-Art-Homepage-Project/">/Inked_<wbr>Art_<wbr>Landing_<wbr>Page.exe</a></h2><p><a class="code" href="https://end-us3r.github.io/Inked-Art-Homepage-Project/">Open</a></p></div>
 </article>
-<article class="tile">
+<article class="tile reveal" data-tags="web">
   <picture>
     <source media="(max-width: 800px)" srcset="images/aurora/night-p.webp" type="image/webp" />
     <img src="images/aurora/night-d.webp" alt="California at night, seen from orbit" />
   </picture>
   <div class="cap"><p class="kicker">02 / WEB</p><h2><a href="https://end-us3r.github.io/Message-Generator/">/Message_<wbr>Generator.exe</a></h2><p><a class="code" href="https://end-us3r.github.io/Message-Generator/">Open</a></p></div>
 </article>
-<article class="tile">
+<article class="tile reveal" data-tags="python">
   <picture>
     <source media="(max-width: 800px)" srcset="images/aurora/aurora-p.webp" type="image/webp" />
     <img src="images/aurora/aurora-d.webp" alt="Aurora over Earth, seen from the International Space Station" />
   </picture>
-  <div class="cap"><p class="kicker">03 / PYTHON</p><p class="kicker">Say hello to CoffeeBot!</p><h2><a href="projects-folder/coffeeBot.html">/CoffeeBot.exe</a></h2><p>This Python script implements a simple coffee ordering chatbot. It interacts with the user to determine their desired drink size, coffee type, and the type of milk for a latte. It then collects the user's name and confirms their order. The chatbot includes error handling to prompt the user to enter valid inputs when necessary.</p><p>You can find the code for this program on <a href="https://github.com/End-Us3r/Coffee-bot/blob/main/coffee-bot.py">GitHub</a>.</p><p><a class="code" href="https://github.com/End-Us3r/Coffee-bot/blob/main/coffee-bot.py">Code</a></p></div>
+  <div class="cap"><p class="kicker">03 / PYTHON</p><p class="kicker">Say hello to CoffeeBot!</p><h2><a href="projects-folder/coffeeBot.html">/CoffeeBot.exe</a></h2>
+<div class="more" id="more-03">
+<p>This Python script implements a simple coffee ordering chatbot. It interacts with the user to determine their desired drink size, coffee type, and the type of milk for a latte. It then collects the user's name and confirms their order. The chatbot includes error handling to prompt the user to enter valid inputs when necessary.</p><p>You can find the code for this program on <a href="https://github.com/End-Us3r/Coffee-bot/blob/main/coffee-bot.py">GitHub</a>.</p>
+</div>
+<p><a class="code" href="https://github.com/End-Us3r/Coffee-bot/blob/main/coffee-bot.py">Code</a></p></div>
 </article>
-<article class="tile">
+<article class="tile reveal" data-tags="java">
   <picture>
     <source media="(max-width: 800px)" srcset="images/aurora/crab-p.webp" type="image/webp" />
     <img src="images/aurora/crab-d.webp" alt="The Crab Nebula" />
   </picture>
-  <div class="cap"><p class="kicker">04 / JAVA</p><p class="kicker">GPA Calculator Program</p><h2><a href="projects-folder/gpaCalculator.html">/GPA_<wbr>Calculator.exe</a></h2><p>This is a Java program that calculates and displays a person's GPA for the current semester and their cumulative GPA. The program uses a graphical user interface (GUI) to prompt the user for the number of classes taken for the semester, the number of credits for each class, and the letter grade for each class. The program then calculates the total number of credits and the total number of grade points earned, and uses this information to compute the GPA. Finally, the program displays the semester grades, the total number of credits, and the GPA on the screen.</p><p>You can find the code for this program on <a href="https://github.com/End-Us3r/GPA-Calc/blob/main/gpa-calculater.java">GitHub</a>.</p><p><a class="code" href="https://github.com/End-Us3r/GPA-Calc/blob/main/gpa-calculater.java">Code</a></p></div>
+  <div class="cap"><p class="kicker">04 / JAVA</p><p class="kicker">GPA Calculator Program</p><h2><a href="projects-folder/gpaCalculator.html">/GPA_<wbr>Calculator.exe</a></h2>
+<div class="more" id="more-04">
+<p>This is a Java program that calculates and displays a person's GPA for the current semester and their cumulative GPA. The program uses a graphical user interface (GUI) to prompt the user for the number of classes taken for the semester, the number of credits for each class, and the letter grade for each class. The program then calculates the total number of credits and the total number of grade points earned, and uses this information to compute the GPA. Finally, the program displays the semester grades, the total number of credits, and the GPA on the screen.</p><p>You can find the code for this program on <a href="https://github.com/End-Us3r/GPA-Calc/blob/main/gpa-calculater.java">GitHub</a>.</p>
+</div>
+<p><a class="code" href="https://github.com/End-Us3r/GPA-Calc/blob/main/gpa-calculater.java">Code</a></p></div>
 </article>
-<article class="tile">
+<article class="tile reveal" data-tags="python">
   <picture>
     <source media="(max-width: 800px)" srcset="images/aurora/earthrise-p.webp" type="image/webp" />
     <img src="images/aurora/earthrise-d.webp" alt="Earthrise over the Moon" />
   </picture>
-  <div class="cap"><p class="kicker">05 / PYTHON</p><p class="kicker">The Boredless Tourist!</p><h2><a href="projects-folder/boredlessTourist.html">/The_<wbr>Boredless_<wbr>Tourist.exe</a></h2><p>This is a simple Codecademy project that I worked on. It creates a travel recommendation system that focuses on destinations, travelers, and attractions. It starts by defining functions to find destination and attraction indices. It then organizes attractions in nested lists by destination and offers functions to add attractions and find attractions based on traveler interests. The final function provides recommendations for attractions tailored to a traveler's interests and destination. The code demonstrates its functionality by generating and printing recommendations for multiple travelers.</p><p>You can find the code for this program on <a href="https://github.com/End-Us3r/James--The-Boredless-Tourist/blob/main/theBoredlessTourist.py">GitHub</a>.</p><p><a class="code" href="https://github.com/End-Us3r/James--The-Boredless-Tourist/blob/main/theBoredlessTourist.py">Code</a></p></div>
+  <div class="cap"><p class="kicker">05 / PYTHON</p><p class="kicker">The Boredless Tourist!</p><h2><a href="projects-folder/boredlessTourist.html">/The_<wbr>Boredless_<wbr>Tourist.exe</a></h2>
+<div class="more" id="more-05">
+<p>This is a simple Codecademy project that I worked on. It creates a travel recommendation system that focuses on destinations, travelers, and attractions. It starts by defining functions to find destination and attraction indices. It then organizes attractions in nested lists by destination and offers functions to add attractions and find attractions based on traveler interests. The final function provides recommendations for attractions tailored to a traveler's interests and destination. The code demonstrates its functionality by generating and printing recommendations for multiple travelers.</p><p>You can find the code for this program on <a href="https://github.com/End-Us3r/James--The-Boredless-Tourist/blob/main/theBoredlessTourist.py">GitHub</a>.</p>
+</div>
+<p><a class="code" href="https://github.com/End-Us3r/James--The-Boredless-Tourist/blob/main/theBoredlessTourist.py">Code</a></p></div>
 </article>
-<article class="tile">
+<article class="tile reveal" data-tags="cpp">
   <picture>
     <source media="(max-width: 800px)" srcset="images/aurora/terrain-p.webp" type="image/webp" />
     <img src="images/aurora/terrain-d.webp" alt="Perseverance panorama on Mars" />
   </picture>
-  <div class="cap"><p class="kicker">06 / C++</p><p class="kicker">Let's play Rock-Paper-Scissors!</p><h2><a href="projects-folder/rps.html">/Rock_<wbr>Paper_<wbr>Scissors.exe</a></h2><p>This code is a C++ program that implements the game Rock-Paper-Scissors using a random number generator to simulate the computer's choice. The program prompts the user to input their choice and then displays the result of the game. The program keeps track of the number of wins, losses, and ties and displays the final score at the end of the game. The game is played until the user decides to stop playing.</p><p>You can find the code for this program on <a href="https://github.com/End-Us3r/Rock-Paper-Scissors/blob/main/main.cpp">GitHub</a>.</p><p><a class="code" href="https://github.com/End-Us3r/Rock-Paper-Scissors/blob/main/main.cpp">Code</a></p></div>
+  <div class="cap"><p class="kicker">06 / C++</p><p class="kicker">Let's play Rock-Paper-Scissors!</p><h2><a href="projects-folder/rps.html">/Rock_<wbr>Paper_<wbr>Scissors.exe</a></h2>
+<div class="more" id="more-06">
+<p>This code is a C++ program that implements the game Rock-Paper-Scissors using a random number generator to simulate the computer's choice. The program prompts the user to input their choice and then displays the result of the game. The program keeps track of the number of wins, losses, and ties and displays the final score at the end of the game. The game is played until the user decides to stop playing.</p><p>You can find the code for this program on <a href="https://github.com/End-Us3r/Rock-Paper-Scissors/blob/main/main.cpp">GitHub</a>.</p>
+</div>
+<p><a class="code" href="https://github.com/End-Us3r/Rock-Paper-Scissors/blob/main/main.cpp">Code</a></p></div>
 </article>
-<article class="tile">
+<article class="tile reveal" data-tags="cpp">
   <picture>
     <source media="(max-width: 800px)" srcset="images/aurora/mars-p.webp" type="image/webp" />
     <img src="images/aurora/mars-d.webp" alt="Mars globe" />
   </picture>
-  <div class="cap"><p class="kicker">07 / C++</p><p class="kicker">Let's play a game, The Nightmare!</p><h2><a href="projects-folder/nightmareGame.html">/Nightmare.exe</a></h2><p>Warning: Graphic</p><p>This program is a text-based adventure game implemented in C++. It allows users to navigate through different locations and make choices that influence the game's outcome. The game starts with a welcome message and prompts for user interaction. It features locations ('field', 'home', 'forest', 'mountain', 'cave') and events ('bearAttack'). The program includes a boolean variable to track item acquisition status and utilizes the 'Sleep()' function from 'windows.h' for immersive pauses. User input is managed through keyboard commands with error handling to ensure valid commands, providing an engaging and interactive experience.</p><p>You can find the code for this program on <a href="https://github.com/End-Us3r/nightmare-game/blob/main/adventure-game.cpp">GitHub</a>.</p><p><a class="code" href="https://github.com/End-Us3r/nightmare-game/blob/main/adventure-game.cpp">Code</a></p></div>
+  <div class="cap"><p class="kicker">07 / C++</p><p class="kicker">Let's play a game, The Nightmare!</p><h2><a href="projects-folder/nightmareGame.html">/Nightmare.exe</a></h2>
+<div class="more" id="more-07">
+<p>Warning: Graphic</p><p>This program is a text-based adventure game implemented in C++. It allows users to navigate through different locations and make choices that influence the game's outcome. The game starts with a welcome message and prompts for user interaction. It features locations ('field', 'home', 'forest', 'mountain', 'cave') and events ('bearAttack'). The program includes a boolean variable to track item acquisition status and utilizes the 'Sleep()' function from 'windows.h' for immersive pauses. User input is managed through keyboard commands with error handling to ensure valid commands, providing an engaging and interactive experience.</p><p>You can find the code for this program on <a href="https://github.com/End-Us3r/nightmare-game/blob/main/adventure-game.cpp">GitHub</a>.</p>
+</div>
+<p><a class="code" href="https://github.com/End-Us3r/nightmare-game/blob/main/adventure-game.cpp">Code</a></p></div>
 </article>
 </main>
+
+<section class="band closeband">
+  <picture>
+    <source media="(max-width: 800px)" srcset="images/aurora/glint-p.webp" type="image/webp" />
+    <img src="images/aurora/glint-d.webp" alt="The sun's glint on a partly cloudy Indian Ocean" />
+  </picture>
+  <div class="cap reveal"><p class="kicker">Sun glint</p><p>Sun glint, Indian Ocean. NASA / Johnson Space Center.</p></div>
+</section>
 <footer class="foot">
   <p>&copy;2025 James Atkins</p>
   <p><a href="https://www.linkedin.com/in/techiejames/" target="_blank" rel="noopener">LinkedIn</a>
   · <a href="https://github.com/End-Us3r" target="_blank" rel="noopener">GitHub</a>
   · <a href="https://www.codecademy.com/profiles/James-Atkins" target="_blank" rel="noopener">Codecademy</a></p>
-  <p class="credits">Earth from orbit at sunrise: NASA / Johnson Space Center. California at night: NASA / Johnson Space Center. Aurora: NASA / Johnson Space Center. Crab Nebula: NASA/ESA/JPL/Arizona State Univ. Earthrise: NASA / Johnson Space Center. Perseverance panorama: NASA/JPL-Caltech/MSSS/ASU. Mars globe: NASA/JPL/USGS.</p>
+  <p class="credits">Earth from orbit at sunrise: NASA / Johnson Space Center. California at night: NASA / Johnson Space Center. Aurora: NASA / Johnson Space Center. Crab Nebula: NASA/ESA/JPL/Arizona State Univ. Earthrise: NASA / Johnson Space Center. Perseverance panorama: NASA/JPL-Caltech/MSSS/ASU. Mars globe: NASA/JPL/USGS. Himalayas: NASA / Johnson Space Center. Sun glint, Indian Ocean: NASA / Johnson Space Center.</p>
 </footer>
 <div class="modal" id="contact-dialog" role="dialog" aria-modal="true" aria-labelledby="contact-dialog-title" hidden tabindex="-1">
   <div class="form-card">
@@ -103,5 +147,6 @@
   </div>
 </div>
 <script src="js/aurora-ui.js"></script>
+<script src="js/aurora-v2.js" defer></script>
 </body>
 </html>
