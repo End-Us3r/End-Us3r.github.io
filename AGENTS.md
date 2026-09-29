@@ -97,12 +97,19 @@ Every page that shows a NASA photo has a credit line in its footer. That line na
 - `Earthrise: NASA / Johnson Space Center` — `earthrise-d.webp`, `earthrise-p.webp`
 - `Whole Earth: NASA / Johnson Space Center` — `bluemarble-d.webp`, `bluemarble-p.webp`. The whole Earth, Apollo 17, 1972. Home, View from orbit (default).
 - `Hurricane Florence: NASA / Johnson Space Center` — `florence-d.webp`, `florence-p.webp`. Hurricane Florence from the ISS, 2018. Home, View from orbit.
+- `Europe at night: NASA/Mike Fossum` — `europe-night-d.webp`, `europe-night-p.webp`. City lights of London, Paris, Brussels and Amsterdam at night, from the International Space Station (NASA record iss028, 10 Aug. 2011, photographer Mike Fossum). Home, View from orbit picker.
 - `Aurora over city lights: NASA/Chris Williams` — `aurora-lights-d.webp`, `aurora-lights-p.webp`. Red and green aurora over Europe's city lights, ISS, February 2026. Home, View from orbit.
 - `Sahara coast: NASA / Johnson Space Center` — `sahara-coast-d.webp`, `sahara-coast-p.webp`. Desert coast of Mauritania, straight down. Home, View from orbit.
 - `Himalayas: NASA / Johnson Space Center` — `himalaya-d.webp`, `himalaya-p.webp`. Snow-covered Himalayas, with Everest at the center. Projects, top band.
 - `Sun glint, Indian Ocean: NASA / Johnson Space Center` — `glint-d.webp`, `glint-p.webp`. Sun glint on the Indian Ocean under clouds, thin limb. Projects, closing band.
 
-Fifth View from orbit photo: a NASA night photo replacing med-night; it must be added to this list with its exact credit before it ships.
+`med-night` is not used.
+
+Home footer credit line, exactly:
+`Aurora: NASA / Johnson Space Center. Crab Nebula: NASA/ESA/JPL/Arizona State Univ. Whole Earth: NASA / Johnson Space Center. Hurricane Florence: NASA / Johnson Space Center. Europe at night: NASA/Mike Fossum. Aurora over city lights: NASA/Chris Williams. Sahara coast: NASA / Johnson Space Center.`
+
+Projects footer adds, after the seven project-card credits:
+`Himalayas: NASA / Johnson Space Center. Sun glint, Indian Ocean: NASA / Johnson Space Center.`
 
 A general `Photographs: NASA` line alone is not enough. A caption on a full-width photo band, like the Crab Nebula caption in the mockup, is fine in addition to the footer line. It does not replace the footer line.
 
