@@ -269,7 +269,7 @@ h1 {
 .orbit-view { display: none; margin: 0; }
 .orbit:has(#v-disk:checked) .v-disk,
 .orbit:has(#v-florence:checked) .v-florence,
-.orbit:has(#v-med:checked) .v-med,
+.orbit:has(#v-europe:checked) .v-europe,
 .orbit:has(#v-aurora:checked) .v-aurora,
 .orbit:has(#v-sahara:checked) .v-sahara { display: block; }
 .orbit-view picture {
