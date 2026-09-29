@@ -83,35 +83,37 @@ Never two full-width photos back to back. Between any two photos there is a text
 The greeting words stay the same. How the sentence appears is open: typing, a scramble, or a fade. Whatever effect is used, the full sentence must be readable with JavaScript off and when the device is set to reduce motion. The box holding the greeting is sized for the full sentence, so the page does not jump.
 
 ### Motion
-On a computer, the aurora photo drifts very slowly. On a phone, photos stay still by default. The only exception is the hero tilt. Tilt stays off until the visitor taps the "Tilt" button. On iOS, permission is requested only from that tap. If the visitor refuses, or there is no tilt data, show "Tilt off" and stop. The Tilt button is hidden with JavaScript off and with reduce motion on.
-With reduce motion on, the page holds completely still: no drift, no parallax, no fade-ins, and no tilt. Switches are instant.
+On a computer, the aurora photo drifts very slowly. On a phone, photos stay still. There is no phone or device tilt.
+With reduce motion on, the page holds completely still: no drift, no parallax, and no fade-ins. Switches are instant.
 
 ### Photos
-Use only the NASA public-domain images listed here. WebP only. Each file is 300 KB or less. Load a desktop size and a phone size with a `picture` element.
+Use only the NASA public-domain images listed here. WebP only. Load a desktop size and a phone size with a `picture` element. The files are in `images/aurora/`.
+
+Phone files must be no more than 1,280 px wide and no more than 450 KB. Desktop files must be no more than 2,560 px wide and no more than 500 KB.
+
+The first photo on each page loads right away (the aurora on Home, the Himalayas band on Projects) and must not be `loading="lazy"`. Every other photo uses `loading="lazy"`, including the hidden picker views.
 
 Every page that shows a NASA photo has a credit line in its footer. That line names each photo used on that page, including all picker views on Home, with the full credit exactly as written below. A page passes when the footer includes the matching line for every NASA photo on that page:
-- `Aurora: NASA / Johnson Space Center` — `aurora-d.webp`, `aurora-p.webp`
-- `Crab Nebula: NASA/ESA/JPL/Arizona State Univ.` — `crab-d.webp`, `crab-p.webp`. Keep this full credit. ESA is named because Hubble is a NASA/ESA telescope. This is not an ESA/Webb image.
-- `Earth from orbit at sunrise: NASA / Johnson Space Center` — `earth-d.webp`, `earth-p.webp`
-- `California at night: NASA / Johnson Space Center` — `night-d.webp`, `night-p.webp`
-- `Mars globe: NASA/JPL/USGS` — `mars-d.webp`, `mars-p.webp`
-- `Perseverance panorama: NASA/JPL-Caltech/MSSS/ASU` — `terrain-d.webp`, `terrain-p.webp`
-- `Earthrise: NASA / Johnson Space Center` — `earthrise-d.webp`, `earthrise-p.webp`
-- `Whole Earth: NASA / Johnson Space Center` — `bluemarble-d.webp`, `bluemarble-p.webp`. The whole Earth, Apollo 17, 1972. Home, View from orbit (default).
-- `Hurricane Florence: NASA / Johnson Space Center` — `florence-d.webp`, `florence-p.webp`. Hurricane Florence from the ISS, 2018. Home, View from orbit.
-- `Europe at night: NASA/Mike Fossum` — `europe-night-d.webp`, `europe-night-p.webp`. City lights of London, Paris, Brussels and Amsterdam at night, from the International Space Station (NASA record ISS028-E-024360, 10 Aug. 2011, photographer Mike Fossum). Home, View from orbit picker.
-- `Aurora over city lights: NASA/Chris Williams` — `aurora-lights-d.webp`, `aurora-lights-p.webp`. Red and green aurora over Europe's city lights, ISS, February 2026. Home, View from orbit.
-- `Sahara coast: NASA / Johnson Space Center` — `sahara-coast-d.webp`, `sahara-coast-p.webp`. Desert coast of Mauritania, straight down. Home, View from orbit.
-- `Himalayas: NASA / Johnson Space Center` — `himalaya-d.webp`, `himalaya-p.webp`. Snow-covered Himalayas, with Everest at the center. Projects, top band.
-- `Sun glint, Indian Ocean: NASA / Johnson Space Center` — `glint-d.webp`, `glint-p.webp`. Sun glint on the Indian Ocean under clouds, thin limb. Projects, closing band.
-
-`med-night` is not used.
+- `Aurora: NASA / Johnson Space Center` — `aurora-manitoba-d.webp`, `aurora-manitoba-p.webp`. Alt: "The aurora borealis over Canada, seen from the International Space Station". Home hero (loads right away). Projects card 03.
+- `Whole Earth: NASA / Johnson Space Center` — `bluemarble-d.webp`, `bluemarble-p.webp`. Alt: "The whole Earth, photographed by the Apollo 17 crew". Caption: "Whole Earth from Apollo 17, 7 Dec. 1972. NASA / Johnson Space Center." Home, View from orbit (default).
+- `Hurricane Florence: NASA / Johnson Space Center` — `florence-d.webp`, `florence-p.webp`. Alt: "Hurricane Florence seen from the International Space Station". Caption: "Hurricane Florence over the Atlantic, from the ISS, 12 Sept. 2018. NASA / Johnson Space Center." Home, View from orbit.
+- `Europe at night: NASA/Chris Williams` — `vienna-night-d.webp`, `vienna-night-p.webp`. Alt: "Vienna and Bratislava at night along the Danube, seen from the International Space Station". Caption: "Vienna and Bratislava at night, from the ISS, 18 Jan. 2026. NASA/Chris Williams." Home, View from orbit.
+- `Aurora over city lights: NASA/Chris Williams` — `aurora-europe-d.webp`, `aurora-europe-p.webp`. Alt: "Green and red aurora over the city lights of Europe". Caption: "Aurora above the city lights of Italy and Germany, from the ISS, 19 Jan. 2026. NASA/Chris Williams." Home, View from orbit.
+- `Sahara coast: NASA / Johnson Space Center` — `sahara-coast-d.webp`, `sahara-coast-p.webp`. Alt: "The desert coast of Mauritania". Caption: "The Sahara meets the Atlantic in Mauritania, from the ISS, 16 May 2024. NASA / Johnson Space Center." Home, View from orbit.
+- `Crab Nebula: NASA/ESA/JPL/Arizona State Univ.` — `crab-d.webp`, `crab-p.webp`. Alt: "The Crab Nebula". Caption: "Crab Nebula. NASA, ESA, JPL, Arizona State Univ." Keep this full credit. ESA is named because Hubble is a NASA/ESA telescope. This is not an ESA/Webb image. Home, deep field band. Projects card 04.
+- `Himalayas: NASA / Johnson Space Center` — `himalaya-d.webp`, `himalaya-p.webp`. Alt: "The Himalayas and Mount Everest". Projects, top band (loads right away).
+- `Earth from orbit at sunrise: NASA / Johnson Space Center` — `sunrise-d.webp`, `sunrise-p.webp`. Alt: "Sunrise above the clouds, seen from orbit". Projects card 01.
+- `Los Angeles at night: NASA / Johnson Space Center` — `la-night-d.webp`, `la-night-p.webp`. Alt: "Los Angeles at night, seen from orbit". Projects card 02.
+- `Earthrise: NASA / Johnson Space Center` — `earthrise-d.webp`, `earthrise-p.webp`. Alt: "Earthrise over the Moon". Projects card 05.
+- `Perseverance panorama: NASA/JPL-Caltech/MSSS/ASU` — `terrain-d.webp`, `terrain-p.webp`. Alt: "Perseverance panorama on Mars". Projects card 06.
+- `Mars globe: NASA/JPL/USGS` — `mars-d.webp`, `mars-p.webp`. Alt: "Mars globe". Projects card 07.
+- `Sun glint, Indian Ocean: NASA / Johnson Space Center` — `glint-d.webp`, `glint-p.webp`. Alt: "The sun's glint on a partly cloudy Indian Ocean". Caption: "Sun glint, Indian Ocean. NASA / Johnson Space Center." Projects, closing band.
 
 Home footer credit line, exactly:
-`Aurora: NASA / Johnson Space Center. Crab Nebula: NASA/ESA/JPL/Arizona State Univ. Whole Earth: NASA / Johnson Space Center. Hurricane Florence: NASA / Johnson Space Center. Europe at night: NASA/Mike Fossum. Aurora over city lights: NASA/Chris Williams. Sahara coast: NASA / Johnson Space Center.`
+`Aurora: NASA / Johnson Space Center. Crab Nebula: NASA/ESA/JPL/Arizona State Univ. Whole Earth: NASA / Johnson Space Center. Hurricane Florence: NASA / Johnson Space Center. Europe at night: NASA/Chris Williams. Aurora over city lights: NASA/Chris Williams. Sahara coast: NASA / Johnson Space Center.`
 
-Projects footer adds, after the seven project-card credits:
-`Himalayas: NASA / Johnson Space Center. Sun glint, Indian Ocean: NASA / Johnson Space Center.`
+Projects footer credit line, exactly:
+`Earth from orbit at sunrise: NASA / Johnson Space Center. Los Angeles at night: NASA / Johnson Space Center. Aurora: NASA / Johnson Space Center. Crab Nebula: NASA/ESA/JPL/Arizona State Univ. Earthrise: NASA / Johnson Space Center. Perseverance panorama: NASA/JPL-Caltech/MSSS/ASU. Mars globe: NASA/JPL/USGS. Himalayas: NASA / Johnson Space Center. Sun glint, Indian Ocean: NASA / Johnson Space Center.`
 
 A general `Photographs: NASA` line alone is not enough. A caption on a full-width photo band, like the Crab Nebula caption in the mockup, is fine in addition to the footer line. It does not replace the footer line.
 
@@ -125,7 +127,7 @@ v2 may add these, in plain JavaScript and CSS, with no libraries. They live in o
 - Project filter and More buttons
 - Gentle scroll fade-ins
 
-With JavaScript off, everything still works and all content is visible. With reduce motion on, the page holds completely still: no drift, no parallax, no fade-ins, and no tilt. Switches are instant.
+With JavaScript off, everything still works and all content is visible. With reduce motion on, the page holds completely still: no drift, no parallax, and no fade-ins. Switches are instant.
 Put new controls inside `header`, `main`, or `footer`, so the contact pop-up can lock them. One contact control per page. Do not load `js/contactForm.js` on Aurora pages.
 
 ### How the site is built
@@ -174,12 +176,12 @@ Only edit James's files above. If a fix needs a Stacky-owned or shared file, sto
 ### Aurora track
 These checks are for `test/aurora-home` and later `test/aurora-*` branches.
 - The greeting is readable with JavaScript off and when reduce motion is on. The words stay the same, and the box is sized for the full sentence so the page does not jump.
-- JavaScript off: both pages are fully readable. All three chapters are visible. All seven cards show their full descriptions. The filter bar and the Tilt button are hidden. The Earth picker still switches. Contact goes to `contact.html`.
-- Reduce motion on: no drift, no parallax, no Tilt button, no fade-ins, and every switch is instant.
-- Phone at 390 and 375 pixels wide: no sideways scroll, and no two full-width photos touch. Tap targets are at least 44 pixels tall. Tilt asks for permission on iOS Safari only after the tap. If refused, or there is no tilt data, the button shows "Tilt off".
+- JavaScript off: both pages are fully readable. All three chapters are visible. All seven cards show their full descriptions. The filter bar is hidden. The Earth picker still switches. Contact goes to `contact.html`.
+- Reduce motion on: no drift, no parallax, no fade-ins, and every switch is instant.
+- Phone at 390 and 375 pixels wide: no sideways scroll, and no two full-width photos touch. Tap targets are at least 44 pixels tall.
 - Keyboard only: Tab reaches every control in order, with a visible ring. Arrow keys work in the tabs and the picker. Enter and Space work on More and the filters. Esc closes the pop-up and focus returns to Contact.
 - Must not break: `js/buttons.js` stays unchanged, and `#button_one` through `#button_seven` are not reused. Project links open in the same tab (no `target`, and no click handler on the whole card). The footer on each page names every photo on that page with the exact credit lines in the photo list. The contact pop-up `#contact-dialog` opens from `[data-contact]`, traps focus, closes with Esc and a tap outside, and shows the "Nothing was sent" message in `#contact-status`.
-- Every WebP file is 300 KB or less. Phones download only the phone-size (`-p`) files.
+- Phone files are no more than 1,280 px wide and no more than 450 KB. Desktop files are no more than 2,560 px wide and no more than 500 KB. Phones download only the phone-size (`-p`) files. The first photo on each page is not `loading="lazy"`. Every other photo is.
 
 ## Working habits
 - Pull before each block of work. Push small commits often.
