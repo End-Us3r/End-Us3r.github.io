@@ -1,0 +1,225 @@
+/* Demo pages use James's existing projects theme: black, cyan, orange, Doto.
+   Colors and the grain overlay come from the site stylesheets.
+   Every rule is scoped to body.demo-colors so houseTour.html, which links
+   this file but does not use that class, stays unstyled. */
+
+body.demo-colors,
+body.demo-colors * {
+  box-sizing: border-box;
+}
+
+html:has(body.demo-colors) {
+  background-color: black;
+}
+
+body.demo-colors {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  background-color: black;
+  color: white;
+  font-family: "doto", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+body.demo-colors::before {
+  content: "";
+  z-index: 100000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(./assets/images/grain.77eeb0e6.gif);
+  pointer-events: none;
+  opacity: 0.06;
+}
+
+body.demo-colors main {
+  flex: 1 0 auto;
+  width: 100%;
+  max-width: 46rem;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 3rem;
+}
+
+body.demo-colors header,
+body.demo-colors footer {
+  width: 100%;
+  max-width: 46rem;
+  margin: 0 auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+body.demo-colors header {
+  padding-top: 1.25rem;
+}
+
+body.demo-colors header h1,
+body.demo-colors main h1 {
+  margin: 0 0 2rem;
+  color: rgb(0, 240, 255);
+  font-family: "doto", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.25;
+  text-align: center;
+  text-shadow: rgb(0, 240, 255) 0px 0px 5px, rgb(0, 240, 255) 0px 0px 10px,
+    rgb(0, 240, 255) 0px 0px 20px, rgb(0, 240, 255) 0px 0px 40px;
+  overflow-wrap: anywhere;
+}
+
+body.demo-colors main section {
+  margin: 0 0 2rem;
+  padding-left: 1rem;
+  border-left: 2px solid rgb(0, 240, 255);
+}
+
+/* Collapse an empty Demo block so it leaves no gap. CSS only, so this
+   holds with JavaScript off. A real src shows the section and player. */
+body.demo-colors main section:has(video:not([src])),
+body.demo-colors main section:has(video[src=""]),
+body.demo-colors main section:has(video[src="#"]) {
+  display: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body.demo-colors main h2 {
+  margin: 0 0 0.75rem;
+  color: #ff6c11;
+  font-family: "doto", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 900;
+  text-align: left;
+  text-shadow: 0 0 5px #ff6c11, 0 0 10px #ff6c11;
+  overflow-wrap: anywhere;
+}
+
+body.demo-colors main p {
+  margin: 0;
+  color: white;
+  font-family: "doto", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
+
+body.demo-colors header > p,
+body.demo-colors main > p {
+  margin: -1rem 0 2rem;
+  color: #ff6c11;
+  font-size: 1.15rem;
+  font-weight: 700;
+  text-align: center;
+  text-shadow: 0 0 5px #ff6c11, 0 0 10px #ff6c11, 0 0 20px #ff6c11;
+}
+
+body.demo-colors main a {
+  color: rgb(0, 240, 255);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+body.demo-colors main a:hover {
+  color: #ff6c11;
+  text-shadow: 0 0 5px #ff6c11, 0 0 10px #ff6c11, 0 0 20px #ff6c11,
+    0 0 40px #ff6c11;
+}
+
+body.demo-colors img,
+body.demo-colors video {
+  max-width: 100%;
+  height: auto;
+}
+
+body.demo-colors main video {
+  display: block;
+  width: min(700px, 100%);
+  margin-top: 0.75rem;
+}
+
+/* Stay hidden until a real file is set on src. */
+body.demo-colors video:not([src]),
+body.demo-colors video[src=""],
+body.demo-colors video[src="#"] {
+  display: none;
+}
+
+@media (max-width: 1600px) {
+  body.demo-colors main {
+    padding-top: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body.demo-colors header,
+  body.demo-colors footer {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  body.demo-colors main {
+    padding: 1rem 1rem 2.5rem;
+  }
+
+  body.demo-colors header h1,
+  body.demo-colors main h1 {
+    font-size: 1.6rem;
+  }
+
+  body.demo-colors main h2 {
+    font-size: 1.25rem;
+  }
+
+  body.demo-colors main p {
+    font-size: 1rem;
+  }
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 1;
+  }
+  3% {
+    opacity: 0.8;
+  }
+  6% {
+    opacity: 1;
+  }
+  7% {
+    opacity: 0.9;
+  }
+  8% {
+    opacity: 1;
+  }
+  9% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 0.9;
+  }
+  20% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0.7;
+  }
+  72% {
+    opacity: 0.95;
+  }
+  77% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 1;
+  }
+}
