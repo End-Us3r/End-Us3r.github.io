@@ -1,10 +1,9 @@
 (function () {
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  function initTilt() {
+  function initHeroShift() {
     var hero = document.querySelector(".hero");
     var media = hero && hero.querySelector(".hero-media");
-    var button = document.querySelector(".tilt-toggle");
     if (!hero || !media || reduce) return;
 
     var modal = document.getElementById("contact-dialog");
@@ -52,69 +51,6 @@
       x = 0;
       y = 0;
       queue();
-    });
-
-    var touch = navigator.maxTouchPoints > 0 || "ontouchstart" in window;
-    if (!button || !touch || !("DeviceOrientationEvent" in window)) return;
-
-    button.hidden = false;
-    var listening = false;
-    var onOrient = null;
-    var waitTimer = 0;
-
-    function stopTilt(failed) {
-      listening = false;
-      if (onOrient) {
-        window.removeEventListener("deviceorientation", onOrient);
-        onOrient = null;
-      }
-      if (waitTimer) {
-        window.clearTimeout(waitTimer);
-        waitTimer = 0;
-      }
-      x = 0;
-      y = 0;
-      queue();
-      button.setAttribute("aria-pressed", "false");
-      button.textContent = failed ? "Tilt off" : "Tilt";
-    }
-
-    function startTilt() {
-      var got = false;
-      listening = true;
-      button.setAttribute("aria-pressed", "true");
-      button.textContent = "Tilt";
-      onOrient = function (event) {
-        if (event.beta == null || event.gamma == null) return;
-        got = true;
-        var beta = Math.max(-20, Math.min(20, event.beta));
-        var gamma = Math.max(-20, Math.min(20, event.gamma));
-        y = (beta / 20) * 12;
-        x = (gamma / 20) * 12;
-        queue();
-      };
-      window.addEventListener("deviceorientation", onOrient);
-      waitTimer = window.setTimeout(function () {
-        if (!got) stopTilt(true);
-      }, 1000);
-    }
-
-    button.addEventListener("click", function () {
-      if (listening) {
-        stopTilt(false);
-        return;
-      }
-      var orientation = window.DeviceOrientationEvent;
-      if (orientation && typeof orientation.requestPermission === "function") {
-        orientation.requestPermission().then(function (state) {
-          if (state === "granted") startTilt();
-          else stopTilt(true);
-        }).catch(function () {
-          stopTilt(true);
-        });
-        return;
-      }
-      startTilt();
     });
   }
 
@@ -258,7 +194,7 @@
   }
 
   function start() {
-    initTilt();
+    initHeroShift();
     initTabs();
     initProjects();
     initReveal();

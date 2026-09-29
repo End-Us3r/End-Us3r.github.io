@@ -219,11 +219,9 @@ h1 {
 [hidden] { display: none !important; }
 .chapter[hidden],
 .filter[hidden],
-.more[hidden],
-.tilt-toggle[hidden] {
+.more[hidden] {
   display: none;
 }
-.tilt-toggle,
 .chapters [role="tab"],
 .orbit-places label,
 .filter button,
@@ -232,7 +230,6 @@ h1 {
   padding: 12px 14px;
 }
 .orbit-places label { min-width: 0; }
-.tilt-toggle { margin-top: 18px; }
 .glass { margin-bottom: 96px; }
 .chapters { padding-top: 0; }
 .chapters.chapters--tabs { grid-template-columns: minmax(0, 1fr); }
