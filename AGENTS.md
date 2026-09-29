@@ -35,8 +35,8 @@ The Aurora rules apply only to `test/aurora-home` and later `test/aurora-*` bran
 - "Known gap" labels on the Inked Art demo (card on `projects-page.html`; the live demo is https://end-us3r.github.io/Inked-Art-Homepage-Project/) and the Nightmare demo (`projects-folder/nightmareGame.html`)
 
 ### Stacky owns (structure)
-- Each page's menu on `index.html`, `about-me.html`, and `projects-page.html` matches main at 1280/390/375 (its own links and look), except the three approved fixes. A shared footer is fine.
-- `shell.css` (each page's own menu styles, matching main at 1280/390/375 except the three approved fixes; a shared footer is fine)
+- Each page's menu on `index.html`, `about-me.html`, and `projects-page.html` matches main at 1280/390/375 (its own links and look), except the three approved fixes. A shared footer is fine if it looks the same as main's.
+- `shell.css` (each page's own menu styles, matching main at 1280/390/375 except the three approved fixes; a shared footer is fine if it looks the same as main's)
 - CSS consolidation
 - `js/contactForm.js`, `js/buttons.js`, `js/messages.js`
 - `contact-form.html`
@@ -149,7 +149,7 @@ Only edit James's files above. If a fix needs a Stacky-owned or shared file, sto
 
 ### Upgrade track
 **Before layout/IA work (Phase 2) starts**
-- Each page's menu matches main at 1280/390/375 (its own links and look), except the three approved fixes. A shared footer is fine.
+- Each page's menu matches main at 1280/390/375 (its own links and look), except the three approved fixes. A shared footer is fine if it looks the same as main's.
 - The greeting is the same as main
 - One contact control only (no duplicate contact IDs). The Contact page and the pop-up keep the honest "nothing was sent" demo, and neither posts to the Formspree placeholder, until James sets up a real Formspree address.
 - No `#inspire-button` console error
