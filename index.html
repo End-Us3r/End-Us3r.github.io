@@ -1,251 +1,86 @@
 <!DOCTYPE html>
 <html lang="en-US">
-  <head>
-    <meta charset="UTF-8" />
-    <script>
-      document.documentElement.classList.add("js");
-    </script>
-    <style>
-      .js .js-fallback { display: none !important; }
-      html:not(.js) .tw-seed { display: none !important; }
-    </style>
-    <meta name="description" content="James Atkins Portfolio" />
-    <meta name="keywords" content="James Atkins, Portfolio, Software Engineer, Web Developer" />
-    <meta name="author" content="James Atkins" />
-    <meta name="robots" content="index, follow" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link
-      rel="stylesheet"
-      href="stylesheet.css"
-      type="text/css"
-    />
-    <link rel="stylesheet" href="shell.css" type="text/css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="icon" href="assets/images/favicon-16x16.png" type="image/png" sizes="16x16" />
-    <link rel="manifest" href="site.webmanifest" type="application/manifest+json" />
-    <link rel="mask-icon" href="assets/images/safari-pinned-tab.svg" color="#5bbad5" />
-    <title>James Atkins | Portfolio</title>
-  </head>
-  <body class="theme-home">
-    <a class="skip-link" href="#main">Skip to content</a>
-        <header class="site-header">
-      <nav class="site-nav" aria-label="Primary">
-        <div class="site-mark">
-          <a href="index.html" aria-label="Home">JA</a>
-          <div class="site-mark-card">
-            <div class="first-element-two"></div>
-            <div class="card-container-one">
-              <div class="upper-card-one">
-                <img src="assets/images/profile_pic.png" alt="Portrait of James Atkins" />
-                <div class="text-section">
-                  <h2><span class="dark-text">Name: </span> James Atkins</h2>
-                  <p>
-                    <span class="dark-text">Location: </span> San Mateo,
-                    California
-                  </p>
-                  <p>
-                    <span class="dark-text">Skills: </span>HTML/CSS/JS •
-                    Python<br />
-                    • Git/GitHub • Figma
-                  </p>
-                </div>
-              </div>
-              <div class="lower-card-one">
-                <p>
-                  <span class="dark-text">Education: </span>Junior, Bachelors
-                  in Software Engineering @W.G.U.
-                </p>
-                <p>
-                  <span class="dark-text">Interests: </span> Web Development,
-                  Game Development, Artificial Intelligence
-                </p>
-              </div>
-              <div class="social-backdrop">
-                <a
-                  href="https://www.codecademy.com/profiles/James-Atkins"
-                  target="_blank"
-                >
-                  <img
-                    src="assets/images/codecademy_icon.svg"
-                    alt="Codecademy logo"
-                    loading="lazy"
-                  />
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/techiejames/"
-                  target="_blank"
-                >
-                  <img
-                    src="assets/images/linkedin_icon.svg"
-                    alt="LinkedIn logo"
-                    loading="lazy"
-                  />
-                </a>
-                <a href="https://github.com/End-Us3r" target="_blank">
-                  <img
-                    src="assets/images/github_icon.svg"
-                    alt="GitHub logo"
-                    loading="lazy"
-                  />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="site-menu">
-          <input class="site-menu-checkbox" type="checkbox" id="site-menu-toggle" />
-          <label class="site-menu-toggle" for="site-menu-toggle">Menu</label>
-          <ul class="site-menu-list">
-            <li><a href="about-me.html">../About</a></li>
-            <li><a href="projects-page.html">../Projects</a></li>
-            <li><a href="contact.html">../Contact</a></li>
-          </ul>
-        </div>
-      </nav>
-    </header>
-    <main id="main" tabindex="-1">
-      <section class="landing-page" id="homepage">
-        <div class="left-panel">
-          <div class="left-panel-container">
-            <h1 data-text="Greetings User, I'm James!"><span class="cursor tw-seed">_</span><span class="js-fallback">Greetings User, I'm James!<span class="cursor visible">_</span></span></h1>
-          </div>
-        </div>
-        <div class="right-panel">
-          <div class="lower-right-panel">
-            <p data-text-2="Welcome to my portfolio! I'm a Junior at Western Governors
-            University studying <span class='glitch' id='button_one'> Software Engineering</span> 
-            and passionate about <span class='glitch'>Web Development</span>, <span class='glitch'>Game Development</span>, and <span class='glitch'>Artificial Intelligence</span>.">
-            <span class="cursor tw-seed">_</span><span class="js-fallback">Welcome to my portfolio! I'm a Junior at Western Governors
-              University studying <span class="glitch"> Software Engineering</span>
-              and passionate about <span class="glitch">Web Development</span>, <span class="glitch">Game Development</span>, and <span class="glitch">Artificial Intelligence</span>.<span class="cursor visible">_</span></span></p>
-            <br>
-            <br>
-            <p data-text-3="Originally from a small town in Eastern North Carolina, I now call the Bay Area home. My path into tech has been anything but traditional. I come from a background in hands-on work, with experience in construction and the fishing industry. But over time, I discovered a real passion for problem-solving, learning, and building things in the digital world."><span class="cursor tw-seed">_</span><span class="js-fallback">Originally from a small town in Eastern North Carolina, I now call the Bay Area home. My path into tech has been anything but traditional. I come from a background in hands-on work, with experience in construction and the fishing industry. But over time, I discovered a real passion for problem-solving, learning, and building things in the digital world.<span class="cursor visible">_</span></span>
-            </p>
-          </div>
-        </div>
-      </section>
-      <section class="third-page" id="third-page" hidden>
-        <div class="content-container">
-          <h3 id="inspire-h3">Be inspired!</h3>
-          <button type="button" id="inspire-button">Click me</button>
-        </div>
-        <div class="hidden" id="expanded-element" aria-live="polite">
-          <q id="random-quote"></q>
-          <p id="random-author"></p>
-        </div>
-      </section>
-      </main>
-      <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          const headingElement = document.querySelector("h1");
-          const text = headingElement.getAttribute("data-text");
-          const typingSpeed = 25;
-          let i = 0;
-          
-          const paragraphElement = document.querySelector(".lower-right-panel p:first-child");
-          const text2 = paragraphElement.getAttribute("data-text-2");
-          const typingSpeed2 = 2;
-          let j = 0;
-
-          const paragraphElementTwo = document.querySelector(".lower-right-panel p:last-child");
-          const text3 = paragraphElementTwo.getAttribute("data-text-3");
-          const typingSpeed3 = 2;
-          let k = 0;
-
-          headingElement.innerHTML = '<span class="cursor">_</span>';
-
-          function typeWriter() {
-            if (i < text.length) {
-              headingElement.innerHTML = text.substring(0, i + 1);
-              headingElement.insertAdjacentHTML('beforeend', '<span class="cursor">_</span>');
-              i++;
-              const cursor = headingElement.querySelector('.cursor')
-              cursor.classList.add('visible'); // Make the cursor visible
-              setTimeout(typeWriter, typingSpeed);
-            }
-          }
-
-          typeWriter();
-
-          function typeWriter2() {
-            let contentToType = "";
-            // We will type out text normally, but preserve the spans and their style
-            let tempText = text2;  // No need to modify or replace the span tags
-
-            if (j < tempText.length) {
-              contentToType = tempText.substring(0, j + 1); // Get the current part to type
-              
-              // Replace the typed portion in the original text while maintaining span tags
-              paragraphElement.innerHTML = contentToType;
-              
-              // Add the cursor to the end of the typed portion
-              paragraphElement.insertAdjacentHTML('beforeend', '<span class="cursor">_</span>');
-              const cursor = paragraphElement.querySelector('.cursor');
-              cursor.classList.add('visible');
-        
-              j++; // Move to the next character
-              setTimeout(typeWriter2, typingSpeed2); // Call the function recursively to type the next character
-            }
-          }
-
-          setTimeout(typeWriter2, 2000);
-
-          function typeWriter3() {
-            let contentToType = "";
-            // We will type out text normally, but preserve the spans and their style
-            let tempTextTwo = text3;  // No need to modify or replace the span tags
-
-            if (k < tempTextTwo.length) {
-              contentToType = tempTextTwo.substring(0, k + 1); // Get the current part to type
-              
-              // Replace the typed portion in the original text while maintaining span tags
-              paragraphElementTwo.innerHTML = contentToType;
-              
-              // Add the cursor to the end of the typed portion
-              paragraphElementTwo.innerHTML += '<span class="cursor">_</span>';
-              const cursor = paragraphElementTwo.querySelector('.cursor');
-              cursor.classList.add('visible');
-        
-              k++; // Move to the next character
-              setTimeout(typeWriter3, typingSpeed3); // Call the function recursively to type the next character
-            }
-          }
-        
-          setTimeout(typeWriter3, 6000);
-        });
-
-      </script>
-    <footer class="site-footer">
-      <div>
-        <ul>
-          <li>
-            <a href="https://www.linkedin.com/in/techiejames/" target="_blank">
-              LinkedIn
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/End-Us3r" target="_blank">
-              GitHub
-            </a>
-          </li>
-          <li>
-            <a href="https://www.codecademy.com/profiles/James-Atkins" target="_blank">
-              Codecademy
-            </a>
-          </li>
-        </ul>
-      </div>
-      <p>&copy;2025 James Atkins</p>
-    </footer>
-    <script src="js/messages.js"></script>
-    <script src="js/buttons.js"></script>
-    <script src="js/contactForm.js"></script>
-  </body>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="James Atkins Portfolio" />
+<meta name="author" content="James Atkins" />
+<title>James Atkins | Aurora Deep Field</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=IBM+Plex+Mono:wght@400&family=Outfit:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/aurora-base.css" />
+<link rel="stylesheet" href="css/aurora.css" />
+<link rel="icon" href="assets/images/favicon-16x16.png" type="image/png" sizes="16x16" />
+<link rel="manifest" href="site.webmanifest" type="application/manifest+json" />
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="top">
+  <a class="mark" href="index.html">JA</a>
+  <nav aria-label="Primary">
+    <a href="#about">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html" data-contact>Contact</a>
+  </nav>
+</header>
+<main id="main" tabindex="-1">
+<section class="hero">
+  <div class="hero-media">
+    <picture>
+      <source media="(max-width: 800px)" srcset="images/aurora/aurora-p.webp" type="image/webp" />
+      <img class="drift" src="images/aurora/aurora-d.webp" alt="Aurora over Earth, seen from the International Space Station" />
+    </picture>
+  </div>
+  <div class="hero-copy">
+    <p class="kicker">James Atkins</p>
+    <h1>Greetings User, I'm James!</h1>
+  </div>
+</section>
+<section class="glass" id="about">
+  <p class="kicker">01 / About</p>
+  <p>Welcome to my portfolio! I'm a Junior at Western Governors University studying Software Engineering and passionate about Web Development, Game Development, and Artificial Intelligence.</p>
+  <p>Originally from a small town in Eastern North Carolina, I now call the Bay Area home. My path into tech has been anything but traditional. I come from a background in hands-on work, with experience in construction and the fishing industry. But over time, I discovered a real passion for problem-solving, learning, and building things in the digital world.</p>
+</section>
+<section class="band">
+  <picture>
+    <source media="(max-width: 800px)" srcset="images/aurora/crab-p.webp" type="image/webp" />
+    <img src="images/aurora/crab-d.webp" alt="The Crab Nebula" />
+  </picture>
+  <div class="cap"><p class="kicker">02 / Deep field</p><p>Crab Nebula. NASA, ESA, JPL, Arizona State Univ.</p></div>
+</section>
+<section class="chapters">
+  <article class="chapter"><p class="kicker">01</p><h2>Introduction</h2><p>Hello World, I’m James Atkins. Originally from a small town in Eastern North Carolina, I now live in the Bay Area, CA. I come from a background in manual labor — mainly construction and commercial fishing — but over time, I found myself drawn toward a different kind of building: creating things with code.</p></article>
+  <article class="chapter"><p class="kicker">02</p><h2>Background</h2><p>I began my education at FTCC in 2019, where a C++ class first sparked my interest in programming. I took that curiosity further by enrolling in Web Development and Computer Programming courses, which opened up a new world for me. Those experiences laid the foundation for what I’m passionate about today — designing and building websites that look good and work well. After taking some time off and moving west, I’m now studying Software Engineering at WGU, working toward launching a career in tech. Lately, I’ve been diving into Data Science topics like MySQL and data visualization, and I’m looking forward to deepening my skills in Python.</p></article>
+  <article class="chapter"><p class="kicker">03</p><h2>Interests</h2><p>Outside of coding, I’m all about staying active and exploring new places. I love hiking, camping, photography, gaming, traveling, hitting the gym, and I’ve recently picked up golf (jury’s still out on my swing). I’ve traveled all over the U.S., and I think getting out and experiencing new environments is one of the best ways to stay inspired. Whether you’re here to connect, collaborate, or just learn more — welcome!</p></article>
+</section>
+</main>
+<footer class="foot">
+  <p>&copy;2025 James Atkins</p>
+  <p><a href="https://www.linkedin.com/in/techiejames/" target="_blank" rel="noopener">LinkedIn</a>
+  · <a href="https://github.com/End-Us3r" target="_blank" rel="noopener">GitHub</a>
+  · <a href="https://www.codecademy.com/profiles/James-Atkins" target="_blank" rel="noopener">Codecademy</a></p>
+  <p class="credits">Aurora: NASA / Johnson Space Center. Crab Nebula: NASA/ESA/JPL/Arizona State Univ.</p>
+</footer>
+<div class="modal" id="contact-dialog" role="dialog" aria-modal="true" aria-labelledby="contact-dialog-title" hidden tabindex="-1">
+  <div class="form-card">
+    <div class="form-head">
+      <h2 id="contact-dialog-title">[::] Initiate Contact</h2>
+      <button class="close" type="button" data-close>Close</button>
+    </div>
+    <form method="post" action="contact.html">
+      <label for="name">&gt; Name:</label>
+      <input id="name" name="name" type="text" autocomplete="name" required />
+      <label for="email">&gt; Email:</label>
+      <input id="email" name="email" type="email" autocomplete="email" required />
+      <label for="message">&gt; Message:</label>
+      <textarea id="message" name="message" rows="5" required minlength="10"></textarea>
+      <p>[For demo purposes only, no user data collected]</p>
+      <button class="send" type="submit">&gt; Transmit</button>
+      <p class="form-status" id="contact-status" role="status" hidden></p>
+    </form>
+  </div>
+</div>
+<script src="js/aurora-ui.js"></script>
+</body>
 </html>
