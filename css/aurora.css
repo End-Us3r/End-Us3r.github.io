@@ -69,7 +69,7 @@ h1, h2, .display {
   max-width: none;
   object-fit: cover;
 }
-.hero-media img { object-position: center 36%; }
+.hero-media img { object-position: center 80%; }
 .hero-media img.drift {
   animation: drift 52s ease-in-out infinite alternate;
   transform: scale(1.06);
