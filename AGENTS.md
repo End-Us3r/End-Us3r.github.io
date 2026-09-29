@@ -19,11 +19,13 @@ On upgrade the menu must match main at 1280, 390, and 375 pixels wide on every p
 - Phone pages do not scroll sideways.
 - The phone menu opens with JavaScript off.
 
+James approved a separate exception on 2026-09-29. Five demo pages load `project-template.css` and keep James's original colors. They do not match main's browser-default look. The pages are `coffeeBot.html` (CoffeeBot), `gpaCalculator.html` (GPA Calculator), `boredlessTourist.html` (Boredless Tourist), `rps.html` (Rock Paper Scissors), and `nightmareGame.html` (Nightmare). `houseTour.html` is not part of this exception and stays exactly as on main.
+
 Upgrade has no Skip to content link and no custom focus outline. It uses the browser's default focus outline, as main does. The JA hover card with social links stays on Home only, as on main.
 
 Project cards open in the same tab (James lock 2026-09-27).
 
-The six old project pages (`coffeeBot.html`, `gpaCalculator.html`, `boredlessTourist.html`, `rps.html`, `nightmareGame.html`, `houseTour.html`) look like main. `houseTour.html` stays exactly as on main.
+The six old project pages are `coffeeBot.html`, `gpaCalculator.html`, `boredlessTourist.html`, `rps.html`, `nightmareGame.html`, and `houseTour.html`. The five demo pages load `project-template.css` and keep James's original colors. `houseTour.html` stays exactly as on main.
 
 The Aurora rules apply only to `test/aurora-home` and later `test/aurora-*` branches. Aurora does not go into upgrade or main until James gives a separate yes to move it.
 
@@ -43,7 +45,7 @@ The Aurora rules apply only to `test/aurora-home` and later `test/aurora-*` bran
 - `js/contactForm.js`, `js/buttons.js`, `js/messages.js`
 - `contact-form.html`
 - Page structure in `contact.html`
-- `project-template.css` and the page chrome inside `projects-folder`
+- `project-template.css` (the five demo pages load it and keep James's original colors) and the page chrome inside `projects-folder`. `houseTour.html` stays exactly as on main.
 - `site.webmanifest`, favicons (`assets/images/favicon-16x16.png`, `assets/images/favicon-32x32.png`, `assets/images/favicon.ico`, `assets/images/apple-touch-icon.png`, `assets/images/android-chrome-192x192.png`, `assets/images/android-chrome-512x512.png`, `favicon.ico` (to be created), `assets/images/safari-pinned-tab.svg` (to be created)), `sitemap.xml`, `robots.txt`
 
 ### Shared — claim in the Software Team room before editing
@@ -56,7 +58,7 @@ The Aurora rules apply only to `test/aurora-home` and later `test/aurora-*` bran
 - No changes to layout IDs, routing, or page structure
 
 ### Leave alone
-- Keep all seven demos. Leave `houseTour.html` untouched. For the other demos, leave the game logic alone unless a path or CSS link is broken.
+- Keep all seven demos. Leave `houseTour.html` untouched. For the other demos, leave the game logic alone unless a path or CSS link is broken. The five demo pages load `project-template.css` and keep James's original colors. `houseTour.html` stays exactly as on main.
 
 ## Aurora Deep Field
 James locked this look on 2026-09-28. On 2026-09-27 he restarted the site from scratch with a futuristic space, robotics, and tech theme. These rules apply only to `test/aurora-home` and later `test/aurora-*` branches. Aurora does not go into upgrade or main until James gives a separate yes to move it.
@@ -162,6 +164,7 @@ Only edit James's files above. If a fix needs a Stacky-owned or shared file, sto
 **Before the visual refresh (Phase 3) starts**
 - Project cards use real links
 - `project-template.css` exists and loads (no 404)
+- Five demo pages (`coffeeBot.html`, `gpaCalculator.html`, `boredlessTourist.html`, `rps.html`, `nightmareGame.html`) load `project-template.css` and keep James's original colors. `houseTour.html` stays unchanged from main.
 - All 7 demos reachable
 - Codecademy footer link fixed
 - Favicon, manifest, and sitemap load (no 404)
@@ -171,6 +174,7 @@ Only edit James's files above. If a fix needs a Stacky-owned or shared file, sto
 **Before merge to `main` (live)**
 - QA v1 acceptance passes
 - Menu matches main at 1280/390/375 except the three approved fixes
+- Five demo pages (`coffeeBot.html`, `gpaCalculator.html`, `boredlessTourist.html`, `rps.html`, `nightmareGame.html`) load `project-template.css` and keep James's original colors. `houseTour.html` stays unchanged from main.
 - James gives a separate, explicit yes. Merge is never automatic after Phase 3.
 
 ### Aurora track
