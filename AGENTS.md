@@ -97,7 +97,7 @@ Every page that shows a NASA photo has a credit line in its footer. That line na
 - `Earthrise: NASA / Johnson Space Center` — `earthrise-d.webp`, `earthrise-p.webp`
 - `Whole Earth: NASA / Johnson Space Center` — `bluemarble-d.webp`, `bluemarble-p.webp`. The whole Earth, Apollo 17, 1972. Home, View from orbit (default).
 - `Hurricane Florence: NASA / Johnson Space Center` — `florence-d.webp`, `florence-p.webp`. Hurricane Florence from the ISS, 2018. Home, View from orbit.
-- `Europe at night: NASA/Mike Fossum` — `europe-night-d.webp`, `europe-night-p.webp`. City lights of London, Paris, Brussels and Amsterdam at night, from the International Space Station (NASA record iss028, 10 Aug. 2011, photographer Mike Fossum). Home, View from orbit picker.
+- `Europe at night: NASA/Mike Fossum` — `europe-night-d.webp`, `europe-night-p.webp`. City lights of London, Paris, Brussels and Amsterdam at night, from the International Space Station (NASA record ISS028-E-024360, 10 Aug. 2011, photographer Mike Fossum). Home, View from orbit picker.
 - `Aurora over city lights: NASA/Chris Williams` — `aurora-lights-d.webp`, `aurora-lights-p.webp`. Red and green aurora over Europe's city lights, ISS, February 2026. Home, View from orbit.
 - `Sahara coast: NASA / Johnson Space Center` — `sahara-coast-d.webp`, `sahara-coast-p.webp`. Desert coast of Mauritania, straight down. Home, View from orbit.
 - `Himalayas: NASA / Johnson Space Center` — `himalaya-d.webp`, `himalaya-p.webp`. Snow-covered Himalayas, with Everest at the center. Projects, top band.
