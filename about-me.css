@@ -665,19 +665,48 @@ body::before {
   }
 }
 
-/* Phone widths only. The sticky header is the bar. Wider screens never match. */
+/* Phone widths only. Slide the nav, not the sticky header. Transforming
+   the header makes the browser scroll the page when Tab focuses the
+   hidden toggle. The nav is pinned and paints the bar, so the top of
+   the page stays the same and a wider screen never matches. */
 @media (max-width: 480px) {
   header {
-    transition: transform 0.2s ease;
+    height: 5rem;
+    min-height: 5rem;
+    background-color: transparent;
+    box-shadow: none;
+    filter: none;
   }
 
   header.nav-hidden {
+    pointer-events: none;
+  }
+
+  header nav {
+    transition: transform 0.2s ease;
+  }
+
+  header .mobile-nav,
+  header .desktop-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5rem;
+    background-color: black;
+    box-shadow: 0px 5px 10px 0px purple;
+    filter: brightness(2);
+    z-index: 10;
+  }
+
+  header.nav-hidden nav {
     transform: translateY(-100%);
+    pointer-events: auto;
   }
 }
 
 @media (max-width: 480px) and (prefers-reduced-motion: reduce) {
-  header {
+  header nav {
     transition: none;
   }
 }
