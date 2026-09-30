@@ -19,9 +19,14 @@
   var scroller = document.scrollingElement || document.documentElement;
   var lastY = 0;
   var ignoreUntil = 0;
+  /* Direction comes from the visitor's own input, not from how far the
+     page moved. The home greeting nudges scrollY in +36px steps without
+     a size change, and that nudge can land in the same beat as a scroll
+     up. Scroll deltas would call that a scroll down and hide the bar. */
+  var inputDir = 0;
+  var dragMode = false;
   var lastInputAt = 0;
-  var lastLayoutAt = 0;
-  var userDir = 0;
+  var touchStartY = null;
   var ticking = false;
 
   function findBar() {
@@ -86,6 +91,20 @@
     else lastY = y;
   }
 
+  /* Wheel, touch, and keys set the direction. It stays until the next
+     one of those, so a self-scroll cannot flip an upward gesture. */
+  function noteInput(dir) {
+    inputDir = dir;
+    dragMode = false;
+    lastInputAt = Date.now();
+  }
+
+  function noteDrag() {
+    dragMode = true;
+    inputDir = 0;
+    lastInputAt = Date.now();
+  }
+
   function onScroll() {
     var reading = metrics();
 
@@ -129,58 +148,112 @@
     var delta = y - lastY;
     var gestured = Date.now() - lastInputAt < USER_SCROLL_MS;
 
-    /* Any scroll up past the threshold shows the bar. A layout nudge
-       must not be able to cancel that. */
-    if (delta <= -THRESHOLD) {
-      if (gestured) userDir = -1;
+    /* Upward wheel, swipe, or key. Keep the bar shown until a real
+       downward gesture, including when the page nudges itself downward
+       in the same beat. */
+    if (!dragMode && inputDir < 0) {
       show();
       lastY = y;
       return;
     }
 
-    /* Scroll anchoring after the home greeting grows the page is not a
-       scroll the visitor made. Catch up and leave the bar alone. A
-       downward nudge in the same beat as a scroll up is the same case. */
-    if (!gestured || (userDir < 0 && lastLayoutAt > lastInputAt)) {
+    /* Downward wheel, swipe, or key. Only that gesture hides the bar.
+       A nudge the other way in the same beat does not show it again. */
+    if (!dragMode && inputDir > 0 && gestured) {
+      if (delta >= THRESHOLD) {
+        hide();
+        lastY = y;
+      } else if (delta <= -THRESHOLD) {
+        lastY = y;
+      }
+      return;
+    }
+
+    /* Scrollbar dragging still follows the scroll itself. Anything else
+       with no fresh drag is the page moving on its own. */
+    if (!dragMode || !gestured) {
       remember(y, max);
+      return;
+    }
+
+    if (delta <= -THRESHOLD) {
+      show();
+      lastY = y;
       return;
     }
 
     if (delta < THRESHOLD) return;
 
-    userDir = 1;
     hide();
     lastY = y;
   }
 
-  function markUserScroll() {
-    lastInputAt = Date.now();
+  function onWheel(event) {
+    if (event.deltaY > 0) noteInput(1);
+    else if (event.deltaY < 0) noteInput(-1);
+  }
+
+  function onTouchStart(event) {
+    if (!event.touches || event.touches.length !== 1) {
+      touchStartY = null;
+      return;
+    }
+    touchStartY = event.touches[0].clientY;
+  }
+
+  function onTouchMove(event) {
+    if (touchStartY === null || !event.touches || !event.touches.length) return;
+    var dy = event.touches[0].clientY - touchStartY;
+    if (!dy) return;
+    /* Finger moving down scrolls the page up. */
+    noteInput(dy > 0 ? -1 : 1);
+  }
+
+  function onTouchEnd() {
+    touchStartY = null;
+  }
+
+  function scrollKeyDir(event) {
+    var key = event.key;
+    if (key === "ArrowDown" || key === "PageDown" || key === "End") return 1;
+    if (key === "ArrowUp" || key === "PageUp" || key === "Home") return -1;
+    if (key === " " || key === "Spacebar") return event.shiftKey ? -1 : 1;
+    return 0;
   }
 
   function onKeyDown(event) {
-    var key = event.key;
-    if (key !== "ArrowDown" && key !== "ArrowUp" && key !== "ArrowLeft" && key !== "ArrowRight" &&
-        key !== "PageDown" && key !== "PageUp" && key !== "Home" && key !== "End" && key !== " ") {
-      return;
-    }
+    if (event.defaultPrevented) return;
+    var dir = scrollKeyDir(event);
+    if (!dir) return;
     var target = event.target;
     var tag = target && target.tagName;
     if (tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT" || (target && target.isContentEditable)) return;
-    markUserScroll();
+    noteInput(dir);
+  }
+
+  function scrollbarGutter() {
+    return Math.max(0, window.innerWidth - document.documentElement.clientWidth);
+  }
+
+  function onPointerDown(event) {
+    if (event.pointerType === "touch" || event.button !== 0) return;
+    var gutter = scrollbarGutter();
+    if (gutter > 0 && event.clientX >= window.innerWidth - gutter) noteDrag();
   }
 
   function onPointerMove(event) {
-    if (event.buttons) markUserScroll();
+    if (event.pointerType === "touch" || !event.buttons) return;
+    noteDrag();
   }
 
   /* The greeting changes the size of the page. Resync while that is
      happening so the next real scroll is measured from where the
-     browser actually is. */
+     browser actually is. An upward gesture stays shown. */
   function syncToLayout() {
-    lastLayoutAt = Date.now();
-    if (Date.now() - lastInputAt < USER_SCROLL_MS && userDir >= 0) return;
+    var upward = !dragMode && inputDir < 0;
+    if (Date.now() - lastInputAt < USER_SCROLL_MS && !upward) return;
     var reading = metrics();
-    if (!narrow.matches || reading.y <= THRESHOLD) show();
+    if (!narrow.matches || reading.y <= THRESHOLD || upward) show();
     if (reading.y > reading.max) return;
     remember(reading.y, reading.max);
   }
@@ -206,12 +279,16 @@
 
   window.addEventListener("scroll", noteScroller, { passive: true });
   document.addEventListener("scroll", noteScroller, { capture: true, passive: true });
-  window.addEventListener("wheel", markUserScroll, { passive: true });
-  window.addEventListener("touchmove", markUserScroll, { passive: true });
+  /* Capture so the direction is stored before the browser applies the
+     scroll. Keydown stays on the bubble so a control that already
+     consumed the key (the phone-menu button) is left alone. */
+  window.addEventListener("wheel", onWheel, { capture: true, passive: true });
+  window.addEventListener("touchstart", onTouchStart, { capture: true, passive: true });
+  window.addEventListener("touchmove", onTouchMove, { capture: true, passive: true });
+  window.addEventListener("touchend", onTouchEnd, { capture: true, passive: true });
+  window.addEventListener("touchcancel", onTouchEnd, { capture: true, passive: true });
   window.addEventListener("keydown", onKeyDown);
-  window.addEventListener("pointerdown", markUserScroll, { passive: true });
-  window.addEventListener("pointerup", markUserScroll, { passive: true });
-  window.addEventListener("pointercancel", markUserScroll, { passive: true });
+  window.addEventListener("pointerdown", onPointerDown, { passive: true });
   window.addEventListener("pointermove", onPointerMove, { passive: true });
 
   if (window.ResizeObserver) {
