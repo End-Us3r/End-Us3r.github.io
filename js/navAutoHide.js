@@ -7,6 +7,9 @@
 
   var THRESHOLD = 8;
   var JUMP_HOLD_MS = 500;
+  /* A wheel, key, or touch and the scroll it causes land in the same
+     frame, or the next one. Later movement is the page shifting itself. */
+  var USER_SCROLL_MS = 100;
   var HIDDEN_CLASS = "nav-hidden";
 
   var bar = findBar();
@@ -16,6 +19,9 @@
   var scroller = document.scrollingElement || document.documentElement;
   var lastY = 0;
   var ignoreUntil = 0;
+  var lastInputAt = 0;
+  var lastLayoutAt = 0;
+  var userDir = 0;
   var ticking = false;
 
   function findBar() {
@@ -121,11 +127,62 @@
     }
 
     var delta = y - lastY;
-    if (Math.abs(delta) < THRESHOLD) return;
+    var gestured = Date.now() - lastInputAt < USER_SCROLL_MS;
 
-    if (delta > 0) hide();
-    else show();
+    /* Any scroll up past the threshold shows the bar. A layout nudge
+       must not be able to cancel that. */
+    if (delta <= -THRESHOLD) {
+      if (gestured) userDir = -1;
+      show();
+      lastY = y;
+      return;
+    }
+
+    /* Scroll anchoring after the home greeting grows the page is not a
+       scroll the visitor made. Catch up and leave the bar alone. A
+       downward nudge in the same beat as a scroll up is the same case. */
+    if (!gestured || (userDir < 0 && lastLayoutAt > lastInputAt)) {
+      remember(y, max);
+      return;
+    }
+
+    if (delta < THRESHOLD) return;
+
+    userDir = 1;
+    hide();
     lastY = y;
+  }
+
+  function markUserScroll() {
+    lastInputAt = Date.now();
+  }
+
+  function onKeyDown(event) {
+    var key = event.key;
+    if (key !== "ArrowDown" && key !== "ArrowUp" && key !== "ArrowLeft" && key !== "ArrowRight" &&
+        key !== "PageDown" && key !== "PageUp" && key !== "Home" && key !== "End" && key !== " ") {
+      return;
+    }
+    var target = event.target;
+    var tag = target && target.tagName;
+    if (tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT" || (target && target.isContentEditable)) return;
+    markUserScroll();
+  }
+
+  function onPointerMove(event) {
+    if (event.buttons) markUserScroll();
+  }
+
+  /* The greeting changes the size of the page. Resync while that is
+     happening so the next real scroll is measured from where the
+     browser actually is. */
+  function syncToLayout() {
+    lastLayoutAt = Date.now();
+    if (Date.now() - lastInputAt < USER_SCROLL_MS && userDir >= 0) return;
+    var reading = metrics();
+    if (!narrow.matches || reading.y <= THRESHOLD) show();
+    if (reading.y > reading.max) return;
+    remember(reading.y, reading.max);
   }
 
   function requestTick() {
@@ -149,6 +206,21 @@
 
   window.addEventListener("scroll", noteScroller, { passive: true });
   document.addEventListener("scroll", noteScroller, { capture: true, passive: true });
+  window.addEventListener("wheel", markUserScroll, { passive: true });
+  window.addEventListener("touchmove", markUserScroll, { passive: true });
+  window.addEventListener("keydown", onKeyDown);
+  window.addEventListener("pointerdown", markUserScroll, { passive: true });
+  window.addEventListener("pointerup", markUserScroll, { passive: true });
+  window.addEventListener("pointercancel", markUserScroll, { passive: true });
+  window.addEventListener("pointermove", onPointerMove, { passive: true });
+
+  if (window.ResizeObserver) {
+    var layoutObserver = new ResizeObserver(syncToLayout);
+    layoutObserver.observe(document.documentElement);
+    layoutObserver.observe(document.body);
+    var mainEl = document.querySelector("main");
+    if (mainEl) layoutObserver.observe(mainEl);
+  }
 
   function onWidthChange() {
     if (!narrow.matches) show();
