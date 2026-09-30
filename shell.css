@@ -731,3 +731,20 @@
     padding: 1.25rem;
   }
 }
+
+/* Phone widths only. A wider screen never matches, so the bar cannot slide. */
+@media (max-width: 480px) {
+  .site-header .site-nav {
+    transition: transform 0.2s ease;
+  }
+
+  .site-header.nav-hidden .site-nav {
+    transform: translateY(-100%);
+  }
+}
+
+@media (max-width: 480px) and (prefers-reduced-motion: reduce) {
+  .site-header .site-nav {
+    transition: none;
+  }
+}

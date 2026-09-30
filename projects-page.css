@@ -746,3 +746,37 @@ footer p {
   }
   
 }
+
+/* Phone widths only. A wider screen never matches, so the bar cannot slide.
+   The phone menu is sticky without a top edge, so it scrolls off with the
+   page. Pin it, and keep the same 5rem gap, only where that menu is showing. */
+@media (max-width: 480px) {
+  header .mobile-nav {
+    transition: transform 0.2s ease;
+  }
+
+  header.nav-hidden nav {
+    transform: translateY(-100%);
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  header {
+    height: 5rem;
+    min-height: 5rem;
+    flex-shrink: 0;
+  }
+
+  header .mobile-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+}
+
+@media (max-width: 480px) and (prefers-reduced-motion: reduce) {
+  header nav,
+  header .mobile-nav {
+    transition: none;
+  }
+}
