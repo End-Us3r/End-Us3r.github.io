@@ -1433,3 +1433,33 @@ footer p {
     transition: none;
   }
 }
+
+/* Home is 971px wide from 481px to 970px. The greeting is one max-content
+   line, and from 481px to 544px the shifted welcome paragraph also sticks
+   out. Wider and phone layouts are outside this query, so they stay put. */
+@media (min-width: 481px) and (max-width: 1000px) {
+  .landing-page {
+    position: relative;
+    max-width: 100%;
+  }
+
+  .left-panel-container {
+    left: 0;
+    right: 0;
+    width: auto;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .landing-page h1 {
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
+
+  /* left: 135% runs past the window until about 544px. Keep that shift
+     when it still fits, and stop the paragraph at the window when it
+     does not. */
+  .lower-right-panel p:last-child {
+    left: min(135%, calc(100vw - 100% - 5rem));
+  }
+}

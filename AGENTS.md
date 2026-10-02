@@ -16,7 +16,7 @@ Work follows two tracks. Do not mix them.
 
 On upgrade the menu must match main at 1280, 390, and 375 pixels wide on every page: same links and order, same look, same phone menu open and close. James approved four exceptions (2026-09-28 and 2026-09-29):
 - Contact on the Home phone menu, About, and Projects opens `contact.html`. The Home computer menu's Contact keeps main's pop-up.
-- Phone pages do not scroll sideways.
+- No page scrolls sideways at any width from 320 to 1280 pixels (widened from phones only on 2026-10-02). Fix the element that is too wide. Don't hide the overflow on the whole page.
 - The phone menu opens with JavaScript off.
 - On the mobile (responsive) layout only, meaning 480px wide or less where the phone menu takes over, the top nav bar slides away when you scroll down and comes back when you scroll up (approved 2026-09-29). It always shows at the top of the page, while the phone menu is open, and when anything in it gets keyboard focus. With JavaScript off it stays put, and with reduce motion on it appears without sliding. Wider layouts keep the nav bar fixed exactly as it is now. The footer does not hide.
 
@@ -169,7 +169,7 @@ Only edit James's files above. If a fix needs a Stacky-owned or shared file, sto
 - All 7 demos reachable
 - Codecademy footer link fixed
 - Favicon, manifest, and sitemap load (no 404)
-- No sideways scroll at 390 and 375 pixels wide on every page
+- No sideways scroll on any page at any width from 320 to 1280 pixels, including 481, 768, and 820
 - Image alt text, an H1 on Projects, and a skip link
 
 **Before merge to `main` (live)**
