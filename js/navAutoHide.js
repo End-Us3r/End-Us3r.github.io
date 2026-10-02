@@ -26,7 +26,15 @@
   var inputDir = 0;
   var dragMode = false;
   var lastInputAt = 0;
-  var touchStartY = null;
+  /* Previous finger position, not the start of the touch. A reverse
+     mid-drag has to count on its own. */
+  var touchY = null;
+  var TOUCH_JITTER = 4;
+  /* Chrome does not send pointermove while the scrollbar thumb is
+     dragged, so the short gesture window would close and a drag back
+     up would leave the bar hidden. Hold the drag open until the
+     pointer is released. */
+  var scrollbarDrag = false;
   var ticking = false;
 
   function findBar() {
@@ -169,9 +177,11 @@
       return;
     }
 
-    /* Scrollbar dragging still follows the scroll itself. Anything else
+    /* Scrollbar dragging still follows the scroll itself. A thumb drag
+       stays active until the pointer is released, because Chrome sends
+       no pointermove to refresh the short gesture window. Anything else
        with no fresh drag is the page moving on its own. */
-    if (!dragMode || !gestured) {
+    if (!scrollbarDrag && (!dragMode || !gestured)) {
       remember(y, max);
       return;
     }
@@ -195,22 +205,24 @@
 
   function onTouchStart(event) {
     if (!event.touches || event.touches.length !== 1) {
-      touchStartY = null;
+      touchY = null;
       return;
     }
-    touchStartY = event.touches[0].clientY;
+    touchY = event.touches[0].clientY;
   }
 
   function onTouchMove(event) {
-    if (touchStartY === null || !event.touches || !event.touches.length) return;
-    var dy = event.touches[0].clientY - touchStartY;
-    if (!dy) return;
+    if (touchY === null || !event.touches || !event.touches.length) return;
+    var y = event.touches[0].clientY;
+    var dy = y - touchY;
+    touchY = y;
+    if (Math.abs(dy) < TOUCH_JITTER) return;
     /* Finger moving down scrolls the page up. */
     noteInput(dy > 0 ? -1 : 1);
   }
 
   function onTouchEnd() {
-    touchStartY = null;
+    touchY = null;
   }
 
   function scrollKeyDir(event) {
@@ -238,7 +250,14 @@
   function onPointerDown(event) {
     if (event.pointerType === "touch" || event.button !== 0) return;
     var gutter = scrollbarGutter();
-    if (gutter > 0 && event.clientX >= window.innerWidth - gutter) noteDrag();
+    if (gutter > 0 && event.clientX >= window.innerWidth - gutter) {
+      scrollbarDrag = true;
+      noteDrag();
+    }
+  }
+
+  function endScrollbarDrag() {
+    scrollbarDrag = false;
   }
 
   function onPointerMove(event) {
@@ -290,6 +309,9 @@
   window.addEventListener("keydown", onKeyDown);
   window.addEventListener("pointerdown", onPointerDown, { passive: true });
   window.addEventListener("pointermove", onPointerMove, { passive: true });
+  window.addEventListener("pointerup", endScrollbarDrag, true);
+  window.addEventListener("pointercancel", endScrollbarDrag, true);
+  window.addEventListener("lostpointercapture", endScrollbarDrag, true);
 
   if (window.ResizeObserver) {
     var layoutObserver = new ResizeObserver(syncToLayout);
