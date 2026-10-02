@@ -169,7 +169,7 @@ Only edit James's files above. If a fix needs a Stacky-owned or shared file, sto
 - All 7 demos reachable
 - Codecademy footer link fixed
 - Favicon, manifest, and sitemap load (no 404)
-- No sideways scroll on any page at any width from 320 to 1280 pixels, including 481, 768, and 820
+- No sideways scroll on any page at any width from 320 to 1280 pixels, including 481, 768, and 820 (except `assets/old_index.html`, James's old saved copy, which no page links to)
 - Image alt text, an H1 on Projects, and a skip link
 
 **Before merge to `main` (live)**
