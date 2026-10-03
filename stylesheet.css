@@ -1433,3 +1433,78 @@ footer p {
     transition: none;
   }
 }
+
+/* Home is 971px wide from 481px to 970px. The greeting is one max-content
+   line, and from 481px to 544px the shifted welcome paragraph also sticks
+   out. Wider and phone layouts are outside this query, so they stay put. */
+@media (min-width: 481px) and (max-width: 1000px) {
+  .landing-page {
+    position: relative;
+    max-width: 100%;
+  }
+
+  .left-panel-container {
+    left: 0;
+    right: 0;
+    width: auto;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .landing-page h1 {
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
+
+  /* From 481px to 576px the wrapped greeting is three lines and lands on
+     the first welcome paragraph. A slightly smaller size keeps it to two
+     lines and clears that paragraph. 577px and up already clear at 4rem. */
+  @media (max-width: 576px) {
+    .landing-page h1 {
+      font-size: 3.25rem;
+    }
+  }
+
+  /* ../Contact sticks out because the row is 100% wide plus 2rem of margin
+     on each side. Fit the row, and tighten the gaps, from 481px to 1000px.
+     margin-left: auto on the About link stays, so the links still sit on
+     the right when there is room. The phone menu is a different list. */
+  .desktop-nav > ul {
+    box-sizing: border-box;
+    width: calc(100% - 4rem);
+    margin: 0 2rem;
+    gap: 0.25rem;
+  }
+
+  .desktop-nav .first-element {
+    flex-shrink: 0;
+    width: 3rem;
+    height: 3rem;
+    min-width: 3rem;
+    min-height: 3rem;
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+  }
+
+  /* A full-size circle leaves too little room for the labels until 516px.
+     18px fits them on one line. Wider than this, 22px already fits. */
+  @media (max-width: 520px) {
+    .desktop-nav .first-element ~ li > a,
+    .desktop-nav #contactLink {
+      font-size: 18px;
+      letter-spacing: 0;
+    }
+  }
+
+  .desktop-nav li:nth-child(2),
+  .desktop-nav li:nth-child(3) {
+    margin-right: 0;
+  }
+
+  /* left: 135% runs past the window until about 544px. Keep that shift
+     when it still fits, and stop the paragraph at the window when it
+     does not. */
+  .lower-right-panel p:last-child {
+    left: min(135%, calc(100vw - 100% - 5rem));
+  }
+}
