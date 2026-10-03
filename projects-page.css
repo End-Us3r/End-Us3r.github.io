@@ -789,6 +789,15 @@ footer p {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     width: 100%;
     max-width: 100%;
+    column-gap: 0.75rem;
+  }
+
+  /* Same 100% width plus 2rem margins as Home. Fit the row so ../Contact
+     stays on screen. The phone menu does not use this list. */
+  .desktop-nav ul {
+    box-sizing: border-box;
+    width: calc(100% - 4rem);
+    margin: 0 2rem;
   }
 
   .card-container {
