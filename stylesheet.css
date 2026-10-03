@@ -1477,8 +1477,23 @@ footer p {
   }
 
   .desktop-nav .first-element {
+    flex-shrink: 0;
+    width: 3rem;
+    height: 3rem;
+    min-width: 3rem;
+    min-height: 3rem;
     margin-left: 0.25rem;
     margin-right: 0.25rem;
+  }
+
+  /* A full-size circle leaves too little room for the labels until 516px.
+     18px fits them on one line. Wider than this, 22px already fits. */
+  @media (max-width: 520px) {
+    .desktop-nav .first-element ~ li > a,
+    .desktop-nav #contactLink {
+      font-size: 18px;
+      letter-spacing: 0;
+    }
   }
 
   .desktop-nav li:nth-child(2),
