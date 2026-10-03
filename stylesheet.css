@@ -1516,7 +1516,7 @@ footer p {
    and shrinks as the column gets wider. 1280px and the phone layout
    are outside this query, so they stay as they are. */
 @media (min-width: 481px) and (max-width: 1279px) {
-  body:not(.theme-contact) main {
+  body:not(.theme-contact) #main {
     padding-bottom: clamp(186px, 1120px - 1.95 * (100vw - 799px), 1120px);
     background-color: #1d1d1d;
   }
