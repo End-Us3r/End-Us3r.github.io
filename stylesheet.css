@@ -1508,3 +1508,16 @@ footer p {
     left: min(135%, calc(100vw - 100% - 5rem));
   }
 }
+
+/* From 481px to 1279px the last welcome paragraph is tall enough to
+   run under the footer. Extra space after the home section, on the
+   same dark background, lets that paragraph finish above the footer.
+   The space is largest where the paragraph is tallest, through 799px,
+   and shrinks as the column gets wider. 1280px and the phone layout
+   are outside this query, so they stay as they are. */
+@media (min-width: 481px) and (max-width: 1279px) {
+  body:not(.theme-contact) main {
+    padding-bottom: clamp(186px, 1120px - 1.95 * (100vw - 799px), 1120px);
+    background-color: #1d1d1d;
+  }
+}
