@@ -1581,13 +1581,19 @@ footer p {
   }
 }
 
-/* 1001px to 1116px: the one-line greeting is wider than the window
-   (about 1117px). Scale it down so it stays one line and does not
-   scroll sideways, and keep the 77px line box so the welcome text
-   does not move. */
+/* 1001px to 1116px: one line of the greeting is wider than the window
+   (about 1117px). Scale it down so it stays one line, and keep the
+   77px line box so the welcome text does not move.
+   Doto draws every glyph at 0.6em, and the line is 27 of them (the
+   words plus the cursor span). This scale grows each glyph by 1/27px
+   when the window grows by 1px, so the fractional pixel on every glyph
+   repeats every 27px. Where those advances round to whole pixels they
+   jump together, and the cursor — the last glyph, glow included —
+   sticks out past the h1 by up to 9px. A 4px gap was not enough for
+   that jump. 18px keeps the cursor inside the window after it. */
 @media (min-width: 1001px) and (max-width: 1116px) {
   .landing-page h1 {
-    font-size: calc((100vw - 5rem - 4px) * 64 / 1036.8);
+    font-size: calc((100vw - 5rem - 18px) * 64 / 1036.8);
     line-height: 77px;
     white-space: nowrap;
   }
