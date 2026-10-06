@@ -170,7 +170,7 @@ Only edit James's files above. If a fix needs a Stacky-owned or shared file, sto
 - Codecademy footer link fixed
 - Favicon, manifest, and sitemap load (no 404)
 - No sideways scroll on any page at any width from 320 to 1280 pixels, including 481, 768, and 820 (except `assets/old_index.html`, James's old saved copy, which no page links to)
-- On Home, with the page scrolled to the bottom: the welcome text never covers the "Be inspired!" heading or its button, and never runs under the footer, at any width from 320 to 1280 and any window height from 600 up. The greeting stays clear of the welcome text. The quote box that opens after "Click me" stays fully on screen and never makes the page scroll sideways.
+- On Home, with the page scrolled to the bottom: the welcome text never covers the "Be inspired!" heading or its button, and never runs under the footer, at any width from 320 to 1600 and any window height from 600 up. The greeting stays clear of the welcome text. The quote box that opens after "Click me" stays fully on screen and never makes the page scroll sideways.
 - Image alt text, an H1 on Projects, and a skip link
 
 **Before merge to `main` (live)**
