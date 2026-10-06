@@ -934,7 +934,10 @@ h3 {
   transform: translate(0, -100%);
   opacity: 1;
   justify-content: space-evenly;
-  width: 650px;
+  /* 650px wherever the window already holds it (665px and up). Narrower
+     than that, stay 15px inside the section so the box is not cut off. */
+  width: min(650px, calc(100% - 15px));
+  max-width: calc(100% - 15px);
 }
 
 #random-quote {
@@ -1508,15 +1511,118 @@ footer p {
   }
 }
 
-/* From 481px to 1279px the last welcome paragraph is tall enough to
-   run under the footer. Extra space after the home section, on the
-   same dark background, lets that paragraph finish above the footer.
-   The space is largest where the paragraph is tallest, through 799px,
-   and shrinks as the column gets wider. 1280px and the phone layout
-   are outside this query, so they stay as they are. */
-@media (min-width: 481px) and (max-width: 1279px) {
-  body:not(.theme-contact) #main {
-    padding-bottom: clamp(186px, 1120px - 1.95 * (100vw - 799px), 1120px);
-    background-color: #1d1d1d;
+/* Home, 481px to 1600px. The greeting and the welcome text were offset
+   out of the flow inside a fixed 100vh section, so the text ran over
+   "Be inspired!" and a wrapped greeting landed on the first paragraph.
+   The same offsets are now padding in normal flow: the section grows
+   with the text, and the next section starts below it. One line of the
+   4rem greeting is 77px, so the extra 3px (5rem - 77px) keeps the first
+   paragraph where top: 40% put it when the greeting is one line. A
+   wrapped line is taller, and the paragraph moves down with it.
+   The last paragraph used to be pulled up with bottom: 16rem, which
+   left an empty spot the section still counted. That 16rem is now a
+   margin, so the section ends on the visible text. Wider than 1600px
+   keeps the old offsets. Phones are the next query. */
+@media (min-width: 481px) and (max-width: 1600px) {
+  .landing-page {
+    display: block;
+    height: auto;
+    min-height: 100vh;
+    max-width: 100%;
+  }
+
+  .left-panel {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .left-panel-container {
+    position: relative;
+    top: auto;
+    right: auto;
+    left: auto;
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    padding-top: calc(30vh - 5rem);
+    align-items: flex-start;
+  }
+
+  .landing-page h1 {
+    width: max-content;
+    max-width: 100%;
+    min-width: 0;
+    overflow-wrap: break-word;
+  }
+
+  .right-panel {
+    height: auto;
+    min-width: 0;
+    padding-top: calc(10vh + 3px);
+  }
+
+  .lower-right-panel {
+    top: auto;
+    vertical-align: top;
+    /* Grid, not inline-block: a negative margin on the second
+       paragraph then keeps a stable height while the window is resized. */
+    display: grid;
+  }
+
+  /* bottom: 16rem only moves the paragraph visually, so the section
+     stayed tall enough for the empty spot it left. Pull it up in the
+     flow by the same amount and clear that offset. */
+  .lower-right-panel p:last-child {
+    bottom: auto;
+    margin-top: -16rem;
+  }
+}
+
+/* 1001px to 1116px: one line of the greeting is wider than the window
+   (about 1117px). Scale it down so it stays one line, and keep the
+   77px line box so the welcome text does not move.
+   Doto draws every glyph at 0.6em, and the line is 27 of them (the
+   words plus the cursor span). This scale grows each glyph by 1/27px
+   when the window grows by 1px, so the fractional pixel on every glyph
+   repeats every 27px. Where those advances round to whole pixels they
+   jump together, and the cursor — the last glyph, glow included —
+   sticks out past the h1 by up to 9px. A 4px gap was not enough for
+   that jump. 18px keeps the cursor inside the window after it. */
+@media (min-width: 1001px) and (max-width: 1116px) {
+  .landing-page h1 {
+    font-size: calc((100vw - 5rem - 18px) * 64 / 1036.8);
+    line-height: 77px;
+    white-space: nowrap;
+  }
+}
+
+/* Phones. The welcome block sits 250px down (20% of the old fixed
+   1250px section). Keep that offset, but in the flow, so a tall
+   paragraph lengthens the section instead of covering "Be inspired!".
+   The greeting's own spacing is unchanged. */
+@media (max-width: 480px) {
+  .landing-page {
+    height: auto;
+    min-height: 1250px;
+  }
+
+  .right-panel {
+    height: auto;
+    padding-top: 250px;
+  }
+
+  .lower-right-panel {
+    top: auto;
+  }
+
+  /* The greeting is 30% down the window, and the welcome text starts
+     at 250px. On a tall window that 30% drops the two-line greeting
+     onto the text. Cap it where a 844px-tall window already puts it,
+     which is the last height that still clears. */
+  .left-panel-container {
+    top: min(30%, 253.2px);
   }
 }
