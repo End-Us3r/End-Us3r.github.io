@@ -1,21 +1,31 @@
-document.getElementById("inspire-button").addEventListener('click', function() {
+const inspireButton = document.getElementById("inspire-button");
+
+if (inspireButton) {
+    inspireButton.addEventListener('click', function() {
     // Toggle 'clicked' class on inspire-button
     this.classList.add('clicked');
     setTimeout(() => {
         this.classList.remove('clicked');
     }, 4000);
 
+    const expandedElement = document.getElementById("expanded-element");
+    const inspireHeading = document.getElementById("inspire-h3");
+
     // Toggle 'visible' class on expanded-element after 5000ms
-    document.getElementById("expanded-element").classList.toggle('visible');
-    setTimeout(() => {
-        document.getElementById("expanded-element").classList.toggle('visible');
-    }, 4000);
+    if (expandedElement) {
+        expandedElement.classList.toggle('visible');
+        setTimeout(() => {
+            expandedElement.classList.toggle('visible');
+        }, 4000);
+    }
 
     // Toggle 'invisible' class on h3 after
-    document.getElementById("inspire-h3").classList.toggle('invisible');
-    setTimeout(() => {
-        document.getElementById("inspire-h3").classList.toggle('invisible');
-    }, 4000);
+    if (inspireHeading) {
+        inspireHeading.classList.toggle('invisible');
+        setTimeout(() => {
+            inspireHeading.classList.toggle('invisible');
+        }, 4000);
+    }
 });
 
 // Function to display a random message
@@ -41,16 +51,19 @@ function displayRandomMessage() {
     const randomIndex = Math.floor(Math.random() * messages.length);
     const quoteElement = document.getElementById("random-quote");
     const authorElement = document.getElementById("random-author");
+    const expandedElement = document.getElementById("expanded-element");
+    if (!quoteElement || !authorElement || !expandedElement) return;
 
     quoteElement.textContent = messages[randomIndex].quote;
     authorElement.textContent = `${messages[randomIndex].author}`;
 
     // Ensure 'expanded-element' is visible when displaying message
-    document.getElementById("expanded-element").classList.add('visible');
+    expandedElement.classList.add('visible');
 
     // Debugging log
     console.log('Random message displayed');
 }
 
 // Event listener to display random message on button click
-document.getElementById("inspire-button").addEventListener('click', displayRandomMessage);
+inspireButton.addEventListener('click', displayRandomMessage);
+}

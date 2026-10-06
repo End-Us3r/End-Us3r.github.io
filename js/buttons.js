@@ -1,5 +1,5 @@
 function redirectToPage(url) {
-    window.open(url, '_blank');
+    window.location.assign(url);
 }
 
 function setupButtonListeners() {
@@ -14,12 +14,17 @@ function setupButtonListeners() {
     };
 
     for (const buttonId in buttons) {
-        buttonElement = document.getElementById(buttonId);
-        if (buttonElement) {
-            buttonElement.addEventListener('click', () => {
-                redirectToPage(buttons[buttonId]);
-            });
-        }
+        const buttonElement = document.getElementById(buttonId);
+        if (!buttonElement) continue;
+        buttonElement.addEventListener('click', (event) => {
+            // Real links navigate themselves, including with JS off.
+            // A new tab was the only extra effect, and same-tab stays.
+            if (buttonElement.matches('a[href]')) {
+                return;
+            }
+            event.preventDefault();
+            redirectToPage(buttons[buttonId]);
+        });
     }
 }
 

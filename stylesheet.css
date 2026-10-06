@@ -389,6 +389,23 @@ section {
   display: none;
 }
 
+/* Visually hidden checkbox. Its label is the JA circle, so the phone
+   menu still opens when JavaScript is off. */
+.nav-fallback {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+  opacity: 0;
+  pointer-events: none;
+  appearance: none;
+}
+
 nav {
   display: flex;
   flex-direction: row;
@@ -439,7 +456,8 @@ ul {
   top: -2%;
 }
 
-.first-element > a {
+.first-element > a,
+.first-element > label {
   display: flex;
   color: black;
   text-decoration: none;
@@ -454,6 +472,7 @@ ul {
   font-family: "doto", sans-serif;
   font-size: 28px;
   font-weight: 600;
+  cursor: pointer;
 }
 
 .first-element-hidden {
@@ -586,7 +605,8 @@ li:nth-child(3) {
   margin-right: 1rem;
 }
 
-nav > ul > li > a {
+nav > ul > li > a,
+nav > ul > li > label {
   display: flex;
   color: lawngreen;
   width: 100%;
@@ -598,7 +618,8 @@ nav > ul > li > a {
     lawngreen 0px 0px 20px, lawngreen 0px 0px 40px;
 }
 
-li > a {
+li > a,
+li > label {
   color: black;
   text-decoration: none;
   text-transform: uppercase;
@@ -611,7 +632,8 @@ li > a {
   background-color: transparent;
 }
 
-li > a:hover {
+li > a:hover,
+li > label:hover {
   text-decoration: underline;
   cursor: pointer;
   color: black;
@@ -664,7 +686,6 @@ h1 {
   margin: 0;
   padding: 0;
   margin-right: auto;
-  letter-spacing: -5px;
   width: max-content;
   text-shadow: 0 0 3px lawngreen, 0 0 7px lawngreen, 0 0 12px #00ff00,
     0 0 20px #00ff00;
@@ -816,10 +837,14 @@ h1 {
   text-shadow: 0 0 5px rgba(131, 3, 255, 1), 0 0 10px rgba(131, 3, 255, 1);
 }
 
+[hidden] {
+  display: none !important;
+}
+
 .third-page {
   display: flex;
   flex-direction: column;
-  background: black url(layered-peaks-haikei.svg) no-repeat center center/cover;
+  background: black url(assets/images/layered-peaks-haikei.svg) no-repeat center center/cover;
   color: white;
   align-items: center;
   margin: 0 auto;
@@ -851,6 +876,10 @@ h3 {
   text-transform: capitalize;
 }
 
+#inspire-h3 {
+  margin-bottom: 1.5rem;
+}
+
 #inspire-h3.invisible {
   display: none;
 }
@@ -867,7 +896,7 @@ h3 {
   letter-spacing: 1px;
   text-transform: capitalize;
   z-index: 1;
-  position: absolute;
+  position: relative;
   border-radius: 25px;
   border: #000000 solid 2px;
 }
@@ -905,7 +934,10 @@ h3 {
   transform: translate(0, -100%);
   opacity: 1;
   justify-content: space-evenly;
-  width: 650px;
+  /* 650px wherever the window already holds it (665px and up). Narrower
+     than that, stay 15px inside the section so the box is not cut off. */
+  width: min(650px, calc(100% - 15px));
+  max-width: calc(100% - 15px);
 }
 
 #random-quote {
@@ -1196,6 +1228,10 @@ footer p {
     color: #000;
   }
 
+  .nav-fallback:checked ~ .mobile-dropdown {
+    display: flex;
+  }
+
   .first-element {
     transform: none;
   }
@@ -1204,11 +1240,13 @@ footer p {
     box-shadow: 0 0 10px 2px lawngreen, 0 0 10px 2px lawngreen;
   }
   
-  .first-element > a {
+  .first-element > a,
+  .first-element > label {
     display: block;
   }
 
-  .first-element > a:hover {
+  .first-element > a:hover,
+  .first-element > label:hover {
     text-decoration: none;
     font-weight: 600;
   }
@@ -1225,6 +1263,14 @@ footer p {
     letter-spacing: -4.5px;
   }
 
+  .landing-page h1 {
+    width: auto;
+    max-width: 100%;
+    font-size: clamp(1.35rem, 7vw, 2rem);
+    letter-spacing: -0.04em;
+    overflow-wrap: anywhere;
+  }
+
   .landing-page {
     display: flex;
     height: 1250px;
@@ -1233,7 +1279,11 @@ footer p {
   }
 
   .left-panel-container {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
     padding-left: 1rem;
+    padding-right: 1rem;
     top:30%;
   }
 
@@ -1328,5 +1378,251 @@ footer p {
     position: relative;
     top: 0%;
     gap: 1rem;
+  }
+
+  .third-page {
+    height: auto;
+    min-height: 70vh;
+    box-sizing: border-box;
+    padding: 1rem;
+    overflow: hidden;
+  }
+
+  .content-container {
+    height: auto;
+    box-sizing: border-box;
+    padding: 2rem 1rem 4rem;
+  }
+
+  #inspire-h3 {
+    font-size: clamp(1.75rem, 9vw, 2.5rem);
+    padding: 1.5rem 0.5rem;
+    overflow-wrap: anywhere;
+  }
+
+  #inspire-button {
+    position: relative;
+    left: auto;
+    top: auto;
+    max-width: 100%;
+  }
+
+  #expanded-element,
+  #expanded-element.visible {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    min-height: 0;
+    box-sizing: border-box;
+    transform: none;
+    padding: 1.25rem;
+  }
+}
+
+/* Phone widths only. A wider screen never matches, so the bar cannot slide. */
+@media (max-width: 480px) {
+  header nav {
+    transition: transform 0.2s ease;
+  }
+
+  header.nav-hidden nav {
+    transform: translateY(-100%);
+  }
+}
+
+@media (max-width: 480px) and (prefers-reduced-motion: reduce) {
+  header nav {
+    transition: none;
+  }
+}
+
+/* Home is 971px wide from 481px to 970px. The greeting is one max-content
+   line, and from 481px to 544px the shifted welcome paragraph also sticks
+   out. Wider and phone layouts are outside this query, so they stay put. */
+@media (min-width: 481px) and (max-width: 1000px) {
+  .landing-page {
+    position: relative;
+    max-width: 100%;
+  }
+
+  .left-panel-container {
+    left: 0;
+    right: 0;
+    width: auto;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .landing-page h1 {
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
+
+  /* From 481px to 576px the wrapped greeting is three lines and lands on
+     the first welcome paragraph. A slightly smaller size keeps it to two
+     lines and clears that paragraph. 577px and up already clear at 4rem. */
+  @media (max-width: 576px) {
+    .landing-page h1 {
+      font-size: 3.25rem;
+    }
+  }
+
+  /* ../Contact sticks out because the row is 100% wide plus 2rem of margin
+     on each side. Fit the row, and tighten the gaps, from 481px to 1000px.
+     margin-left: auto on the About link stays, so the links still sit on
+     the right when there is room. The phone menu is a different list. */
+  .desktop-nav > ul {
+    box-sizing: border-box;
+    width: calc(100% - 4rem);
+    margin: 0 2rem;
+    gap: 0.25rem;
+  }
+
+  .desktop-nav .first-element {
+    flex-shrink: 0;
+    width: 3rem;
+    height: 3rem;
+    min-width: 3rem;
+    min-height: 3rem;
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+  }
+
+  /* A full-size circle leaves too little room for the labels until 516px.
+     18px fits them on one line. Wider than this, 22px already fits. */
+  @media (max-width: 520px) {
+    .desktop-nav .first-element ~ li > a,
+    .desktop-nav #contactLink {
+      font-size: 18px;
+      letter-spacing: 0;
+    }
+  }
+
+  .desktop-nav li:nth-child(2),
+  .desktop-nav li:nth-child(3) {
+    margin-right: 0;
+  }
+
+  /* left: 135% runs past the window until about 544px. Keep that shift
+     when it still fits, and stop the paragraph at the window when it
+     does not. */
+  .lower-right-panel p:last-child {
+    left: min(135%, calc(100vw - 100% - 5rem));
+  }
+}
+
+/* Home, 481px to 1600px. The greeting and the welcome text were offset
+   out of the flow inside a fixed 100vh section, so the text ran over
+   "Be inspired!" and a wrapped greeting landed on the first paragraph.
+   The same offsets are now padding in normal flow: the section grows
+   with the text, and the next section starts below it. One line of the
+   4rem greeting is 77px, so the extra 3px (5rem - 77px) keeps the first
+   paragraph where top: 40% put it when the greeting is one line. A
+   wrapped line is taller, and the paragraph moves down with it.
+   The last paragraph used to be pulled up with bottom: 16rem, which
+   left an empty spot the section still counted. That 16rem is now a
+   margin, so the section ends on the visible text. Wider than 1600px
+   keeps the old offsets. Phones are the next query. */
+@media (min-width: 481px) and (max-width: 1600px) {
+  .landing-page {
+    display: block;
+    height: auto;
+    min-height: 100vh;
+    max-width: 100%;
+  }
+
+  .left-panel {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .left-panel-container {
+    position: relative;
+    top: auto;
+    right: auto;
+    left: auto;
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    padding-top: calc(30vh - 5rem);
+    align-items: flex-start;
+  }
+
+  .landing-page h1 {
+    width: max-content;
+    max-width: 100%;
+    min-width: 0;
+    overflow-wrap: break-word;
+  }
+
+  .right-panel {
+    height: auto;
+    min-width: 0;
+    padding-top: calc(10vh + 3px);
+  }
+
+  .lower-right-panel {
+    top: auto;
+    vertical-align: top;
+    /* Grid, not inline-block: a negative margin on the second
+       paragraph then keeps a stable height while the window is resized. */
+    display: grid;
+  }
+
+  /* bottom: 16rem only moves the paragraph visually, so the section
+     stayed tall enough for the empty spot it left. Pull it up in the
+     flow by the same amount and clear that offset. */
+  .lower-right-panel p:last-child {
+    bottom: auto;
+    margin-top: -16rem;
+  }
+}
+
+/* 1001px to 1116px: one line of the greeting is wider than the window
+   (about 1117px). Scale it down so it stays one line, and keep the
+   77px line box so the welcome text does not move.
+   Doto draws every glyph at 0.6em, and the line is 27 of them (the
+   words plus the cursor span). This scale grows each glyph by 1/27px
+   when the window grows by 1px, so the fractional pixel on every glyph
+   repeats every 27px. Where those advances round to whole pixels they
+   jump together, and the cursor — the last glyph, glow included —
+   sticks out past the h1 by up to 9px. A 4px gap was not enough for
+   that jump. 18px keeps the cursor inside the window after it. */
+@media (min-width: 1001px) and (max-width: 1116px) {
+  .landing-page h1 {
+    font-size: calc((100vw - 5rem - 18px) * 64 / 1036.8);
+    line-height: 77px;
+    white-space: nowrap;
+  }
+}
+
+/* Phones. The welcome block sits 250px down (20% of the old fixed
+   1250px section). Keep that offset, but in the flow, so a tall
+   paragraph lengthens the section instead of covering "Be inspired!".
+   The greeting's own spacing is unchanged. */
+@media (max-width: 480px) {
+  .landing-page {
+    height: auto;
+    min-height: 1250px;
+  }
+
+  .right-panel {
+    height: auto;
+    padding-top: 250px;
+  }
+
+  .lower-right-panel {
+    top: auto;
+  }
+
+  /* The greeting is 30% down the window, and the welcome text starts
+     at 250px. On a tall window that 30% drops the two-line greeting
+     onto the text. Cap it where a 844px-tall window already puts it,
+     which is the last height that still clears. */
+  .left-panel-container {
+    top: min(30%, 253.2px);
   }
 }

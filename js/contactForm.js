@@ -5,8 +5,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const formContainer = document.querySelector('.form-container');
 
     contactLink?.addEventListener('click', (e) => {
+        if (!modal) return;
         e.preventDefault();
-        modal?.classList.add('show');
+        modal.classList.add('show');
     });
 
     closeModal?.addEventListener('click', () => {
@@ -15,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Close when clicking outside the form
     modal?.addEventListener('click', (e) => {
-        if (!formContainer.contains(e.target)) {
+        if (formContainer && !formContainer.contains(e.target)) {
             modal.classList.remove('show');
         }
     });
